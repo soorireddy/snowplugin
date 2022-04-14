@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role/>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-13 06:15:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>db1c62c21b7e41108dcc755e034bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1b1c62c21b7e41108dcc755e034bcb8e</sys_name>
+        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_embedded_help_role_db1c62c21b7e41108dcc755e034bcb92</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-13 06:15:34</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
