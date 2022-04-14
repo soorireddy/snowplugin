@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Reset PIN" max_length="40" name="x_aleen_alertsnowp_reset_pin" sizeclass="0" type="collection">
+        <element display="true" label="New PIN" max_length="255" name="new_pin" type="password2"/>
+        <element label="Request For" max_length="32" name="request_for" read_only="true" reference="sys_user" type="reference"/>
+    </element>
+</database>
