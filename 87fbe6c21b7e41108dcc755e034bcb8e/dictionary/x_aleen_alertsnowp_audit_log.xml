@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Audit Log" max_length="40" name="x_aleen_alertsnowp_audit_log" type="collection">
+        <element label="Handler Name" max_length="40" name="handler_name" type="string"/>
+        <element label="Request No" max_length="32" name="request_no" type="string"/>
+        <element label="Status" max_length="40" name="status" type="string"/>
+    </element>
+</database>
