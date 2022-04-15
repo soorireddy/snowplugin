@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Access Levels" max_length="40" name="x_aleen_alertsnowp_access_levels" type="collection">
-        <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
+        <element label="Access Level ID" mandatory="true" max_length="40" name="access_level_id" type="string"/>
         <element display="true" label="Access Level Name" max_length="40" name="access_level_name" type="string"/>
-        <element choice_field="reason" label="Location ID" max_length="40" name="location_id" type="string"/>
-        <element label="System" max_length="40" name="system" type="string"/>
+        <element choice_field="reason" label="Location" mandatory="true" max_length="40" name="location_id" reference="x_aleen_alertsnowp_locations" type="reference"/>
+        <element label="System" mandatory="true" max_length="40" name="system" type="string"/>
     </element>
 </database>

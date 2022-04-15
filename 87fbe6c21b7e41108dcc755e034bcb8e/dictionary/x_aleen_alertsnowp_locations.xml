@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Locations" max_length="40" name="x_aleen_alertsnowp_locations" type="collection">
-        <element default="False" display="true" label="Deleted" max_length="40" name="deleted" type="boolean"/>
-        <element label="Location ID" max_length="40" name="id" type="string"/>
-        <element label="Location Name" max_length="40" name="name" type="string"/>
+        <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
+        <element label="Location ID" mandatory="true" max_length="40" name="id" type="string"/>
+        <element label="Location Type" max_length="40" name="location_type" type="string"/>
+        <element display="true" label="Location Name" mandatory="true" max_length="40" name="name" type="string"/>
     </element>
 </database>
