@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="76d1302a1bbe81108dcc755e034bcb7d" sys_domain="global" table="x_aleen_alertsnowp_reset_pin" version="3" view="">
+    <sys_ui_section caption="" section_id="64849ab6db7601100cd3440805961995" sys_domain="global" table="x_aleen_alertsnowp_mobile_credential" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 12:46:34</sys_created_on>
-            <sys_id>6ec816fadb7601100cd344080596196f</sys_id>
+            <sys_created_on>2022-04-15 12:46:03</sys_created_on>
+            <sys_id>87a852fadb7601100cd34408059619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_reset_pin" sys_domain="global" view="Default view">76d1302a1bbe81108dcc755e034bcb7d</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_mobile_credential" sys_domain="global" view="Default view">64849ab6db7601100cd3440805961995</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 12:46:34</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:46:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>request_for</element>
+            <element>phone_number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 12:46:34</sys_created_on>
-            <sys_id>eec816fadb7601100cd344080596196f</sys_id>
+            <sys_created_on>2022-04-15 12:46:03</sys_created_on>
+            <sys_id>cfa852fadb7601100cd34408059619f4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_reset_pin" sys_domain="global" view="Default view">76d1302a1bbe81108dcc755e034bcb7d</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_mobile_credential" sys_domain="global" view="Default view">64849ab6db7601100cd3440805961995</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 12:46:34</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:46:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 12:46:34</sys_created_on>
-            <sys_id>62c816fadb7601100cd3440805961970</sys_id>
+            <sys_created_on>2022-04-15 12:46:03</sys_created_on>
+            <sys_id>43a852fadb7601100cd34408059619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_reset_pin" sys_domain="global" view="Default view">76d1302a1bbe81108dcc755e034bcb7d</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_mobile_credential" sys_domain="global" view="Default view">64849ab6db7601100cd3440805961995</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 12:46:34</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:46:03</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -46,52 +46,52 @@
             <element>state</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 12:46:34</sys_created_on>
-            <sys_id>e2c816fadb7601100cd3440805961970</sys_id>
+            <sys_created_on>2022-04-15 12:46:03</sys_created_on>
+            <sys_id>c3a852fadb7601100cd34408059619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_reset_pin" sys_domain="global" view="Default view">76d1302a1bbe81108dcc755e034bcb7d</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_mobile_credential" sys_domain="global" view="Default view">64849ab6db7601100cd3440805961995</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 12:46:34</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:46:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>new_pin</element>
+            <element>reason</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 12:46:34</sys_created_on>
-            <sys_id>66c816fadb7601100cd3440805961970</sys_id>
+            <sys_created_on>2022-04-15 12:46:03</sys_created_on>
+            <sys_id>47a852fadb7601100cd34408059619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_reset_pin" sys_domain="global" view="Default view">76d1302a1bbe81108dcc755e034bcb7d</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_mobile_credential" sys_domain="global" view="Default view">64849ab6db7601100cd3440805961995</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 12:46:34</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:46:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_aleen_alertsnowp_reset_pin</name>
+            <name>x_aleen_alertsnowp_mobile_credential</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-14 10:38:22</sys_created_on>
+            <sys_created_on>2022-04-15 12:27:52</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>76d1302a1bbe81108dcc755e034bcb7d</sys_id>
+            <sys_id>64849ab6db7601100cd3440805961995</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_aleen_alertsnowp_reset_pin</sys_name>
+            <sys_name>x_aleen_alertsnowp_mobile_credential</sys_name>
             <sys_overrides/>
             <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-            <sys_update_name>sys_ui_section_76d1302a1bbe81108dcc755e034bcb7d</sys_update_name>
+            <sys_update_name>sys_ui_section_64849ab6db7601100cd3440805961995</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-14 10:38:22</sys_updated_on>
+            <sys_updated_on>2022-04-15 12:27:52</sys_updated_on>
             <sys_user/>
             <title>true</title>
             <view display_value="Default view" name="NULL">Default view</view>
