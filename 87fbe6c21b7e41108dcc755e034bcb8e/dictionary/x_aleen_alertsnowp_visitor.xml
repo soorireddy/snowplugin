@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Visitor" max_length="40" name="x_aleen_alertsnowp_visitor" type="collection">
+        <element label="Email" max_length="50" name="email" type="string"/>
+        <element label="First Name" max_length="50" name="first_name" type="string"/>
+        <element label="Host User" max_length="32" name="host_user" reference="sys_user" type="reference"/>
+        <element label="Last Name" max_length="50" name="last_name" type="string"/>
+        <element display="true" label="notes" max_length="40" name="notes" type="string"/>
+        <element choice="1" label="Reason" max_length="40" name="reason" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Meeting" sequence="1" value="MEETING"/>
+                <element inactive_on_update="false" label="Interview" sequence="2" value="INTERVIEW"/>
+                <element inactive_on_update="false" label="Maintenance" sequence="3" value="MAINTENANCE"/>
+                <element inactive_on_update="false" label="Event" sequence="4" value="EVENT"/>
+                <element inactive_on_update="false" label="Others" sequence="5" value="OTHERS"/>
+            </choice>
+        </element>
+        <element label="Visitor Company" max_length="50" name="visitor_company" type="string"/>
+        <element label="Visit End Date" max_length="40" name="visit_end_date" type="glide_date_time"/>
+        <element label="Visit Location" max_length="40" name="visit_location" type="string"/>
+        <element label="Visit Start Date" max_length="40" name="visit_start_date" type="glide_date_time"/>
+    </element>
+</database>

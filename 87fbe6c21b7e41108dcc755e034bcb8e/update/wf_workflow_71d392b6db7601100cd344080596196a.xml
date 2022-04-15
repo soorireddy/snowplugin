@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"ends":["f2535a76db7601100cd3440805961917"],"activities":{},"subflows":[],"stages":{}}</activity_stages>
+        <activity_stages>{"ends":["3dd3d2b6db7601100cd344080596197f"],"activities":{},"subflows":[],"stages":{}}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
         <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
         <condition/>
         <condition_type>run_match</condition_type>
-        <description>Alert Activate Badge request flow</description>
-        <expected_sequences>3a535a76db7601100cd3440805961915,fa535a76db7601100cd3440805961917,b6535a76db7601100cd3440805961916,f2535a76db7601100cd3440805961917</expected_sequences>
+        <description>Alert Update Profile request flow</description>
+        <expected_sequences>39d392b6db7601100cd344080596196c,35d3d2b6db7601100cd3440805961980,31d3d2b6db7601100cd344080596197f,3dd3d2b6db7601100cd344080596197f</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>3a535a76db7601100cd3440805961915,fa535a76db7601100cd3440805961917,b6535a76db7601100cd3440805961916,f2535a76db7601100cd3440805961917</full_sequences>
+        <full_sequences>39d392b6db7601100cd344080596196c,35d3d2b6db7601100cd3440805961980,31d3d2b6db7601100cd344080596197f,3dd3d2b6db7601100cd344080596197f</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
-        <name>Alert Activate Badge</name>
+        <name>Alert Update Profile</name>
         <not_cacheable>false</not_cacheable>
         <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
         <order>100</order>
@@ -27,41 +27,41 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">3a535a76db7601100cd3440805961915</start>
+        <start display_value="Begin">39d392b6db7601100cd344080596196c</start>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>32535a76db7601100cd3440805961914</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>39d392b6db7601100cd344080596196a</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:23:14</sys_updated_on>
-        <table>x_aleen_alertsnowp_activate_badge</table>
+        <sys_updated_on>2022-04-15 12:25:37</sys_updated_on>
+        <table>x_aleen_alertsnowp_update_profile</table>
         <timezone/>
         <validated>false</validated>
-        <workflow display_value="Alert Activate Badge">50c4cc661b3e81108dcc755e034bcb73</workflow>
+        <workflow display_value="Alert Update Profile">71d392b6db7601100cd344080596196a</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
         <access>public</access>
-        <description>Alert Activate Badge request flow</description>
-        <name>Alert Activate Badge</name>
+        <description>Alert Update Profile request flow</description>
+        <name>Alert Update Profile</name>
         <preview/>
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-14 07:21:20</sys_created_on>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>50c4cc661b3e81108dcc755e034bcb73</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Alert Activate Badge</sys_name>
+        <sys_id>71d392b6db7601100cd344080596196a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Alert Update Profile</sys_name>
         <sys_overrides/>
         <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>wf_workflow_50c4cc661b3e81108dcc755e034bcb73</sys_update_name>
+        <sys_update_name>wf_workflow_71d392b6db7601100cd344080596196a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:23:14</sys_updated_on>
-        <table>x_aleen_alertsnowp_activate_badge</table>
+        <sys_updated_on>2022-04-15 12:25:37</sys_updated_on>
+        <table>x_aleen_alertsnowp_update_profile</table>
         <template>false</template>
         <vars/>
     </wf_workflow>
@@ -81,21 +81,21 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>3a535a76db7601100cd3440805961915</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>39d392b6db7601100cd344080596196c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Alert Activate Badge">32535a76db7601100cd3440805961914</workflow_version>
+        <workflow_version display_value="Alert Update Profile">39d392b6db7601100cd344080596196a</workflow_version>
         <x>20</x>
         <y>20</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=3a535a76db7601100cd3440805961915"/>
+    <sys_variable_value action="delete_multiple" query="document_key=39d392b6db7601100cd344080596196c"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">3a535a76db7601100cd3440805961915</activity>
+        <activity display_value="Begin">39d392b6db7601100cd344080596196c</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -109,11 +109,11 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>7e535a76db7601100cd3440805961915</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>f5d3d2b6db7601100cd344080596197e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -131,19 +131,19 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>f2535a76db7601100cd3440805961917</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>3dd3d2b6db7601100cd344080596197f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Alert Activate Badge">32535a76db7601100cd3440805961914</workflow_version>
+        <workflow_version display_value="Alert Update Profile">39d392b6db7601100cd344080596196a</workflow_version>
         <x>480</x>
         <y>183</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=f2535a76db7601100cd3440805961917"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3dd3d2b6db7601100cd344080596197f"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -160,49 +160,49 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>b6535a76db7601100cd3440805961916</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>31d3d2b6db7601100cd344080596197f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Alert Activate Badge">32535a76db7601100cd3440805961914</workflow_version>
+        <workflow_version display_value="Alert Update Profile">39d392b6db7601100cd344080596196a</workflow_version>
         <x>302</x>
         <y>95</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b6535a76db7601100cd3440805961916"/>
+    <sys_variable_value action="delete_multiple" query="document_key=31d3d2b6db7601100cd344080596197f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b6535a76db7601100cd3440805961916</document_key>
+        <document_key>31d3d2b6db7601100cd344080596197f</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>3a535a76db7601100cd3440805961916</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b1d3d2b6db7601100cd344080596197f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <value>state=3^EQ</value>
         <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>b6535a76db7601100cd3440805961916</document_key>
+        <document_key>31d3d2b6db7601100cd344080596197f</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>3a535a76db7601100cd3440805961916</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b1d3d2b6db7601100cd344080596197f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <value>state=3^EQ</value>
         <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Mark as Closed Completed">b6535a76db7601100cd3440805961916</activity>
+        <activity display_value="Mark as Closed Completed">31d3d2b6db7601100cd344080596197f</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -216,11 +216,11 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>7e535a76db7601100cd3440805961916</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b5d3d2b6db7601100cd344080596197f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -238,49 +238,49 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>fa535a76db7601100cd3440805961917</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>35d3d2b6db7601100cd3440805961980</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Alert Activate Badge">32535a76db7601100cd3440805961914</workflow_version>
+        <workflow_version display_value="Alert Update Profile">39d392b6db7601100cd344080596196a</workflow_version>
         <x>122</x>
         <y>7</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=fa535a76db7601100cd3440805961917"/>
+    <sys_variable_value action="delete_multiple" query="document_key=35d3d2b6db7601100cd3440805961980"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>fa535a76db7601100cd3440805961917</document_key>
+        <document_key>35d3d2b6db7601100cd3440805961980</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>b2535a76db7601100cd3440805961918</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b5d3d2b6db7601100cd3440805961980</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <value>current.request_for = gs.getUserID();</value>
         <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>fa535a76db7601100cd3440805961917</document_key>
+        <document_key>35d3d2b6db7601100cd3440805961980</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>b2535a76db7601100cd3440805961918</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b5d3d2b6db7601100cd3440805961980</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
         <value>current.request_for = gs.getUserID();</value>
         <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set Request For">fa535a76db7601100cd3440805961917</activity>
+        <activity display_value="Set Request For">35d3d2b6db7601100cd3440805961980</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -294,58 +294,58 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>3a535a76db7601100cd3440805961918</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b9d3d2b6db7601100cd3440805961980</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7e535a76db7601100cd3440805961916</condition>
-        <from display_value="Mark as Closed Completed">b6535a76db7601100cd3440805961916</from>
+        <condition display_value="Always">b5d3d2b6db7601100cd344080596197f</condition>
+        <from display_value="Mark as Closed Completed">31d3d2b6db7601100cd344080596197f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>7a539a76db7601100cd34408059619cd</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b5d3d2b6db7601100cd3440805961982</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
-        <to display_value="End">f2535a76db7601100cd3440805961917</to>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
+        <to display_value="End">3dd3d2b6db7601100cd344080596197f</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">3a535a76db7601100cd3440805961918</condition>
-        <from display_value="Set Request For">fa535a76db7601100cd3440805961917</from>
+        <condition display_value="Always">b9d3d2b6db7601100cd3440805961980</condition>
+        <from display_value="Set Request For">35d3d2b6db7601100cd3440805961980</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>b6539a76db7601100cd34408059619cd</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>f1d3d2b6db7601100cd3440805961982</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
-        <to display_value="Mark as Closed Completed">b6535a76db7601100cd3440805961916</to>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
+        <to display_value="Mark as Closed Completed">31d3d2b6db7601100cd344080596197f</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7e535a76db7601100cd3440805961915</condition>
-        <from display_value="Begin">3a535a76db7601100cd3440805961915</from>
+        <condition display_value="Always">f5d3d2b6db7601100cd344080596197e</condition>
+        <from display_value="Begin">39d392b6db7601100cd344080596196c</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:51</sys_created_on>
-        <sys_id>f2539a76db7601100cd34408059619cd</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>fdd3d2b6db7601100cd3440805961981</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:51</sys_updated_on>
-        <to display_value="Set Request For">fa535a76db7601100cd3440805961917</to>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
+        <to display_value="Set Request For">35d3d2b6db7601100cd3440805961980</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-15 12:22:50</sys_created_on>
-        <sys_id>b2535a76db7601100cd3440805961914</sys_id>
+        <sys_created_on>2022-04-15 12:24:57</sys_created_on>
+        <sys_id>b9d392b6db7601100cd344080596196a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-15 12:22:50</sys_updated_on>
-        <workflow_version display_value="Alert Activate Badge">32535a76db7601100cd3440805961914</workflow_version>
+        <sys_updated_on>2022-04-15 12:24:57</sys_updated_on>
+        <workflow_version display_value="Alert Update Profile">39d392b6db7601100cd344080596196a</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=50c4cc661b3e81108dcc755e034bcb73^sys_id!=32535a76db7601100cd3440805961914">
+    <wf_workflow_version action="update_multiple" query="workflow=71d392b6db7601100cd344080596196a^sys_id!=39d392b6db7601100cd344080596196a">
         <published>false</published>
     </wf_workflow_version>
 </record_update>
