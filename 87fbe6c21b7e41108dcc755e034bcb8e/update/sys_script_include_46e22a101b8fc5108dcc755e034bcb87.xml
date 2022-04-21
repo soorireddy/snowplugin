@@ -10,9 +10,8 @@
         <script><![CDATA[var AlertAPIScript = Class.create();
 AlertAPIScript.prototype = {
     initialize: function() {
-        gs.info("Testing  ");
         this.baseURLProp = gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl');
-        gs.info(" Base URL is " + this.baseURLProp);
+        //gs.info(" Base URL is " + this.baseURLProp);
         this.jwt_token = this.getJWT();
     },
     getJWT: function() {
@@ -24,23 +23,23 @@ AlertAPIScript.prototype = {
                 '{ "username":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_username') +
                 '", "password":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_password') + '"}';
             var requestBody = requestBody1.toString();
-            gs.info('JWT request body ::  ==> ' + requestBody);
+            //gs.info('JWT request body ::  ==> ' + requestBody);
             r.setRequestBody(requestBody);
             var response = r.executeAsync();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            gs.info('Authentication httpStatus  ::' + httpStatus);
+            //gs.info('Authentication httpStatus  ::' + httpStatus);
             var Token = null;
             if (httpStatus == 200) {
                 var responseObj = JSON.parse(responseBody);
                 if (null != responseObj && responseObj.success && null != responseObj.data) {
                     Token = 'Bearer ' + responseObj.data.access_token;
-                    gs.info('Authentication is Successful');
+                   // gs.info('Authentication is Successful');
                 }
             } else {
-                gs.info('Authentication is unSuccessful');
+               // gs.info('Authentication is unSuccessful');
             }
-            gs.debug(Token);
+           // gs.debug(Token);
             return Token;
         } catch (ex) {
             var message = ex.message;
@@ -117,7 +116,27 @@ AlertAPIScript.prototype = {
         gs.info(" resetPin  :: begin");
         try {
             if (null != this.jwt_token) {
-                gs.info(" resetPin  ==> Token is not Null");
+                var grUser = new GlideRecordSecure('sys_user');
+                grUser.get(data.request_for);
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{ "identity":{ "masterIdentityId":"' + grUser.user_name + '","pin":' + data.new_pin + '}}';
+                var requestBody = requestBody1.toString();
+                gs.info('reset pin JWT request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                if (updatehttpStatus == 200) {
+                    gs.debug("reset pin is Successfull");
+                    data.state = 3;
+                } else {
+                    gs.debug("reset pin is unsuccessful");
+                    data.state = 4;
+                }
             }
         } catch (ex) {
             var message = ex.message;
@@ -161,7 +180,7 @@ AlertAPIScript.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>AlertAPIScript</sys_name>
         <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -169,6 +188,6 @@ AlertAPIScript.prototype = {
         <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-21 04:22:23</sys_updated_on>
+        <sys_updated_on>2022-04-21 05:32:48</sys_updated_on>
     </sys_script_include>
 </record_update>

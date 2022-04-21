@@ -2,14 +2,14 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Reset Door Pin">23eee4261bbe81108dcc755e034bcbdd</cat_item>
+        <cat_item display_value="Update profile information">56cfb176db3601100cd344080596199d</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
         <choice_table/>
         <create_roles/>
         <default_html_value/>
-        <default_value/>
+        <default_value>javascript:gs.getUserID()</default_value>
         <delete_roles/>
         <delivery_plan/>
         <description/>
@@ -19,11 +19,11 @@
         <dynamic_ref_qual/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>new_pin</field>
+        <field>request_for</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
-        <hidden>false</hidden>
+        <hidden>true</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -35,24 +35,24 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>new_pin</name>
-        <order>200</order>
+        <name>request_for</name>
+        <order/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>New PIN</question_text>
+        <question_text>request_for</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_aleen_alertsnowp_reset_pin</record_producer_table>
-        <reference/>
+        <record_producer_table>x_aleen_alertsnowp_update_profile</record_producer_table>
+        <reference>sys_user</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -66,26 +66,26 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-14 10:25:36</sys_created_on>
+        <sys_created_on>2022-04-21 05:05:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>67eee0661bbe81108dcc755e034bcb9d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>New PIN</sys_name>
+        <sys_id>8548abe01b0f09108dcc755e034bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>request_for</sys_name>
         <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>item_option_new_67eee0661bbe81108dcc755e034bcb9d</sys_update_name>
+        <sys_update_name>item_option_new_8548abe01b0f09108dcc755e034bcbf2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-21 05:21:31</sys_updated_on>
+        <sys_updated_on>2022-04-21 05:05:52</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>8</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
-        <validate_regex display_value="Number">556cbfe5876b1300e0ef0cf888cb0be3</validate_regex>
+        <validate_regex/>
         <variable_name/>
         <variable_set/>
         <variable_width/>
@@ -96,22 +96,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=67eee0661bbe81108dcc755e034bcb9d"/>
-    <fx_price action="delete_multiple" query="id=67eee0661bbe81108dcc755e034bcb9d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=8548abe01b0f09108dcc755e034bcbf2"/>
+    <fx_price action="delete_multiple" query="id=8548abe01b0f09108dcc755e034bcbf2"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>67eee0661bbe81108dcc755e034bcb9d</id>
+        <id>8548abe01b0f09108dcc755e034bcbf2</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-14 10:25:36</sys_created_on>
-        <sys_id>63eee0661bbe81108dcc755e034bcba0</sys_id>
+        <sys_created_on>2022-04-21 05:05:52</sys_created_on>
+        <sys_id>d4e86f241b0f09108dcc755e034bcb30</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-14 10:25:36</sys_updated_on>
+        <sys_updated_on>2022-04-21 05:05:52</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -119,16 +119,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>67eee0661bbe81108dcc755e034bcb9d</id>
+        <id>8548abe01b0f09108dcc755e034bcbf2</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-04-14 10:25:36</sys_created_on>
-        <sys_id>2beee0661bbe81108dcc755e034bcb9f</sys_id>
+        <sys_created_on>2022-04-21 05:05:52</sys_created_on>
+        <sys_id>d0e86f241b0f09108dcc755e034bcb2f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-14 10:25:36</sys_updated_on>
+        <sys_updated_on>2022-04-21 05:05:52</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
