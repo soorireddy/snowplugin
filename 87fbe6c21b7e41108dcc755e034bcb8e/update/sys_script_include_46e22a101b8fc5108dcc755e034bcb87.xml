@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aleen_alertsnowp.AlertAPIScript</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Used to call from Workflow</description>
+        <name>AlertAPIScript</name>
+        <script><![CDATA[var AlertAPIScript = Class.create();
+AlertAPIScript.prototype = {
+    initialize: function() {
+        gs.info("Testing  ");
+        this.baseURLProp = gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl');
+        gs.info(" Base URL is " + this.baseURLProp);
+        this.jwt_token = this.getJWT();
+    },
+    getJWT: function() {
+        try {
+            var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetJWTToken', 'Token');
+            r.setStringParameter('baseURL', this.baseURLProp);
+            r.setRequestHeader('Content-Type', 'application/json');
+            var requestBody1 =
+                '{ "username":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_username') +
+                '", "password":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_password') + '"}';
+            var requestBody = requestBody1.toString();
+            gs.info('JWT request body ::  ==> ' + requestBody);
+            r.setRequestBody(requestBody);
+            var response = r.executeAsync();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            gs.info('Authentication httpStatus  ::' + httpStatus);
+            var Token = null;
+            if (httpStatus == 200) {
+                var responseObj = JSON.parse(responseBody);
+                if (null != responseObj && responseObj.success && null != responseObj.data) {
+                    Token = 'Bearer ' + responseObj.data.access_token;
+                    gs.info('Authentication is Successful');
+                }
+            } else {
+                gs.info('Authentication is unSuccessful');
+            }
+            gs.debug(Token);
+            return Token;
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('getJWT   :: ' + message);
+        }
+    },
+    newBadge: function(data) {
+        gs.info(" newBadge  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" newBadge  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('newBadge   :: ' + message);
+        }
+    },
+    activateBadge: function(data) {
+        gs.info(" activateBadge  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" activateBadge  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('activateBadge   :: ' + message);
+        }
+    },
+    registerVisitor: function(data) {
+        gs.info(" registerVisitor  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" registerVisitor  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('registerVisitor   :: ' + message);
+        }
+    },
+    buildingAccess: function(data) {
+        gs.info(" buildingAccess  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" buildingAccess  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('buildingAccess   :: ' + message);
+        }
+    },
+    mobileCredentials: function(data) {
+        gs.info(" mobileCredentials  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" mobileCredentials  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('mobileCredentials   :: ' + message);
+        }
+    },
+    replaceBadge: function(data) {
+        gs.info(" replaceBadge  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" replaceBadge  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('replaceBadge   :: ' + message);
+        }
+    },
+    resetPin: function(data) {
+        gs.info(" resetPin  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                gs.info(" resetPin  ==> Token is not Null");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('resetPin   :: ' + message);
+        }
+    },
+    updateProfile: function(data) {
+        gs.info(" updateProfile  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                var grUser = new GlideRecordSecure('sys_user');
+                grUser.get(data.request_for);
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{ "identity":{ "email":"' + data.email + '", "masterIdentityId":"' + grUser.user_name + '","phone":' + data.phone_number + '}}';
+                var requestBody = requestBody1.toString();
+                gs.debug('updateProfile JWT request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                if (updatehttpStatus == 200) {
+                    gs.debug("Updated Successfully");
+                    data.state = 3;
+                } else {
+                    gs.debug("Update is unsuccessful");
+                    data.state = 4;
+                }
+            }
+        } catch (ex) {
+            gs.debug('updateProfile  Exception ==>  :: ' + ex.message);
+        }
+    },
+    type: 'AlertAPIScript'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-20 05:24:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>AlertAPIScript</sys_name>
+        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-21 04:22:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

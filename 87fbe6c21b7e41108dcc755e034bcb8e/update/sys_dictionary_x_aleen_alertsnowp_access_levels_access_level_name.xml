@@ -33,7 +33,7 @@
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>40</max_length>
         <name>x_aleen_alertsnowp_access_levels</name>
         <next_element/>
@@ -55,7 +55,7 @@
         <sys_created_on>2022-04-14 18:20:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dd7b9ea6dbba89100cd344080596190f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Access Level Name</sys_name>
         <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -63,7 +63,7 @@
         <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_dictionary_x_aleen_alertsnowp_access_levels_access_level_name</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-14 18:20:26</sys_updated_on>
+        <sys_updated_on>2022-04-20 10:31:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
