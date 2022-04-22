@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to  update profile.</li><li>It doesn&#39;t require any approval</li><li>You can modify any changes in the profile in this section.If you update the photo, it will not auto trigger the new Badge request. Please use the designated option for the new or replacement badge.</li></ul>]]></description>
+        <description><![CDATA[<p>Service Overview :</p>
+<ul style="list-style-position: inside;"><li>Update your phone or email information. This is important to have your current information in order to contact you during the badge or access issuance process</li><li>Update your photo if this needs to be changed on the ID Badge. Please use the replacement badge request if a replacement badge is required with the updated photo</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,7 +25,7 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Photo, Picture</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used by the employees to update user information</short_description>
+        <short_description>This request can be used to update contact  information or photo</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-15 10:57:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>56cfb176db3601100cd344080596199d</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Update profile information</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_56cfb176db3601100cd344080596199d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:42:07</sys_updated_on>
+        <sys_updated_on>2022-04-21 18:45:58</sys_updated_on>
         <table_name>x_aleen_alertsnowp_update_profile</table_name>
         <taxonomy_topic/>
         <template/>

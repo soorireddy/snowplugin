@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to submit a new badge request to replace the existing badge</li><li>It will trigger a 1 stage approval workflow and will go to the user’s manager for approval before it reaches reach to AlertEnterprise Guardian.</li></ul>]]></description>
+        <description><![CDATA[<p>Service Overview :</p>
+<ul style="list-style-position: inside;"><li>Fill out a badge replacement form and select the reason for the replacement</li><li>It will automatically deactivate the already issued badge(s) once the replacement Badge is issued</li><li>If the replacement reason is selected as Lost/Stolen, the existing badge will be deactivated immediately</li><li>You will receive an email notification once the new badge is printed</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,7 +25,7 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Badge, ID Card, IDCard, IDBadge</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used by the employees to submit a request to replace the existing badge</short_description>
+        <short_description>This request can be used to if you need a replacement badge because of any reason</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-14 04:53:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3ad26f1e1bba81108dcc755e034bcb00</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Request Replacement Badge</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_3ad26f1e1bba81108dcc755e034bcb00</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:40:12</sys_updated_on>
+        <sys_updated_on>2022-04-21 19:00:52</sys_updated_on>
         <table_name>x_aleen_alertsnowp_repalce_badge</table_name>
         <taxonomy_topic/>
         <template/>

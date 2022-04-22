@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to  reset the Door Pin</li><li>It doesn&#39;t require any approval</li></ul>]]></description>
+        <description><![CDATA[<p>Service Overview :</p>
+<ul style="list-style-position: inside;"><li>If you have access to the building/doors that needs 2-factor authentication - Badge, PIN. You can use this option to reset the PIN</li><li>The same PIN would be applied to all the doors</li><li>The PIN is kept encrypted and no one would know except for you</li><li>This request type doesn&#39;t need any approval and the new PIN can be used instantly</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,7 +25,7 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Door, Door PIN, PIN, Badge, ID Card, IDBadge, Reset, Reader</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used by the employees to reset door PIN.</short_description>
+        <short_description>This request can be used to reset door PIN.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-14 10:25:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>23eee4261bbe81108dcc755e034bcbdd</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Reset Door Pin</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_23eee4261bbe81108dcc755e034bcbdd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:41:12</sys_updated_on>
+        <sys_updated_on>2022-04-21 19:16:18</sys_updated_on>
         <table_name>x_aleen_alertsnowp_reset_pin</table_name>
         <taxonomy_topic/>
         <template/>

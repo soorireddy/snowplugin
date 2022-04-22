@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to submit requests for obtaining building access</li><li>It will trigger a 1 stage approval workflow and will go to the user’s manager for approval before it reaches reach to AlertEnterprise Guardian.</li></ul>]]></description>
+        <description><![CDATA[<p>Service Overview :</p>
+<ul style="list-style-position: inside;"><li>If you need access to a specific building or area, you can use this option to make a request</li><li>If you need access for a specific duration, please provide the validity dates</li><li>Based on the building/Area policy, the request may go for an additional approval</li><li>You will receive a confirmation email once the new access is added to your ID Badge</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,12 +25,12 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Building Access, Access Area, Badge, Access, traveling, travel, AccessLevel, ID Badge</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Request building Access</name>
+        <name>Request Building Access</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used by the employees to request for a building access</short_description>
+        <short_description>This request can be used  to request for additional building access</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-14 07:54:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>956c04aa1b3e81108dcc755e034bcbf8</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Request building Access</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Request Building Access</sys_name>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_956c04aa1b3e81108dcc755e034bcbf8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:37:46</sys_updated_on>
+        <sys_updated_on>2022-04-21 19:09:29</sys_updated_on>
         <table_name>x_aleen_alertsnowp_building_access</table_name>
         <taxonomy_topic/>
         <template/>

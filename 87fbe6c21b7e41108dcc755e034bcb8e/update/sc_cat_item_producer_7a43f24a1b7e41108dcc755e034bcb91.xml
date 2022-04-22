@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>  Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to submit requests for a new badge</li><li>It will trigger a 1 stage approval workflow and will go to the user’s manager for approval before it reaches reach to AlertEnterprise Guardian.</li></ul>]]></description>
+        <description><![CDATA[<p>  Service Overview :</p>
+<ul style="list-style-position: inside;"><li>If you are a new hire then please check with your manager, there might be a request created already by the system</li><li>The request will go for Manager approval before it goes to Badging office/Security Team for printing</li><li>The default building Access would be automatically added to your badge based on company policies. You can always request additional access once you receive your badge</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,7 +25,7 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Badge, ID Card, IDCard, IDBadge</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used by the employees to request for a new Badge</short_description>
+        <short_description>This request can be used to request for a new Badge/ID Card</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-13 06:46:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7a43f24a1b7e41108dcc755e034bcb91</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Request New Badge</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_7a43f24a1b7e41108dcc755e034bcb91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:39:21</sys_updated_on>
+        <sys_updated_on>2022-04-21 19:01:27</sys_updated_on>
         <table_name>x_aleen_alertsnowp_new_badge</table_name>
         <taxonomy_topic/>
         <template/>

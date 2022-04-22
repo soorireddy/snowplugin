@@ -13,8 +13,8 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Service OverView :</p>
-<ul style="list-style-position: inside;"><li>The SNOW-Guardian Self-Service platform allows users to register a visitor.</li><li>It doesn&#39;t require any approval</li><li>Register a new visitor by entering the required details in the relevant fields. Once the visitors are registered, they will receive a visit confirmation email with visit details and QR code for easy check-in.</li></ul>]]></description>
+        <description><![CDATA[<p>Service Overview :</p>
+<ul style="list-style-position: inside;"><li>Provide visitor and the visit details for registration</li><li>Based on the visitor and site policies, it may go for an additional approval</li><li>Once registered, the visitor will receive a confirmation email with visit details and a QR code for easy check-in</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -25,7 +25,7 @@
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>Visitor, Guest, Invite</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -67,7 +67,7 @@
         <sc_ic_version/>
         <sc_template/>
         <script/>
-        <short_description>This request can be used to  register a new visitor</short_description>
+        <short_description>This request can be used to  invite a guest to your facility</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-15 12:32:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a0951af6db7601100cd34408059619e1</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Register a Visitor</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_a0951af6db7601100cd34408059619e1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-20 04:35:19</sys_updated_on>
+        <sys_updated_on>2022-04-21 19:01:53</sys_updated_on>
         <table_name>x_aleen_alertsnowp_visitor</table_name>
         <taxonomy_topic/>
         <template/>
