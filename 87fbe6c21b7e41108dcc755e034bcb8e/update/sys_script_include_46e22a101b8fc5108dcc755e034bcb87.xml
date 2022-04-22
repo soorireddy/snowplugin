@@ -16,7 +16,7 @@ AlertEnterprisePlatformAPIs.prototype = {
     },
     getJWT: function() {
         try {
-            var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetJWTToken', 'Token');
+            var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetJWTToken', 'POST');
             r.setStringParameter('baseURL', this.baseURLProp);
             r.setRequestHeader('Content-Type', 'application/json');
             var requestBody1 =
@@ -34,12 +34,12 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var responseObj = JSON.parse(responseBody);
                 if (null != responseObj && responseObj.success && null != responseObj.data) {
                     Token = 'Bearer ' + responseObj.data.access_token;
-                   // gs.info('Authentication is Successful');
+                    // gs.info('Authentication is Successful');
                 }
             } else {
-               // gs.info('Authentication is unSuccessful');
+                // gs.info('Authentication is unSuccessful');
             }
-           // gs.debug(Token);
+            // gs.debug(Token);
             return Token;
         } catch (ex) {
             var message = ex.message;
@@ -50,11 +50,34 @@ AlertEnterprisePlatformAPIs.prototype = {
         gs.info(" newBadge  :: begin");
         try {
             if (null != this.jwt_token) {
-                gs.info(" newBadge  ==> Token is not Null");
+                var grUser = new GlideRecordSecure('sys_user');
+                grUser.get(data.request_for);
+				identitySystemId = this.getIdentitySystemId(grUser.user_name);
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var newBadgeRequestBody1 =
+                    '{"type": "RequestNewBadge","requestIdentityIds": [' + identitySystemId + ']}';
+                var newBadgerequestBody = newBadgeRequestBody1.toString();
+                gs.info('newBadge request body ::  ==> ' + newBadgerequestBody);
+                r.setRequestBody(newBadgerequestBody);
+                var newBadgeResponse = r.executeAsync();
+                var newBadgeResponseBody = newBadgeResponse.getBody();
+                var newBadgehttpStatus = newBadgeResponse.getStatusCode();
+				updateResponseObj = JSON.parse(newBadgeResponseBody);
+                if (newBadgehttpStatus == 200 && updateResponseObj.success) {
+					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  created in Alert successfully",updateResponseObj.messages[0].valuesMap.id,"submitted") ;
+                    gs.info("New Badge Request created Successfully");
+                } else {
+                    gs.info("New Badge Request is unsuccessful");
+					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  creation failed in Alert ","","") ;
+                }
             }
         } catch (ex) {
             var message = ex.message;
             gs.debug('newBadge   :: ' + message);
+			this.saveAuditLog(data.number,gs.getUserName(),"error occured while approving request ::" +message ,"","") ;
         }
     },
     activateBadge: function(data) {
@@ -131,10 +154,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    gs.debug("reset pin is Successfull");
+                    this.saveAuditLog(data.number,grUser.user_name,"Reset PIN  is successful","","") ;
                     data.state = 3;
                 } else {
-                    gs.debug("reset pin is unsuccessful");
+                    this.saveAuditLog(data.number,grUser.user_name,"Reset PIN  is unsuccessful","","") ;
                     data.state = 4;
                 }
             }
@@ -164,8 +187,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (updatehttpStatus == 200) {
                     gs.debug("Updated Successfully");
                     data.state = 3;
+					this.saveAuditLog(data.number,grUser.user_name,"profile update is successful","","") ;
                 } else {
                     gs.debug("Update is unsuccessful");
+					this.saveAuditLog(data.number,grUser.user_name,"profile update is unsuccessful","","") ;
                     data.state = 4;
                 }
             }
@@ -173,6 +198,50 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.debug('updateProfile  Exception ==>  :: ' + ex.message);
         }
     },
+    getIdentitySystemId: function(masterUserId) {
+        var identityId = 0;
+        gs.info(" getIdentitySystemId  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetIdentityId', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{"filterCriteria": [{"fieldName": "masterIdentityId","operator": "=","value": "' + masterUserId + '"}],"projectionList":["id"]}';
+                var requestBody = requestBody1.toString();
+                gs.info('getIdentitySystemId request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                updateResponseObj = JSON.parse(updateresponseBody);
+                if (updatehttpStatus == 200 && updateResponseObj.success) {
+                    gs.debug("Found identity Id");
+                    identityId = updateResponseObj.data[0].id;
+                } else {
+                    gs.debug("identity Id not found");
+                }
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.debug('getIdentitySystemId   :: ' + message);
+        }
+        return identityId;
+    },
+	saveAuditLog: function(request_no,handler_name,notes,ae_request_number,ae_request_status) {
+		var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
+        auditLog.request_no = request_no;
+        auditLog.handler_name = handler_name;
+        auditLog.notes = notes;
+        auditLog.ae_request_number = ae_request_number;
+		auditLog.ae_request_status =ae_request_status;
+        // auditLog.sys_created_on = new GlideDateTime();
+		// auditLog.sys_updated_on = new GlideDateTime();
+		// auditLog.sys_created_by = handler_name;
+		// auditLog.sys_updated_by = handler_name;
+        auditLog.insert();
+	},
     type: 'AlertEnterprisePlatformAPIs'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -180,7 +249,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -188,6 +257,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-22 07:48:37</sys_updated_on>
+        <sys_updated_on>2022-04-22 14:03:34</sys_updated_on>
     </sys_script_include>
 </record_update>
