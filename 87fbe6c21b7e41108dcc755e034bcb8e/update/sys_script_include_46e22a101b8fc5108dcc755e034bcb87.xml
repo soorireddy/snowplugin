@@ -51,8 +51,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-                grUser.get(data.request_for);
-				identitySystemId = this.getIdentitySystemId(grUser.user_name);
+				var identitySystemId = 0;
+                if(grUser.get(data.request_for)){
+					identitySystemId = this.getIdentitySystemId(grUser.user_name);
+				}
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
@@ -67,11 +69,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
 				updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  created in Alert successfully",updateResponseObj.messages[0].valuesMap.id,"submitted") ;
-                    gs.info("New Badge Request created Successfully");
+					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  is created in Alert successfully",updateResponseObj.messages[0].valuesMap.id,"submitted") ;
+                    gs.info("New Badge Request is created Successfully");
                 } else {
                     gs.info("New Badge Request is unsuccessful");
-					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  creation failed in Alert ","","") ;
+					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  creation is failed in Alert ","","") ;
                 }
             }
         } catch (ex) {
@@ -140,13 +142,16 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-                grUser.get(data.request_for);
+				var identityId = '';
+                if(grUser.get(data.request_for)){
+					identityId = grUser.user_name;
+				}
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var requestBody1 =
-                    '{ "identity":{ "masterIdentityId":"' + grUser.user_name + '","pin":' + data.new_pin + '}}';
+                    '{ "identity":{ "masterIdentityId":"' + identityId + '","pin":' + data.new_pin + '}}';
                 var requestBody = requestBody1.toString();
                 gs.info('reset pin JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
@@ -154,10 +159,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    this.saveAuditLog(data.number,grUser.user_name,"Reset PIN  is successful","","") ;
+                    this.saveAuditLog(data.number,identityId,"Reset PIN  is successful","","") ;
                     data.state = 3;
                 } else {
-                    this.saveAuditLog(data.number,grUser.user_name,"Reset PIN  is unsuccessful","","") ;
+                    this.saveAuditLog(data.number,identityId,"Reset PIN  is unsuccessful","","") ;
                     data.state = 4;
                 }
             }
@@ -171,13 +176,16 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-                grUser.get(data.request_for);
+				var userName = '';
+                if(grUser.get(data.request_for)){
+					userName = grUser.user_name;
+				}
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var requestBody1 =
-                    '{ "identity":{ "email":"' + data.email + '", "masterIdentityId":"' + grUser.user_name + '","phone":' + data.phone_number + '}}';
+                    '{ "identity":{ "email":"' + data.email + '", "masterIdentityId":"' + userName + '","phone":' + data.phone_number + '}}';
                 var requestBody = requestBody1.toString();
                 gs.debug('updateProfile JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
@@ -187,10 +195,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (updatehttpStatus == 200) {
                     gs.debug("Updated Successfully");
                     data.state = 3;
-					this.saveAuditLog(data.number,grUser.user_name,"profile update is successful","","") ;
+					this.saveAuditLog(data.number,userName,"profile update is successful","","") ;
                 } else {
                     gs.debug("Update is unsuccessful");
-					this.saveAuditLog(data.number,grUser.user_name,"profile update is unsuccessful","","") ;
+					this.saveAuditLog(data.number,userName,"profile update is unsuccessful","","") ;
                     data.state = 4;
                 }
             }
@@ -249,7 +257,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -257,6 +265,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-22 18:13:45</sys_updated_on>
+        <sys_updated_on>2022-04-25 11:29:14</sys_updated_on>
     </sys_script_include>
 </record_update>
