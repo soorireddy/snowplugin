@@ -11,7 +11,6 @@
 AlertEnterprisePlatformAPIs.prototype = {
     initialize: function() {
         this.baseURLProp = gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl');
-        //gs.info(" Base URL is " + this.baseURLProp);
         this.jwt_token = this.getJWT();
     },
     getJWT: function() {
@@ -28,7 +27,6 @@ AlertEnterprisePlatformAPIs.prototype = {
             var response = r.executeAsync();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            //gs.info('Authentication httpStatus  ::' + httpStatus);
             var Token = null;
             if (httpStatus == 200) {
                 var responseObj = JSON.parse(responseBody);
@@ -39,7 +37,6 @@ AlertEnterprisePlatformAPIs.prototype = {
             } else {
                 // gs.info('Authentication is unSuccessful');
             }
-            // gs.debug(Token);
             return Token;
         } catch (ex) {
             var message = ex.message;
@@ -51,10 +48,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-				var identitySystemId = 0;
-                if(grUser.get(data.request_for)){
-					identitySystemId = this.getIdentitySystemId(grUser.user_name);
-				}
+                var identitySystemId = 0;
+                if (grUser.get(data.request_for)) {
+                    identitySystemId = this.getIdentitySystemId(grUser.user_name);
+                }
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
@@ -67,19 +64,22 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
-				updateResponseObj = JSON.parse(newBadgeResponseBody);
+                updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  is created in Alert successfully",updateResponseObj.messages[0].valuesMap.id,"submitted") ;
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                     gs.info("New Badge Request is created Successfully");
                 } else {
                     gs.info("New Badge Request is unsuccessful");
-					this.saveAuditLog(data.number,gs.getUserName(),"request is approved , New badge request  creation is failed in Alert ","","") ;
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert ", "", "");
                 }
+            } else {
+                gs.debug("New Badge Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
             }
         } catch (ex) {
             var message = ex.message;
             gs.debug('newBadge   :: ' + message);
-			this.saveAuditLog(data.number,gs.getUserName(),"error occured while approving request ::" +message ,"","") ;
+            this.saveAuditLog(data.number, gs.getUserName(), "error occured while approving request ::" + message, "", "");
         }
     },
     activateBadge: function(data) {
@@ -142,10 +142,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-				var identityId = '';
-                if(grUser.get(data.request_for)){
-					identityId = grUser.user_name;
-				}
+                var identityId = '';
+                if (grUser.get(data.request_for)) {
+                    identityId = grUser.user_name;
+                }
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
@@ -159,12 +159,15 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    this.saveAuditLog(data.number,identityId,"Reset PIN  is successful","","") ;
+                    this.saveAuditLog(data.number, identityId, "Reset PIN  is successful", "", "");
                     data.state = 3;
                 } else {
-                    this.saveAuditLog(data.number,identityId,"Reset PIN  is unsuccessful","","") ;
+                    this.saveAuditLog(data.number, identityId, "Reset PIN  is unsuccessful", "", "");
                     data.state = 4;
                 }
+            } else {
+                gs.debug("Reset PIN Request is unsuccessful due to API  server authentication / connectivity issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
             }
         } catch (ex) {
             var message = ex.message;
@@ -176,10 +179,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
-				var userName = '';
-                if(grUser.get(data.request_for)){
-					userName = grUser.user_name;
-				}
+                var userName = '';
+                if (grUser.get(data.request_for)) {
+                    userName = grUser.user_name;
+                }
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
@@ -195,12 +198,15 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (updatehttpStatus == 200) {
                     gs.debug("Updated Successfully");
                     data.state = 3;
-					this.saveAuditLog(data.number,userName,"profile update is successful","","") ;
+                    this.saveAuditLog(data.number, userName, "profile update is successful", "", "");
                 } else {
                     gs.debug("Update is unsuccessful");
-					this.saveAuditLog(data.number,userName,"profile update is unsuccessful","","") ;
+                    this.saveAuditLog(data.number, userName, "profile update is unsuccessful", "", "");
                     data.state = 4;
                 }
+            } else {
+                gs.debug("Update profile Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
             }
         } catch (ex) {
             gs.debug('updateProfile  Exception ==>  :: ' + ex.message);
@@ -237,19 +243,19 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
         return identityId;
     },
-	saveAuditLog: function(request_no,handler_name,notes,ae_request_number,ae_request_status) {
-		var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
+    saveAuditLog: function(request_no, handler_name, notes, ae_request_number, ae_request_status) {
+        var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
         auditLog.request_no = request_no;
         auditLog.handler_name = handler_name;
         auditLog.notes = notes;
         auditLog.ae_request_number = ae_request_number;
-		auditLog.ae_request_status =ae_request_status;
+        auditLog.ae_request_status = ae_request_status;
         auditLog.sys_created_on = new GlideDateTime();
-		auditLog.sys_updated_on = new GlideDateTime();
-		// auditLog.sys_created_by = handler_name;
-		// auditLog.sys_updated_by = handler_name;
+        auditLog.sys_updated_on = new GlideDateTime();
+        // auditLog.sys_created_by = handler_name;
+        // auditLog.sys_updated_by = handler_name;
         auditLog.insert();
-	},
+    },
     type: 'AlertEnterprisePlatformAPIs'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -257,14 +263,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
-        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Badge and Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Badge and Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-25 11:29:14</sys_updated_on>
+        <sys_updated_on>2022-04-26 09:24:26</sys_updated_on>
     </sys_script_include>
 </record_update>
