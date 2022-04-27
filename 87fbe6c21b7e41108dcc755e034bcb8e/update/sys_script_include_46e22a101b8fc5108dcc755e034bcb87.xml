@@ -57,7 +57,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var newBadgeRequestBody1 =
-                    '{"type": "RequestNewBadge","requestIdentityIds": [' + identitySystemId + ']}';
+                    '{"type": "RequestNewBadge","requestIdentityFieldNew": [{ "identityId":' + identitySystemId + '}],"customProperties": { "comment":"'+data.delivery_comments+'","reason": "'+data.reason+'"}}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
                 gs.info('newBadge request body ::  ==> ' + newBadgerequestBody);
                 r.setRequestBody(newBadgerequestBody);
@@ -70,15 +70,19 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.info("New Badge Request is created Successfully");
                 } else {
                     gs.info("New Badge Request is unsuccessful");
-                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert ", "", "");
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert "+updateResponseObj.messages[0].messageDisplayText, "", "");
+					data.state = 4;
+					data.update();
                 }
             } else {
                 gs.debug("New Badge Request is unsuccessful due to API  server authentication issue");
                 this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
+				data.state = 4;
+				data.update();
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('newBadge   :: ' + message);
+            gs.info('newBadge   :: ' + message);
             this.saveAuditLog(data.number, gs.getUserName(), "error occured while approving request ::" + message, "", "");
         }
     },
@@ -86,11 +90,40 @@ AlertEnterprisePlatformAPIs.prototype = {
         gs.info(" activateBadge  :: begin");
         try {
             if (null != this.jwt_token) {
-                gs.info(" activateBadge  ==> Token is not Null");
+                var grUser = new GlideRecordSecure('sys_user');
+                var userName = '';
+                if (grUser.get(data.request_for)) {
+                    userName = grUser.user_name;
+                }
+				var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{"identity": {"masterIdentityId": "'+userName+'"},"identityAsset": [{"assetAccessId": "'+data.badge_number+'","action":"UNLOCK"}]}';
+                var requestBody = requestBody1.toString();
+                gs.info('activateBadge JWT request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+				updateResponseObj = JSON.parse(updateresponseBody);
+                if (updatehttpStatus == 200) {
+                    gs.info("Badge activated Successfully");
+                    data.state = 3;
+                    this.saveAuditLog(data.number, userName, "activateBadge  is successful", "", "");
+                } else {
+                    gs.info("Badge activation isunsuccessful");
+                    this.saveAuditLog(data.number, userName, "activateBadge is unsuccessful reason ->" + updateResponseObj.data.messages[0].messageDisplayText, "", "");
+                    data.state = 4;
+                }
+            } else {
+                gs.info("Activate Badge Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('activateBadge   :: ' + message);
+            gs.info('activateBadge   :: ' + message);
         }
     },
     registerVisitor: function(data) {
@@ -101,7 +134,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('registerVisitor   :: ' + message);
+            gs.info('registerVisitor   :: ' + message);
         }
     },
     buildingAccess: function(data) {
@@ -112,7 +145,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('buildingAccess   :: ' + message);
+            gs.info('buildingAccess   :: ' + message);
         }
     },
     mobileCredentials: function(data) {
@@ -123,18 +156,59 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('mobileCredentials   :: ' + message);
+            gs.info('mobileCredentials   :: ' + message);
         }
     },
     replaceBadge: function(data) {
         gs.info(" replaceBadge  :: begin");
         try {
             if (null != this.jwt_token) {
-                gs.info(" replaceBadge  ==> Token is not Null");
+              var grUser = new GlideRecordSecure('sys_user');
+                var identitySystemId = 0;
+                if (grUser.get(data.request_for)) {
+                    identitySystemId = this.getIdentitySystemId(grUser.user_name);
+                }
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var newBadgeRequestBody1 =
+                    '{"type": "externalReplaceBadge","requestIdentityFieldNew": [{ "identityId":' + identitySystemId + '}],"customProperties": { "comment":"'+data.badge_delivery_comments+'","reason": "'+data.reason+'"}}';
+                var newBadgerequestBody = newBadgeRequestBody1.toString();
+                gs.info('replace Badge request body ::  ==> ' + newBadgerequestBody);
+                r.setRequestBody(newBadgerequestBody);
+                var newBadgeResponse = r.executeAsync();
+                var newBadgeResponseBody = newBadgeResponse.getBody();
+                var newBadgehttpStatus = newBadgeResponse.getStatusCode();
+                updateResponseObj = JSON.parse(newBadgeResponseBody);
+                if (newBadgehttpStatus == 200 && updateResponseObj.success) {
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+                    gs.info("Replace Badge Request is created Successfully");
+                } else {
+                    gs.info("Replace Badge Request is unsuccessful");
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Replace Badge request  creation is failed in Alert  "+updateResponseObj.messages[0].messageDisplayText, "", "");
+					data.state = 4;
+					data.update();
+                }
+            }else {
+                gs.debug("Replace Badge Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
+				data.state = 4;
+				data.update();
+				/*
+				var grreplaceBadge = new GlideRecordSecure('x_aleen_alertsnowp_repalce_badge');
+				if (grreplaceBadge.get('number', data.number)) {
+					gs.info(' found ');
+                    grreplaceBadge.state = 4;
+					grreplaceBadge.update();
+                }else{
+					gs.info('not found ');
+				} */
+				
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('replaceBadge   :: ' + message);
+            gs.info('replaceBadge   :: ' + message);
         }
     },
     resetPin: function(data) {
@@ -171,7 +245,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('resetPin   :: ' + message);
+            gs.info('resetPin   :: ' + message);
         }
     },
     updateProfile: function(data) {
@@ -209,7 +283,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
             }
         } catch (ex) {
-            gs.debug('updateProfile  Exception ==>  :: ' + ex.message);
+            gs.info('updateProfile  Exception ==>  :: ' + ex.message);
         }
     },
     getIdentitySystemId: function(masterUserId) {
@@ -234,12 +308,12 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.debug("Found identity Id");
                     identityId = updateResponseObj.data[0].id;
                 } else {
-                    gs.debug("identity Id not found");
+                    gs.info("identity Id not found");
                 }
             }
         } catch (ex) {
             var message = ex.message;
-            gs.debug('getIdentitySystemId   :: ' + message);
+            gs.info('getIdentitySystemId   :: ' + message);
         }
         return identityId;
     },
@@ -263,14 +337,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
-        <sys_package display_value="Badge and Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Badge and Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-26 09:24:26</sys_updated_on>
+        <sys_updated_on>2022-04-27 12:45:07</sys_updated_on>
     </sys_script_include>
 </record_update>
