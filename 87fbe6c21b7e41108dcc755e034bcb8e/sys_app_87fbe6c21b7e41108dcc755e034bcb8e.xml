@@ -13,8 +13,8 @@
         <license_definition/>
         <license_model>app_use</license_model>
         <logo>8920c145db4785100cd3440805961998</logo>
-        <menu display_value="Badge and Building Access">f2386a4a1b8b0d108dcc755e034bcb66</menu>
-        <name>Badge and Building Access</name>
+        <menu/>
+        <name>Workplace Access and Security</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -29,9 +29,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-13 06:15:00</sys_created_on>
         <sys_id>87fbe6c21b7e41108dcc755e034bcb8e</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-25 16:23:32</sys_updated_on>
+        <sys_updated_on>2022-04-27 03:28:55</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>

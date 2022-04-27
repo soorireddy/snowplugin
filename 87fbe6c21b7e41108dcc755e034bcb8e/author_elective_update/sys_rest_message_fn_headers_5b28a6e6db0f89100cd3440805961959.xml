@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="DELETE">
+        <name>Content-Type</name>
+        <rest_message_function display_value="POST">f7a9f5cddbc785100cd3440805961926</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-27 05:31:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5b28a6e6db0f89100cd3440805961959</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_5b28a6e6db0f89100cd3440805961959</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-27 05:31:59</sys_updated_on>
+        <value>application/json</value>
+    </sys_rest_message_fn_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_rest_message_fn_headers_5b28a6e6db0f89100cd3440805961959</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers"><sys_rest_message_fn_headers action="INSERT_OR_UPDATE"><name>Content-Type</name><rest_message_function display_value="POST">f7a9f5cddbc785100cd3440805961926</rest_message_function><sys_class_name>sys_rest_message_fn_headers</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-04-27 05:31:59</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>5b28a6e6db0f89100cd3440805961959</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Content-Type</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_rest_message_fn_headers_5b28a6e6db0f89100cd3440805961959</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-04-27 05:31:59</sys_updated_on><value>application/json</value></sys_rest_message_fn_headers></record_update>]]></payload>
+        <payload_hash>1134582993</payload_hash>
+        <record_name>Content-Type</record_name>
+        <reverted_from/>
+        <source>b9d5ff561bfa81108dcc755e034bcbcb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-27 05:31:59</sys_created_on>
+        <sys_id>95682ee6db0f89100cd344080596197e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18069813cd20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-27 05:31:59</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>dd682ee62d0f891094e579c8d012617d</update_guid>
+        <update_guid_history>dd682ee62d0f891094e579c8d012617d:1134582993</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-27 05:41:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn_headers">sys_rest_message_fn_headers</sys_db_object>
+        <sys_id>513121f6d5b04aff9b101fd2eea0d611</sys_id>
+        <sys_metadata>5b28a6e6db0f89100cd3440805961959</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="POST">f7a9f5cddbc785100cd3440805961926</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_headers_5b28a6e6db0f89100cd3440805961959</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_headers_5b28a6e6db0f89100cd3440805961959">95682ee6db0f89100cd344080596197e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-27 05:41:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
