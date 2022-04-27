@@ -151,8 +151,39 @@ AlertEnterprisePlatformAPIs.prototype = {
     mobileCredentials: function(data) {
         gs.info(" mobileCredentials  :: begin");
         try {
-            if (null != this.jwt_token) {
-                gs.info(" mobileCredentials  ==> Token is not Null");
+             if (null != this.jwt_token) {
+              var grUser = new GlideRecordSecure('sys_user');
+                var identitySystemId = 0;
+                if (grUser.get(data.request_for)) {
+                    identitySystemId = this.getIdentitySystemId(grUser.user_name);
+                }
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var newBadgeRequestBody1 =
+                    '{"type": "RequestNewMobileCredetials","requestIdentityFieldNew": [{"identityId": '+identitySystemId+',"customProperties": {"phoneNumber": "'+data.phone_number+'"}}],"customProperties": {"comment": "'+data.reason+'"}}';
+                var newBadgerequestBody = newBadgeRequestBody1.toString();
+                gs.info('mobileCredentials request body ::  ==> ' + newBadgerequestBody);
+                r.setRequestBody(newBadgerequestBody);
+                var newBadgeResponse = r.executeAsync();
+                var newBadgeResponseBody = newBadgeResponse.getBody();
+                var newBadgehttpStatus = newBadgeResponse.getStatusCode();
+                updateResponseObj = JSON.parse(newBadgeResponseBody);
+                if (newBadgehttpStatus == 200 && updateResponseObj.success) {
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Mobile Credentials request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+                    gs.info("Mobile Credentials Request is created Successfully");
+                } else {
+                    gs.info("Mobile Credentials Request is unsuccessful");
+                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Mobile Credentials request  creation is failed in Alert  "+updateResponseObj.messages[0].messageDisplayText, "", "");
+					data.state = 4;
+					data.update();
+                }
+            }else {
+                gs.debug("Mobile Credentials Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
+				data.state = 4;
+				data.update();
             }
         } catch (ex) {
             var message = ex.message;
@@ -337,7 +368,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>78</sys_mod_count>
+        <sys_mod_count>80</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -345,6 +376,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-27 12:45:07</sys_updated_on>
+        <sys_updated_on>2022-04-27 13:08:50</sys_updated_on>
     </sys_script_include>
 </record_update>
