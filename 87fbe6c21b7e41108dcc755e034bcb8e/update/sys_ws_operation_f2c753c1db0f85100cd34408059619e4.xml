@@ -13,6 +13,7 @@
     requestId = body.requestId;
     var grAuditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
     grAuditLog.get('ae_request_number', requestId);
+	gs.info("Got response from Alert server  ==>" + JSON.stringify(body) );
     if (type == "RequestNewBadge") {
         gs.info("Got response for new badge request");
         var grnewbadge = new GlideRecordSecure('x_aleen_alertsnowp_new_badge');
@@ -29,6 +30,8 @@
     } else if (type == "RequestReplaceBadge") {
         gs.info("Got response forReplace Badge request");
     }
+	
+	return { "success" :true};
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_aleen_alertsnowp/alertapiinboundrequest/requeststatus</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
@@ -44,15 +47,15 @@
         <sys_created_on>2022-04-22 17:09:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f2c753c1db0f85100cd34408059619e4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>requestStatus</sys_name>
-        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ws_operation_f2c753c1db0f85100cd34408059619e4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-22 18:07:25</sys_updated_on>
+        <sys_updated_on>2022-04-29 11:51:03</sys_updated_on>
         <web_service_definition display_value="AlertAPIInboundRequest">c9479b81db0f85100cd34408059619e2</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
