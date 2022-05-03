@@ -53,7 +53,7 @@
         <record/>
         <record_producer_table>x_aleen_alertsnowp_building_access</record_producer_table>
         <reference>x_aleen_alertsnowp_locations</reference>
-        <reference_qual/>
+        <reference_qual>location_type=building</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -69,7 +69,7 @@
         <sys_created_on>2022-04-14 07:54:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9d6c8cea1b3e81108dcc755e034bcba7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Building</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -77,7 +77,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_9d6c8cea1b3e81108dcc755e034bcba7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-02 12:55:15</sys_updated_on>
+        <sys_updated_on>2022-05-03 12:23:00</sys_updated_on>
         <table/>
         <tooltip/>
         <type>18</type>
