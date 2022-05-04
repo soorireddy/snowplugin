@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Request Building Access">956c04aa1b3e81108dcc755e034bcbf8</catalog_item>
+        <catalog_variable>IO:116c8cea1b3e81108dcc755e034bcbd3</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-04 08:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0a0e83bc1bd305508dcc755e034bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>access_end_date</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_0a0e83bc1bd305508dcc755e034bcb41</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-04 08:03:01</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Mark StatDate &amp; End Date Madatory if  Temp Work">8022ca141bdb81508dcc755e034bcb72</ui_policy>
+        <variable>access_end_date</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+</record_update>
