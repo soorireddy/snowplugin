@@ -36,8 +36,6 @@ function myGreeting() {
     if (day < 10) {
         day = "0" + day;
     }
-    g_form.setValue('access_end_date', year + "-" + month + "-" + day + " 23:59:59");
-
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -46,7 +44,7 @@ function myGreeting() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f56ef1501bdb81508dcc755e034bcbd6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>OnloadShowNoAccessLevels</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -55,7 +53,7 @@ function myGreeting() {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_f56ef1501bdb81508dcc755e034bcbd6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-04 10:56:42</sys_updated_on>
+        <sys_updated_on>2022-05-05 11:02:28</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>

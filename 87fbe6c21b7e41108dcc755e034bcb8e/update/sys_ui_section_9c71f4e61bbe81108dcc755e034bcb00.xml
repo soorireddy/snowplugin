@@ -196,6 +196,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-05 11:30:21</sys_created_on>
+            <sys_id>f82781551b1745508dcc755e034bcbec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_building_access" sys_domain="global" view="Default view">9c71f4e61bbe81108dcc755e034bcb00</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 11:30:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
@@ -211,10 +225,10 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_aleen_alertsnowp_building_access</sys_name>
             <sys_overrides/>
-            <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+            <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+            <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_ui_section_9c71f4e61bbe81108dcc755e034bcb00</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-04-14 10:36:34</sys_updated_on>
