@@ -262,7 +262,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 for (var i = 0; i < myArray.length; i++) {
                     if (!(this.searchExisting(myArray[i], processedSysId))) {
                         processedSysId.push(myArray[i]);
-                        var gr = new GlideRecord('x_aleen_alertsnowp_access_levels');
+                        var gr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
                         if (gr.get(myArray[i])) {
                             if (!(this.searchExisting(gr.access_level_id, accessLevelIdList))) {
                                 accessLevelIdList.push(gr.access_level_id.toString());
@@ -579,10 +579,16 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveLocation: function(id, name, location_type) {
-        var gr = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+		var count = 0;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
+        gr.addAggregate('COUNT');
         gr.query();
-        if (gr.getRowCount() == 0) {
+		while (gr.next())
+		{
+			count = gr.getAggregate('COUNT');	
+		}
+        if (count == 0) {
             var location = new GlideRecordSecure('x_aleen_alertsnowp_locations');
             location.id = id;
             location.name = name;
@@ -636,12 +642,18 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveAccessLevel: function(id, name, location_id, system, location_name) {
-        var gr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
+		var count = 0;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
         gr.addQuery('access_level_id', id);
         gr.addQuery('location_id', location_id);
         gr.addQuery('system', system);
+		gr.addAggregate('COUNT');
         gr.query();
-        if (gr.getRowCount() == 0) {
+		while (gr.next())
+		{
+			count = gr.getAggregate('COUNT');	
+		}
+        if (count == 0) {
             var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
             accessLevel.access_level_id = id;
             accessLevel.access_level_name = name;
@@ -689,10 +701,16 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveOrganizations: function(id, name) {
-        var gr = new GlideRecordSecure('x_aleen_alertsnowp_organization');
+		var count = 0;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_organization');
         gr.addQuery('id', id);
+        gr.addAggregate('COUNT');
         gr.query();
-        if (gr.getRowCount() == 0) {
+		while (gr.next())
+		{
+			count = gr.getAggregate('COUNT');	
+		}
+        if (count == 0) {
             var organization = new GlideRecordSecure('x_aleen_alertsnowp_organization');
             organization.id = id;
             organization.name = name;
@@ -716,7 +734,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>192</sys_mod_count>
+        <sys_mod_count>196</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -724,6 +742,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-05 14:58:17</sys_updated_on>
+        <sys_updated_on>2022-05-06 05:58:30</sys_updated_on>
     </sys_script_include>
 </record_update>
