@@ -6,7 +6,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category display_value="Badge and Building Access">c92de6061b7e41108dcc755e034bcb19</category>
+        <category display_value="Workplace Access and Security">c92de6061b7e41108dcc755e034bcb19</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -43,7 +43,7 @@
         <no_search>false</no_search>
         <no_wishlist_v2>false</no_wishlist_v2>
         <omit_price>false</omit_price>
-        <order>0</order>
+        <order>800</order>
         <ordered_item_link/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
         <picture>ead992981b4fc5108dcc755e034bcbbc</picture>
@@ -76,15 +76,15 @@
         <sys_created_on>2022-04-15 10:57:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>56cfb176db3601100cd344080596199d</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Update profile information</sys_name>
-        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_56cfb176db3601100cd344080596199d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-21 18:45:58</sys_updated_on>
+        <sys_updated_on>2022-05-23 07:43:39</sys_updated_on>
         <table_name>x_aleen_alertsnowp_update_profile</table_name>
         <taxonomy_topic/>
         <template/>
