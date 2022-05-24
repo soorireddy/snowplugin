@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Repalce Badge" max_length="40" name="x_aleen_alertsnowp_repalce_badge" type="collection">
+        <element display="true" label="Badge Delivery Comments" max_length="200" name="badge_delivery_comments" type="string"/>
+        <element choice="1" label="Reason" max_length="20" name="reason" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Damaged" value="DAMAGED"/>
+                <element inactive_on_update="false" label="Lost" value="LOST"/>
+                <element inactive_on_update="false" label="Other" value="OTHER"/>
+                <element inactive_on_update="false" label="Stolen" value="STOLEN"/>
+            </choice>
+        </element>
+        <element label="Request For" max_length="32" name="request_for" read_only="true" reference="sys_user" type="reference"/>
+    </element>
+</database>

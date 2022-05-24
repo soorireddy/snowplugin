@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application/>
+        <filter/>
+        <name>Locations</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_aleen_alertsnowp.admin</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-14 18:11:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>22791a66dbba89100cd3440805961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Locations</sys_name>
+        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_ui_module_22791a66dbba89100cd3440805961962</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-14 18:11:05</sys_updated_on>
+        <table>x_aleen_alertsnowp_locations</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_ui_module_22791a66dbba89100cd3440805961962</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application/><filter/><name>Locations</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_aleen_alertsnowp.admin</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-04-14 18:11:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>22791a66dbba89100cd3440805961962</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Locations</sys_name><sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_ui_module_22791a66dbba89100cd3440805961962</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-04-14 18:11:05</sys_updated_on><table>x_aleen_alertsnowp_locations</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>148321099</payload_hash>
+        <record_name>Locations</record_name>
+        <reverted_from/>
+        <source>b9d5ff561bfa81108dcc755e034bcbcb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-14 18:11:43</sys_created_on>
+        <sys_id>f7991266dbba89100cd34408059619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>180294622460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-14 18:11:43</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e2791a6670ba8910cf1be26663326b64</update_guid>
+        <update_guid_history>e2791a6670ba8910cf1be26663326b64:-245328135,e2791a6670ba8910cf1be26663326b64:-245328135</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-14 18:12:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>8e1458ff35b94bee8781c68440f59621</sys_id>
+        <sys_metadata>22791a66dbba89100cd3440805961962</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Locations</sys_name>
+        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_ui_module_22791a66dbba89100cd3440805961962</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_22791a66dbba89100cd3440805961962">f7991266dbba89100cd34408059619b9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-14 18:12:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

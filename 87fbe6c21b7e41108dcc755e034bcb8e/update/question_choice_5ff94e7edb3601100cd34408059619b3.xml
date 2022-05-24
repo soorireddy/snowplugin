@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>4</order>
+        <published_ref/>
+        <question display_value="Reason">17f94e7edb3601100cd344080596197f</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 11:41:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5ff94e7edb3601100cd34408059619b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event</sys_name>
+        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>question_choice_5ff94e7edb3601100cd34408059619b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 11:41:55</sys_updated_on>
+        <text>Event</text>
+        <value>EVENT</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=5ff94e7edb3601100cd34408059619b3"/>
+</record_update>

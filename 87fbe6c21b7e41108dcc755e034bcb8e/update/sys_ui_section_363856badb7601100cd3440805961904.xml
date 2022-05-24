@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Visitor Details" section_id="363856badb7601100cd3440805961904" sys_domain="global" table="x_aleen_alertsnowp_visitor" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>6f999efadb7601100cd3440805961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>first_name</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>ef999efadb7601100cd3440805961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>63999efadb7601100cd3440805961914</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>e3999efadb7601100cd3440805961914</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>67999efadb7601100cd3440805961914</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_name</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>e7999efadb7601100cd3440805961914</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>visitor_company</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:50:11</sys_created_on>
+            <sys_id>6b999efadb7601100cd3440805961914</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitor Details" display_value="Visitor Details" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">363856badb7601100cd3440805961904</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Visitor Details</caption>
+            <header>false</header>
+            <name>x_aleen_alertsnowp_visitor</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-15 12:44:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>363856badb7601100cd3440805961904</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_aleen_alertsnowp_visitor</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+            <sys_update_name>sys_ui_section_363856badb7601100cd3440805961904</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-15 12:50:10</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

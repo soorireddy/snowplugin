@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Alert Server Base Url</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>true</is_private>
+        <name>x_aleen_alertsnowp.alert_api_baseUrl</name>
+        <read_roles>x_aleen_alertsnowp.admin,x_aleen_alertsnowp.user</read_roles>
+        <suffix>alert_api_baseUrl</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-14 17:32:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>33ff8a6edb7a89100cd344080596191e</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp.alert_api_baseUrl</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_properties_33ff8a6edb7a89100cd344080596191e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-12 05:54:05</sys_updated_on>
+        <type>string</type>
+        <value>https://hscpartner1.alerthsc.com</value>
+        <write_roles>x_aleen_alertsnowp.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=33ff8a6edb7a89100cd344080596191e"/>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>x_aleen_alertsnowp_Support</description>
+        <direct>true</direct>
+        <endpoint>x_aleen_alertsnowp_Support.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<div style="border-radius: 5px; background-color: #f2f2f2;  padding: 10px 0px 30px 0px; box-sizing: border-box; ">
+  <div style="text-align:center">
+    <h2>Contact AlertEnterprise</h2>
+    
+		 <div style="color: #000000 line-height: normal; font-size:large">Alert Enterprise Inc.</div>
+		 <div style="color: #000000 line-height: normal; font-size:large">4350 Starboard Drive</div>
+		  <div style="color: #000000 line-height: normal; font-size:large">Fremont, California 94538, USA</div><div style="color: #000000 line-height: normal; font-size:large"><a style="text-decoration:none; color:blue;" href="https://alertenterprise.com/" target="_blank" rel="noopener noreferrer nofollow">https://alertenterprise.com/</a></div>
+       
+     
+     <h3 style="margin-bottom:5px;">Email Address</h3>
+     <span style="color: #000000 line-height: normal; font-size:large"><a    style="text-decoration:none; color:blue;" href="mailto:info@alertenterprise.com" rel="noopener noreferrer nofollow">info@alertenterprise.com</a></span>
+     <h3 style="margin-bottom:5px;">Support</h3>
+      <div style="color: #000000 line-height: normal; font-size:large"><a style="text-decoration:none; color:blue; margin-bottom:-5px;" href="https://alertsupport.microsoftcrmportals.com/SignIn" target="_blank" rel="noopener noreferrer nofollow">AlertEnterprise Support Portal</a></div>
+      <div style="color: #000000 line-height: normal; font-size:large"><a style="text-decoration:none; color:blue; margin-bottom:-5px;" href="tel:1-855-ALERT-US" rel="noopener noreferrer nofollow">1-855-ALERT-US</a></div>
+      <div style="color: #000000 line-height: normal; font-size:large"><a style="text-decoration:none; color:blue; margin-bottom:1px;" href="mailto:support@alertenterprise.com" rel="noopener noreferrer nofollow">support@alertenterprise.com</a></div>
+	 
+  </div>
+  
+</div>
+		
+
+</j:jelly>]]></html>
+        <name>Support</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-14 17:21:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0ded8e2edb7a89100cd344080596197d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Support</sys_name>
+        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_ui_page_0ded8e2edb7a89100cd344080596197d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-25 09:43:02</sys_updated_on>
+    </sys_ui_page>
+</record_update>

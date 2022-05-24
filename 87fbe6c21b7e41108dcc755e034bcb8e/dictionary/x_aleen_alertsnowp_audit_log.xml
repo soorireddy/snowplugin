@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Audit Log" max_length="40" name="x_aleen_alertsnowp_audit_log" sizeclass="0" type="collection">
+        <element label="AE Request Number" max_length="80" name="ae_request_number" type="string"/>
+        <element label="AE Request status" max_length="50" name="ae_request_status" type="string"/>
+        <element label="Handler Name" max_length="40" name="handler_name" type="string"/>
+        <element label="notes" max_length="400" name="notes" type="string"/>
+        <element label="Request No" max_length="32" name="request_no" type="string"/>
+    </element>
+</database>

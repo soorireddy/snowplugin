@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="New Badge" max_length="40" name="x_aleen_alertsnowp_new_badge" sizeclass="11" type="collection">
+        <element label="Delivery Comments" max_length="2000" name="delivery_comments" read_only="true" type="string"/>
+        <element choice="1" display="true" label="Reason" max_length="40" name="reason" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New Hire" value="NEW"/>
+                <element inactive_on_update="false" label="Others" value="OTHERS"/>
+            </choice>
+        </element>
+        <element label="Request For" max_length="32" name="request_for" read_only="true" reference="sys_user" type="reference"/>
+    </element>
+</database>
