@@ -164,7 +164,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         var visitorId = responseObj.data[0].id;
                         this.addVisit(data, visitorId);
-                    } 
+                    }
                 } else {
                     gs.debug("Error while processing the request , please contact administrator for the reasons/logs ");
                     this.saveAuditLog(data.number, gs.getUserName(), "Visitor add/update is unsuccessful", "", "");
@@ -270,30 +270,30 @@ AlertEnterprisePlatformAPIs.prototype = {
                         }
                     }
                 }
-				var requestAccessList = [];
-				var accessLevelId ="";
-				for (var j = 0; j < accessLevelIdList.length; j++) {
-					accessLevelId = accessLevelIdList[j];
-					var access = {};
-					access.uiAction = "ADD";
-					access.accessId = accessLevelId.toString();
-					access.validFrom = access_start_date_str;
-					access.validTo = access_end_date_str;
-					access.identityId = hostidentitySystemId;
-					requestAccessList.push(access);
-				}
-				var form_notes = data.notes;
-				var form_reason = data.reason;
-				var customPropertiesObj = {
-					comment : form_notes.toString(),
-					reason : form_reason.toString()
-				};
-				var requestPayloadObject = {};
-				requestPayloadObject.type = "requestCommLocation";
-				requestPayloadObject.requestAccess=requestAccessList;
-				requestPayloadObject.customProperties =customPropertiesObj;
-				var reqPayload =  new global.JSON().encode(requestPayloadObject);
-				var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                var requestAccessList = [];
+                var accessLevelId = "";
+                for (var j = 0; j < accessLevelIdList.length; j++) {
+                    accessLevelId = accessLevelIdList[j];
+                    var access = {};
+                    access.uiAction = "ADD";
+                    access.accessId = accessLevelId.toString();
+                    access.validFrom = access_start_date_str;
+                    access.validTo = access_end_date_str;
+                    access.identityId = hostidentitySystemId;
+                    requestAccessList.push(access);
+                }
+                var form_notes = data.notes;
+                var form_reason = data.reason;
+                var customPropertiesObj = {
+                    comment: form_notes.toString(),
+                    reason: form_reason.toString()
+                };
+                var requestPayloadObject = {};
+                requestPayloadObject.type = "requestCommLocation";
+                requestPayloadObject.requestAccess = requestAccessList;
+                requestPayloadObject.customProperties = customPropertiesObj;
+                var reqPayload = new global.JSON().encode(requestPayloadObject);
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
@@ -579,15 +579,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveLocation: function(id, name, location_type) {
-		var count = 0;
+        var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
         gr.addAggregate('COUNT');
         gr.query();
-		while (gr.next())
-		{
-			count = gr.getAggregate('COUNT');	
-		}
+        while (gr.next()) {
+            count = gr.getAggregate('COUNT');
+        }
         if (count == 0) {
             var location = new GlideRecordSecure('x_aleen_alertsnowp_locations');
             location.id = id;
@@ -612,7 +611,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var gr = new GlideRecordSecure("x_aleen_alertsnowp_access_levels");
                     gr.query();
                     gr.deleteMultiple();
-                    gs.info(" Access levels Data sync is successful >>>>>>>>>>");
+                    var grAO = new GlideRecordSecure("x_aleen_alertsnowp_area_owners");
+                    grAO.query();
+                    grAO.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -625,8 +626,17 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var accessLocations = accessLevelObj.accessLocations;
                                 for (j = 0; j < accessLocations.length; j++) {
                                     var accessLocation = accessLocations[j];
-                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId, accessLocation.location.text);
+                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId, accessLocation.location.text, accessLevelObj.criticality);
                                 }
+                            }
+                            if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
+                                gs.debug("Access level has area Owners");
+                                var accessOwners = accessLevelObj.accessOwners;
+                                for (j = 0; j < accessOwners.length; j++) {
+                                    var accessOwner = accessOwners[j];
+                                    this.saveAccessLevelOwners(accessId, accessOwner.type, accessOwner.identity.masterIdentityId);
+                                }
+
                             }
                         }
                     }
@@ -641,18 +651,17 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncAccessLevels   :: ' + message);
         }
     },
-    saveAccessLevel: function(id, name, location_id, system, location_name) {
-		var count = 0;
+    saveAccessLevel: function(id, name, location_id, system, location_name, criticality) {
+        var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
         gr.addQuery('access_level_id', id);
         gr.addQuery('location_id', location_id);
         gr.addQuery('system', system);
-		gr.addAggregate('COUNT');
+        gr.addAggregate('COUNT');
         gr.query();
-		while (gr.next())
-		{
-			count = gr.getAggregate('COUNT');	
-		}
+        while (gr.next()) {
+            count = gr.getAggregate('COUNT');
+        }
         if (count == 0) {
             var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
             accessLevel.access_level_id = id;
@@ -660,9 +669,40 @@ AlertEnterprisePlatformAPIs.prototype = {
             accessLevel.location_id = location_id;
             accessLevel.location_name = location_name;
             accessLevel.system = system;
+            accessLevel.criticality = criticality;
             accessLevel.sys_created_on = new GlideDateTime();
             accessLevel.sys_updated_on = new GlideDateTime();
             accessLevel.insert();
+        }
+    },
+    saveAccessLevelOwners: function(id, ownertype, masterUserId) {
+        try {
+            var grUser = new GlideRecordSecure('sys_user');
+            if (grUser.get('user_name', masterUserId)) {
+                var count = 0;
+                var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');
+                gr.addQuery('access_level_id', id);
+                gr.addQuery('owner', grUser.sys_id);
+                gr.addAggregate('COUNT');
+                gr.query();
+                while (gr.next()) {
+                    count = gr.getAggregate('COUNT');
+                }
+                if (count == 0) {
+                    var accessLevelAreaOwner = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');
+                    accessLevelAreaOwner.access_level_id = id;
+                    accessLevelAreaOwner.owner = grUser.sys_id;
+                    accessLevelAreaOwner.owner_type = ownertype;
+                    accessLevelAreaOwner.sys_created_on = new GlideDateTime();
+                    accessLevelAreaOwner.sys_updated_on = new GlideDateTime();
+                    accessLevelAreaOwner.insert();
+                }
+            } else {
+                gs.debug(masterUserId + "   -->  Not found in SNOW , so ignoring to add as Area owner");
+            }
+        } catch (ex) {
+            gs.info('saveAccessLevelOwners   :: ' + ex.message);
+
         }
     },
     syncOrganizations: function() {
@@ -701,15 +741,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveOrganizations: function(id, name) {
-		var count = 0;
+        var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_organization');
         gr.addQuery('id', id);
         gr.addAggregate('COUNT');
         gr.query();
-		while (gr.next())
-		{
-			count = gr.getAggregate('COUNT');	
-		}
+        while (gr.next()) {
+            count = gr.getAggregate('COUNT');
+        }
         if (count == 0) {
             var organization = new GlideRecordSecure('x_aleen_alertsnowp_organization');
             organization.id = id;
@@ -734,7 +773,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>197</sys_mod_count>
+        <sys_mod_count>207</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -742,6 +781,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-06 07:44:52</sys_updated_on>
+        <sys_updated_on>2022-05-24 14:03:18</sys_updated_on>
     </sys_script_include>
 </record_update>
