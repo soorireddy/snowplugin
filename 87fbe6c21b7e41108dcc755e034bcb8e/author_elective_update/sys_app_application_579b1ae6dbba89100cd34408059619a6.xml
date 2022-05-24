@@ -30,7 +30,7 @@
     </sys_app_application>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
         <file_path/>
         <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
         <instance_name>ven02572</instance_name>
@@ -54,7 +54,7 @@
         <update_guid_history>939b1ae6e1ba89105844e3e9fc9081a8:390057695</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-04-14 11:21:12">6ecb1ee6dbba89100cd34408059619c0</sys_audit_delete>
+        <sys_audit_delete display_value="Record deleted 2022-04-14 23:51:12">6ecb1ee6dbba89100cd34408059619c0</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-14 18:21:12</sys_created_on>
@@ -64,11 +64,11 @@
         <sys_metadata>579b1ae6dbba89100cd34408059619a6</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Access Levels</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_app_application_579b1ae6dbba89100cd34408059619a6</sys_update_name>
         <sys_update_version display_value="sys_app_application_579b1ae6dbba89100cd34408059619a6">5b9b1ae6dbba89100cd34408059619a8</sys_update_version>

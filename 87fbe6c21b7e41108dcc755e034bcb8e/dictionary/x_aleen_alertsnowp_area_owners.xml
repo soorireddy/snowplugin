@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Area owners" max_length="40" name="x_aleen_alertsnowp_area_owners" type="collection">
+        <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
+        <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element display="true" label="Owner Type" max_length="40" name="owner_type" type="string"/>
+        <index name="index">
+            <element name="owner"/>
+        </index>
+    </element>
+</database>

@@ -28,7 +28,7 @@
     </sys_ui_page>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
         <file_path/>
         <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
         <instance_name>ven02572</instance_name>
@@ -65,11 +65,11 @@
         <sys_metadata>66698006dbcf09100cd3440805961910</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Test</sys_name>
-        <sys_package display_value="Badge &amp; Building Access" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Badge &amp; Building Access">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_ui_page_66698006dbcf09100cd3440805961910</sys_update_name>
         <sys_update_version display_value="sys_ui_page_66698006dbcf09100cd3440805961910">00898c82dbcf09100cd344080596196d</sys_update_version>
