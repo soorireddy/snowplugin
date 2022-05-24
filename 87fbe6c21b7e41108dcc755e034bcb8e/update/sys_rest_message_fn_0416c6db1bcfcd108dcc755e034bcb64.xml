@@ -10,9 +10,9 @@
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>Get ALL Locations [ POST ]</qualified_name>
+        <qualified_name>Get All Locations [ POST ]</qualified_name>
         <rest_endpoint>${baseURL}/api/location/find</rest_endpoint>
-        <rest_message display_value="Get ALL Locations">a4f4069b1bcfcd108dcc755e034bcb58</rest_message>
+        <rest_message display_value="Get All Locations">a4f4069b1bcfcd108dcc755e034bcb58</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-29 10:57:26</sys_created_on>

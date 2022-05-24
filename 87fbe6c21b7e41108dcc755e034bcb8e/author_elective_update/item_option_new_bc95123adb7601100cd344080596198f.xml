@@ -134,7 +134,7 @@
     </fx_price>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
         <file_path/>
         <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
         <instance_name>ven02572</instance_name>
@@ -158,7 +158,7 @@
         <update_guid_history>7095123a04760110936f3f3cfbc98e95:-1728055766</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-04-15 06:07:45">38ad5afedb7601100cd34408059619ce</sys_audit_delete>
+        <sys_audit_delete display_value="Record deleted 2022-04-15 18:37:45">38ad5afedb7601100cd34408059619ce</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-15 13:07:45</sys_created_on>
@@ -168,11 +168,11 @@
         <sys_metadata>bc95123adb7601100cd344080596198f</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Visit Location</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent display_value="Register a Visitor">a0951af6db7601100cd34408059619e1</sys_parent>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>item_option_new_bc95123adb7601100cd344080596198f</sys_update_name>
         <sys_update_version display_value="item_option_new_bc95123adb7601100cd344080596198f">3895123adb7601100cd3440805961995</sys_update_version>

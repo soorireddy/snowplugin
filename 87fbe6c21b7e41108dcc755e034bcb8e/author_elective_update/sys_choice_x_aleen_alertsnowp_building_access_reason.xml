@@ -7,13 +7,13 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-04-14 07:42:12</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>8a898c6a1b3e81108dcc755e034bcb56</sys_id>
+            <sys_id>829d8bdb1beb09108dcc755e034bcbfb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>reason</sys_name>
-            <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+            <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+            <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_choice_x_aleen_alertsnowp_building_access_reason</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-04-14 07:42:12</sys_updated_on>

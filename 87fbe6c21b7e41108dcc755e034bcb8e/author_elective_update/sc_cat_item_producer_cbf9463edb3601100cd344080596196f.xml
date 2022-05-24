@@ -180,7 +180,7 @@
     </sys_attachment_doc>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
         <file_path/>
         <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
         <instance_name>ven02572</instance_name>
@@ -211,7 +211,7 @@
         <update_guid_history>5a909af25b7601107e7ab011c6b1e357:-1128031291,269a0abeb03601104cc22cbe8f7185b3:1287676221,cb3ac2be343601100d2cbf7f6814f3ab:983163614,073ac2be79360110c610cf1cff807193:-985103247,5d2a82be63360110a1a5952ee2f20703:1389887723,112a42bea0360110a55cee784c5513f8:-1824937286,a21a42be60360110b89f1daf48ce0a3f:-429840145,4bf94e7e5c360110dbe3ab7f1692654f:-1519517261,c3f94e7ee1360110afe75c7319a7ea3c:1488959110</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-04-15 05:10:48">26909af2db7601100cd34408059619aa</sys_audit_delete>
+        <sys_audit_delete display_value="Record deleted 2022-04-15 17:40:48">26909af2db7601100cd34408059619aa</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-15 12:10:48</sys_created_on>
@@ -221,11 +221,11 @@
         <sys_metadata>cbf9463edb3601100cd344080596196f</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Register a Visitor</sys_name>
-        <sys_package display_value="AlertSnowPlugin" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
-        <sys_parent display_value="Visitor">2db58abadb3601100cd3440805961960</sys_parent>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="">2db58abadb3601100cd3440805961960</sys_parent>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AlertSnowPlugin">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sc_cat_item_producer_cbf9463edb3601100cd344080596196f</sys_update_name>
         <sys_update_version display_value="sc_cat_item_producer_cbf9463edb3601100cd344080596196f">52909af2db7601100cd3440805961958</sys_update_version>
