@@ -634,7 +634,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var accessOwners = accessLevelObj.accessOwners;
                                 for (j = 0; j < accessOwners.length; j++) {
                                     var accessOwner = accessOwners[j];
-                                    this.saveAccessLevelOwners(accessId, accessOwner.type, accessOwner.identity.masterIdentityId);
+                                    this.saveAccessLevelOwners(accessId,accessName, accessOwner.type, accessOwner.identity.masterIdentityId);
                                 }
 
                             }
@@ -675,7 +675,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             accessLevel.insert();
         }
     },
-    saveAccessLevelOwners: function(id, ownertype, masterUserId) {
+    saveAccessLevelOwners: function(id,accName, ownertype, masterUserId) {
         try {
             var grUser = new GlideRecordSecure('sys_user');
             if (grUser.get('user_name', masterUserId)) {
@@ -691,6 +691,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (count == 0) {
                     var accessLevelAreaOwner = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');
                     accessLevelAreaOwner.access_level_id = id;
+					accessLevelAreaOwner.access_level_name = accName;
                     accessLevelAreaOwner.owner = grUser.sys_id;
                     accessLevelAreaOwner.owner_type = ownertype;
                     accessLevelAreaOwner.sys_created_on = new GlideDateTime();
@@ -773,7 +774,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>208</sys_mod_count>
+        <sys_mod_count>209</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -781,6 +782,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-06-02 12:46:42</sys_updated_on>
+        <sys_updated_on>2022-07-21 06:04:04</sys_updated_on>
     </sys_script_include>
 </record_update>
