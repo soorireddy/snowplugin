@@ -2,17 +2,31 @@
     <sys_ui_related sys_domain="global" table="x_aleen_alertsnowp_building_access" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Building Access - Default view" name="x_aleen_alertsnowp_building_access" related_list="NULL" sys_domain="global" view="Default view">790159ce1bf411508dcc755e034bcb53</list_id>
+            <list_id display_value="Building Access - Default view" name="x_aleen_alertsnowp_building_access" related_list="NULL" sys_domain="global" view="Default view">6627fed61bf451508dcc755e034bcb0e</list_id>
             <order_by/>
             <position>0</position>
             <related_list>REL:83101d8e1bf411508dcc755e034bcbe4</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-07-21 09:43:11</sys_created_on>
-            <sys_id>b50159ce1bf411508dcc755e034bcb54</sys_id>
+            <sys_created_on>2022-07-22 11:47:55</sys_created_on>
+            <sys_id>a227fed61bf451508dcc755e034bcb0f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-07-21 09:43:11</sys_updated_on>
+            <sys_updated_on>2022-07-22 11:47:55</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Building Access - Default view" name="x_aleen_alertsnowp_building_access" related_list="NULL" sys_domain="global" view="Default view">6627fed61bf451508dcc755e034bcb0e</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:6dc2fa161bf451508dcc755e034bcb87</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-07-22 11:47:55</sys_created_on>
+            <sys_id>a627fed61bf451508dcc755e034bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-07-22 11:47:55</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Building Access - Default view</calculated_name>
@@ -23,11 +37,11 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-07-21 09:43:11</sys_created_on>
+            <sys_created_on>2022-07-22 11:47:55</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>790159ce1bf411508dcc755e034bcb53</sys_id>
+            <sys_id>6627fed61bf451508dcc755e034bcb0e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Building Access - Default view</sys_name>
             <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -36,7 +50,7 @@
             <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_ui_related_x_aleen_alertsnowp_building_access_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-07-21 09:43:11</sys_updated_on>
+            <sys_updated_on>2022-07-22 11:47:55</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

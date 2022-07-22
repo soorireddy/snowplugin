@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_aleen_alertsnowp_building_access</basic_apply_to>
+        <basic_query_from>sysapproval_approver</basic_query_from>
+        <insert_callback/>
+        <name>Approvals for Task</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+    var recordSysID = [];
+    var gr_buildingAccessTask = new GlideRecord("x_aleen_alertsnowp_building_access_task");
+    gr_buildingAccessTask.addQuery("parent_number", parent.number.toString());
+    gr_buildingAccessTask.query();
+    while (gr_buildingAccessTask.next()) {
+        recordSysID.push(gr_buildingAccessTask.sys_id.toString());
+    }
+    var pr = current.addQuery("sysapproval", parent.sys_id.toString());
+    for (var i = 0; i < recordSysID.length; i++) {
+        pr.addOrCondition("sysapproval", recordSysID[i]);
+    }
+})(current, parent);]]></query_with>
+        <reference_field>sysapproval</reference_field>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-22 11:38:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6dc2fa161bf451508dcc755e034bcb87</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Approvals for Task</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_relationship_6dc2fa161bf451508dcc755e034bcb87</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-22 11:47:32</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=6dc2fa161bf451508dcc755e034bcb87"/>
+</record_update>
