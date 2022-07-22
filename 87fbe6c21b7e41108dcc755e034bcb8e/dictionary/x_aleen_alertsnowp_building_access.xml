@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Building Access" max_length="40" name="x_aleen_alertsnowp_building_access" type="collection">
+    <element extends="task" label="Building Access" max_length="40" name="x_aleen_alertsnowp_building_access" sizeclass="69" type="collection">
         <element label="Access End Date" max_length="40" name="access_end_date" read_only="true" type="glide_date_time"/>
         <element label="Access Levels" max_length="500" name="access_levels" read_only="true" type="string"/>
         <element label="Access Start Date" max_length="40" name="access_start_date" read_only="true" type="glide_date_time"/>
         <element label="Building" max_length="50" name="building" read_only="true" type="string"/>
-        <element display="true" label="notes" max_length="200" name="notes" type="string"/>
+        <element display="true" label="notes" max_length="200" name="notes" read_only="true" type="string"/>
         <element choice="1" label="Reason" max_length="200" name="reason" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Permanent Work" value="PERMANENT"/>
