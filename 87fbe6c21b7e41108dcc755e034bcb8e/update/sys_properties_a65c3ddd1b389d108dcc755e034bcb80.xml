@@ -12,7 +12,7 @@
         <sys_created_on>2022-07-19 05:03:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a65c3ddd1b389d108dcc755e034bcb80</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>x_aleen_alertsnowp.alert_default _approver_for_critical_access</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -20,9 +20,9 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_properties_a65c3ddd1b389d108dcc755e034bcb80</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-17 05:51:58</sys_updated_on>
+        <sys_updated_on>2022-08-19 05:21:35</sys_updated_on>
         <type>string</type>
-        <value>4761e3c353101200ed11da86a11c08e6</value>
+        <value/>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=a65c3ddd1b389d108dcc755e034bcb80"/>
