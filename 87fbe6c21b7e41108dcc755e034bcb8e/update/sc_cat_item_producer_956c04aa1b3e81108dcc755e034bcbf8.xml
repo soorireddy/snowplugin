@@ -18,6 +18,7 @@
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
         <group/>
         <hide_sp>false</hide_sp>
         <icon>f2d85a181b4fc5108dcc755e034bcbb6</icon>
@@ -43,7 +44,7 @@
         <no_search>false</no_search>
         <no_wishlist_v2>false</no_wishlist_v2>
         <omit_price>false</omit_price>
-        <order>200</order>
+        <order>1</order>
         <ordered_item_link/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
         <picture>11c89a181b4fc5108dcc755e034bcb23</picture>
@@ -76,7 +77,7 @@
         <sys_created_on>2022-04-14 07:54:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>956c04aa1b3e81108dcc755e034bcbf8</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Request Building Access</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -84,7 +85,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_956c04aa1b3e81108dcc755e034bcbf8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-09 10:49:40</sys_updated_on>
+        <sys_updated_on>2023-03-18 04:23:20</sys_updated_on>
         <table_name>x_aleen_alertsnowp_building_access</table_name>
         <taxonomy_topic/>
         <template/>

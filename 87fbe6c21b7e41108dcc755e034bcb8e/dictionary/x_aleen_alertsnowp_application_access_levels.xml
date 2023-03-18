@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="78079c1b1b6565108dcc755e034bcb26" label="Application Access Levels" max_length="40" name="x_aleen_alertsnowp_application_access_levels" type="collection">
+        <element label="Access level ID" max_length="40" name="access_level_id" type="string"/>
+        <element display="true" label="Access Level Name" max_length="40" name="access_level_name" type="string"/>
+        <element label="Application" max_length="32" name="application" reference="x_aleen_alertsnowp_applications" type="reference"/>
+        <index name="index">
+            <element name="application"/>
+        </index>
+    </element>
+</database>
