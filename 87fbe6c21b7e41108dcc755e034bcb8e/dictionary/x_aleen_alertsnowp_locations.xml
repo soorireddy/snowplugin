@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Locations" max_length="40" name="x_aleen_alertsnowp_locations" type="collection">
+    <element db_object_id="5b8d47db1beb09108dcc755e034bcbbf" label="Locations" max_length="40" name="x_aleen_alertsnowp_locations" type="collection">
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
         <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="Location ID" mandatory="true" max_length="40" name="id" type="string"/>
         <element label="Location Type" max_length="40" name="location_type" type="string"/>
         <element display="true" label="Location Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Postal Code" max_length="40" name="postal_code" type="string"/>
+        <element label="state" max_length="40" name="state" type="string"/>
     </element>
 </database>

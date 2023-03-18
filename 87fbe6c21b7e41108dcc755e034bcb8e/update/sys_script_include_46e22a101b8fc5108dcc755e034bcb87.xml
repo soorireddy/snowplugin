@@ -561,7 +561,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
                             if (responseObj.data[i].type && responseObj.data[i].type != "") {
-                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type);
+								var state  = (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "";
+								var country  = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
+								var postal  = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
+								var city  = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
+                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type ,state,country,postal,city);
                             }
                         }
                     }
@@ -576,7 +580,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncLocations   :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type) {
+    saveLocation: function(id, name, location_type ,state,country,postal,city) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
@@ -590,6 +594,10 @@ AlertEnterprisePlatformAPIs.prototype = {
             location.id = id;
             location.name = name;
             location.location_type = location_type;
+			location.state = state;
+			location.country = country;
+			location.postal_code = postal;
+			location.city = city;
             location.sys_created_on = new GlideDateTime();
             location.sys_updated_on = new GlideDateTime();
             location.insert();
@@ -777,7 +785,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>224</sys_mod_count>
+        <sys_mod_count>226</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -785,6 +793,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-13 06:01:24</sys_updated_on>
+        <sys_updated_on>2023-03-18 08:44:32</sys_updated_on>
     </sys_script_include>
 </record_update>
