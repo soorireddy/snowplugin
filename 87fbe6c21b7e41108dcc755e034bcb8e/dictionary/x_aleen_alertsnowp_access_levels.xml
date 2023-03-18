@@ -9,8 +9,11 @@
                 <element inactive_on_update="false" label="Medium" value="MEDIUM"/>
             </choice>
         </element>
-        <element choice_field="reason" label="Location" mandatory="true" max_length="40" name="location_id" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="x_aleen_alertsnowp_locations" type="reference"/>
         <element label="sourceId" mandatory="true" max_length="40" name="sourceid" type="string"/>
         <element label="System" mandatory="true" max_length="40" name="system" type="string"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
     </element>
 </database>
