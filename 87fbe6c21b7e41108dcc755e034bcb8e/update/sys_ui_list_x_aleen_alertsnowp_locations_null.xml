@@ -3,47 +3,107 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f2d70dfadb7201100cd3440805961918</list_id>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 06:52:58</sys_created_on>
-            <sys_id>bed70dfadb7201100cd3440805961918</sys_id>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>521b49971b252510234b0f6e6e4bcb58</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 06:52:58</sys_updated_on>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>id</element>
-            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f2d70dfadb7201100cd3440805961918</list_id>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 06:52:58</sys_created_on>
-            <sys_id>32d70dfadb7201100cd3440805961919</sys_id>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>d21b49971b252510234b0f6e6e4bcb58</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 06:52:58</sys_updated_on>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>location_type</element>
-            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f2d70dfadb7201100cd3440805961918</list_id>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 06:52:58</sys_created_on>
-            <sys_id>b2d70dfadb7201100cd3440805961919</sys_id>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>561b49971b252510234b0f6e6e4bcb58</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 06:52:58</sys_updated_on>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>city</element>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>d61b49971b252510234b0f6e6e4bcb58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>country</element>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>5a1b49971b252510234b0f6e6e4bcb58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>da1b49971b252510234b0f6e6e4bcb58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>postal_code</element>
+            <list_id display_value="x_aleen_alertsnowp_locations" element="NULL" name="x_aleen_alertsnowp_locations" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">461b49971b252510234b0f6e6e4bcb57</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
+            <sys_id>5e1b49971b252510234b0f6e6e4bcb58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -57,11 +117,11 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-15 06:52:58</sys_created_on>
+            <sys_created_on>2023-03-18 09:27:54</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f2d70dfadb7201100cd3440805961918</sys_id>
+            <sys_id>461b49971b252510234b0f6e6e4bcb57</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_aleen_alertsnowp_locations</sys_name>
             <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -70,7 +130,7 @@
             <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_ui_list_x_aleen_alertsnowp_locations_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-15 06:52:58</sys_updated_on>
+            <sys_updated_on>2023-03-18 09:27:54</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

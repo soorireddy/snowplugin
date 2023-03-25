@@ -28,9 +28,9 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-	gs.addInfoMessage('Building Access request has been placed , it needs an approval from  your manager !!');
+	gs.addInfoMessage('New Access request has been placed , it needs an approval from  your manager !!');
     var includeScript = new AlertEnterprisePlatformAPIs();
-    includeScript.saveAuditLog(current.number, current.opened_by.user_name, " Building access requested for " + current.request_for.user_name, "", "");
+    includeScript.saveAuditLog(current.number, current.opened_by.user_name, " New access requested for " + current.request_for.user_name, "", "");
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -39,7 +39,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8f6393c9dbcb85100cd344080596191d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Audit Log for Building Access</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -48,7 +48,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_8f6393c9dbcb85100cd344080596191d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-28 06:01:48</sys_updated_on>
+        <sys_updated_on>2023-03-18 07:14:59</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

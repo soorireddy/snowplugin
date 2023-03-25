@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Request  Application Access">ddcbbb0f1be165108dcc755e034bcbb5</sc_cat_item>
+        <sc_catalog display_value="Workplace Services Catalog">19dbe710c37310109f6de5f87d40dd48</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 03:48:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7c8d378f1be165108dcc755e034bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workplace Services Catalog.Request  Application Access</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_7c8d378f1be165108dcc755e034bcbdb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-18 03:48:57</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sc_cat_item_catalog_7c8d378f1be165108dcc755e034bcbdb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Request  Application Access">ddcbbb0f1be165108dcc755e034bcbb5</sc_cat_item><sc_catalog display_value="Workplace Services Catalog">19dbe710c37310109f6de5f87d40dd48</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-03-18 03:48:57</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>7c8d378f1be165108dcc755e034bcbdb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Workplace Services Catalog.Request  Application Access</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sc_cat_item_catalog_7c8d378f1be165108dcc755e034bcbdb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-18 03:48:57</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>-259301405</payload_hash>
+        <record_name>Workplace Services Catalog.Request  Application Access</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 03:48:57</sys_created_on>
+        <sys_id>348d378f1be165108dcc755e034bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186f2d5b6be0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-18 03:48:57</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>3c8d378fbce165105001bc7a39b83ee7</update_guid>
+        <update_guid_history>3c8d378fbce165105001bc7a39b83ee7:-259301405</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2023-03-18 09:40:17">916240d31b2565108dcc755e034bcb76</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 04:10:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>89a516ba7b3b4a5c941b15d5c1211490</sys_id>
+        <sys_metadata>7c8d378f1be165108dcc755e034bcbdb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workplace Services Catalog.Request  Application Access</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="Request  Application Access">ddcbbb0f1be165108dcc755e034bcbb5</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_7c8d378f1be165108dcc755e034bcbdb</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_7c8d378f1be165108dcc755e034bcbdb">348d378f1be165108dcc755e034bcbe8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-18 04:10:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_aleen_alertsnowp.AlertEnterprisePlatformAPIs</api_name>
         <caller_access/>
@@ -12,6 +12,7 @@ AlertEnterprisePlatformAPIs.prototype = {
     initialize: function() {
         this.baseURLProp = gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl');
         this.jwt_token = this.getJWT();
+        this.date_format = gs.getProperty('x_aleen_alertsnowp.alert_api_payload_dateformat');
     },
     getJWT: function() {
         try {
@@ -22,7 +23,6 @@ AlertEnterprisePlatformAPIs.prototype = {
                 '{ "username":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_username') +
                 '", "password":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_password') + '"}';
             var requestBody = requestBody1.toString();
-            //gs.info('JWT request body ::  ==> ' + requestBody);
             r.setRequestBody(requestBody);
             var response = r.executeAsync();
             var responseBody = response.getBody();
@@ -194,11 +194,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var gd = new GlideDate();
                 var gdt = new GlideDateTime(data.visit_end_date);
                 gd.setValue(gdt.getValue());
-                visit_end_date_str = gd.getByFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+                visit_end_date_str = gd.getByFormat(this.date_format);
                 gd = new GlideDate();
                 gdt = new GlideDateTime(data.visit_start_date);
                 gd.setValue(gdt.getValue());
-                visit_start_date_str = gd.getByFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+                visit_start_date_str = gd.getByFormat(this.date_format);
                 var randomVisitId = gd.getByFormat("yyyyMMddHHmmssSS");
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateVisit', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
@@ -237,10 +237,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         gs.info(" buildingAccess  :: begin");
         try {
             if (null != this.jwt_token) {
-                var grUser = new GlideRecordSecure('sys_user');
-                var hostidentitySystemId = 0;
-                if (grUser.get(data.request_for)) {
-                    hostidentitySystemId = this.getIdentitySystemId(grUser.user_name);
+                var grUserXZ = new GlideRecordSecure('sys_user');
+                var userNameBA = '';
+                if (grUserXZ.get(data.request_for)) {
+                    userNameBA = grUserXZ.user_name;
                 }
                 var access_end_date_str = "";
                 var access_start_date_str = "";
@@ -248,38 +248,35 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var gd = new GlideDate();
                     var gdt = new GlideDateTime(data.access_end_date);
                     gd.setValue(gdt.getValue());
-                    access_end_date_str = gd.getByFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+                    access_end_date_str = gd.getByFormat(this.date_format);
                 }
                 if (data.access_start_date && data.access_start_date != "") {
                     var gdq = new GlideDate();
                     var gdtq = new GlideDateTime(data.access_start_date);
                     gdq.setValue(gdtq.getValue());
-                    access_start_date_str = gdq.getByFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+                    access_start_date_str = gdq.getByFormat(this.date_format);
                 }
                 var processedSysId = [];
-                var accessLevelIdList = [];
-                var myArray = data.access_levels.split(',');
+                var accessLevelSourceIdList = [];
+                var myArray = data.sourceid.split('###');
                 for (var i = 0; i < myArray.length; i++) {
-                    if (!(this.searchExisting(myArray[i], processedSysId))) {
-                        processedSysId.push(myArray[i]);
-                        var gr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
-                        if (gr.get(myArray[i])) {
-                            if (!(this.searchExisting(gr.access_level_id, accessLevelIdList))) {
-                                accessLevelIdList.push(gr.access_level_id.toString());
-                            }
-                        }
+                    if (myArray[i] && myArray[i] != "") {
+                        accessLevelSourceIdList.push(myArray[i]);
                     }
                 }
                 var requestAccessList = [];
                 var accessLevelId = "";
-                for (var j = 0; j < accessLevelIdList.length; j++) {
-                    accessLevelId = accessLevelIdList[j];
+                for (var j = 0; j < accessLevelSourceIdList.length; j++) {
+                    accessLevelId = accessLevelSourceIdList[j];
                     var access = {};
-                    access.uiAction = "ADD";
-                    access.accessId = accessLevelId.toString();
-                    access.validFrom = access_start_date_str;
-                    access.validTo = access_end_date_str;
-                    access.identityId = hostidentitySystemId;
+                    access.action = "ADD";
+                    access.accessLevelId = accessLevelId.toString();
+                    if (access_start_date_str != "") {
+                        access.validFrom = access_start_date_str;
+                    }
+                    if (access_end_date_str != "") {
+                        access.validTo = access_end_date_str;
+                    }
                     requestAccessList.push(access);
                 }
                 var form_notes = data.notes;
@@ -288,36 +285,37 @@ AlertEnterprisePlatformAPIs.prototype = {
                     comment: form_notes.toString(),
                     reason: form_reason.toString()
                 };
+                var identityObj = {};
+                identityObj.masterIdentityId = userNameBA.toString();
                 var requestPayloadObject = {};
-                requestPayloadObject.type = "PhysicalAccess";
-                requestPayloadObject.requestAccess = requestAccessList;
-                requestPayloadObject.customProperties = customPropertiesObj;
+                requestPayloadObject.identity = identityObj;
+                requestPayloadObject.identityAccess = requestAccessList;
+				requestPayloadObject.customProperties = customPropertiesObj;
                 var reqPayload = new global.JSON().encode(requestPayloadObject);
-                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
-                gs.info('buildingAccess request body ::  ==> ' + reqPayload);
+                gs.info('buildingAccess  NEW request body ::  ==> ' + reqPayload);
                 r.setRequestBody(reqPayload);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
                 updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-                    gs.addInfoMessage('Building Access request has been placed with Alert ,it will take sometime to Process, it will update the status based on Alert response');
-                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Building Access request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
-                    gs.info("Building Access Request is created Successfully");
+                    gs.info("Building Access role(s)  " + data.access_level_name + " is/are  provisioned Successfully");
+					this.saveAuditLog(data.parent_number, gs.getUserName(), data.access_level_name + " provisioned successfully", "", "Provisioned");
                 } else {
                     gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
-                    gs.info("Building Access Request is unsuccessful");
-                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Building Access request  creation is failed in Alert " + updateResponseObj.messages[0].messageDisplayText, "", "");
+                    gs.info("Building Access provisioning  is unsuccessful for " + data.access_level_name);
+                    this.saveAuditLog(data.parent_number, gs.getUserName(), "Building Access role provisioning is failed for  " + data.access_level_name, "", "");
                     data.state = 4;
                     data.update();
                 }
             } else {
                 gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
                 gs.info("Building Access  Request is unsuccessful due to API  server authentication issue");
-                this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
+                this.saveAuditLog(data.parent_number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
                 data.state = 4;
                 data.update();
             }
@@ -563,7 +561,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
                             if (responseObj.data[i].type && responseObj.data[i].type != "") {
-                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type);
+								var state  = (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "";
+								var country  = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
+								var postal  = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
+								var city  = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
+                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type ,state,country,postal,city);
                             }
                         }
                     }
@@ -578,7 +580,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncLocations   :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type) {
+    saveLocation: function(id, name, location_type ,state,country,postal,city) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
@@ -592,6 +594,10 @@ AlertEnterprisePlatformAPIs.prototype = {
             location.id = id;
             location.name = name;
             location.location_type = location_type;
+			location.state = state;
+			location.country = country;
+			location.postal_code = postal;
+			location.city = city;
             location.sys_created_on = new GlideDateTime();
             location.sys_updated_on = new GlideDateTime();
             location.insert();
@@ -621,12 +627,15 @@ AlertEnterprisePlatformAPIs.prototype = {
                             var accessId = accessLevelObj.id.toString();
                             var accessName = accessLevelObj.text;
                             var systemId = accessLevelObj.system.text;
-                            //gs.info("accessId  --> " + accessId + "    << accessName  --> " + accessName + "  <<<systemId  --> " + systemId);
+                            var sourceId = "";
+                            if (accessLevelObj.sourceId) {
+                                sourceId = accessLevelObj.sourceId;
+                            }
                             if (accessLevelObj.accessLocations && accessLevelObj.accessLocations.length > 0) {
                                 var accessLocations = accessLevelObj.accessLocations;
                                 for (j = 0; j < accessLocations.length; j++) {
                                     var accessLocation = accessLocations[j];
-                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId, accessLocation.location.text, accessLevelObj.criticality);
+                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId,  accessLevelObj.criticality, sourceId);
                                 }
                             }
                             if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
@@ -634,7 +643,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var accessOwners = accessLevelObj.accessOwners;
                                 for (j = 0; j < accessOwners.length; j++) {
                                     var accessOwner = accessOwners[j];
-                                    this.saveAccessLevelOwners(accessId, accessOwner.type, accessOwner.identity.masterIdentityId);
+                                    this.saveAccessLevelOwners(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId);
                                 }
 
                             }
@@ -651,11 +660,11 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncAccessLevels   :: ' + message);
         }
     },
-    saveAccessLevel: function(id, name, location_id, system, location_name, criticality) {
+    saveAccessLevel: function(id, name, location_id, system, criticality, sourceId) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
         gr.addQuery('access_level_id', id);
-        gr.addQuery('location_id', location_id);
+        //gr.addQuery('location_id', location_id);
         gr.addQuery('system', system);
         gr.addAggregate('COUNT');
         gr.query();
@@ -663,19 +672,24 @@ AlertEnterprisePlatformAPIs.prototype = {
             count = gr.getAggregate('COUNT');
         }
         if (count == 0) {
+			var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+            if (grLocation.get('id', location_id)) {
+			
+			
             var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
             accessLevel.access_level_id = id;
             accessLevel.access_level_name = name;
-            accessLevel.location_id = location_id;
-            accessLevel.location_name = location_name;
+            accessLevel.location = grLocation.sys_id;
+            accessLevel.sourceid = sourceId;
             accessLevel.system = system;
             accessLevel.criticality = criticality;
             accessLevel.sys_created_on = new GlideDateTime();
             accessLevel.sys_updated_on = new GlideDateTime();
             accessLevel.insert();
+			}
         }
     },
-    saveAccessLevelOwners: function(id, ownertype, masterUserId) {
+    saveAccessLevelOwners: function(id, accName, ownertype, masterUserId) {
         try {
             var grUser = new GlideRecordSecure('sys_user');
             if (grUser.get('user_name', masterUserId)) {
@@ -691,6 +705,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (count == 0) {
                     var accessLevelAreaOwner = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');
                     accessLevelAreaOwner.access_level_id = id;
+                    accessLevelAreaOwner.access_level_name = accName;
                     accessLevelAreaOwner.owner = grUser.sys_id;
                     accessLevelAreaOwner.owner_type = ownertype;
                     accessLevelAreaOwner.sys_created_on = new GlideDateTime();
@@ -773,7 +788,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>208</sys_mod_count>
+        <sys_mod_count>229</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -781,6 +796,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-06-02 12:46:42</sys_updated_on>
+        <sys_updated_on>2023-03-18 09:08:07</sys_updated_on>
     </sys_script_include>
 </record_update>

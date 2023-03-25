@@ -41,6 +41,7 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>building</name>
         <order>200</order>
+        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -53,8 +54,10 @@
         <record/>
         <record_producer_table>x_aleen_alertsnowp_building_access</record_producer_table>
         <reference>x_aleen_alertsnowp_locations</reference>
-        <reference_qual>location_type=building</reference_qual>
-        <reference_qual_condition/>
+        <reference_qual>location_type=building^EQ</reference_qual>
+        <reference_qual_condition table="x_aleen_alertsnowp_locations">location_type=building^EQ<item endquery="false" field="location_type" goto="false" newquery="false" operator="=" or="false" value="building"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script/>
@@ -69,7 +72,7 @@
         <sys_created_on>2022-04-14 07:54:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9d6c8cea1b3e81108dcc755e034bcba7</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Building</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -77,14 +80,14 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_9d6c8cea1b3e81108dcc755e034bcba7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-03 12:23:00</sys_updated_on>
+        <sys_updated_on>2023-03-18 09:26:04</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>18</type>
+        <type>8</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <use_reference_qualifier>simple</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>
