@@ -565,7 +565,9 @@ AlertEnterprisePlatformAPIs.prototype = {
 								var country  = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
 								var postal  = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
 								var city  = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
-                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type ,state,country,postal,city);
+								var latitude  = (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0";
+								var longitude  = (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0";
+                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type ,state,country,postal,city,latitude,longitude);
                             }
                         }
                     }
@@ -580,7 +582,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncLocations   :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type ,state,country,postal,city) {
+    saveLocation: function(id, name, location_type ,state,country,postal,city,latitude,longitude) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
@@ -598,6 +600,8 @@ AlertEnterprisePlatformAPIs.prototype = {
 			location.country = country;
 			location.postal_code = postal;
 			location.city = city;
+			location.latitude = latitude;
+			location.longitude = longitude;
             location.sys_created_on = new GlideDateTime();
             location.sys_updated_on = new GlideDateTime();
             location.insert();
@@ -773,6 +777,124 @@ AlertEnterprisePlatformAPIs.prototype = {
             organization.insert();
         }
     },
+		syncBadgeTemplates: function() {
+        gs.info('syncBadgeTemplates  :: Begin');
+        try {
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetBadgeTemplates', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                if (updatehttpStatus == 200) {
+                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_badgetemplates");
+                    gr.query();
+                    gr.deleteMultiple();
+                    var responseObj = JSON.parse(updateresponseBody);
+                    if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                        for (i = 0; i < responseObj.data.length; i++) {
+                            var template = responseObj.data[i];
+                            this.saveTemplate(template);
+                        }
+                    }
+                } else {
+                    gs.info("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
+                }
+            } else {
+                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('syncAccessLevels   :: ' + message);
+        }
+    },
+	saveTemplate: function(template) {
+        var count = 0;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
+        gr.addQuery('id', template.id);
+        gr.addAggregate('COUNT');
+        gr.query();
+        while (gr.next()) {
+            count = gr.getAggregate('COUNT');
+        }
+        if (count == 0) {
+			var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
+			recordToInsert.id = template.id;
+			recordToInsert.extid = template.extId;
+			recordToInsert.text = template.text;
+			recordToInsert.description = template.description;
+			recordToInsert.frontsidebadgehtml = template.frontSideBadgeHTML;
+			recordToInsert.backsidebadgehtml = template.backSideBadgeHTML;
+			recordToInsert.sys_created_on = new GlideDateTime();
+			recordToInsert.sys_updated_on = new GlideDateTime();
+			recordToInsert.insert();			
+        }
+    },
+	syncReaders: function() {
+        gs.info('syncReaders  :: Begin');
+        try {
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetReaders', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                if (updatehttpStatus == 200) {
+                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_readers");
+                    gr.query();
+                    gr.deleteMultiple();
+                    var responseObj = JSON.parse(updateresponseBody);
+                    if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                        for (i = 0; i < responseObj.data.length; i++) {
+                            var template = responseObj.data[i];
+                            this.saveReaders(template);
+                        }
+                    }
+					gs.info(" Readers sync is successful >>>>>>>>>>");
+                } else {
+                    gs.info("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
+                }
+            } else {
+                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('syncReaders   Error   :: ' + message);
+        }
+    },
+	saveReaders: function(template) {
+        var count = 0;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_readers');
+        gr.addQuery('id', template.id);
+        gr.addAggregate('COUNT');
+        gr.query();
+        while (gr.next()) {
+            count = gr.getAggregate('COUNT');
+        }
+        if (count == 0) {
+			var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+            if (grLocation.get('id', template.locationId.toString())) {
+			gs.info('Location found for   :: ' +  template.locationId.toString());
+			var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_readers');
+			recordToInsert.id = template.id;
+			recordToInsert.extid = template.extId;
+			recordToInsert.text = template.text;
+			recordToInsert.type = template.type;
+			recordToInsert.intstatus = template.intStatus;
+			recordToInsert.subtype = template.subType;
+			recordToInsert.serialno = template.serialNo;
+			recordToInsert.assetstatus = template.assetStatus;
+			recordToInsert.location = grLocation.sys_id;
+			recordToInsert.sys_created_on = new GlideDateTime();
+			recordToInsert.sys_updated_on = new GlideDateTime();
+			recordToInsert.insert();	
+			}else{
+				gs.info('Location not found  >>>>>     :: ' +  template.locationId.toString());
+			}
+        }
+    },
     searchExisting: function(recordId, array) {
         for (var i = 0; i < array.length; i++) {
             if (array[i] == recordId) {
@@ -788,7 +910,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>229</sys_mod_count>
+        <sys_mod_count>238</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -796,6 +918,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-18 09:08:07</sys_updated_on>
+        <sys_updated_on>2023-06-19 08:29:54</sys_updated_on>
     </sys_script_include>
 </record_update>

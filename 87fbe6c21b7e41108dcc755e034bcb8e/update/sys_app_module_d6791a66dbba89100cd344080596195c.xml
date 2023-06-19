@@ -6,7 +6,7 @@
         <content_page/>
         <device_type/>
         <filter/>
-        <hint/>
+        <hint>Locations</hint>
         <homepage/>
         <image/>
         <link_type>LIST</link_type>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d6791a66dbba89100cd344080596195c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Locations</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_app_module_d6791a66dbba89100cd344080596195c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-18 06:19:29</sys_updated_on>
+        <sys_updated_on>2023-06-19 07:44:06</sys_updated_on>
         <timeline_page/>
         <title>Locations</title>
         <uncancelable>false</uncancelable>

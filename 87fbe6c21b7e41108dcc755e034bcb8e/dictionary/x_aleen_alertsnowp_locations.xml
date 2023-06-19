@@ -4,7 +4,9 @@
         <element label="Country" max_length="40" name="country" type="string"/>
         <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="Location ID" mandatory="true" max_length="40" name="id" type="string"/>
+        <element label="latitude" max_length="40" name="latitude" type="string"/>
         <element label="Location Type" max_length="40" name="location_type" type="string"/>
+        <element label="longitude" max_length="40" name="longitude" type="string"/>
         <element display="true" label="Location Name" mandatory="true" max_length="40" name="name" type="string"/>
         <element label="Postal Code" max_length="40" name="postal_code" type="string"/>
         <element label="state" max_length="40" name="state" type="string"/>

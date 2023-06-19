@@ -14,7 +14,7 @@
         <mobile_title>Settings</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name/>
-        <order>4</order>
+        <order>7</order>
         <override_menu_roles>false</override_menu_roles>
         <query>system_properties_ui.do?sysparm_category=Workplace%20Access%20and%20Security%20Settings&amp;sysparm_domain_restore=false&amp;sysparm_stack=no&amp;sysparm_title=Workplace Access and Security Properties&#13;
 </query>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>752112eedb7a89100cd3440805961980</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Settings</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_app_module_752112eedb7a89100cd3440805961980</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-18 06:19:52</sys_updated_on>
+        <sys_updated_on>2023-06-19 07:48:40</sys_updated_on>
         <timeline_page/>
         <title>Settings</title>
         <uncancelable>false</uncancelable>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>false</active>
+        <application display_value="Workplace Access and Security">777e866edb7a89100cd344080596193c</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>Applications</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Applications</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_aleen_alertsnowp_readers</name>
+        <order>5</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_aleen_alertsnowp.admin</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 05:11:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>766010d31b6565108dcc755e034bcb42</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Applications</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_app_module_766010d31b6565108dcc755e034bcb42</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-19 08:00:31</sys_updated_on>
+        <timeline_page/>
+        <title>Applications</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_app_module_766010d31b6565108dcc755e034bcb42</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>false</active><application display_value="Workplace Access and Security">777e866edb7a89100cd344080596193c</application><assessment/><content_page/><device_type/><filter/><hint>Applications</hint><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Applications</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_aleen_alertsnowp_readers</name><order>5</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_aleen_alertsnowp.admin</roles><survey/><survey_overwrite>true</survey_overwrite><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-03-18 05:11:33</sys_created_on><sys_customer_update>false</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>766010d31b6565108dcc755e034bcb42</sys_id><sys_mod_count>9</sys_mod_count><sys_name>Applications</sys_name><sys_overrides/><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_app_module_766010d31b6565108dcc755e034bcb42</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-06-19 08:00:31</sys_updated_on><timeline_page/><title>Applications</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>1671854809</payload_hash>
+        <record_name>Applications</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-19 08:00:32</sys_created_on>
+        <sys_id>45f27f811ba32110234b0f6e6e4bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188d2ab754a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-19 08:00:32</sys_updated_on>
+        <type>Module</type>
+        <update_guid>89f27f81f4a32110d76875eb9cf3e0a4</update_guid>
+        <update_guid_history>89f27f81f4a32110d76875eb9cf3e0a4:1671854809,1e50b3413ca321105971585bd816fa9a:-513876446,f920f34171a32110f90b4592e1df782e:-1659748541,2910bf0101a3211081b688e6a16f20dd:-721058334,48d4b73432faa510bb8a4a878e8e985a:-1119542073,447b9bbce9dea9508e8d0b628bd5683d:26330022,b2ef50935da56510cf011757f89370a2:-1119542073,62bf109304a565101d771088e4a487ed:-2058232280,26e0d4938b65651088d4cd3fe78b6d3a:-1623215006,326010d39e656510315b2ed1055a4a45:-1661602913</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2023-06-19 13:33:56">f6b3ffc11ba32110234b0f6e6e4bcbb6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-19 08:03:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>723a704883a94afc9b567a1af8adf4b9</sys_id>
+        <sys_metadata>766010d31b6565108dcc755e034bcb42</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_readers</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_app_module_766010d31b6565108dcc755e034bcb42</sys_update_name>
+        <sys_update_version display_value="sys_app_module_766010d31b6565108dcc755e034bcb42">45f27f811ba32110234b0f6e6e4bcba5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-19 08:03:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
