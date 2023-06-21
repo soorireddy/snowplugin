@@ -32,10 +32,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var responseObj = JSON.parse(responseBody);
                 if (null != responseObj && responseObj.success && null != responseObj.data) {
                     Token = 'Bearer ' + responseObj.data.access_token;
-                    // gs.info('Authentication is Successful');
                 }
-            } else {
-                // gs.info('Authentication is unSuccessful');
             }
             return Token;
         } catch (ex) {
@@ -59,7 +56,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgeRequestBody1 =
                     '{"type": "RequestNewBadge","requestIdentityFieldNew": [{ "identityId":' + identitySystemId + '}],"customProperties": { "comment":"' + data.delivery_comments + '","reason": "' + data.reason + '"}}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
-                gs.info('newBadge request body ::  ==> ' + newBadgerequestBody);
+                gs.debug('newBadge request body ::  ==> ' + newBadgerequestBody);
                 r.setRequestBody(newBadgerequestBody);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
@@ -68,10 +65,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('New Badge request has been placed with Alert ,it will take sometime to Process, it will update the status based on Alert response');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
-                    gs.info("New Badge Request is created Successfully");
+                    gs.debug("New Badge Request is created Successfully");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    gs.info("New Badge Request is unsuccessful");
+                    gs.debug("New Badge Request is unsuccessful");
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert " + updateResponseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                     data.update();
@@ -85,7 +82,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('newBadge   :: ' + message);
+            gs.debug('newBadge   :: ' + message);
             this.saveAuditLog(data.number, gs.getUserName(), "error occured while approving request ::" + message, "", "");
         }
     },
@@ -105,7 +102,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{"identity": {"masterIdentityId": "' + userName + '"},"identityAsset": [{"assetAccessId": "' + data.badge_number + '","action":"UNLOCK"}]}';
                 var requestBody = requestBody1.toString();
-                gs.info('activateBadge JWT request body ::  ==> ' + requestBody);
+                gs.debug('activateBadge JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -113,24 +110,24 @@ AlertEnterprisePlatformAPIs.prototype = {
                 updateResponseObj = JSON.parse(updateresponseBody);
                 if (updatehttpStatus == 200) {
                     gs.addInfoMessage('Request processed Successfully');
-                    gs.info("Badge activated Successfully");
+                    gs.debug("Badge activated Successfully");
                     data.state = 3;
                     this.saveAuditLog(data.number, userName, "activateBadge  is successful", "", "");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    gs.info("Badge activation isunsuccessful");
+                    gs.debug("Badge activation isunsuccessful");
                     this.saveAuditLog(data.number, userName, "activateBadge is unsuccessful reason ->" + updateResponseObj.data.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                 }
             } else {
                 gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                gs.info("Activate Badge Request is unsuccessful due to API  server authentication issue");
+                gs.debug("Activate Badge Request is unsuccessful due to API  server authentication issue");
                 this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
                 data.state = 4;
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('activateBadge   :: ' + message);
+            gs.debug('activateBadge   :: ' + message);
         }
     },
     registerVisitor: function(data) {
@@ -138,7 +135,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         gs.addInfoMessage('Request (' + data.number + ') has been placed Successfully , it will take a while a process. it will update request status');
     },
     addVisitor: function(data) {
-        gs.debug(" addVisitor  :: begin");
+        gs.info(" addVisitor  :: begin");
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
@@ -153,7 +150,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{"type": "Visitor","firstName": "' + data.first_name + '", "lastName": "' + data.last_name + '","email": "' + data.email + '","visitorCompany":"' + data.visitor_company + '"}';
                 var requestBody = requestBody1.toString();
-                gs.info('addVisitor JWT request body ::  ==> ' + requestBody);
+                gs.debug('addVisitor JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -177,13 +174,13 @@ AlertEnterprisePlatformAPIs.prototype = {
                 data.update();
             }
         } catch (ex) {
-            gs.info('Visitor visit Exception ==>  :: ' + ex.message);
+            gs.debug('Visitor visit Exception ==>  :: ' + ex.message);
             data.state = 4;
             data.update();
         }
     },
     addVisit: function(data, visitorId) {
-        gs.debug(" addVisit  :: begin");
+        gs.info(" addVisit  :: begin");
         try {
             if (null != this.jwt_token) {
                 var grUser = new GlideRecordSecure('sys_user');
@@ -207,7 +204,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{"type": "Visit_Registration","visitTypeCode": "single","recurringTypeId": 1,"visitStartDate": "' + visit_start_date_str + '","visitEndDate": "' + visit_end_date_str + '", "locationId":' + data.visit_location + ' ,"id": "' + randomVisitId + '","visitorsVisits": [{"visitId": "' + randomVisitId + '","visitorId": ' + visitorId + ',"visitStatus": 60}],"visitHosts": [{"hostId": ' + hostidentitySystemId + ',"visitId": "' + randomVisitId + '"}]}';
                 var requestBody = requestBody1.toString();
-                gs.info('addVisit JWT request body ::  ==> ' + requestBody);
+                gs.debug('addVisit JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -217,7 +214,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     data.state = 3;
                     data.update();
                 } else {
-                    gs.info("Error while processing the request , please contact administrator for the reasons/logs ");
+                    gs.debug("Error while processing the request , please contact administrator for the reasons/logs ");
                     this.saveAuditLog(data.number, gs.getUserName(), "Visit add/update is unsuccessful", "", "");
                     data.state = 4;
                     data.update();
@@ -228,7 +225,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 data.update();
             }
         } catch (ex) {
-            gs.info(' visit Exception ==>  :: ' + ex.message);
+            gs.debug(' visit Exception ==>  :: ' + ex.message);
             data.state = 4;
             data.update();
         }
@@ -290,38 +287,38 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestPayloadObject = {};
                 requestPayloadObject.identity = identityObj;
                 requestPayloadObject.identityAccess = requestAccessList;
-				requestPayloadObject.customProperties = customPropertiesObj;
+                requestPayloadObject.customProperties = customPropertiesObj;
                 var reqPayload = new global.JSON().encode(requestPayloadObject);
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UpdateProfile', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
-                gs.info('buildingAccess  NEW request body ::  ==> ' + reqPayload);
+                gs.debug('buildingAccess  NEW request body ::  ==> ' + reqPayload);
                 r.setRequestBody(reqPayload);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
                 updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-                    gs.info("Building Access role(s)  " + data.access_level_name + " is/are  provisioned Successfully");
-					this.saveAuditLog(data.parent_number, gs.getUserName(), data.access_level_name + " provisioned successfully", "", "Provisioned");
+                    gs.debug("Building Access role(s)  " + data.access_level_name + " is/are  provisioned Successfully");
+                    this.saveAuditLog(data.parent_number, gs.getUserName(), data.access_level_name + " provisioned successfully", "", "Provisioned");
                 } else {
                     gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
-                    gs.info("Building Access provisioning  is unsuccessful for " + data.access_level_name);
+                    gs.debug("Building Access provisioning  is unsuccessful for " + data.access_level_name);
                     this.saveAuditLog(data.parent_number, gs.getUserName(), "Building Access role provisioning is failed for  " + data.access_level_name, "", "");
                     data.state = 4;
                     data.update();
                 }
             } else {
                 gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
-                gs.info("Building Access  Request is unsuccessful due to API  server authentication issue");
+                gs.debug("Building Access  Request is unsuccessful due to API  server authentication issue");
                 this.saveAuditLog(data.parent_number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
                 data.state = 4;
                 data.update();
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('buildingAccess   :: ' + message);
+            gs.debug('buildingAccess   :: ' + message);
         }
     },
     mobileCredentials: function(data) {
@@ -340,7 +337,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgeRequestBody1 =
                     '{"type": "RequestNewMobileCredetials","requestIdentityFieldNew": [{"identityId": ' + identitySystemId + ',"customProperties": {"phoneNumber": "' + data.phone_number + '"}}],"customProperties": {"comment": "' + data.reason + '"}}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
-                gs.info('mobileCredentials request body ::  ==> ' + newBadgerequestBody);
+                gs.debug('mobileCredentials request body ::  ==> ' + newBadgerequestBody);
                 r.setRequestBody(newBadgerequestBody);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
@@ -349,10 +346,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('Mobile Credentials request has been placed with Alert ,it will take sometime to Process, it will update the status based on Alert response');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Mobile Credentials request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
-                    gs.info("Mobile Credentials Request is created Successfully");
+                    gs.debug("Mobile Credentials Request is created Successfully");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    gs.info("Mobile Credentials Request is unsuccessful");
+                    gs.debug("Mobile Credentials Request is unsuccessful");
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Mobile Credentials request  creation is failed in Alert  " + updateResponseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                     data.update();
@@ -366,7 +363,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('mobileCredentials   :: ' + message);
+            gs.debug('mobileCredentials   :: ' + message);
         }
     },
     replaceBadge: function(data) {
@@ -385,7 +382,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgeRequestBody1 =
                     '{"type": "externalReplaceBadge","requestIdentityFieldNew": [{ "identityId":' + identitySystemId + '}],"customProperties": { "comment":"' + data.badge_delivery_comments + '","reason": "' + data.reason + '"}}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
-                gs.info('replace Badge request body ::  ==> ' + newBadgerequestBody);
+                gs.debug('replace Badge request body ::  ==> ' + newBadgerequestBody);
                 r.setRequestBody(newBadgerequestBody);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
@@ -394,10 +391,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('Replace Badge request has been placed with Alert ,it will take sometime to Process, it will update the status based on Alert response');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
-                    gs.info("Replace Badge Request is created Successfully");
+                    gs.debug("Replace Badge Request is created Successfully");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    gs.info("Replace Badge Request is unsuccessful");
+                    gs.debug("Replace Badge Request is unsuccessful");
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Replace Badge request  creation is failed in Alert  " + updateResponseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                     data.update();
@@ -411,7 +408,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('replaceBadge   :: ' + message);
+            gs.debug('replaceBadge   :: ' + message);
         }
     },
     resetPin: function(data) {
@@ -430,7 +427,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{ "identity":{ "masterIdentityId":"' + identityId + '","pin":' + data.new_pin + '}}';
                 var requestBody = requestBody1.toString();
-                gs.info('reset pin JWT request body ::  ==> ' + requestBody);
+                gs.debug('reset pin JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -452,7 +449,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('resetPin   :: ' + message);
+            gs.debug('resetPin   :: ' + message);
         }
     },
     updateProfile: function(data) {
@@ -471,7 +468,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{ "identity":{ "email":"' + data.email + '", "masterIdentityId":"' + userName + '","phone":' + data.phone_number + '}}';
                 var requestBody = requestBody1.toString();
-                gs.info('updateProfile JWT request body ::  ==> ' + requestBody);
+                gs.debug('updateProfile JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -494,12 +491,12 @@ AlertEnterprisePlatformAPIs.prototype = {
                 data.state = 4;
             }
         } catch (ex) {
-            gs.info('updateProfile  Exception ==>  :: ' + ex.message);
+            gs.debug('updateProfile  Exception ==>  :: ' + ex.message);
         }
     },
     getIdentitySystemId: function(masterUserId) {
         var identityId = 0;
-        gs.debug(" getIdentitySystemId  :: begin");
+        gs.info(" getIdentitySystemId  :: begin");
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetIdentityId', 'POST');
@@ -509,7 +506,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var requestBody1 =
                     '{"filterCriteria": [{"fieldName": "masterIdentityId","operator": "=","value": "' + masterUserId + '"}],"projectionList":["id"]}';
                 var requestBody = requestBody1.toString();
-                gs.info('getIdentitySystemId request body ::  ==> ' + requestBody);
+                gs.debug('getIdentitySystemId request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -519,12 +516,12 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.debug("Found identity Id");
                     identityId = updateResponseObj.data[0].id;
                 } else {
-                    gs.info("identity Id not found");
+                    gs.debug("identity Id not found");
                 }
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('getIdentitySystemId   :: ' + message);
+            gs.debug('getIdentitySystemId   :: ' + message);
         }
         return identityId;
     },
@@ -542,7 +539,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         auditLog.insert();
     },
     syncLocations: function() {
-        gs.info('syncLocations  :: Begin');
+        //gs.info('syncLocations  :: Begin');
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.Get All Locations', 'POST');
@@ -555,34 +552,35 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var gr = new GlideRecordSecure("x_aleen_alertsnowp_locations");
                     gr.query();
                     gr.deleteMultiple();
-                    gs.info("Data sync is successful >>>>>>>>>>");
+                    gs.debug("Data sync is successful >>>>>>>>>>");
                     var responseObj = JSON.parse(updateresponseBody);
-                    //gs.info(JSON.stringify(updateresponseBody));
+                    //gs.debug(JSON.stringify(updateresponseBody));
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
                             if (responseObj.data[i].type && responseObj.data[i].type != "") {
-								var state  = (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "";
-								var country  = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
-								var postal  = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
-								var city  = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
-								var latitude  = (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0";
-								var longitude  = (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0";
-                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type ,state,country,postal,city,latitude,longitude);
+                                var state = (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "";
+                                var country = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
+                                var postal = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
+                                var city = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
+                                var latitude = (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0";
+                                var longitude = (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0";
+                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type, state, country, postal, city, latitude, longitude);
                             }
                         }
                     }
                 } else {
-                    gs.info("Data sync is unsuccessful  due to API error");
+                    gs.debug("Data sync is unsuccessful  due to API error");
                 }
             } else {
-                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue");
+                gs.debug("Data sync is unsuccessful due to API  server authentication / connectivity issue");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('syncLocations   :: ' + message);
+            gs.debug('syncLocations   :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type ,state,country,postal,city,latitude,longitude) {
+    saveLocation: function(id, name, location_type, state, country, postal, city, latitude, longitude) {
+        //gs.info('saveLocation  :: Begin');
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
@@ -596,19 +594,19 @@ AlertEnterprisePlatformAPIs.prototype = {
             location.id = id;
             location.name = name;
             location.location_type = location_type;
-			location.state = state;
-			location.country = country;
-			location.postal_code = postal;
-			location.city = city;
-			location.latitude = latitude;
-			location.longitude = longitude;
+            location.state = state;
+            location.country = country;
+            location.postal_code = postal;
+            location.city = city;
+            location.latitude = latitude;
+            location.longitude = longitude;
             location.sys_created_on = new GlideDateTime();
             location.sys_updated_on = new GlideDateTime();
             location.insert();
         }
     },
     syncAccessLevels: function() {
-        gs.info('syncAccessLevels  :: Begin');
+        //gs.info('syncAccessLevels  :: Begin');
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GET Access Levels', 'POST');
@@ -624,6 +622,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var grAO = new GlideRecordSecure("x_aleen_alertsnowp_area_owners");
                     grAO.query();
                     grAO.deleteMultiple();
+                    var grAR = new GlideRecordSecure("x_aleen_alertsnowp_accessasset");
+                    grAR.query();
+                    grAR.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -639,32 +640,43 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var accessLocations = accessLevelObj.accessLocations;
                                 for (j = 0; j < accessLocations.length; j++) {
                                     var accessLocation = accessLocations[j];
-                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId,  accessLevelObj.criticality, sourceId);
+                                    this.saveAccessLevel(accessId, accessName, accessLocation.locationId.toString(), systemId, accessLevelObj.criticality, sourceId);
                                 }
                             }
                             if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
                                 gs.debug("Access level has area Owners");
                                 var accessOwners = accessLevelObj.accessOwners;
-                                for (j = 0; j < accessOwners.length; j++) {
-                                    var accessOwner = accessOwners[j];
+                                for (jk = 0; jk < accessOwners.length; jk++) {
+                                    var accessOwner = accessOwners[jk];
                                     this.saveAccessLevelOwners(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId);
+                                }
+
+                            }
+                            if (accessLevelObj.accessAssets && accessLevelObj.accessAssets.length > 0) {
+                                gs.debug("Access level has Asset information");
+                                var accessAssets = accessLevelObj.accessAssets;
+                                for (kl = 0; kl < accessAssets.length; kl++) {
+                                    var accessAsset = accessAssets[kl];
+                                    gs.info("Access level has Asset information   -->  " + ( kl + 1 ) + "  accessName  -->" + accessName + " Reader ID" + accessAsset.asset.id);
+                                    this.saveAccessLevelReaders(accessId, accessName, accessAsset.asset.text, accessAsset.asset.id);
                                 }
 
                             }
                         }
                     }
                 } else {
-                    gs.info("Data sync is unsuccessful  due to API error");
+                    gs.debug("Data sync is unsuccessful  due to API error");
                 }
             } else {
-                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue");
+                gs.debug("Data sync is unsuccessful due to API  server authentication / connectivity issue");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('syncAccessLevels   :: ' + message);
+            gs.debug('syncAccessLevels   :: ' + message);
         }
     },
     saveAccessLevel: function(id, name, location_id, system, criticality, sourceId) {
+        //gs.info('saveAccessLevel  :: Begin');
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
         gr.addQuery('access_level_id', id);
@@ -676,24 +688,25 @@ AlertEnterprisePlatformAPIs.prototype = {
             count = gr.getAggregate('COUNT');
         }
         if (count == 0) {
-			var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+            var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
             if (grLocation.get('id', location_id)) {
-			
-			
-            var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
-            accessLevel.access_level_id = id;
-            accessLevel.access_level_name = name;
-            accessLevel.location = grLocation.sys_id;
-            accessLevel.sourceid = sourceId;
-            accessLevel.system = system;
-            accessLevel.criticality = criticality;
-            accessLevel.sys_created_on = new GlideDateTime();
-            accessLevel.sys_updated_on = new GlideDateTime();
-            accessLevel.insert();
-			}
+
+
+                var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
+                accessLevel.access_level_id = id;
+                accessLevel.access_level_name = name;
+                accessLevel.location = grLocation.sys_id;
+                accessLevel.sourceid = sourceId;
+                accessLevel.system = system;
+                accessLevel.criticality = criticality;
+                accessLevel.sys_created_on = new GlideDateTime();
+                accessLevel.sys_updated_on = new GlideDateTime();
+                accessLevel.insert();
+            }
         }
     },
     saveAccessLevelOwners: function(id, accName, ownertype, masterUserId) {
+        //gs.info('saveAccessLevelOwners  :: Begin');
         try {
             var grUser = new GlideRecordSecure('sys_user');
             if (grUser.get('user_name', masterUserId)) {
@@ -720,7 +733,39 @@ AlertEnterprisePlatformAPIs.prototype = {
                 gs.debug(masterUserId + "   -->  Not found in SNOW , so ignoring to add as Area owner");
             }
         } catch (ex) {
-            gs.info('saveAccessLevelOwners   :: ' + ex.message);
+            gs.debug('saveAccessLevelOwners   :: ' + ex.message);
+
+        }
+    },
+    saveAccessLevelReaders: function(id, accName, assetName, assetId) {
+        gs.info('saveAccessLevelReaders  :: Begin');
+        try {
+            var grReader = new GlideRecordSecure('x_aleen_alertsnowp_readers');
+            if (grReader.get('id', assetId)) {
+                var count = 0;
+                var grAsset = new GlideAggregate('x_aleen_alertsnowp_accessasset');
+                grAsset.addQuery('access_level_id', id);
+                grAsset.addQuery('reader', grReader.sys_id);
+                grAsset.addAggregate('COUNT');
+                grAsset.query();
+                while (grAsset.next()) {
+                    count = grAsset.getAggregate('COUNT');
+                }
+                if (count == 0) {
+                    var accessLevelAsset = new GlideRecordSecure('x_aleen_alertsnowp_accessasset');
+                    accessLevelAsset.access_level_id = id;
+                    accessLevelAsset.access_level_name = accName;
+                    accessLevelAsset.reader = grReader.sys_id;
+                    accessLevelAsset.reader_name = assetName;
+                    accessLevelAsset.sys_created_on = new GlideDateTime();
+                    accessLevelAsset.sys_updated_on = new GlideDateTime();
+                    accessLevelAsset.insert();
+                }
+            } else {
+                gs.info(assetId + "   -->  Not found in SNOW , so ignoring to add  Asset to AccessLevel");
+            }
+        } catch (ex) {
+            gs.debug('saveAccessLevelReaders   :: ' + ex.message);
 
         }
     },
@@ -738,7 +783,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var gr = new GlideRecordSecure("x_aleen_alertsnowp_organization");
                     gr.query();
                     gr.deleteMultiple();
-                    gs.info(" Organizations Data sync is successful >>>>>>>>>>");
+                    gs.debug(" Organizations Data sync is successful >>>>>>>>>>");
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -749,14 +794,14 @@ AlertEnterprisePlatformAPIs.prototype = {
                         }
                     }
                 } else {
-                    gs.info("Organizations Data sync is unsuccessful  due to API error");
+                    gs.debug("Organizations Data sync is unsuccessful  due to API error");
                 }
             } else {
-                gs.info("Organizations Data sync is unsuccessful due to API  server authentication / connectivity issue");
+                gs.debug("Organizations Data sync is unsuccessful due to API  server authentication / connectivity issue");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('syncOrganizations   :: ' + message);
+            gs.debug('syncOrganizations   :: ' + message);
         }
     },
     saveOrganizations: function(id, name) {
@@ -777,7 +822,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             organization.insert();
         }
     },
-		syncBadgeTemplates: function() {
+    syncBadgeTemplates: function() {
         gs.info('syncBadgeTemplates  :: Begin');
         try {
             if (null != this.jwt_token) {
@@ -799,17 +844,17 @@ AlertEnterprisePlatformAPIs.prototype = {
                         }
                     }
                 } else {
-                    gs.info("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
+                    gs.debug("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
                 }
             } else {
-                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
+                gs.debug("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('syncAccessLevels   :: ' + message);
+            gs.debug('syncAccessLevels   :: ' + message);
         }
     },
-	saveTemplate: function(template) {
+    saveTemplate: function(template) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
         gr.addQuery('id', template.id);
@@ -819,19 +864,19 @@ AlertEnterprisePlatformAPIs.prototype = {
             count = gr.getAggregate('COUNT');
         }
         if (count == 0) {
-			var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
-			recordToInsert.id = template.id;
-			recordToInsert.extid = template.extId;
-			recordToInsert.text = template.text;
-			recordToInsert.description = template.description;
-			recordToInsert.frontsidebadgehtml = template.frontSideBadgeHTML;
-			recordToInsert.backsidebadgehtml = template.backSideBadgeHTML;
-			recordToInsert.sys_created_on = new GlideDateTime();
-			recordToInsert.sys_updated_on = new GlideDateTime();
-			recordToInsert.insert();			
+            var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
+            recordToInsert.id = template.id;
+            recordToInsert.extid = template.extId;
+            recordToInsert.text = template.text;
+            recordToInsert.description = template.description;
+            recordToInsert.frontsidebadgehtml = template.frontSideBadgeHTML;
+            recordToInsert.backsidebadgehtml = template.backSideBadgeHTML;
+            recordToInsert.sys_created_on = new GlideDateTime();
+            recordToInsert.sys_updated_on = new GlideDateTime();
+            recordToInsert.insert();
         }
     },
-	syncReaders: function() {
+    syncReaders: function() {
         gs.info('syncReaders  :: Begin');
         try {
             if (null != this.jwt_token) {
@@ -852,19 +897,21 @@ AlertEnterprisePlatformAPIs.prototype = {
                             this.saveReaders(template);
                         }
                     }
-					gs.info(" Readers sync is successful >>>>>>>>>>");
+                    gs.debug(" Readers sync is successful >>>>>>>>>>");
                 } else {
-                    gs.info("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
+                    gs.debug("Data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
                 }
             } else {
-                gs.info("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
+                gs.debug("Data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
             }
         } catch (ex) {
             var message = ex.message;
-            gs.info('syncReaders   Error   :: ' + message);
+            gs.debug('syncReaders   Error   :: ' + message);
         }
     },
-	saveReaders: function(template) {
+    saveReaders: function(template) {
+		try{
+		gs.info( "saveReader with ID     ++++++++++++++++++++++    " + template.id);
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_readers');
         gr.addQuery('id', template.id);
@@ -874,26 +921,30 @@ AlertEnterprisePlatformAPIs.prototype = {
             count = gr.getAggregate('COUNT');
         }
         if (count == 0) {
-			var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+            var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
             if (grLocation.get('id', template.locationId.toString())) {
-			gs.info('Location found for   :: ' +  template.locationId.toString());
-			var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_readers');
-			recordToInsert.id = template.id;
-			recordToInsert.extid = template.extId;
-			recordToInsert.text = template.text;
-			recordToInsert.type = template.type;
-			recordToInsert.intstatus = template.intStatus;
-			recordToInsert.subtype = template.subType;
-			recordToInsert.serialno = template.serialNo;
-			recordToInsert.assetstatus = template.assetStatus;
-			recordToInsert.location = grLocation.sys_id;
-			recordToInsert.sys_created_on = new GlideDateTime();
-			recordToInsert.sys_updated_on = new GlideDateTime();
-			recordToInsert.insert();	
-			}else{
-				gs.info('Location not found  >>>>>     :: ' +  template.locationId.toString());
+                gs.debug('Location found for   :: ' + template.locationId.toString());
+                var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_readers');
+                recordToInsert.id = template.id;
+                recordToInsert.extid = template.extId;
+                recordToInsert.text = template.text;
+                recordToInsert.type = template.type;
+                recordToInsert.intstatus = template.intStatus;
+                recordToInsert.subtype = template.subType;
+                recordToInsert.serialno = template.serialNo;
+                recordToInsert.assetstatus = template.assetStatus;
+                recordToInsert.location = grLocation.sys_id;
+                recordToInsert.sys_created_on = new GlideDateTime();
+                recordToInsert.sys_updated_on = new GlideDateTime();
+                recordToInsert.insert();
+            } else {
+				gs.info(template.locationId.toString()   + " not present in Service Now");
 			}
         }
+		}catch(ex){
+			var message = ex.message;
+			gs.info( " ##########################         " + message);
+		}
     },
     searchExisting: function(recordId, array) {
         for (var i = 0; i < array.length; i++) {
@@ -910,7 +961,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>238</sys_mod_count>
+        <sys_mod_count>249</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -918,6 +969,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-19 08:29:54</sys_updated_on>
+        <sys_updated_on>2023-06-19 10:45:44</sys_updated_on>
     </sys_script_include>
 </record_update>
