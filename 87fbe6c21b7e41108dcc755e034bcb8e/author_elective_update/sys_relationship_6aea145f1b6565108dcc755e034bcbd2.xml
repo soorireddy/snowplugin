@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="DELETE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_aleen_alertsnowp_applications</basic_apply_to>
+        <basic_query_from>x_aleen_alertsnowp_application_access_levels</basic_query_from>
+        <insert_callback/>
+        <name>Application --&gt; Access Levels</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+
+	current.addQuery('application', parent);
+
+})(current, parent);]]></query_with>
+        <reference_field/>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 06:00:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6aea145f1b6565108dcc755e034bcbd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Application --&gt; Access Levels</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_relationship_6aea145f1b6565108dcc755e034bcbd2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-18 06:00:19</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="DELETE" query="documentkey=6aea145f1b6565108dcc755e034bcbd2"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_relationship_6aea145f1b6565108dcc755e034bcbd2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_relationship"&gt;&lt;sys_relationship action="INSERT_OR_UPDATE"&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;apply_to/&gt;&lt;basic_apply_to&gt;x_aleen_alertsnowp_applications&lt;/basic_apply_to&gt;&lt;basic_query_from&gt;x_aleen_alertsnowp_application_access_levels&lt;/basic_query_from&gt;&lt;insert_callback/&gt;&lt;name&gt;Application --&amp;gt; Access Levels&lt;/name&gt;&lt;query_from/&gt;&lt;query_with&gt;&lt;![CDATA[(function refineQuery(current, parent) {
+
+	current.addQuery('application', parent);
+
+})(current, parent);]]&gt;&lt;/query_with&gt;&lt;reference_field/&gt;&lt;related_list/&gt;&lt;simple_reference&gt;false&lt;/simple_reference&gt;&lt;sys_class_name&gt;sys_relationship&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-03-18 06:00:19&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;6aea145f1b6565108dcc755e034bcbd2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Application --&amp;gt; Access Levels&lt;/sys_name&gt;&lt;sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Workplace Access and Security"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_relationship_6aea145f1b6565108dcc755e034bcbd2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-03-18 06:00:19&lt;/sys_updated_on&gt;&lt;/sys_relationship&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=6aea145f1b6565108dcc755e034bcbd2"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>886055286</payload_hash>
+        <record_name>Application --&gt; Access Levels</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-18 06:00:19</sys_created_on>
+        <sys_id>d99b909f1b6565108dcc755e034bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186f34dfc5d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-18 06:00:19</sys_updated_on>
+        <type>Relationship</type>
+        <update_guid>d19b909fea6565103e624db532239773</update_guid>
+        <update_guid_history>d19b909fea6565103e624db532239773:886055286</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-21 06:51:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_relationship">sys_relationship</sys_db_object>
+        <sys_id>1d13e12108da4ea98374da80e2787ca1</sys_id>
+        <sys_metadata>6aea145f1b6565108dcc755e034bcbd2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Application --&gt; Access Levels</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="">08ef08931b6565108dcc755e034bcbaf</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_relationship_6aea145f1b6565108dcc755e034bcbd2</sys_update_name>
+        <sys_update_version display_value="sys_relationship_6aea145f1b6565108dcc755e034bcbd2">d99b909f1b6565108dcc755e034bcb73</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-21 06:51:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

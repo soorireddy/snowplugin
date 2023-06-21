@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="08ef08931b6565108dcc755e034bcbaf" label="Applications" max_length="40" name="x_aleen_alertsnowp_applications" type="collection">
-        <element label="Application ID" max_length="40" name="application_id" type="string"/>
-        <element display="true" label="Name" max_length="40" name="name" type="string"/>
-        <element label="Type" max_length="40" name="type" type="string"/>
-    </element>
-</database>
