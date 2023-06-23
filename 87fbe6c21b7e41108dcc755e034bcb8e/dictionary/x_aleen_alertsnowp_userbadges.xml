@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="68c222791b632110234b0f6e6e4bcb5c" label="UserBadges" max_length="40" name="x_aleen_alertsnowp_userbadges" type="collection">
+        <element label="Badge Id" max_length="40" name="badge_id" type="string"/>
+        <element label="Badge PIN" max_length="40" name="badge_pin" type="string"/>
+        <element label="Badge Status" max_length="40" name="badge_status" type="string"/>
+        <element label="Badge Valid From" max_length="40" name="badge_valid_from" type="string"/>
+        <element label="Badge Valid To" max_length="40" name="badge_valid_to" type="string"/>
+        <element label="Mobile Credential" max_length="40" name="mobile_credential" type="boolean"/>
+        <element display="true" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

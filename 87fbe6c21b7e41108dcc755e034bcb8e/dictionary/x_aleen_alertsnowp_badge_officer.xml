@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e7e362791b632110234b0f6e6e4bcbd2" label="Badging Office" max_length="40" name="x_aleen_alertsnowp_badge_officer" type="collection">
+        <element display="true" label="User Id" max_length="32" name="user_id" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user_id"/>
+        </index>
+    </element>
+</database>
