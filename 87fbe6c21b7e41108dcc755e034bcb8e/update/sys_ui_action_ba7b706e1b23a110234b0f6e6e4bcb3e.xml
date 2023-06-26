@@ -2,7 +2,7 @@
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name/>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
@@ -28,9 +28,21 @@
         <list_style/>
         <messages/>
         <name>Print</name>
-        <onclick/>
+        <onclick>printBadge()</onclick>
         <order>50</order>
-        <script><![CDATA[gs.addInfoMessage('Print request has been placed , Please collect Badge from printer');]]></script>
+        <script><![CDATA[function printBadge() {
+	//gs.addInfoMessage('Print request has been placed , Please collect Badge from printer');
+    var gdw = new GlideModal('x_aleen_alertsnowp_Print_Page', false, 800);
+    gdw.setTitle("Previvew & Print");
+	var frontsidehtmlString = g_form.getValue('front');
+	frontsidehtmlString = frontsidehtmlString.replace('##COMPANY_NAME##', g_form.getValue('company'));
+    frontsidehtmlString = frontsidehtmlString.replace('##BADGE_ID##', g_form.getValue('badge_id'));
+    frontsidehtmlString = frontsidehtmlString.replace('##USER_IMAGE##', g_form.getValue('image'));
+	frontsidehtmlString = frontsidehtmlString.replace('##USER_NAME##', g_form.getValue('user_name'));
+    gdw.setPreference("sysparm_fronttemplate", frontsidehtmlString);
+    gdw.setPreference("sysparm_backtemplate", g_form.getValue('back'));
+    gdw.render();
+}]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -42,18 +54,18 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ba7b706e1b23a110234b0f6e6e4bcb3e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Print</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
-        <sys_policy/>
+        <sys_policy>protected</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_ba7b706e1b23a110234b0f6e6e4bcb3e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-23 10:33:29</sys_updated_on>
+        <sys_updated_on>2023-06-26 07:38:31</sys_updated_on>
         <table>x_aleen_alertsnowp_userbadges</table>
         <ui11_compatible>true</ui11_compatible>
-        <ui16_compatible>false</ui16_compatible>
+        <ui16_compatible>true</ui16_compatible>
     </sys_ui_action>
 </record_update>

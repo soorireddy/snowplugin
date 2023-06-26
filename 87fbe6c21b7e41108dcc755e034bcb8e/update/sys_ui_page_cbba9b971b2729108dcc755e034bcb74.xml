@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[addLoadEvent(function() {
+    document.getElementById("printableArea").innerHTML = gel('frontSide').value;
+});
+
+function changeTemplate() {
+    if (gel("template").value == 'front') {
+        document.getElementById("printableArea").innerHTML = gel('frontSide').value;
+    } else {
+        document.getElementById("printableArea").innerHTML =  gel('backSide').value;
+    }
+}
+
+function onCancel() {
+    GlideDialogWindow.get().destroy();
+    return false;
+}
+
+function onPrint() {
+    //var divToPrint = document.getElementById('printableArea').innerHTML;
+    //var newWindow = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+    //newWindow.document.open();
+    //newWindow.document.write(divToPrint);
+    //newWindow.document.close();
+	
+	
+		var divContents = document.getElementById("printableArea").innerHTML; 
+        var a = window.open('', '', 'height=500, width=500'); 
+         a.document.write('<html>'); 
+         a.document.write('<body onload="window.print();window.close()">'); 
+         a.document.write(divContents); 
+         a.document.write('</body></html>'); 
+         a.document.close(); 
+         //a.print();  
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_aleen_alertsnowp_Print_Page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:ui_form>
+	<input type="hidden" id="frontSide" name="frontSide" value="${sysparm_fronttemplate}"/>
+	<input type="hidden" id="backSide" name="backSide" value="${sysparm_backtemplate}" />
+	<div style="padding: 5px 10px;">
+	<select id="template" name="Template" onchange="changeTemplate()" style="width: 530px;padding: 5px;text-align: center;">
+		<option value="front">----Front-----</option>
+		<option value="back">----Back-----</option>
+	</select>
+	</div>
+</g:ui_form>
+
+	<div id="printableArea"></div>
+	
+<footer class="modal-footer flex">
+    <g:dialog_buttons_ok_cancel  ok_text="Print" ok_title="Print" ok_type="button" 
+								 ok="return onPrint();"  cancel="return onCancel();" cancel_type="button"/>
+</footer>
+
+</j:jelly>]]></html>
+        <name>Print_Page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-26 06:02:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cbba9b971b2729108dcc755e034bcb74</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Print_Page</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_ui_page_cbba9b971b2729108dcc755e034bcb74</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-26 07:48:00</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="68c222791b632110234b0f6e6e4bcb5c" label="UserBadges" max_length="40" name="x_aleen_alertsnowp_userbadges" type="collection">
+        <element label="back" max_length="10000" name="back" type="string"/>
+        <element choice="1" label="BadgeType" max_length="40" name="badgetype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Permanent" sequence="1" value="PERM"/>
+                <element inactive_on_update="false" label="Temporary" sequence="2" value="TEMP"/>
+            </choice>
+        </element>
         <element label="Badge Id" max_length="40" name="badge_id" type="string"/>
         <element label="Badge PIN" max_length="40" name="badge_pin" type="password"/>
         <element choice="3" default="Active" label="Badge Status" max_length="40" name="badge_status" type="string">
@@ -11,8 +18,14 @@
         </element>
         <element label="Badge Valid From" max_length="40" name="badge_valid_from" type="glide_date_time"/>
         <element label="Badge Valid To" max_length="40" name="badge_valid_to" type="glide_date_time"/>
+        <element label="company" max_length="40" name="company" type="string"/>
+        <element label="front" max_length="10000" name="front" type="string"/>
+        <element label="image" max_length="100" name="image" type="string"/>
         <element label="Mobile Credential" max_length="40" name="mobile_credential" type="boolean"/>
+        <element label="ParentTask" max_length="40" name="parenttask" type="string"/>
+        <element label="Provisioning Status" max_length="40" name="provisioning_status" type="string"/>
         <element display="true" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="User Name" max_length="100" name="user_name" type="string"/>
         <index name="index">
             <element name="user"/>
         </index>
