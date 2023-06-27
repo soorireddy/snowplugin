@@ -31,29 +31,10 @@
             <sys_created_on>2023-06-23 10:14:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-06-23 10:14:35</sys_updated_on>
-            <value>Active</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>badge_status</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Suspended</label>
-            <language>en</language>
-            <name>x_aleen_alertsnowp_userbadges</name>
-            <sequence>2</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-06-23 10:14:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-06-23 10:14:54</sys_updated_on>
-            <value>Suspended</value>
+            <sys_updated_on>2023-06-27 14:53:17</sys_updated_on>
+            <value>0</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -63,16 +44,35 @@
             <label>Lost</label>
             <language>en</language>
             <name>x_aleen_alertsnowp_userbadges</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-06-23 10:14:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-06-27 14:57:31</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>badge_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inactive</label>
+            <language>en</language>
+            <name>x_aleen_alertsnowp_userbadges</name>
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2023-06-23 10:15:05</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-06-23 10:15:12</sys_updated_on>
-            <value>Lost</value>
+            <sys_updated_on>2023-06-27 14:57:23</sys_updated_on>
+            <value>9</value>
         </sys_choice>
     </sys_choice>
 </record_update>

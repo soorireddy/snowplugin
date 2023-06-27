@@ -657,7 +657,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var accessAssets = accessLevelObj.accessAssets;
                                 for (kl = 0; kl < accessAssets.length; kl++) {
                                     var accessAsset = accessAssets[kl];
-                                    gs.info("Access level has Asset information   -->  " + ( kl + 1 ) + "  accessName  -->" + accessName + " Reader ID" + accessAsset.asset.id);
+                                    gs.info("Access level has Asset information   -->  " + (kl + 1) + "  accessName  -->" + accessName + " Reader ID" + accessAsset.asset.id);
                                     this.saveAccessLevelReaders(accessId, accessName, accessAsset.asset.text, accessAsset.asset.id);
                                 }
 
@@ -910,41 +910,41 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
     },
     saveReaders: function(template) {
-		try{
-		gs.info( "saveReader with ID     ++++++++++++++++++++++    " + template.id);
-        var count = 0;
-        var gr = new GlideAggregate('x_aleen_alertsnowp_readers');
-        gr.addQuery('id', template.id);
-        gr.addAggregate('COUNT');
-        gr.query();
-        while (gr.next()) {
-            count = gr.getAggregate('COUNT');
+        try {
+            gs.info("saveReader with ID     ++++++++++++++++++++++    " + template.id);
+            var count = 0;
+            var gr = new GlideAggregate('x_aleen_alertsnowp_readers');
+            gr.addQuery('id', template.id);
+            gr.addAggregate('COUNT');
+            gr.query();
+            while (gr.next()) {
+                count = gr.getAggregate('COUNT');
+            }
+            if (count == 0) {
+                var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
+                if (grLocation.get('id', template.locationId.toString())) {
+                    gs.debug('Location found for   :: ' + template.locationId.toString());
+                    var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_readers');
+                    recordToInsert.id = template.id;
+                    recordToInsert.extid = template.extId;
+                    recordToInsert.text = template.text;
+                    recordToInsert.type = template.type;
+                    recordToInsert.intstatus = template.intStatus;
+                    recordToInsert.subtype = template.subType;
+                    recordToInsert.serialno = template.serialNo;
+                    recordToInsert.assetstatus = template.assetStatus;
+                    recordToInsert.location = grLocation.sys_id;
+                    recordToInsert.sys_created_on = new GlideDateTime();
+                    recordToInsert.sys_updated_on = new GlideDateTime();
+                    recordToInsert.insert();
+                } else {
+                    gs.info(template.locationId.toString() + " not present in Service Now");
+                }
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info(" ##########################         " + message);
         }
-        if (count == 0) {
-            var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
-            if (grLocation.get('id', template.locationId.toString())) {
-                gs.debug('Location found for   :: ' + template.locationId.toString());
-                var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_readers');
-                recordToInsert.id = template.id;
-                recordToInsert.extid = template.extId;
-                recordToInsert.text = template.text;
-                recordToInsert.type = template.type;
-                recordToInsert.intstatus = template.intStatus;
-                recordToInsert.subtype = template.subType;
-                recordToInsert.serialno = template.serialNo;
-                recordToInsert.assetstatus = template.assetStatus;
-                recordToInsert.location = grLocation.sys_id;
-                recordToInsert.sys_created_on = new GlideDateTime();
-                recordToInsert.sys_updated_on = new GlideDateTime();
-                recordToInsert.insert();
-            } else {
-				gs.info(template.locationId.toString()   + " not present in Service Now");
-			}
-        }
-		}catch(ex){
-			var message = ex.message;
-			gs.info( " ##########################         " + message);
-		}
     },
     searchExisting: function(recordId, array) {
         for (var i = 0; i < array.length; i++) {
@@ -954,6 +954,76 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
         return false;
     },
+    syncUserBadges: function(req_for) {
+        gs.info('syncUserBadges  :: Begin');
+        try {
+            var grSysUser = new GlideRecordSecure('sys_user');
+            username = ""
+            if (grSysUser.get(req_for)) {
+                username = grSysUser.getValue('user_name');
+            }
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UserBadgesAndAccessLevels', 'POST');
+                r.setStringParameterNoEscape('baseURL', this.baseURLProp);
+                r.setStringParameterNoEscape('userId', username);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                if (updatehttpStatus == 200) {
+                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_userbadges");
+                    gr.addQuery('user', req_for.sys_id);
+                    gr.query();
+                    gr.deleteMultiple();
+                    var responseObj = JSON.parse(updateresponseBody);
+                    if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                        if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
+                            var assets = responseObj.data[0].identityAssets;
+                            for (i = 0; i < assets.length; i++) {
+                                var assetObj = assets[i];
+                                this.saveUserBadge(assetObj, req_for.sys_id, username);
+                            }
+                        }
+                        return true;
+                    } else {
+                        gs.addInfoMessage("No badges for   --> " + username);
+                    }
+                } else {
+                    gs.info("syncUserBadges is unsuccessful  due to API error");
+                }
+            } else {
+                gs.info("syncUserBadges  is unsuccessful due to API  server authentication / connectivity issue");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('syncUserBadges   :: ' + message);
+        }
+        return false;
+    },
+    saveUserBadge: function(template, user_id, user_name) {
+        try {
+            var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_userbadges');
+            recordToInsert.user = user_id;
+            recordToInsert.user_name = user_name;
+            recordToInsert.badge_id = template.asset.extId;
+            recordToInsert.badge_status = template.intStatus;
+			recordToInsert.badgetype = template.asset.type;
+            recordToInsert.provisioning_status = "YES";
+			var validFrom = new GlideDateTime();
+			validFrom.setDisplayValue(template.validFrom, this.date_format);
+			var validTo = new GlideDateTime();
+			validTo.setDisplayValue(template.validFrom, this.date_format);
+            recordToInsert.badge_valid_from = validFrom;
+            recordToInsert.badge_valid_to = validTo;
+            recordToInsert.sys_created_on = new GlideDateTime();
+            recordToInsert.sys_updated_on = new GlideDateTime();
+            recordToInsert.insert();
+        } catch (ex) {
+            var message = ex.message;
+            gs.info(" ##########################         " + message);
+        }
+    },
     type: 'AlertEnterprisePlatformAPIs'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -961,7 +1031,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>249</sys_mod_count>
+        <sys_mod_count>262</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -969,6 +1039,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-19 10:45:44</sys_updated_on>
+        <sys_updated_on>2023-06-27 15:16:46</sys_updated_on>
     </sys_script_include>
 </record_update>

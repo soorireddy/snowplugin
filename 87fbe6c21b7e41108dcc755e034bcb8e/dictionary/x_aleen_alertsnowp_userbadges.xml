@@ -3,17 +3,17 @@
         <element label="back" max_length="10000" name="back" type="string"/>
         <element choice="1" label="BadgeType" max_length="40" name="badgetype" type="string">
             <choice>
-                <element inactive_on_update="false" label="Permanent" sequence="1" value="PERM"/>
-                <element inactive_on_update="false" label="Temporary" sequence="2" value="TEMP"/>
+                <element inactive_on_update="false" label="Permanent" sequence="1" value="permanent_badge"/>
+                <element inactive_on_update="false" label="Temporary" sequence="2" value="temp_badge"/>
             </choice>
         </element>
         <element label="Badge Id" max_length="40" name="badge_id" type="string"/>
         <element label="Badge PIN" max_length="40" name="badge_pin" type="password"/>
         <element choice="3" default="Active" label="Badge Status" max_length="40" name="badge_status" type="string">
             <choice>
-                <element inactive_on_update="false" label="Active" sequence="1" value="Active"/>
-                <element inactive_on_update="false" label="Suspended" sequence="2" value="Suspended"/>
-                <element inactive_on_update="false" label="Lost" sequence="3" value="Lost"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="0"/>
+                <element inactive_on_update="false" label="Lost" sequence="2" value="5"/>
+                <element inactive_on_update="false" label="Inactive" sequence="3" value="9"/>
             </choice>
         </element>
         <element label="Badge Valid From" max_length="40" name="badge_valid_from" type="glide_date_time"/>
