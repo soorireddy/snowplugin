@@ -78,7 +78,7 @@
         <sys_created_on>2023-06-27 07:44:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cfdb70bf1b6f6510234b0f6e6e4bcbc4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Existing Badges</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -86,7 +86,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_cfdb70bf1b6f6510234b0f6e6e4bcbc4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 11:26:16</sys_updated_on>
+        <sys_updated_on>2023-06-27 12:06:18</sys_updated_on>
         <table/>
         <tooltip/>
         <type>23</type>
@@ -97,7 +97,7 @@
         <validate_regex/>
         <variable_name/>
         <variable_set/>
-        <variable_width>50</variable_width>
+        <variable_width>100</variable_width>
         <visibility>1</visibility>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

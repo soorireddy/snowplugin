@@ -8,7 +8,8 @@
         <choice_field/>
         <choice_table/>
         <create_roles/>
-        <default_html_value/>
+        <default_html_value><![CDATA[<p> </p>
+<table style="align: center; border-collapse: collapse;" border="1"><tbody><tr><td style="width: 50%; height: 15.3906px;">Access Level ID</td><td style="width: 50%; height: 15.3906px;">Access Level Name</td></tr></tbody></table>]]></default_html_value>
         <default_value/>
         <delete_roles/>
         <delivery_plan/>
@@ -78,7 +79,7 @@
         <sys_created_on>2023-06-27 07:43:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6a9ab07f1b6f6510234b0f6e6e4bcb33</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Existing Access Levels</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -86,10 +87,10 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_6a9ab07f1b6f6510234b0f6e6e4bcb33</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 08:15:14</sys_updated_on>
+        <sys_updated_on>2023-06-27 12:19:52</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>2</type>
+        <type>23</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -97,7 +98,7 @@
         <validate_regex/>
         <variable_name/>
         <variable_set/>
-        <variable_width>50</variable_width>
+        <variable_width>100</variable_width>
         <visibility>1</visibility>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

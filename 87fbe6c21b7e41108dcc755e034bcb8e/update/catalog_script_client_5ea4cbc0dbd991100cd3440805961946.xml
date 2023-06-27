@@ -33,9 +33,56 @@
             ajaxscript.getXMLAnswer(userDatacallback);
 
             function userDatacallback(response) {
-                console.log(response);
-                var res = JSON.parse(response);
-                console.log(res);
+                var userHasExistingAccess = false;
+                var userHasBadges = false;
+                var responseObj = JSON.parse(response);
+                var acLevelTable = '<table style="align:center; border-collapse: collapse;">';
+                acLevelTable += '<tr><th>Access level ID</th><th>Access Level Name</th></tr>';
+                var badgeTable = '<table style="align:center; border-collapse: collapse;">';
+                badgeTable += '<tr><th>Badge ID</th><th>Badge Status</th><th>Badge Type</th><th>Valid From </th><th>Valid To</th></tr>';
+                if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                    if (responseObj.data[0].identityAccess && responseObj.data[0].identityAccess.length > 0) {
+                        userHasExistingAccess = true;
+                        var accessLevels = responseObj.data[0].identityAccess;
+                        for (var j = 0; j < accessLevels.length; j++) {
+                            var accessLevel = accessLevels[j];
+                            acLevelTable += '<tr>';
+                            acLevelTable += '<td>' + accessLevels[j].access.id
+                            acLevelTable += '<td>' + accessLevels[j].access.text + '</td>';
+                            acLevelTable += '</tr>';
+                        }
+                    }
+                    if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
+                        userHasBadges = true;
+                        var assets = responseObj.data[0].identityAssets;
+                        for (var ij = 0; ij < assets.length; ij++) {
+                            badgeTable += '<tr>';
+                            badgeTable += '<td>' + assets[ij].asset.extId
+                            badgeTable += '<td>' + assets[ij].intStatus + '</td>';
+                            badgeTable += '<td>' + assets[ij].asset.type + '</td>';
+                            badgeTable += '<td>' + assets[ij].validFrom + '</td>';
+                            badgeTable += '<td>' + assets[ij].validTo + '</td>';
+                            badgeTable += '</tr>';
+                        }
+                    }
+					g_form.hideFieldMsg('request_for');
+                    if (!userHasBadges) {
+						g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
+                        badgeTable += '<tr>';
+                        badgeTable += '<td colspan="5" >' + 'No Badges Found' + '</td>';
+                        badgeTable += '</tr>';
+                    }
+                    badgeTable += '</table>';
+                    g_form.setValue('existing_badges', badgeTable);
+                    if (!userHasExistingAccess) {
+                        acLevelTable += '<tr>';
+                        acLevelTable += '<td colspan="2" >' + 'No Access levels Found' + '</td>';
+                        acLevelTable += '</tr>';
+                    }
+                    acLevelTable += '</table>';
+                    g_form.setValue('existing_access_levels', acLevelTable);
+					
+                }
             }
         }
     }
@@ -47,7 +94,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>On change User check badge Assigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -56,7 +103,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 11:24:16</sys_updated_on>
+        <sys_updated_on>2023-06-27 12:33:34</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

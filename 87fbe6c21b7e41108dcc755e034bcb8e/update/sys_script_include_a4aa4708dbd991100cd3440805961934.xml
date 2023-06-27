@@ -52,11 +52,17 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
     getuserDetailsFromHSC: function() {
         returnResponse = {};
         try {
+			var req_for = this.getParameter('userId');
+			var grSysUser = new GlideRecordSecure('sys_user');
+			username = ""
+			if (grSysUser.get(req_for)) {
+				username = grSysUser.getValue('user_name');				
+			}
             var Token = this.getJWT();
-            //gs.addInfoMessage(Token);
+            //gs.addInfoMessage( " Searching Badges & Access levsl for " + username);
             var req = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UserBadgesAndAccessLevels', 'POST');
             req.setStringParameterNoEscape('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-            req.setStringParameterNoEscape('userId', "reyna.bangle");
+            req.setStringParameterNoEscape('userId', username);
             req.setRequestHeader('Content-Type', 'application/json');
             req.setRequestHeader('Authorization', Token);
             var ressponse = req.executeAsync();
@@ -84,7 +90,7 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
         <sys_created_on>2022-08-09 10:07:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a4aa4708dbd991100cd3440805961934</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>CheckUserBadgesFromUIScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>protected</sys_policy>
@@ -92,6 +98,6 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_a4aa4708dbd991100cd3440805961934</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 11:24:21</sys_updated_on>
+        <sys_updated_on>2023-06-27 12:41:19</sys_updated_on>
     </sys_script_include>
 </record_update>
