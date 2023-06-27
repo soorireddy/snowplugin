@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>userId</name>
+        <rest_message_function display_value="POST">1c96c9371baf6510234b0f6e6e4bcb91</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-27 08:33:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1a4789b71baf6510234b0f6e6e4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>userId</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_1a4789b71baf6510234b0f6e6e4bcba0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-27 08:33:56</sys_updated_on>
+        <type>string</type>
+        <value/>
+    </sys_rest_message_fn_parameters>
+</record_update>
