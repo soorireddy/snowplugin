@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="fc87aeb51baba1108dcc755e034bcb46" sys_domain="global" table="x_aleen_alertsnowp_badge_officer" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>user_id</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-06-23 11:53:21</sys_created_on>
-            <sys_id>e29e09221ba3a110234b0f6e6e4bcb2b</sys_id>
+            <sys_created_on>2023-06-27 13:05:26</sys_created_on>
+            <sys_id>55758efb1b63a510234b0f6e6e4bcb81</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_badge_officer" sys_domain="global" view="Default view">fc87aeb51baba1108dcc755e034bcb46</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-06-23 11:53:21</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>user_id</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-06-23 11:53:21</sys_created_on>
-            <sys_id>669e09221ba3a110234b0f6e6e4bcb2b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_badge_officer" sys_domain="global" view="Default view">fc87aeb51baba1108dcc755e034bcb46</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-06-23 11:53:21</sys_updated_on>
+            <sys_updated_on>2023-06-27 13:05:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
