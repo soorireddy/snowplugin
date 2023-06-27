@@ -32,6 +32,12 @@
         <order>100</order>
         <script><![CDATA[current.request_type = "DATA_REQUEST";
 current.insert();
+var gr = new GlideRecordSecure("x_aleen_alertsnowp_userbadges");
+gr.addQuery('user', current.user_id.sys_id);
+gr.query();
+gr.deleteMultiple();
+gs.addInfoMessage("Fetching Userbadges from HSC , please wait ... , page will auto refresh ");
+/*
 var includeScript = new AlertEnterprisePlatformAPIs();
 var response = includeScript.syncUserBadges(current.user_id);
 if(response){
@@ -39,7 +45,7 @@ if(response){
 }else{
 	current.request_status = "ERROR"
 }
-current.update();
+current.update(); */
 action.setRedirectURL(current);]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -52,7 +58,7 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c2b9cabf1b63a510234b0f6e6e4bcbc9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Fetch From HSC</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -61,7 +67,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_c2b9cabf1b63a510234b0f6e6e4bcbc9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 15:19:40</sys_updated_on>
+        <sys_updated_on>2023-06-27 15:52:51</sys_updated_on>
         <table>x_aleen_alertsnowp_badge_officer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
