@@ -32,7 +32,7 @@
         <order>50</order>
         <script><![CDATA[function printBadge() {
 	//gs.addInfoMessage('Print request has been placed , Please collect Badge from printer');
-    var gdw = new GlideModal('x_aleen_alertsnowp_Print_Page', false, 800);
+    var gdw = new GlideModal('x_aleen_alertsnowp_Print_Page', false, 450);
     gdw.setTitle("Previvew & Print");
 	var frontsidehtmlString = g_form.getValue('front');
 	frontsidehtmlString = frontsidehtmlString.replace('##COMPANY_NAME##', g_form.getValue('company'));
@@ -54,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ba7b706e1b23a110234b0f6e6e4bcb3e</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Print</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_ba7b706e1b23a110234b0f6e6e4bcb3e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 14:58:58</sys_updated_on>
+        <sys_updated_on>2023-06-28 10:42:41</sys_updated_on>
         <table>x_aleen_alertsnowp_userbadges</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
