@@ -26,7 +26,7 @@
     } else {
         if (newValue) {
             //g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
-            g_form.showFieldMsg("request_for", "Loading Badges and Access Levels from HSC , Please wait ...", "info");
+            g_form.showFieldMsg("request_for", "Loading Badges and Access Levels from Security System , Please wait ...", "info");
             var ajaxscript = new GlideAjax('CheckUserBadgesFromUIScript');
             ajaxscript.addParam('sysparm_name', 'getuserDetailsFromHSC');
             ajaxscript.addParam('userId', newValue);
@@ -83,6 +83,10 @@
                     g_form.setValue('existing_access_levels', acLevelTable);
 					
                 }
+				else{
+					g_form.hideFieldMsg('request_for');
+					g_form.showFieldMsg("request_for", "Error while fetching data. Please contact Administrator", "error");
+				}
             }
         }
     }
@@ -94,7 +98,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>On change User check badge Assigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -103,7 +107,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 12:33:34</sys_updated_on>
+        <sys_updated_on>2023-06-30 13:33:18</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -44,7 +44,7 @@ function onPrint() {
 	<input type="hidden" id="frontSide" name="frontSide" value="${sysparm_fronttemplate}"/>
 	<input type="hidden" id="backSide" name="backSide" value="${sysparm_backtemplate}" />
 	<div style="padding: 5px 10px; display: flex; width: 100%; justify-content: center;">
-	<select id="template" name="Template" onchange="changeTemplate()" style="width: 300px;padding: 5px;text-align: center;">
+	<select id="template" name="Template" onchange="changeTemplate()" style="width: 200px;padding: 5px;text-align: center;">
 		<option value="front">----Front-----</option>
 		<option value="back">----Back-----</option>
 	</select>
@@ -66,7 +66,7 @@ function onPrint() {
         <sys_created_on>2023-06-26 06:02:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cbba9b971b2729108dcc755e034bcb74</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Print_Page</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>protected</sys_policy>
@@ -74,6 +74,6 @@ function onPrint() {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_page_cbba9b971b2729108dcc755e034bcb74</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-28 11:00:30</sys_updated_on>
+        <sys_updated_on>2023-06-28 16:20:11</sys_updated_on>
     </sys_ui_page>
 </record_update>

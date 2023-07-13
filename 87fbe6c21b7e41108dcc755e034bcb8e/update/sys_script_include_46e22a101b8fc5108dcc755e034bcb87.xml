@@ -293,8 +293,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
-                gs.debug('buildingAccess  NEW request body ::  ==> ' + reqPayload);
+                gs.info('buildingAccess  NEW request body ::  ==> ' + reqPayload);
                 r.setRequestBody(reqPayload);
+				gs.info( "building acccess payload"   + JSON.stingify(reqPayload))
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
@@ -1008,9 +1009,9 @@ AlertEnterprisePlatformAPIs.prototype = {
 			recordToInsert.badgetype = template.asset.type;
             recordToInsert.provisioning_status = "YES";
 			var validFrom = new GlideDateTime();
-			validFrom.setDisplayValue(template.validFrom, this.date_format);
+			validFrom.setDisplayValue(template.validFrom, "yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 			var validTo = new GlideDateTime();
-			validTo.setDisplayValue(template.validFrom, this.date_format);
+			validTo.setDisplayValue(template.validFrom, "yyyy-MM-dd'T'HH:mm:ss.SSSZ");
             recordToInsert.badge_valid_from = validFrom;
             recordToInsert.badge_valid_to = validTo;
             recordToInsert.sys_created_on = new GlideDateTime();
@@ -1028,7 +1029,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>263</sys_mod_count>
+        <sys_mod_count>265</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -1036,6 +1037,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 15:31:26</sys_updated_on>
+        <sys_updated_on>2023-06-30 07:20:20</sys_updated_on>
     </sys_script_include>
 </record_update>

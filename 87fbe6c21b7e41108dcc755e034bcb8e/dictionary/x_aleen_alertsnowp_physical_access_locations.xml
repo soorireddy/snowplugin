@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e0426d501bc8b110234b0f6e6e4bcb91" extends="cmn_location" label="Physical Access Locations" max_length="40" name="x_aleen_alertsnowp_physical_access_locations" type="collection"/>
+</database>

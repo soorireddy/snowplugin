@@ -16,7 +16,7 @@
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
         <format_for_configurable_workspace>false</format_for_configurable_workspace>
-        <hint/>
+        <hint>Load User badges from Security System</hint>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
@@ -27,7 +27,7 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Fetch From HSC</name>
+        <name>Load Details</name>
         <onclick/>
         <order>100</order>
         <script><![CDATA[current.request_type = "DATA_REQUEST";
@@ -36,7 +36,7 @@ var gr = new GlideRecordSecure("x_aleen_alertsnowp_userbadges");
 gr.addQuery('user', current.user_id.sys_id);
 gr.query();
 gr.deleteMultiple();
-gs.addInfoMessage("Fetching Userbadges from HSC , please wait ... , page will auto refresh ");
+gs.addInfoMessage("Fetching Userbadges from Security System , page will auto refresh. Please wait .. ");
 /*
 var includeScript = new AlertEnterprisePlatformAPIs();
 var response = includeScript.syncUserBadges(current.user_id);
@@ -58,8 +58,8 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c2b9cabf1b63a510234b0f6e6e4bcbc9</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>Fetch From HSC</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Load Details</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>protected</sys_policy>
@@ -67,7 +67,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_c2b9cabf1b63a510234b0f6e6e4bcbc9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 15:52:51</sys_updated_on>
+        <sys_updated_on>2023-06-30 13:27:54</sys_updated_on>
         <table>x_aleen_alertsnowp_badge_officer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
