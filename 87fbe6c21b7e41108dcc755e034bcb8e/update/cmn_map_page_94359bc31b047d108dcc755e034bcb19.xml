@@ -3,26 +3,38 @@
         <center_address>Yogododji, Africa</center_address>
         <center_latitude>14.883333</center_latitude>
         <center_longitude>-1.766667</center_longitude>
-        <controls_size>large</controls_size>
+        <controls_size>small</controls_size>
         <coordinates_retrieved_on/>
         <disable_map_controls/>
         <disable_nav_bar>false</disable_nav_bar>
         <filter/>
-        <initial_zoom>2</initial_zoom>
+        <initial_zoom>3</initial_zoom>
         <name>x_aleen_alertsnowp_Workplace Access Loca</name>
         <overview>true</overview>
-        <refresh_on_zoom>true</refresh_on_zoom>
+        <refresh_on_zoom>false</refresh_on_zoom>
         <roles/>
-        <script><![CDATA[var gr = new GlideRecord("x_aleen_alertsnowp_locations");
+        <script><![CDATA[var gr = new GlideRecordSecure("x_aleen_alertsnowp_locations");
 gr.addEncodedQuery("latitudeISNOTEMPTY^longitudeISNOTEMPTY");
 gr.query();
 while (gr.next()) {
-   var item = map.addItem(gr);
-   item.latitude = gr.getValue('latitude');
-   item.longitude = gr.getValue('longitude');
-   item.dialog_title = gr.getValue('name');
-   item.icon_width = "16";
-   item.icon_height = "16";
+    var lat = gr.getValue('latitude');
+    var lon = gr.getValue('longitude');
+    if (lat != 0.0 && lon != 0.0) {
+        var item = map.addItem(gr);
+        item.latitude = gr.getValue('latitude');
+        item.longitude = gr.getValue('longitude');
+        item.dialog_title = gr.getValue('name');
+        item.icon_width = "32";
+        item.icon_height = "32";
+        var county = gr.getValue('country');
+        if (county === 'Angola') {
+ item.icon = 'https://ven02572.service-now.com/sys_attachment.do?sysparm_transaction_scope=87fbe6c21b7e41108dcc755e034bcb8e&sysparm_referring_url=tear_off&view=true&sys_id=e89f3f941b54fd10234b0f6e6e4bcb98';
+        } else {
+
+            item.icon = 'https://ven02572.service-now.com/sys_attachment.do?sysparm_transaction_scope=87fbe6c21b7e41108dcc755e034bcb8e&sysparm_referring_url=tear_off&view=true&sys_id=4ad9bfd01b54fd10234b0f6e6e4bcb47';
+        }
+
+    }
 }]]></script>
         <show_device_location>true</show_device_location>
         <suffix>Workplace Access Location</suffix>
@@ -31,7 +43,7 @@ while (gr.next()) {
         <sys_created_on>2023-07-20 07:33:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>94359bc31b047d108dcc755e034bcb19</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>x_aleen_alertsnowp_Workplace Access Loca</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -39,7 +51,7 @@ while (gr.next()) {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>cmn_map_page_94359bc31b047d108dcc755e034bcb19</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-20 07:40:12</sys_updated_on>
+        <sys_updated_on>2023-07-24 07:50:23</sys_updated_on>
         <type>satellite</type>
         <type_selection>buttons</type_selection>
         <use_advanced_configuration>false</use_advanced_configuration>
