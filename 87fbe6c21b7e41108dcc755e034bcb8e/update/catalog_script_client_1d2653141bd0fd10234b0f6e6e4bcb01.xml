@@ -7,88 +7,93 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Request Building Access">956c04aa1b3e81108dcc755e034bcbf8</cat_item>
-        <cat_variable>IO:d16c8cea1b3e81108dcc755e034bcb9e</cat_variable>
+        <cat_item display_value="Request New Badge">7a43f24a1b7e41108dcc755e034bcb91</cat_item>
+        <cat_variable>IO:76437a4a1b7e41108dcc755e034bcb75</cat_variable>
         <condition/>
         <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>On change User check badge Assigned</name>
+        <name>On change User check Existing badges </name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
     g_form.hideFieldMsg('request_for');
-    g_form.setValue('existing_access_levels', '');
+    g_form.setValue('existing_badges', '');
     if (isLoading || newValue == '') {
         return;
     } else {
         if (newValue) {
             //g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
-            g_form.showFieldMsg("request_for", "Loading Access Levels from Security System , Please wait ...", "info");
+            g_form.showFieldMsg("request_for", "Loading Badges from Security System , Please wait ...", "info");
             var ajaxscript = new GlideAjax('CheckUserBadgesFromUIScript');
             ajaxscript.addParam('sysparm_name', 'getuserDetailsFromHSC');
             ajaxscript.addParam('userId', newValue);
             ajaxscript.getXMLAnswer(userDatacallback);
 
             function userDatacallback(response) {
-                var userHasExistingAccess = false;
+                var userHasBadges = false;
                 var responseObj = JSON.parse(response);
-                var acLevelTable = '<table style="align:center; border-collapse: collapse;">';
-                acLevelTable += '<tr><th>Access level ID</th><th>Access Level Name</th><th>Valid From </th><th>Valid To</th></tr>';
                 var badgeTable = '<table style="align:center; border-collapse: collapse;">';
                 badgeTable += '<tr><th>Badge ID</th><th>Badge Status</th><th>Badge Type</th><th>Valid From </th><th>Valid To</th></tr>';
                 if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
-                    if (responseObj.data[0].identityAccess && responseObj.data[0].identityAccess.length > 0) {
-                        userHasExistingAccess = true;
-                        var accessLevels = responseObj.data[0].identityAccess;
-                        for (var j = 0; j < accessLevels.length; j++) {
-                            var accessLevel = accessLevels[j];
-                            acLevelTable += '<tr>';
-                            acLevelTable += '<td>' + accessLevels[j].access.id
-                            acLevelTable += '<td>' + accessLevels[j].access.text + '</td>';
-							acLevelTable += '<td>' + accessLevels[j].validFrom + '</td>';
-                            acLevelTable += '<td>' + accessLevels[j].validTo + '</td>';
-                            acLevelTable += '</tr>';
+                  if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
+                        userHasBadges = true;
+                        var assets = responseObj.data[0].identityAssets;
+                        for (var ij = 0; ij < assets.length; ij++) {
+                            badgeTable += '<tr>';
+                            badgeTable += '<td>' + assets[ij].asset.extId
+                            badgeTable += '<td>' + getStatusString(assets[ij].intStatus) + '</td>';
+                            badgeTable += '<td>' + assets[ij].asset.assetType.text + '</td>';
+                            badgeTable += '<td>' + assets[ij].validFrom + '</td>';
+                            badgeTable += '<td>' + assets[ij].validTo + '</td>';
+                            badgeTable += '</tr>';
                         }
                     }
-                   
 					g_form.hideFieldMsg('request_for');
-
-                    if (!userHasExistingAccess) {
-                        acLevelTable += '<tr>';
-                        acLevelTable += '<td colspan="2" >' + 'No Access levels Found' + '</td>';
-                        acLevelTable += '</tr>';
+                    if (!userHasBadges) {
+						g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
+                        badgeTable += '<tr>';
+                        badgeTable += '<td colspan="5" >' + 'No Badges Found' + '</td>';
+                        badgeTable += '</tr>';
                     }
-                    acLevelTable += '</table>';
-                    g_form.setValue('existing_access_levels', acLevelTable);
-					
+                    badgeTable += '</table>';
+                    g_form.setValue('existing_badges', badgeTable);
                 }
 				else{
 					g_form.hideFieldMsg('request_for');
 					g_form.showFieldMsg("request_for", "Error while fetching data. Please contact Administrator", "error");
 				}
             }
+			
+			function getStatusString(statusId){
+				if (statusId  === 0){
+					return 'Active'
+				} else {
+					return 'Inactive'
+				}
+				
+			}
         }
     }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-08-09 09:46:27</sys_created_on>
+        <sys_created_on>2023-07-24 04:50:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>32</sys_mod_count>
-        <sys_name>On change User check badge Assigned</sys_name>
+        <sys_id>1d2653141bd0fd10234b0f6e6e4bcb01</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>On change User check Existing badges </sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
+        <sys_update_name>catalog_script_client_1d2653141bd0fd10234b0f6e6e4bcb01</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-24 05:33:17</sys_updated_on>
+        <sys_updated_on>2023-07-24 06:14:35</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

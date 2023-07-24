@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Request Building Access">956c04aa1b3e81108dcc755e034bcbf8</cat_item>
+        <cat_item display_value="Request New Badge">7a43f24a1b7e41108dcc755e034bcb91</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -42,7 +42,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>existing_badges</name>
-        <order>110</order>
+        <order>101</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -54,7 +54,7 @@
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_aleen_alertsnowp_building_access</record_producer_table>
+        <record_producer_table>x_aleen_alertsnowp_new_badge</record_producer_table>
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
@@ -75,18 +75,18 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-06-27 07:44:27</sys_created_on>
+        <sys_created_on>2023-07-24 04:44:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>cfdb70bf1b6f6510234b0f6e6e4bcbc4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_id>25959f141bd0fd10234b0f6e6e4bcb6f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Existing Badges</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>item_option_new_cfdb70bf1b6f6510234b0f6e6e4bcbc4</sys_update_name>
+        <sys_update_name>item_option_new_25959f141bd0fd10234b0f6e6e4bcb6f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 12:06:18</sys_updated_on>
+        <sys_updated_on>2023-07-24 05:01:19</sys_updated_on>
         <table/>
         <tooltip/>
         <type>23</type>
@@ -97,7 +97,7 @@
         <validate_regex/>
         <variable_name/>
         <variable_set/>
-        <variable_width>100</variable_width>
+        <variable_width/>
         <visibility>1</visibility>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
@@ -105,22 +105,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=cfdb70bf1b6f6510234b0f6e6e4bcbc4"/>
-    <fx_price action="delete_multiple" query="id=cfdb70bf1b6f6510234b0f6e6e4bcbc4"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=25959f141bd0fd10234b0f6e6e4bcb6f"/>
+    <fx_price action="delete_multiple" query="id=25959f141bd0fd10234b0f6e6e4bcb6f"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>cfdb70bf1b6f6510234b0f6e6e4bcbc4</id>
+        <id>25959f141bd0fd10234b0f6e6e4bcb6f</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-06-27 07:44:27</sys_created_on>
-        <sys_id>a3fb70bf1b6f6510234b0f6e6e4bcb8f</sys_id>
+        <sys_created_on>2023-07-24 04:44:33</sys_created_on>
+        <sys_id>17b597d41bd0fd10234b0f6e6e4bcb5c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 07:44:27</sys_updated_on>
+        <sys_updated_on>2023-07-24 04:44:33</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -128,16 +128,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>cfdb70bf1b6f6510234b0f6e6e4bcbc4</id>
+        <id>25959f141bd0fd10234b0f6e6e4bcb6f</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-06-27 07:44:27</sys_created_on>
-        <sys_id>2bfb70bf1b6f6510234b0f6e6e4bcb8e</sys_id>
+        <sys_created_on>2023-07-24 04:44:33</sys_created_on>
+        <sys_id>1fb597d41bd0fd10234b0f6e6e4bcb5a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 07:44:27</sys_updated_on>
+        <sys_updated_on>2023-07-24 04:44:33</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
