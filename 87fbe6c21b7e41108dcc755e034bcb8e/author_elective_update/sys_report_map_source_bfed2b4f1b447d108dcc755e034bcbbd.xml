@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_map_source">
+    <sys_report_map_source action="DELETE">
+        <active>true</active>
+        <aggregate_field>location.country</aggregate_field>
+        <join_by_column>hc-key</join_by_column>
+        <name>TESTT (level 1)</name>
+        <parent display_value="TESTT">947d2b4f1b447d108dcc755e034bcbfd</parent>
+        <report_map_source_mapping display_value="Country mappings">82a231b2d7a30200bd4a4ebfae610308</report_map_source_mapping>
+        <sys_class_name>sys_report_map_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 09:17:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bfed2b4f1b447d108dcc755e034bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TESTT (level 1)</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_report_map_source_bfed2b4f1b447d108dcc755e034bcbbd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 09:17:50</sys_updated_on>
+        <table>x_aleen_alertsnowp_access_levels</table>
+        <type display_value="Level 1">7bbdd872d7101200bd4a4ebfae61031c</type>
+        <type_mapping>mapping</type_mapping>
+    </sys_report_map_source>
+    <sys_translated_text action="DELETE" query="documentkey=bfed2b4f1b447d108dcc755e034bcbbd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_report_map_source_bfed2b4f1b447d108dcc755e034bcbbd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_map_source"><sys_report_map_source action="INSERT_OR_UPDATE"><active>true</active><aggregate_field>location.country</aggregate_field><join_by_column>hc-key</join_by_column><name>TESTT (level 1)</name><parent display_value="TESTT">947d2b4f1b447d108dcc755e034bcbfd</parent><report_map_source_mapping display_value="Country mappings">82a231b2d7a30200bd4a4ebfae610308</report_map_source_mapping><sys_class_name>sys_report_map_source</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-20 09:17:50</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>bfed2b4f1b447d108dcc755e034bcbbd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>TESTT (level 1)</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_report_map_source_bfed2b4f1b447d108dcc755e034bcbbd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-20 09:17:50</sys_updated_on><table>x_aleen_alertsnowp_access_levels</table><type display_value="Level 1">7bbdd872d7101200bd4a4ebfae61031c</type><type_mapping>mapping</type_mapping></sys_report_map_source><sys_translated_text action="delete_multiple" query="documentkey=bfed2b4f1b447d108dcc755e034bcbbd"/></record_update>]]></payload>
+        <payload_hash>-2091267898</payload_hash>
+        <record_name>TESTT (level 1)</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 09:17:51</sys_created_on>
+        <sys_id>3bed2b4f1b447d108dcc755e034bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189729763310000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 09:17:51</sys_updated_on>
+        <type>Map Source</type>
+        <update_guid>3fed2b4f0c447d1063e531a6ba65c8bf</update_guid>
+        <update_guid_history>3fed2b4f0c447d1063e531a6ba65c8bf:-2091267898</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 09:28:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_report_map_source">sys_report_map_source</sys_db_object>
+        <sys_id>ab122b4cf1fc4d889833f421dc2c7d10</sys_id>
+        <sys_metadata>bfed2b4f1b447d108dcc755e034bcbbd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TESTT (level 1)</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_report_map_source_bfed2b4f1b447d108dcc755e034bcbbd</sys_update_name>
+        <sys_update_version display_value="sys_report_map_source_bfed2b4f1b447d108dcc755e034bcbbd">3bed2b4f1b447d108dcc755e034bcbc0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 09:28:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

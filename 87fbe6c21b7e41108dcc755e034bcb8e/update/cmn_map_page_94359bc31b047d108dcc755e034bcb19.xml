@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmn_map_page">
+    <cmn_map_page action="INSERT_OR_UPDATE">
+        <center_address>Yogododji, Africa</center_address>
+        <center_latitude>14.883333</center_latitude>
+        <center_longitude>-1.766667</center_longitude>
+        <controls_size>large</controls_size>
+        <coordinates_retrieved_on/>
+        <disable_map_controls/>
+        <disable_nav_bar>false</disable_nav_bar>
+        <filter/>
+        <initial_zoom>2</initial_zoom>
+        <name>x_aleen_alertsnowp_Workplace Access Loca</name>
+        <overview>true</overview>
+        <refresh_on_zoom>true</refresh_on_zoom>
+        <roles/>
+        <script><![CDATA[var gr = new GlideRecord("x_aleen_alertsnowp_locations");
+gr.addEncodedQuery("latitudeISNOTEMPTY^longitudeISNOTEMPTY");
+gr.query();
+while (gr.next()) {
+   var item = map.addItem(gr);
+   item.latitude = gr.getValue('latitude');
+   item.longitude = gr.getValue('longitude');
+   item.dialog_title = gr.getValue('name');
+   item.icon_width = "16";
+   item.icon_height = "16";
+}]]></script>
+        <show_device_location>true</show_device_location>
+        <suffix>Workplace Access Location</suffix>
+        <sys_class_name>cmn_map_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 07:33:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>94359bc31b047d108dcc755e034bcb19</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_Workplace Access Loca</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>cmn_map_page_94359bc31b047d108dcc755e034bcb19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 07:40:12</sys_updated_on>
+        <type>satellite</type>
+        <type_selection>buttons</type_selection>
+        <use_advanced_configuration>false</use_advanced_configuration>
+    </cmn_map_page>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="DELETE">
+        <group_id/>
+        <report_id display_value="">afedd3cf1b047d108dcc755e034bcbf2</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 08:07:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>27edd3cf1b047d108dcc755e034bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>afedd3cf1b047d108dcc755e034bcbf2</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_report_users_groups_27edd3cf1b047d108dcc755e034bcbf3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 08:07:55</sys_updated_on>
+        <user_id display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user_id>
+    </sys_report_users_groups>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_report_users_groups_27edd3cf1b047d108dcc755e034bcbf3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups"><sys_report_users_groups action="INSERT_OR_UPDATE"><group_id/><report_id display_value="">afedd3cf1b047d108dcc755e034bcbf2</report_id><sys_class_name>sys_report_users_groups</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-20 08:07:55</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>27edd3cf1b047d108dcc755e034bcbf3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>afedd3cf1b047d108dcc755e034bcbf2</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_report_users_groups_27edd3cf1b047d108dcc755e034bcbf3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-20 08:07:55</sys_updated_on><user_id display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user_id></sys_report_users_groups></record_update>]]></payload>
+        <payload_hash>2069473753</payload_hash>
+        <record_name>afedd3cf1b047d108dcc755e034bcbf2</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 08:07:55</sys_created_on>
+        <sys_id>afedd3cf1b047d108dcc755e034bcbf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18972575d1d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 08:07:55</sys_updated_on>
+        <type>Report Users and Groups</type>
+        <update_guid>a3edd3cf4a047d10dbbd5fd5b87844f5</update_guid>
+        <update_guid_history>a3edd3cf4a047d10dbbd5fd5b87844f5:2069473753</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 04:15:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_report_users_groups">sys_report_users_groups</sys_db_object>
+        <sys_id>1327f59bb6ee4ad18231400124e13581</sys_id>
+        <sys_metadata>27edd3cf1b047d108dcc755e034bcbf3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>afedd3cf1b047d108dcc755e034bcbf2</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_report_users_groups_27edd3cf1b047d108dcc755e034bcbf3</sys_update_name>
+        <sys_update_version display_value="sys_report_users_groups_27edd3cf1b047d108dcc755e034bcbf3">afedd3cf1b047d108dcc755e034bcbf5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 04:15:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
