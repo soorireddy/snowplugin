@@ -7,14 +7,14 @@
         <billable>false</billable>
         <can_cancel>false</can_cancel>
         <category display_value="Workplace Access and Security">c92de6061b7e41108dcc755e034bcb19</category>
-        <checked_out>true</checked_out>
+        <checked_out>false</checked_out>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan display_value="">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description><![CDATA[<p>Service Overview :</p>
-<ul style="list-style-position: inside;"><li>You should have a valid badge to request an access.</li><li>If you need access to a specific building or area, you can use this option to make a request</li><li>If you need access for a specific duration, please provide the validity dates</li><li>The request will go for Manager approval before it goes Area owner approval</li><li>Based on the building/Area policy, the request may go for an additional approval</li><li>You will receive a confirmation email once the new access is added to your ID Badge</li></ul>]]></description>
+<ul style="list-style-position: inside;"><li>You should have a valid badge to request an access.</li><li>If you need access to a specific building or area, you can use this option to make a request</li><li>If you need access for a specific duration, please provide the validity dates</li><li>The request  may go for Manager and/or Area owner Approval based on the access type </li><li>You will receive a confirmation email once the new access is added to your ID Badge</li></ul>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -77,7 +77,7 @@
         <sys_created_on>2022-04-14 07:54:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>956c04aa1b3e81108dcc755e034bcbf8</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Request Building Access</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -85,7 +85,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_956c04aa1b3e81108dcc755e034bcbf8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-15 08:49:50</sys_updated_on>
+        <sys_updated_on>2023-08-03 05:44:03</sys_updated_on>
         <table_name>x_aleen_alertsnowp_building_access</table_name>
         <taxonomy_topic/>
         <template/>
