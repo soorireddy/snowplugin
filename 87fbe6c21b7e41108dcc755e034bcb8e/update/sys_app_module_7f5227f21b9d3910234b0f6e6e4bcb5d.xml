@@ -5,41 +5,39 @@
         <assessment/>
         <content_page/>
         <device_type/>
-        <filter table="x_aleen_alertsnowp_badge_officer">sys_created_on&lt;javascript:gs.beginningOfLast7Days()^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="&lt;" or="false" value="javascript:gs.beginningOfLast7Days()"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </filter>
-        <hint/>
+        <filter/>
+        <hint>Badging Office</hint>
         <homepage/>
         <image/>
         <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Badge Officers</mobile_title>
+        <mobile_title>Badging Office</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_aleen_alertsnowp_badge_officer</name>
-        <order>1</order>
+        <order>2</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_aleen_alertsnowp.admin</roles>
+        <roles>x_aleen_badgeoff.admin</roles>
         <survey/>
         <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-06-21 10:15:46</sys_created_on>
+        <sys_created_on>2023-09-19 17:08:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>e5156eb91b632110234b0f6e6e4bcb20</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_id>7f5227f21b9d3910234b0f6e6e4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Badging Office</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_app_module_e5156eb91b632110234b0f6e6e4bcb20</sys_update_name>
+        <sys_update_name>sys_app_module_7f5227f21b9d3910234b0f6e6e4bcb5d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-23 11:59:03</sys_updated_on>
+        <sys_updated_on>2023-09-19 17:08:07</sys_updated_on>
         <timeline_page/>
         <title>Badging Office</title>
         <uncancelable>false</uncancelable>

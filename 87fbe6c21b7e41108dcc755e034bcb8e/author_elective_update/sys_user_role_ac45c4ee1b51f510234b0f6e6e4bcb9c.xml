@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>This Role is for Area Owners</description>
+        <elevated_privilege>true</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_aleen_alertsnowp.AreaOwner</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>AreaOwner</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-18 06:23:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp.AreaOwner</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_user_role_ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-18 06:23:17</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_user_role_ac45c4ee1b51f510234b0f6e6e4bcb9c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>This Role is for Area Owners</description><elevated_privilege>true</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_aleen_alertsnowp.AreaOwner</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix>AreaOwner</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-09-18 06:23:17</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_aleen_alertsnowp.AreaOwner</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_user_role_ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-09-18 06:23:17</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>2125470666</payload_hash>
+        <record_name>x_aleen_alertsnowp.AreaOwner</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-18 06:23:17</sys_created_on>
+        <sys_id>3b5588ee1b51f510234b0f6e6e4bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18aa6f522790000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-18 06:23:17</sys_updated_on>
+        <type>Role</type>
+        <update_guid>2f5588ee7051f5101f0496f310c1ce3c</update_guid>
+        <update_guid_history>2f5588ee7051f5101f0496f310c1ce3c:2125470666</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2023-09-18 19:42:01">4ea0352e1b19f510234b0f6e6e4bcbc1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-18 14:12:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>4de329db4d53427f9d47075f9a385699</sys_id>
+        <sys_metadata>ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp.AreaOwner</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_user_role_ac45c4ee1b51f510234b0f6e6e4bcb9c</sys_update_name>
+        <sys_update_version display_value="sys_user_role_ac45c4ee1b51f510234b0f6e6e4bcb9c">3b5588ee1b51f510234b0f6e6e4bcb3d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-18 14:12:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
