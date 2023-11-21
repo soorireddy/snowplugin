@@ -17,6 +17,8 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <dynamic_value_dot_walk_path/>
+        <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
         <field>access_levels</field>
@@ -27,7 +29,7 @@
         <include_none>true</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table>x_aleen_alertsnowp_access_levels</list_table>
+        <list_table>x_aleen_alertsnowp_accesslocations</list_table>
         <lookup_label>access_level_name</lookup_label>
         <lookup_price/>
         <lookup_table>x_aleen_alertsnowp_access_levels</lookup_table>
@@ -41,6 +43,7 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>access_levels</name>
         <order>300</order>
+        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -69,7 +72,7 @@
         <sys_created_on>2022-04-14 07:54:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9d6c8cea1b3e81108dcc755e034bcbad</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Access Levels</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -77,7 +80,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_9d6c8cea1b3e81108dcc755e034bcbad</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-04 06:37:04</sys_updated_on>
+        <sys_updated_on>2023-11-19 11:43:50</sys_updated_on>
         <table/>
         <tooltip/>
         <type>21</type>

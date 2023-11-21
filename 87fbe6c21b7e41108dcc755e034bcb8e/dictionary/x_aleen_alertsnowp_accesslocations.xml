@@ -2,9 +2,15 @@
     <element db_object_id="f2823f9a1b2abd10234b0f6e6e4bcb6f" label="AccessLocations" max_length="40" name="x_aleen_alertsnowp_accesslocations" type="collection">
         <element label="Access Level" max_length="32" name="access_level" reference="x_aleen_alertsnowp_access_levels" type="reference"/>
         <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
+        <element display="true" label="Access Level Name" max_length="40" name="access_level_name" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="x_aleen_alertsnowp_locations" type="reference"/>
+        <element label="Location Name" max_length="40" name="location_name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <index name="index">
             <element name="access_level"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
         </index>
     </element>
 </database>
