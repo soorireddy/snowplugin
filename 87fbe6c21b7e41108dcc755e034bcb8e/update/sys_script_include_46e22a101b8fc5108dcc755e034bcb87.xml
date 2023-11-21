@@ -85,21 +85,21 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
-				updateResponseObj = JSON.parse(newBadgeResponseBody);
+                updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-                    gs.addInfoMessage('Building  Access request ('+updateResponseObj.messages[0].valuesMap.id+') has been placed with Alert ,it will take sometime to process ..');
-                    this.saveAuditLogWithParent(data.number, gs.getUserName(), "Building access request is approved , request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted",data.parent_number);
+                    gs.addInfoMessage('Building  Access request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process ..');
+                    this.saveAuditLogWithParent(data.number, gs.getUserName(), "Building access request is approved , request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted", data.parent_number);
 
                 } else {
                     gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
-                    this.saveAuditLogWithParent(data.number, gs.getUserName(), "Building Access role provisioning is failed  "+updateResponseObj.messages[0].messageDisplayText, "", "",data.parent_number);
+                    this.saveAuditLogWithParent(data.number, gs.getUserName(), "Building Access role provisioning is failed  " + updateResponseObj.messages[0].messageDisplayText, "", "", data.parent_number);
                     data.state = 4;
                     data.update();
                 }
             } else {
                 gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
                 gs.info("Building Access  Request is unsuccessful due to API  server authentication issue");
-                this.saveAuditLogWithParent(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "",data.parent_number);
+                this.saveAuditLogWithParent(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "", data.parent_number);
                 data.state = 4;
                 data.update();
             }
@@ -131,7 +131,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
                 updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-                    gs.addInfoMessage('New Badge request('+updateResponseObj.messages[0].valuesMap.id+') has been placed with Alert ,it will take sometime to process..');
+                    gs.addInfoMessage('New Badge request(' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process..');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
@@ -153,24 +153,21 @@ AlertEnterprisePlatformAPIs.prototype = {
             this.saveAuditLog(data.number, gs.getUserName(), "error occured while approving request ::" + message, "", "");
         }
     },
-	assignNewBadgeBO: function(data, requestData, parentRequest) {
+    assignNewBadgeBO: function(data, requestData, parentRequest) {
         gs.info(" assignNewBadgeBO  :: begin");
-		gs.info(data);
-		gs.info(requestData);
-		gs.info(parentRequest);
         try {
             if (null != this.jwt_token) {
                 var identitySystemId = 0;
-                identitySystemId = this.getIdentitySystemId(data.user_name);
+                identitySystemId = this.getIdentitySystemId(data.user.user_name);
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
-				var assetId = this.getAssetInformation(data.badge_id);
+                var assetId = this.getAssetInformation(data.badge_id);
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Authorization', this.jwt_token);
-				var newBadgeRequestBody1 =
-                    '{"type": "AddBadge_SNOW_V1","customFields": {"isBadgeAdminApprovalFlagEnabled": "Yes"},"customProperties": {"businessJustification": "New Badge"},"requestAssets": [{"uiAction": "ADD","reason": "New Badge","sourceAssetStatus": "1", "identityId":' + identitySystemId + ',"assetId":'+assetId+',"validFrom": "2023-11-21T05:59:38-0000","validTo": "2023-12-12T03:59:59-0000"}]}';
+                var newBadgeRequestBody1 =
+                    '{"type": "AddBadge_SNOW_V1","customFields": {"isBadgeAdminApprovalFlagEnabled": "Yes"},"customProperties": {"businessJustification": "New Badge"},"requestAssets": [{"uiAction": "ADD","reason": "New Badge","sourceAssetStatus": "1", "identityId":' + identitySystemId + ',"assetId":' + assetId + ',"validFrom": "2023-11-21T05:59:38-0000","validTo": "2023-12-12T03:59:59-0000"}]}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
                 gs.info('assignNewBadgeBO request body ::  ==> ' + newBadgerequestBody);
-               /* r.setRequestBody(newBadgerequestBody);
+                r.setRequestBody(newBadgerequestBody);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
@@ -178,21 +175,16 @@ AlertEnterprisePlatformAPIs.prototype = {
 				
 				if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('New Badge request(' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process..');
-                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+                    this.saveAuditLog(requestData, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("New Badge Request is unsuccessful");
-                    this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert " + updateResponseObj.messages[0].messageDisplayText, "", "");
-                    data.state = 4;
-                    data.update();
-                } */
-				
-            }else {
+                    this.saveAuditLog(requestData, gs.getUserName(), "request is approved , New badge request  creation is failed in Alert " + updateResponseObj.messages[0].messageDisplayText, "", "");
+                } 
+            } else {
                 gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                 gs.info("New Badge Request is unsuccessful due to API  server authentication issue");
                 this.saveAuditLog(data.number, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
-                data.state = 4;
-                data.update();
             }
         } catch (ex) {
             var message = ex.message;
@@ -210,7 +202,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 }
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 //var assetId = this.getAssetInformation(data.badge_number);
-				var assetId = data.badge_id;
+                var assetId = data.badge_id;
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var requestBody1 =
@@ -223,7 +215,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var updatehttpStatus = updateresponse.getStatusCode();
                 updateResponseObj = JSON.parse(updateresponseBody);
                 if (updatehttpStatus == 200 && updateResponseObj.success) {
-                    gs.addInfoMessage('Badge activation request ('+updateResponseObj.messages[0].valuesMap.id+') placed with Alert, it will take sometime to process ..');
+                    gs.addInfoMessage('Badge activation request (' + updateResponseObj.messages[0].valuesMap.id + ') placed with Alert, it will take sometime to process ..');
                     this.saveAuditLog(data.number, gs.getUserName(), "activateBadge  request has been placed with Alert", updateResponseObj.messages[0].valuesMap.id, "submitted");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
@@ -242,8 +234,9 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('activateBadge   :: ' + message);
         }
     },
-    activateBadgeBO: function(data) {
+    activateBadgeBO: function(data, requestData, parentRequest) {
         gs.info(" activateBadgeBO  :: begin");
+        gs.info(" activateBadgeBO  :: data.user_name     === >   " + data.user_name);
         try {
             if (null != this.jwt_token) {
                 var identitySystemId = 0;
@@ -253,7 +246,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var requestBody1 =
-					'{"type": "ActivateBadge_SNow_V1", "requestAssets": [{ "identityId":' + identitySystemId + ' ,"assetId": ' + assetId + ',"uiAction":"UNLOCK","sourceAssetStatus": "ASSIGNED"}]}';
+                    '{"type": "ActivateBadge_SNow_V1", "requestAssets": [{ "identityId":' + identitySystemId + ' ,"assetId": ' + assetId + ',"uiAction":"UNLOCK","sourceAssetStatus": "ASSIGNED"}]}';
                 var requestBody = requestBody1.toString();
                 gs.info('activateBadgeBO  request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
@@ -466,17 +459,17 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var newBadgeRequestBody1 =
-                    '{"type": "RequestReplacementBadge_SNOW_V1","customFields": {"isBadgeAdminApprovalFlagEnabled": "No"},"requestAssets": [{"uiAction": "REPLACE", "sourceAssetStatus": "1", "identityId":' + identitySystemId + ',"reason": "' + data.reason + '","replaceAssetId": '+data.badge_id+'}],"customProperties": { "businessJustification":"' + data.badge_delivery_comments + '","reason": "' + data.reason + '"}}';
+                    '{"type": "RequestReplacementBadge_SNOW_V1","customFields": {"isBadgeAdminApprovalFlagEnabled": "No"},"requestAssets": [{"uiAction": "REPLACE", "sourceAssetStatus": "1", "identityId":' + identitySystemId + ',"reason": "' + data.reason + '","replaceAssetId": ' + data.badge_id + '}],"customProperties": { "businessJustification":"' + data.badge_delivery_comments + '","reason": "' + data.reason + '"}}';
                 var newBadgerequestBody = newBadgeRequestBody1.toString();
                 gs.info('replace Badge request body ::  ==> ' + newBadgerequestBody);
                 r.setRequestBody(newBadgerequestBody);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
                 var newBadgehttpStatus = newBadgeResponse.getStatusCode();
-				gs.info(" reset PIN  request status ===> "+ newBadgehttpStatus);
+                gs.info(" reset PIN  request status ===> " + newBadgehttpStatus);
                 updateResponseObj = JSON.parse(newBadgeResponseBody);
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
-                    gs.addInfoMessage('Replace Badge request ('+updateResponseObj.messages[0].valuesMap.id+') has been placed with Alert ,it will take sometime to process...');
+                    gs.addInfoMessage('Replace Badge request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process...');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                     gs.info("Replace Badge Request is created Successfully");
                 } else {
@@ -512,20 +505,20 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
                 var requestBody1 =
-                    '{"type": "ResetPIN_SNOW_V1", "requestAssets":[{"uiAction": "UPDATE", "identityId":"' + identityId + '","readerPin":' + data.new_pin + ',"assetId":'+ data.badge_id +' }]}';
+                    '{"type": "ResetPIN_SNOW_V1", "requestAssets":[{"uiAction": "UPDATE", "identityId":"' + identityId + '","readerPin":' + data.new_pin + ',"assetId":' + data.badge_id + ' }]}';
                 var requestBody = requestBody1.toString();
                 gs.info('reset pin JWT request body ::  ==> ' + requestBody);
                 r.setRequestBody(requestBody);
                 var response = r.executeAsync();
                 var responseBody = response.getBody();
                 var responsehttpStatus = response.getStatusCode();
-				responseObj = JSON.parse(responseBody);
+                responseObj = JSON.parse(responseBody);
                 if (responsehttpStatus == 200 && responseObj.success) {
-                    gs.addInfoMessage('Reset PIN request ('+responseObj.messages[0].valuesMap.id+') has been placed with Alert, will be processed shortly ...');
-                    this.saveAuditLog(data.number, identityId, "Reset PIN  is successful",  responseObj.messages[0].valuesMap.id, "submitted");
+                    gs.addInfoMessage('Reset PIN request (' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert, will be processed shortly ...');
+                    this.saveAuditLog(data.number, identityId, "Reset PIN  is successful", responseObj.messages[0].valuesMap.id, "submitted");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    this.saveAuditLog(data.number, identityId, "Reset PIN  is unsuccessful reason : ==> " +responseObj.messages[0].messageDisplayText, "", "");
+                    this.saveAuditLog(data.number, identityId, "Reset PIN  is unsuccessful reason : ==> " + responseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                 }
             } else {
@@ -560,15 +553,15 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var response = r.executeAsync();
                 var responseBody = response.getBody();
                 var responsehttpStatus = response.getStatusCode();
-				responseObj = JSON.parse(responseBody);
-				gs.info(responseBody);
-				gs.info("responsehttpStatus   ::" + responsehttpStatus);
+                responseObj = JSON.parse(responseBody);
+                gs.info(responseBody);
+                gs.info("responsehttpStatus   ::" + responsehttpStatus);
                 if (responsehttpStatus == 200 && responseObj.success) {
-                    gs.addInfoMessage('Update profile request('+responseObj.messages[0].valuesMap.id+') has been placed with Alert Successfully , will be processed shortly');
-                this.saveAuditLog(data.number, userName, "profile request is successful", responseObj.messages[0].valuesMap.id, "submitted");
+                    gs.addInfoMessage('Update profile request(' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert Successfully , will be processed shortly');
+                    this.saveAuditLog(data.number, userName, "profile request is successful", responseObj.messages[0].valuesMap.id, "submitted");
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    this.saveAuditLog(data.number, userName, "profile update is unsuccessful  reason ==> "+responseObj.messages[0].messageDisplayText, "", "");
+                    this.saveAuditLog(data.number, userName, "profile update is unsuccessful  reason ==> " + responseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                 }
             } else {
@@ -623,14 +616,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         auditLog.sys_updated_on = new GlideDateTime();
         auditLog.insert();
     },
-	saveAuditLogWithParent: function(request_no, handler_name, notes, ae_request_number, ae_request_status ,parent) {
+    saveAuditLogWithParent: function(request_no, handler_name, notes, ae_request_number, ae_request_status, parent) {
         var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
         auditLog.request_no = request_no;
         auditLog.handler_name = handler_name;
         auditLog.notes = notes;
         auditLog.ae_request_number = ae_request_number;
         auditLog.ae_request_status = ae_request_status;
-		auditLog.parent = parent;
+        auditLog.parent = parent;
         auditLog.sys_created_on = new GlideDateTime();
         auditLog.sys_updated_on = new GlideDateTime();
         auditLog.insert();
@@ -665,7 +658,6 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
@@ -674,6 +666,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 var assetObj = assets[i];
                                 this.saveUserBadge(assetObj, req_for.sys_id, username);
                             }
+                            gs.info("syncUserBadges (" + responseObj.data[0].identityAssets.length + ")  successful ");
                         }
                         return true;
                     } else {
@@ -719,11 +712,8 @@ AlertEnterprisePlatformAPIs.prototype = {
             recordToInsert.badge_id = template.asset.text;
             recordToInsert.badge_status = template.intStatus;
             recordToInsert.badgetype = template.asset.assetType.text;
-			recordToInsert.badge_number = template.asset.serialNo;
+            recordToInsert.badge_number = template.asset.serialNo;
             recordToInsert.provisioning_status = "YES";
-			gs.info(template.asset.text);
-			gs.info(template.validFrom);
-			gs.info(template.validTo);
             var validFrom = new GlideDateTime();
             validFrom.setDisplayValue(template.validFrom);
             var validTo = new GlideDateTime();
@@ -777,7 +767,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>336</sys_mod_count>
+        <sys_mod_count>341</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -785,6 +775,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-21 13:56:09</sys_updated_on>
+        <sys_updated_on>2023-11-21 15:44:25</sys_updated_on>
     </sys_script_include>
 </record_update>

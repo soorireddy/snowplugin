@@ -27,17 +27,16 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-   gs.info('setting User Image & Badge Template');
-	try{
-	if (current.isNewRecord()) {
-         gs.info('Is NEW Request'); 
-    }
-	var attachementId = null;
-	if (current.user) {
-         current.user_name = current.user.name;
-    }
-	if (current.user && current.user.photo) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    try {
+        if (current.isNewRecord()) {
+            gs.info('Is NEW Request');
+        }
+        var attachementId = null;
+        if (current.user) {
+            current.user_name = current.user.name;
+        }
+        if (current.user && current.user.photo) {
             gs.debug('Sys user has Image');
             current.userimage = current.user.photo;
             var userAttachments = new GlideSysAttachment();
@@ -48,20 +47,20 @@
                     gs.info('attachment_id  from User::' + attachementId);
                 }
         }
-	current.image = gs.getProperty("glide.servlet.uri") + attachementId + ".iix";
-	var aebadgeTemplates = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
+        current.image = gs.getProperty("glide.servlet.uri") + attachementId + ".iix";
+        var aebadgeTemplates = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
         aebadgeTemplates.query();
         while (aebadgeTemplates.next()) {
             current.front = aebadgeTemplates.frontsidebadgehtml;
             current.back = aebadgeTemplates.backsidebadgehtml;
             current.company = "Alert Enterprise";
         }
-	
-	}catch (ex) {
+
+    } catch (ex) {
         var message = ex.message;
         gs.error('message' + message);
     }
-	
+
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -71,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6a30239b1b2729108dcc755e034bcba6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Load  and Hide UserImage N BadgeTemplate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -80,7 +79,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_6a30239b1b2729108dcc755e034bcba6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-26 07:44:56</sys_updated_on>
+        <sys_updated_on>2023-11-21 15:24:09</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>
