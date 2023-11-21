@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Activate  Newly received Badge">809e7b121b3e81108dcc755e034bcbcc</cat_item>
+        <cat_item display_value="Activate Badge">809e7b121b3e81108dcc755e034bcbcc</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -17,13 +17,15 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <dynamic_value_dot_walk_path/>
+        <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
         <field>badge_number</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text> Write the number that is printed at the back of the badge</help_text>
-        <hidden>false</hidden>
+        <hidden>true</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -35,12 +37,13 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>badge_number</name>
         <order>200</order>
+        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -69,7 +72,7 @@
         <sys_created_on>2022-04-14 06:54:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>809ebf121b3e81108dcc755e034bcbaa</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Badge Number</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -77,7 +80,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_809ebf121b3e81108dcc755e034bcbaa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-26 10:13:21</sys_updated_on>
+        <sys_updated_on>2023-11-20 11:20:05</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>

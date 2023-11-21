@@ -9,6 +9,7 @@
             </choice>
         </element>
         <element label="Badge Id" max_length="40" name="badge_id" type="string"/>
+        <element label="Badge Number" max_length="40" name="badge_number" type="string"/>
         <element label="Badge PIN" max_length="40" name="badge_pin" type="password"/>
         <element choice="3" default="Active" label="Badge Status" max_length="40" name="badge_status" type="string">
             <choice>

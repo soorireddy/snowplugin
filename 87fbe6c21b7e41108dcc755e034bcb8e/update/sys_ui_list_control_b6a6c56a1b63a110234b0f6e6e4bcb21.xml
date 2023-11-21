@@ -8,7 +8,7 @@
         <empty_condition/>
         <filter_condition/>
         <filter_roles/>
-        <hierarchical_lists>false</hierarchical_lists>
+        <hierarchical_lists>true</hierarchical_lists>
         <label>Location Accesslevels</label>
         <link_condition/>
         <link_roles/>
@@ -27,7 +27,7 @@
         <omit_filters>false</omit_filters>
         <omit_if_empty>false</omit_if_empty>
         <omit_links>false</omit_links>
-        <omit_new_button>true</omit_new_button>
+        <omit_new_button>false</omit_new_button>
         <related_list>REL:569701d31b252510234b0f6e6e4bcba7</related_list>
         <sys_class_name>sys_ui_list_control</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b6a6c56a1b63a110234b0f6e6e4bcb21</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_aleen_alertsnowp_locations</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -45,6 +45,6 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_list_control_b6a6c56a1b63a110234b0f6e6e4bcb21</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-03 04:17:38</sys_updated_on>
+        <sys_updated_on>2023-11-19 10:39:16</sys_updated_on>
     </sys_ui_list_control>
 </record_update>
