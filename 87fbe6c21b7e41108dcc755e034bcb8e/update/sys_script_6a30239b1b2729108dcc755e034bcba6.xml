@@ -31,11 +31,16 @@
     try {
         if (current.isNewRecord()) {
             gs.info('Is NEW Request');
+            if (current.user) {
+                current.user_name = current.user.user_name;
+            }
+        } else {
+            if (current.user) {
+                current.user_name = current.user.name;
+            }
         }
         var attachementId = null;
-        if (current.user) {
-            current.user_name = current.user.name;
-        }
+
         if (current.user && current.user.photo) {
             gs.debug('Sys user has Image');
             current.userimage = current.user.photo;
@@ -70,7 +75,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6a30239b1b2729108dcc755e034bcba6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Load  and Hide UserImage N BadgeTemplate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -79,7 +84,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_6a30239b1b2729108dcc755e034bcba6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-21 15:24:09</sys_updated_on>
+        <sys_updated_on>2023-11-22 11:15:45</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>

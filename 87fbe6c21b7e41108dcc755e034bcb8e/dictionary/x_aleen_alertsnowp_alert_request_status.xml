@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9b91a61b1bae7150234b0f6e6e4bcb15" label="Alert Request Status" max_length="40" name="x_aleen_alertsnowp_alert_request_status" type="collection">
+        <element label="Alert Request Number" max_length="40" name="alert_request_number" type="string"/>
+        <element label="Alert Request Status" max_length="40" name="alert_request_status" type="string"/>
+        <element label="Snow Request Number" max_length="40" name="snow_request_number" type="string"/>
+    </element>
+</database>

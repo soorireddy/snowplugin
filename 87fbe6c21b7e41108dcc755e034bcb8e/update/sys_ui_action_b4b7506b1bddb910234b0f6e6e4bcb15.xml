@@ -34,9 +34,12 @@
 var requestData = session.getClientData('BO_REQUEST');
 var parentRequest = session.getClientData('BO_PARENT_REQUEST');
 var includeScript = new AlertEnterprisePlatformAPIs();
-includeScript.assignNewBadgeBO(current,requestData,parentRequest);
-action.setRedirectURL('/x_aleen_alertsnowp_badge_officer_list.do');
-]]></script>
+if (current.is_it_a_replacement && null != current.replacement_badge_id && "" != current.replacement_badge_id) {
+    includeScript.replaceBadgeBO(current, requestData, parentRequest);
+} else {
+    includeScript.assignNewBadgeBO(current, requestData, parentRequest);
+}
+action.setRedirectURL('/x_aleen_alertsnowp_badge_officer_list.do');]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -48,7 +51,7 @@ action.setRedirectURL('/x_aleen_alertsnowp_badge_officer_list.do');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b4b7506b1bddb910234b0f6e6e4bcb15</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>Assign Badge</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -57,7 +60,7 @@ action.setRedirectURL('/x_aleen_alertsnowp_badge_officer_list.do');
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_b4b7506b1bddb910234b0f6e6e4bcb15</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-21 15:29:39</sys_updated_on>
+        <sys_updated_on>2023-11-22 13:09:59</sys_updated_on>
         <table>x_aleen_alertsnowp_userbadges</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

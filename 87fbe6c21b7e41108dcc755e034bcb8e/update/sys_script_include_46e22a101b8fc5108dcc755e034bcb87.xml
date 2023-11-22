@@ -491,6 +491,49 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('replaceBadge   :: ' + message);
         }
     },
+	replaceBadgeBO: function(data,requestData, parentRequest) {
+        gs.info(" replaceBadgeBO  :: begin");
+        try {
+            if (null != this.jwt_token) {
+                var identitySystemId = 0;
+                identitySystemId = this.getIdentitySystemId(data.user.user_name);
+                var assetId = this.getAssetInformation(data.badge_id);
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var newBadgeRequestBody1 =
+                    '{"type": "RequestReplacementBadge_SNOW_V1","customFields": {"isBadgeAdminApprovalFlagEnabled": "Yes"},"requestAssets": [{"uiAction": "REPLACE", "sourceAssetStatus": "1", "identityId":' + identitySystemId + ',"reason": "' + data.reason + '","replaceAssetId": ' + data.replacement_badge_id + ',"assetId":'+ assetId +' }],"customProperties": { "businessJustification":"'+ data.comments +'","reason": "' + data.reason + '"}}';
+                var newBadgerequestBody = newBadgeRequestBody1.toString();
+                gs.info('replace Badge BO request body ::  ==> ' + newBadgerequestBody);
+                r.setRequestBody(newBadgerequestBody);
+                var newBadgeResponse = r.executeAsync();
+                var newBadgeResponseBody = newBadgeResponse.getBody();
+                var newBadgehttpStatus = newBadgeResponse.getStatusCode();
+                updateResponseObj = JSON.parse(newBadgeResponseBody);
+                if (newBadgehttpStatus == 200 && updateResponseObj.success) {
+                    gs.addInfoMessage('Replace Badge request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process...');
+                    this.saveAuditLog(requestData, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+                    gs.info("Replace Badge Request is created Successfully");
+                } else {
+                    gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
+                    gs.info("Replace Badge Request is unsuccessful");
+                    this.saveAuditLog(requestData, gs.getUserName(), "request is approved , Replace Badge request  creation is failed in Alert  " + updateResponseObj.messages[0].messageDisplayText, "", "");
+                    data.state = 4;
+                    data.update();
+                }
+            } else {
+                gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
+                gs.info("Replace Badge Request is unsuccessful due to API  server authentication issue");
+                this.saveAuditLog(requestData, gs.getUserName(), "Alert server API Authentication / connection issue ", "", "");
+                data.state = 4;
+                data.update();
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('replaceBadge BO   :: ' + message);
+        }
+    },
     resetPin: function(data) {
         gs.info(" resetPin  :: begin");
         try {
@@ -604,6 +647,34 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('getIdentitySystemId   :: ' + message);
         }
         return identityId;
+    },
+	saveAlertRequest: function(alert_request_no, snow_request_number, status) {
+        var alertRequest = new GlideRecordSecure('x_aleen_alertsnowp_alert_request_status');
+        alertRequest.alert_request_no = alert_request_no;
+        alertRequest.snow_request_number = snow_request_number;
+        alertRequest.status = status;
+        alertRequest.sys_created_on = new GlideDateTime();
+        alertRequest.sys_updated_on = new GlideDateTime();
+        alertRequest.insert();
+    },
+	updateAlertRequest: function(alert_request_no,status) {
+        gs.info('updateAlertRequest    ::  Begin ');
+        try {
+            if (null != alert_request_no && "" != alert_request_no ) {
+                var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_alert_request_status');
+                recordToInsert.addQuery('alert_request_no', alert_request_no);
+                recordToInsert.query();
+                while (recordToInsert.next()) {
+                    recordToInsert.status = status;
+                    recordToInsert.update();
+                    this.saveAuditLog(recordToInsert.snow_request_number, "System", "Request is updated in Alert " , alert_request_no, "status");
+                }
+            }
+
+        } catch (ex) {
+            var message = ex.message;
+            gs.info(" ##########################         " + message);
+        }
     },
     saveAuditLog: function(request_no, handler_name, notes, ae_request_number, ae_request_status) {
         var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
@@ -767,7 +838,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>341</sys_mod_count>
+        <sys_mod_count>345</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -775,6 +846,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-21 15:44:25</sys_updated_on>
+        <sys_updated_on>2023-11-22 13:09:12</sys_updated_on>
     </sys_script_include>
 </record_update>
