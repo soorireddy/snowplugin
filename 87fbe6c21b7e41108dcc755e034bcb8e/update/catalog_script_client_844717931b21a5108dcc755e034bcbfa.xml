@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>true</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Request  Application Access">ddcbbb0f1be165108dcc755e034bcbb5</cat_item>
+        <cat_item display_value="">ddcbbb0f1be165108dcc755e034bcbb5</cat_item>
         <cat_variable>IO:32e9409b1b2565108dcc755e034bcbf9</cat_variable>
         <condition/>
         <description/>
@@ -17,6 +17,7 @@
         <messages/>
         <name>On Change System</name>
         <order/>
+        <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
    if (isLoading || newValue == '') {
       return;

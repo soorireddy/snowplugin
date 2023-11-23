@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>true</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Request  Application Access">ddcbbb0f1be165108dcc755e034bcbb5</cat_item>
+        <cat_item display_value="">ddcbbb0f1be165108dcc755e034bcbb5</cat_item>
         <cat_variable/>
         <condition/>
         <description/>
@@ -17,6 +17,7 @@
         <messages/>
         <name>Hide Access Level Filter</name>
         <order/>
+        <published_ref/>
         <script><![CDATA[function onLoad() {
     setTimeout(myGreeting, 1000);
 }

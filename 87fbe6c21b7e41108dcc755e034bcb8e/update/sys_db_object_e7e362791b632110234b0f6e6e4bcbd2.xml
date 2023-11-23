@@ -13,7 +13,7 @@
         <label>Badging Office</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_aleen_alertsnowp_badge_officer</name>
-        <number_ref display_value="Badging_office_request_">e7fc41ee1b63a110234b0f6e6e4bcbaf</number_ref>
+        <number_ref display_value="BO_REQ_">e7fc41ee1b63a110234b0f6e6e4bcbaf</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

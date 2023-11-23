@@ -17,6 +17,7 @@
         <messages/>
         <name>On change User check Existing badges </name>
         <order/>
+        <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
     g_form.hideFieldMsg('request_for');
     g_form.setValue('existing_badges', '');

@@ -17,6 +17,7 @@
         <messages/>
         <name>OnloadShowNoAccessLevels</name>
         <order/>
+        <published_ref/>
         <script><![CDATA[function onLoad() {
     setTimeout(myGreeting, 1000);
 }

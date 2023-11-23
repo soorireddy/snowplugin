@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-06-26 06:56:15</sys_updated_on>
         <table>x_aleen_alertsnowp_userbadges</table>
-        <ui_policy display_value="Hide Image and Badge Template Data">16b3e3df1b2729108dcc755e034bcb51</ui_policy>
+        <ui_policy display_value="Hide Image and Badge Template Data [User Badge]">16b3e3df1b2729108dcc755e034bcb51</ui_policy>
         <visible>false</visible>
     </sys_ui_policy_action>
 </record_update>

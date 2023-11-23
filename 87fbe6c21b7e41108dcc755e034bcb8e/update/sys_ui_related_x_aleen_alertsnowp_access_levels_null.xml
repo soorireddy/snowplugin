@@ -2,7 +2,7 @@
     <sys_ui_related sys_domain="global" table="x_aleen_alertsnowp_access_levels" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Access Levels - Default view" name="x_aleen_alertsnowp_access_levels" related_list="NULL" sys_domain="global" view="Default view">9ebbac821bb411508dcc755e034bcb6d</list_id>
+            <list_id display_value="AccessLevels - Default view" name="x_aleen_alertsnowp_access_levels" related_list="NULL" sys_domain="global" view="Default view">9ebbac821bb411508dcc755e034bcb6d</list_id>
             <order_by/>
             <position>0</position>
             <related_list>REL:16f528ce1b7411508dcc755e034bcbaa</related_list>
@@ -16,7 +16,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Access Levels - Default view" name="x_aleen_alertsnowp_access_levels" related_list="NULL" sys_domain="global" view="Default view">9ebbac821bb411508dcc755e034bcb6d</list_id>
+            <list_id display_value="AccessLevels - Default view" name="x_aleen_alertsnowp_access_levels" related_list="NULL" sys_domain="global" view="Default view">9ebbac821bb411508dcc755e034bcb6d</list_id>
             <order_by/>
             <position>1</position>
             <related_list>REL:728d40191be32110234b0f6e6e4bcb1f</related_list>
@@ -29,7 +29,7 @@
             <sys_updated_on>2023-06-19 09:58:34</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
-            <calculated_name>Access Levels - Default view</calculated_name>
+            <calculated_name>AccessLevels - Default view</calculated_name>
             <filter/>
             <name>x_aleen_alertsnowp_access_levels</name>
             <order_by/>

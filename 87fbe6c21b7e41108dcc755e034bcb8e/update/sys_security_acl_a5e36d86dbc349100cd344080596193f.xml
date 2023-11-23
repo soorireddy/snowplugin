@@ -5,9 +5,11 @@
         <advanced>false</advanced>
         <condition/>
         <description>/api/x_aleen_alertsnowp/alertapiinboundrequest</description>
+        <local_or_existing>Local</local_or_existing>
         <name>/api/x_aleen_alertsnowp/alertapiinboundrequest</name>
         <operation display_value="execute">execute</operation>
         <script/>
+        <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-25 11:16:29</sys_created_on>

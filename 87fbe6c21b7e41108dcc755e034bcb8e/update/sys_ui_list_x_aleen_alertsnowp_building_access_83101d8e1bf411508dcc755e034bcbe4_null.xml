@@ -68,7 +68,7 @@
             <name>x_aleen_alertsnowp_building_access_task</name>
             <parent>x_aleen_alertsnowp_building_access</parent>
             <position/>
-            <relationship display_value="Build Access Request Task">83101d8e1bf411508dcc755e034bcbe4</relationship>
+            <relationship display_value="Build Access --&gt; Buiding Access Task">83101d8e1bf411508dcc755e034bcbe4</relationship>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>

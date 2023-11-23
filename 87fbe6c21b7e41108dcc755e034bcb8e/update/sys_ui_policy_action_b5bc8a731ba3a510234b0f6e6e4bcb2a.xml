@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-06-27 13:37:18</sys_updated_on>
         <table>x_aleen_alertsnowp_badge_officer</table>
-        <ui_policy display_value="Disable User">b24c46731ba3a510234b0f6e6e4bcb49</ui_policy>
+        <ui_policy display_value="Disable User  in Edit [Badge office]">b24c46731ba3a510234b0f6e6e4bcb49</ui_policy>
         <visible>ignore</visible>
     </sys_ui_policy_action>
 </record_update>

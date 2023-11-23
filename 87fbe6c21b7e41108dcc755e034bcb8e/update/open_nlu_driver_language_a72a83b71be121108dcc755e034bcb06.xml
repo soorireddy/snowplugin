@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="open_nlu_driver_language">
     <open_nlu_driver_language action="INSERT_OR_UPDATE">
         <code>de</code>
+        <dialog_acts_supported>false</dialog_acts_supported>
         <driver display_value="">64c023c17300330021a044764df6a70e</driver>
         <driver_codes>de</driver_codes>
         <language>German</language>
