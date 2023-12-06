@@ -77,23 +77,23 @@
         <sys_created_on>2022-04-13 06:46:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7a43f24a1b7e41108dcc755e034bcb91</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Request New Badge</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_7a43f24a1b7e41108dcc755e034bcb91</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-23 07:42:35</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-12-05 12:21:32</sys_updated_on>
         <table_name>x_aleen_alertsnowp_new_badge</table_name>
-        <taxonomy_topic/>
+        <taxonomy_topic display_value="Workplace">888f5567c3303010069aec4b7d40dd99</taxonomy_topic>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version/>
+        <version>1</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
