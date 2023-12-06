@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_aleen_alertsnowp_badge_officer">x_aleen_alertsnowp_badge_officer</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>BO_REQ_</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-23 11:46:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e7fc41ee1b63a110234b0f6e6e4bcbaf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>BO_REQ_</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_number_e7fc41ee1b63a110234b0f6e6e4bcbaf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-21 15:38:12</sys_updated_on>
+    </sys_number>
+</record_update>

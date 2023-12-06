@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>user_id</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-27 13:37:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b5bc8a731ba3a510234b0f6e6e4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_id</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_b5bc8a731ba3a510234b0f6e6e4bcb2a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-27 13:37:18</sys_updated_on>
+        <table>x_aleen_alertsnowp_badge_officer</table>
+        <ui_policy display_value="Disable User  in Edit [Badge office]">b24c46731ba3a510234b0f6e6e4bcb49</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

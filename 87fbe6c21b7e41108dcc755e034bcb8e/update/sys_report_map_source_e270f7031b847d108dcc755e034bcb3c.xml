@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_map_source">
+    <sys_report_map_source action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <aggregate_field>location.state</aggregate_field>
+        <join_by_column>hc-key</join_by_column>
+        <name>TESTT (level 2)</name>
+        <parent display_value="TESTT (level 1)">9670f7031b847d108dcc755e034bcb39</parent>
+        <report_map_source_mapping display_value="Region and state mappings">8e963db2d7a30200bd4a4ebfae6103b7</report_map_source_mapping>
+        <sys_class_name>sys_report_map_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 09:28:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e270f7031b847d108dcc755e034bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TESTT (level 2)</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_report_map_source_e270f7031b847d108dcc755e034bcb3c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 09:28:57</sys_updated_on>
+        <table>x_aleen_alertsnowp_access_levels</table>
+        <type display_value="Level 2">a6edd872d7101200bd4a4ebfae610359</type>
+        <type_mapping>mapping</type_mapping>
+    </sys_report_map_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=e270f7031b847d108dcc755e034bcb3c"/>
+</record_update>

@@ -17,24 +17,58 @@
         <messages/>
         <name>On change User check badge Assigned</name>
         <order/>
+        <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
     g_form.hideFieldMsg('request_for');
+    g_form.setValue('existing_access_levels', '');
     if (isLoading || newValue == '') {
         return;
     } else {
         if (newValue) {
-            var ga = new GlideAjax('CheckUserBadgesFromUIScript');
-            ga.addParam('sysparm_name', 'getAggregate');
-            ga.addParam('sysparm_req_for_parameter', newValue);
-            ga.getXML(mycallback);
+            //g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
+            g_form.showFieldMsg("request_for", "Loading Access Levels from Security System , Please wait ...", "info");
+            var ajaxscript = new GlideAjax('CheckUserBadgesFromUIScript');
+            ajaxscript.addParam('sysparm_name', 'getuserDetailsFromHSC');
+            ajaxscript.addParam('userId', newValue);
+            ajaxscript.getXMLAnswer(userDatacallback);
 
-            function mycallback(response) {
-                var answerfromSI = response.responseXML.documentElement.getAttribute("answer");
-                if (answerfromSI < 1) {
-                    g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
-                } else {
-                    g_form.showFieldMsg("request_for", "User has a valid badge", "info");
+            function userDatacallback(response) {
+                var userHasExistingAccess = false;
+                var responseObj = JSON.parse(response);
+                var acLevelTable = '<table style="align:center; border-collapse: collapse;">';
+                acLevelTable += '<tr><th>Access level ID</th><th>Access Level Name</th><th>Valid From </th><th>Valid To</th></tr>';
+                var badgeTable = '<table style="align:center; border-collapse: collapse;">';
+                badgeTable += '<tr><th>Badge ID</th><th>Badge Status</th><th>Badge Type</th><th>Valid From </th><th>Valid To</th></tr>';
+                if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                    if (responseObj.data[0].identityAccess && responseObj.data[0].identityAccess.length > 0) {
+                        userHasExistingAccess = true;
+                        var accessLevels = responseObj.data[0].identityAccess;
+                        for (var j = 0; j < accessLevels.length; j++) {
+                            var accessLevel = accessLevels[j];
+                            acLevelTable += '<tr>';
+                            acLevelTable += '<td>' + accessLevels[j].access.id
+                            acLevelTable += '<td>' + accessLevels[j].access.text + '</td>';
+							acLevelTable += '<td>' + accessLevels[j].validFrom + '</td>';
+                            acLevelTable += '<td>' + accessLevels[j].validTo + '</td>';
+                            acLevelTable += '</tr>';
+                        }
+                    }
+                   
+					g_form.hideFieldMsg('request_for');
+
+                    if (!userHasExistingAccess) {
+                        acLevelTable += '<tr>';
+                        acLevelTable += '<td colspan="2" >' + 'No Access levels Found' + '</td>';
+                        acLevelTable += '</tr>';
+                    }
+                    acLevelTable += '</table>';
+                    g_form.setValue('existing_access_levels', acLevelTable);
+					
                 }
+				else{
+					g_form.hideFieldMsg('request_for');
+					g_form.showFieldMsg("request_for", "Error while fetching data. Please contact Administrator", "error");
+				}
             }
         }
     }
@@ -46,7 +80,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>On change User check badge Assigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -55,7 +89,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-09 10:52:21</sys_updated_on>
+        <sys_updated_on>2023-07-24 05:33:17</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

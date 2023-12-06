@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Organization" max_length="40" name="x_aleen_alertsnowp_organization" type="collection">
-        <element label="id" max_length="50" name="id" type="string"/>
-        <element display="true" label="name" max_length="200" name="name" type="string"/>
-    </element>
-</database>

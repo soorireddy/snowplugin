@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="request_filter">
+    <request_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_to>0</applies_to>
+        <data_item/>
+        <filter/>
+        <group/>
+        <item_stream/>
+        <last_used/>
+        <mobile>false</mobile>
+        <portal_page display_value="ticket">84af292247132100ba13a5554ee4909e</portal_page>
+        <primary_display>short_description</primary_display>
+        <roles/>
+        <secondary_display>number</secondary_display>
+        <short_description/>
+        <sys_class_name>request_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-21 07:15:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da0735cb1ba635508dcc755e034bcbeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>request_filter_da0735cb1ba635508dcc755e034bcbeb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-21 07:15:49</sys_updated_on>
+        <table>x_aleen_alertsnowp_activate_badge</table>
+        <table_name/>
+        <title>Activate Badge Request</title>
+        <user/>
+    </request_filter>
+</record_update>

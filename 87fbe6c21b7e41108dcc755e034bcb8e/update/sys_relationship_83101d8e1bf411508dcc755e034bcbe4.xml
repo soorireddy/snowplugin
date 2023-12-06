@@ -5,7 +5,7 @@
         <basic_apply_to>x_aleen_alertsnowp_building_access</basic_apply_to>
         <basic_query_from>x_aleen_alertsnowp_building_access_task</basic_query_from>
         <insert_callback/>
-        <name>Build Access Request Task</name>
+        <name>Build Access --&gt; Buiding Access Task</name>
         <query_from/>
         <query_with><![CDATA[(function refineQuery(current, parent) {
 	current.addQuery('parent_number', parent.number);
@@ -18,15 +18,15 @@
         <sys_created_on>2022-07-21 09:42:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83101d8e1bf411508dcc755e034bcbe4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Build Access Request Task</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Build Access --&gt; Buiding Access Task</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_relationship_83101d8e1bf411508dcc755e034bcbe4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-21 09:44:33</sys_updated_on>
+        <sys_updated_on>2023-07-24 04:11:54</sys_updated_on>
     </sys_relationship>
     <sys_translated_text action="delete_multiple" query="documentkey=83101d8e1bf411508dcc755e034bcbe4"/>
 </record_update>

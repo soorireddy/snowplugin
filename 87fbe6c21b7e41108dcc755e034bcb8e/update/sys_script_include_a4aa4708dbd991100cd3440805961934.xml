@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_aleen_alertsnowp.CheckUserBadgesFromUIScript</api_name>
         <caller_access/>
@@ -8,6 +8,7 @@
         <description/>
         <name>CheckUserBadgesFromUIScript</name>
         <script><![CDATA[var CheckUserBadgesFromUIScript = Class.create();
+var accessTokenScriptScript = new AlertGetAccessToken();
 CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     getAggregate: function() {
         var req_for = this.getParameter('sysparm_req_for_parameter');
@@ -22,6 +23,42 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
         }
         return answer;
     },
+    getuserDetailsFromHSC: function() {
+        gs.info("getuserDetailsFromHSC    :: Begin");
+        returnResponse = {};
+        try {
+            var req_for = this.getParameter('userId');
+            var grSysUser = new GlideRecordSecure('sys_user');
+            username = "";
+            if (grSysUser.get(req_for)) {
+                username = grSysUser.getValue('user_name');
+            }
+            var Token = accessTokenScriptScript.getToken();
+            var req = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.UserBadgesAndAccessLevels', 'POST');
+            req.setStringParameterNoEscape('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
+            req.setStringParameterNoEscape('userId', username);
+            req.setRequestHeader('Content-Type', 'application/json');
+            req.setRequestHeader('Authorization', Token);
+			gs.info(req.getRequestBody());
+            var ressponse = req.executeAsync();
+            var responsseBody = ressponse.getBody();
+			gs.info(responsseBody);
+            var httpStatuss = ressponse.getStatusCode();
+            if (httpStatuss == 200) {
+                var successresponseObj = JSON.parse(responsseBody);
+                returnResponse = JSON.stringify(successresponseObj);
+            } else {
+                var errorresponseObj = JSON.parse(responsseBody);
+                returnResponse = JSON.stringify(errorresponseObj);
+            }
+			gs.info(returnResponse);
+            return returnResponse;
+        } catch (ex) {
+            var message = ex.message;
+            gs.addInfoMessage("Error Message   ---> " + message);
+            return JSON.stringify(returnResponse);
+        }
+    },
     type: 'CheckUserBadgesFromUIScript'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -29,14 +66,14 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
         <sys_created_on>2022-08-09 10:07:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a4aa4708dbd991100cd3440805961934</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>CheckUserBadgesFromUIScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_a4aa4708dbd991100cd3440805961934</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-09 11:35:57</sys_updated_on>
+        <sys_updated_on>2023-11-22 11:28:55</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>parenttask</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-26 07:07:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>73e967171b6729108dcc755e034bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>parenttask</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_73e967171b6729108dcc755e034bcba5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-26 07:07:40</sys_updated_on>
+        <table>x_aleen_alertsnowp_userbadges</table>
+        <ui_policy display_value="Hide Image and Badge Template Data [User Badge]">16b3e3df1b2729108dcc755e034bcb51</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

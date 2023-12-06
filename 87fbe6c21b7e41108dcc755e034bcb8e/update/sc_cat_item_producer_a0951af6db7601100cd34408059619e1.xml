@@ -10,7 +10,7 @@
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
-        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan display_value="">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description><![CDATA[<p>Service Overview :</p>
@@ -18,6 +18,7 @@
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
         <group/>
         <hide_sp>false</hide_sp>
         <icon>f0389ed41b4fc5108dcc755e034bcbaf</icon>
@@ -92,6 +93,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
+        <version/>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

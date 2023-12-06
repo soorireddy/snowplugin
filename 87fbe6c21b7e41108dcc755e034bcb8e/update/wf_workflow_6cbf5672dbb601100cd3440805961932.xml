@@ -31,12 +31,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-05-30 11:59:31</sys_created_on>
         <sys_id>fb8dbddddb338d100cd34408059619f3</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-17 08:21:52</sys_updated_on>
+        <sys_updated_on>2023-10-11 14:42:47</sys_updated_on>
         <table>x_aleen_alertsnowp_visitor</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Alert Register a visitor">6cbf5672dbb601100cd3440805961932</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">

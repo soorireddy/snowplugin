@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Area owners" max_length="40" name="x_aleen_alertsnowp_area_owners" sizeclass="7" type="collection">
+    <element db_object_id="27625b931b2f09108dcc755e034bcb8f" label="AccessOwners" max_length="40" name="x_aleen_alertsnowp_area_owners" type="collection">
         <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
         <element label="Access Level Name" max_length="400" name="access_level_name" type="string"/>
         <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>	{"name":"test","salary":"123","age":"23"}</content>
+        <function_name>PSTTTT</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>GetJWTToken [ PSTTTT ]</qualified_name>
+        <rest_endpoint>	https://dummy.restapiexample.com/api/v1/create</rest_endpoint>
+        <rest_message display_value="GetJWTToken">cf79b5cddbc785100cd34408059619e9</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-15 12:16:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>263280591b62b910234b0f6e6e4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PSTTTT</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_263280591b62b910234b0f6e6e4bcbd6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-15 12:16:48</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_rest_message_fn_263280591b62b910234b0f6e6e4bcbd6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>no_authentication</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content>	{"name":"test","salary":"123","age":"23"}</content><function_name>PSTTTT</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>GetJWTToken [ PSTTTT ]</qualified_name><rest_endpoint>	https://dummy.restapiexample.com/api/v1/create</rest_endpoint><rest_message display_value="GetJWTToken">cf79b5cddbc785100cd34408059619e9</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-11-15 12:16:48</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>263280591b62b910234b0f6e6e4bcbd6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>PSTTTT</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_rest_message_fn_263280591b62b910234b0f6e6e4bcbd6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-11-15 12:16:48</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>1656307420</payload_hash>
+        <record_name>PSTTTT</record_name>
+        <reverted_from/>
+        <source>ac9b2cc21bb411508dcc755e034bcbef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-15 12:16:48</sys_created_on>
+        <sys_id>bf7280591b62b910234b0f6e6e4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18bd2e9a2720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-15 12:16:48</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>b3728059c462b910fa5e8c6bceeb50e4</update_guid>
+        <update_guid_history>b3728059c462b910fa5e8c6bceeb50e4:1656307420</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-16 09:47:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>0284766c97d64948932873de06b59d59</sys_id>
+        <sys_metadata>263280591b62b910234b0f6e6e4bcbd6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PSTTTT</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="GetJWTToken">cf79b5cddbc785100cd34408059619e9</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_263280591b62b910234b0f6e6e4bcbd6</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_263280591b62b910234b0f6e6e4bcbd6">bf7280591b62b910234b0f6e6e4bcbe4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-16 09:47:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

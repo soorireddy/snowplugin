@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="476e16331b13a110234b0f6e6e4bcb29" label="BadgeTemplates" max_length="40" name="x_aleen_alertsnowp_badgetemplates" type="collection">
+        <element label="backSideBadgeHTML" max_length="20000" name="backsidebadgehtml" type="string_full_utf8"/>
+        <element label="description" max_length="40" name="description" type="string"/>
+        <element label="extId" max_length="40" name="extid" type="string"/>
+        <element label="frontSideBadgeHTML" max_length="20000" name="frontsidebadgehtml" type="string_full_utf8"/>
+        <element display="true" label="id" max_length="40" name="id" type="longint"/>
+        <element label="text" max_length="40" name="text" type="string"/>
+    </element>
+</database>

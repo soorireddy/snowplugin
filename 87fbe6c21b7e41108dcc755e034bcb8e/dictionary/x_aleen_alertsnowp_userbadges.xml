@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="68c222791b632110234b0f6e6e4bcb5c" label="UserBadges" max_length="40" name="x_aleen_alertsnowp_userbadges" type="collection">
+        <element label="Asset  Id" max_length="19" name="asset_id" type="longint"/>
+        <element label="back" max_length="10000" name="back" type="string"/>
+        <element choice="1" label="BadgeType" max_length="40" name="badgetype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Permanent" sequence="1" value="permanent_badge"/>
+                <element inactive_on_update="false" label="Temporary" sequence="2" value="temp_badge"/>
+            </choice>
+        </element>
+        <element label="Badge Id" max_length="40" name="badge_id" type="string"/>
+        <element label="Badge Number" max_length="40" name="badge_number" type="string"/>
+        <element label="Badge PIN" max_length="40" name="badge_pin" type="password"/>
+        <element choice="3" default="Active" label="Badge Status" max_length="40" name="badge_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="1" value="0"/>
+                <element inactive_on_update="false" label="Lost" sequence="2" value="5"/>
+                <element inactive_on_update="false" label="Inactive" sequence="3" value="9"/>
+            </choice>
+        </element>
+        <element label="Badge Valid From" max_length="40" name="badge_valid_from" type="glide_date_time"/>
+        <element label="Badge Valid To" max_length="40" name="badge_valid_to" type="glide_date_time"/>
+        <element label="Comments" max_length="40" name="comments" type="string"/>
+        <element label="company" max_length="40" name="company" type="string"/>
+        <element label="front" max_length="10000" name="front" type="string"/>
+        <element label="image" max_length="100" name="image" type="string"/>
+        <element label="Is It a replacement" max_length="40" name="is_it_a_replacement" type="boolean"/>
+        <element label="Mobile Credential" max_length="40" name="mobile_credential" type="boolean"/>
+        <element label="ParentTask" max_length="40" name="parenttask" type="string"/>
+        <element label="Provisioning Status" max_length="40" name="provisioning_status" type="string"/>
+        <element choice="3" label="Reason" max_length="40" name="reason" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Damaged" value="DAMAGED"/>
+                <element inactive_on_update="false" label="Lost" value="LOST"/>
+                <element inactive_on_update="false" label="Others" value="OTHERS"/>
+                <element inactive_on_update="false" label="Stolen" value="STOLEN"/>
+            </choice>
+        </element>
+        <element choice="3" label="Replacement Badge ID" max_length="40" name="replacement_badge_id" type="string">
+            <choice/>
+        </element>
+        <element display="true" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="User Name" max_length="100" name="user_name" type="string"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

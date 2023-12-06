@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user>${baseURL}/api/identity/find</basic_auth_user>
+        <content>{&#13;
+    "filterCriteria": [&#13;
+        {&#13;
+            "fieldName": "masterIdentityId",&#13;
+            "operator": "=",&#13;
+            "value": "${userId}"&#13;
+        }&#13;
+    ],&#13;
+    "projectionList": [&#13;
+        "identityAssets",&#13;
+        "identityAssets.id",&#13;
+        "identityAssets.intStatus",&#13;
+        "identityAssets.validFrom",&#13;
+        "identityAssets.validTo",&#13;
+        "identityAssets.asset",&#13;
+        "identityAssets.asset.id",&#13;
+        "identityAssets.asset.extId",&#13;
+        "identityAssets.asset.text",&#13;
+        "identityAssets.asset.serialNo",&#13;
+        "identityAssets.asset.assetType.text",&#13;
+        "identityAccess",&#13;
+        "identityAccess.access",&#13;
+        "identityAccess.access.id",&#13;
+        "identityAccess.access.text",&#13;
+        "identityAccess.validFrom",&#13;
+        "identityAccess.validTo"&#13;
+    ]&#13;
+}</content>
+        <function_name>POST</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>UserBadgesAndAccessLevels [ POST ]</qualified_name>
+        <rest_endpoint>${baseURL}/api/identity/find</rest_endpoint>
+        <rest_message display_value="UserBadgesAndAccessLevels">8366cd771baf6510234b0f6e6e4bcb53</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-27 08:30:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1c96c9371baf6510234b0f6e6e4bcb91</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>POST</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_1c96c9371baf6510234b0f6e6e4bcb91</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-19 16:58:24</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

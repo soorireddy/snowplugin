@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Replace Badge" max_length="40" name="x_aleen_alertsnowp_repalce_badge" type="collection">
+    <element db_object_id="578d47db1beb09108dcc755e034bcbd9" extends="task" label="Replace Badge" max_length="40" name="x_aleen_alertsnowp_repalce_badge" type="collection">
         <element display="true" label="Badge Delivery Comments" max_length="200" name="badge_delivery_comments" type="string"/>
+        <element label="Badge ID" max_length="40" name="badge_id" type="string"/>
+        <element label="Badge Number" max_length="40" name="badge_number" type="string"/>
         <element choice="1" label="Reason" max_length="20" name="reason" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Damaged" value="DAMAGED"/>

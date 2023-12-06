@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Building Access Task" max_length="40" name="x_aleen_alertsnowp_building_access_task" sizeclass="260" type="collection">
+    <element db_object_id="61c209c51bf85d108dcc755e034bcb96" extends="task" label="Building Access Task" max_length="40" name="x_aleen_alertsnowp_building_access_task" type="collection">
         <element label="Access End Date" max_length="40" name="access_end_date" read_only="true" type="glide_date_time"/>
         <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
         <element label="Access Level Name" max_length="40" name="access_level_name" read_only="true" type="string"/>

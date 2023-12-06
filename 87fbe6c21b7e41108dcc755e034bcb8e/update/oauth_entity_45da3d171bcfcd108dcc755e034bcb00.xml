@@ -7,14 +7,16 @@
         <auth_url/>
         <certificate_url/>
         <client_id>05da3d17dacfcd1011adf4ac2f3a6a00</client_id>
-        <client_secret>kXHF7DFZHQdNFcRKrWFaNQ==</client_secret>
+        <client_secret>﷞﷟﷒9f8e0ebd1be521108dcc755e034bcb70﷬﷔1﷬﷭K-YRGg4uQeqDQBO50p5m1w==O26i6VIQ-_TLbOS8Ig_LutfS9MV6zXvRJ4c=﷮﷯</client_secret>
         <client_uuid>c1da3d171bcfcd108dcc755e034bcb00</client_uuid>
         <code_challenge_method>S256</code_challenge_method>
         <comments/>
         <default_grant_type>password</default_grant_type>
         <id_token_lifespan>86400</id_token_lifespan>
+        <login_url/>
         <logo_url/>
         <message_signature_lifespan>60</message_signature_lifespan>
+        <mobile_client>false</mobile_client>
         <name>Alert Oauth</name>
         <oauth_api_script/>
         <protocol_name/>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e7e362791b632110234b0f6e6e4bcbd2" label="Badging Office" max_length="40" name="x_aleen_alertsnowp_badge_officer" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Parent Request" max_length="40" name="parent_request" type="string"/>
+        <element choice="1" default="SUBMIT" label="Request Status" max_length="40" name="request_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" value="CANCELLED"/>
+                <element inactive_on_update="false" label="Completed Sucessfully" value="COMPLETE"/>
+                <element inactive_on_update="false" label="Completed with Errors" value="COMPLETE_ERROR"/>
+                <element inactive_on_update="false" label="Error" value="ERROR"/>
+                <element inactive_on_update="false" label="In Process" value="INPROGRESS"/>
+                <element inactive_on_update="false" label="Rejected by BO" value="REJECTED"/>
+                <element inactive_on_update="false" label="Submitted" value="SUBMIT"/>
+                <element inactive_on_update="false" label="Waiting for BO Approval" value="BO_APPROVE"/>
+            </choice>
+        </element>
+        <element choice="1" label="Request Type" max_length="40" name="request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Activate Badge Request by User" value="ACTIVATE_BADGE_REQUEST"/>
+                <element inactive_on_update="false" label="Data Request by BO" value="DATA_REQUEST"/>
+                <element inactive_on_update="false" label="New Badge Request by User" value="NEW_BADGE_REQUEST"/>
+                <element inactive_on_update="false" label="Replacement Request By User" value="REPLACE_BADGE_REQUEST"/>
+            </choice>
+        </element>
+        <element label="Request For" max_length="32" name="user_id" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user_id"/>
+        </index>
+    </element>
+</database>

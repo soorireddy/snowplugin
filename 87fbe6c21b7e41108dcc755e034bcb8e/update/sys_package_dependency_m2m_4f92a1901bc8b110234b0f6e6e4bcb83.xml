@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System (apps/system_user)" source="apps/system_user">3304eb20db0313002a602f17d4961914</dependency>
+        <min_version/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-11 10:05:51</sys_created_on>
+        <sys_id>4f92a1901bc8b110234b0f6e6e4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-11 10:05:51</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

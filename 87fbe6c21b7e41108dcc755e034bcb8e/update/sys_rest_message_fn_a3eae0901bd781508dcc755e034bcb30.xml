@@ -32,9 +32,9 @@
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>GET Access Levels [ POST ]</qualified_name>
+        <qualified_name>GETAccessLevels [ POST ]</qualified_name>
         <rest_endpoint>${baseURL}/api/access/find</rest_endpoint>
-        <rest_message display_value="GET Access Levels">46cae4101bd781508dcc755e034bcbe0</rest_message>
+        <rest_message display_value="GETAccessLevels">46cae4101bd781508dcc755e034bcbe0</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-05-02 06:53:11</sys_created_on>
