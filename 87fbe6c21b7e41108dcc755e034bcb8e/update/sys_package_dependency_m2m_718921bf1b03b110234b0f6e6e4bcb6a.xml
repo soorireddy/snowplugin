@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Web Service Import Set Tables" source="com.snc.web_service_import_set_tables">b2981ee61b8331108dcc755e034bcbd8</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-18 10:43:10</sys_created_on>
+        <sys_id>718921bf1b03b110234b0f6e6e4bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-18 10:43:10</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
