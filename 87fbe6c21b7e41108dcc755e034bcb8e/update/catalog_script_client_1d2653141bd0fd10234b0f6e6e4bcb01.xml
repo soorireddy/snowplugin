@@ -53,7 +53,6 @@
                     }
 					g_form.hideFieldMsg('request_for');
                     if (!userHasBadges) {
-						g_form.showFieldMsg("request_for", "User should have a valid badge", "error");
                         badgeTable += '<tr>';
                         badgeTable += '<td colspan="5" >' + 'No Badges Found' + '</td>';
                         badgeTable += '</tr>';
@@ -81,20 +80,18 @@
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-24 04:50:32</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1d2653141bd0fd10234b0f6e6e4bcb01</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>On change User check Existing badges </sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_1d2653141bd0fd10234b0f6e6e4bcb01</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-24 06:14:35</sys_updated_on>
+        <sys_updated_on>2024-01-29 07:00:08</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
