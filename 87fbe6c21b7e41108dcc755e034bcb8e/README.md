@@ -25,4 +25,6 @@ If you find yourself unable to import your repository due to the presence of fil
    2.3 Re-import the application from source control
    Currently listed dependencies:
    * System (apps/system_user)
+   * System Import Sets
+   * Web Service Import Set Tables
    * Task table schema

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Import Sets">import_sets</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Alertsnowp 1702630740932</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_aleen_alertsnowp_1702630740932</name>
+        <order>1100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-15 08:59:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dfe4f9b21b837110234b0f6e6e4bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Alertsnowp 1702630740932</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_app_module_dfe4f9b21b837110234b0f6e6e4bcbd4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-15 08:59:03</sys_updated_on>
+        <timeline_page/>
+        <title>Alertsnowp 1702630740932</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>2d30a3a4db4f5780cbf6d5b0cf961946</instance_id>
+        <instance_name>ven02572</instance_name>
+        <name>sys_app_module_dfe4f9b21b837110234b0f6e6e4bcbd4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Import Sets">import_sets</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Alertsnowp 1702630740932</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_aleen_alertsnowp_1702630740932</name><order>1100</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-12-15 08:59:03</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>dfe4f9b21b837110234b0f6e6e4bcbd4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Alertsnowp 1702630740932</sys_name><sys_overrides/><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_update_name>sys_app_module_dfe4f9b21b837110234b0f6e6e4bcbd4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-12-15 08:59:03</sys_updated_on><timeline_page/><title>Alertsnowp 1702630740932</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1286141599</payload_hash>
+        <record_name>Alertsnowp 1702630740932</record_name>
+        <reverted_from/>
+        <source>4d9231b61b437110234b0f6e6e4bcb65</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-15 08:59:03</sys_created_on>
+        <sys_id>93e4f9b21b837110234b0f6e6e4bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c6cb35c8e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-15 08:59:03</sys_updated_on>
+        <type>Module</type>
+        <update_guid>d7e4f9b244837110d7c2857794ae25d6</update_guid>
+        <update_guid_history>d7e4f9b244837110d7c2857794ae25d6:-1286141599</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Alertsnowp 1702630740932">777535f21b837110234b0f6e6e4bcbd9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-15 09:01:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>54581defe70044379fea2bdcfefb3fb9</sys_id>
+        <sys_metadata>dfe4f9b21b837110234b0f6e6e4bcbd4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Alertsnowp 1702630740932</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_app_module_dfe4f9b21b837110234b0f6e6e4bcbd4</sys_update_name>
+        <sys_update_version display_value="sys_app_module_dfe4f9b21b837110234b0f6e6e4bcbd4">93e4f9b21b837110234b0f6e6e4bcbd7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-15 09:01:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

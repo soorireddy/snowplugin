@@ -387,16 +387,14 @@ AlertMetadataScript.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
-        <sys_policy>read</sys_policy>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_policy/>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-21 14:27:59</sys_updated_on>
+        <sys_updated_on>2024-01-29 07:06:22</sys_updated_on>
     </sys_script_include>
 </record_update>
