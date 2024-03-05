@@ -2,10 +2,6 @@
     <element db_object_id="c02244dd1ba32110234b0f6e6e4bcb27" label="AccessAsset" max_length="40" name="x_aleen_alertsnowp_accessasset" type="collection">
         <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
         <element label="Access Level Name" max_length="40" name="access_level_name" type="string"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Reader" max_length="32" name="reader" reference="x_aleen_alertsnowp_readers" type="reference"/>
         <element label="Reader Name" max_length="40" name="reader_name" type="string"/>
-        <index name="index">
-            <element name="reader"/>
-        </index>
     </element>
 </database>

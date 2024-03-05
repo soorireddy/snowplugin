@@ -15,6 +15,10 @@ AlertEnterprisePlatformAPIs.prototype = {
         this.jwt_token = accessTokenScriptScript.getToken();
         this.date_format = gs.getProperty('x_aleen_alertsnowp.alert_api_payload_dateformat');
     },
+	sendDataToFlow:function(msg){
+		gs.info("Request Msg from api >> "+msg);
+		return msg;
+	},
     buildingAccess: function(data) {
         gs.info(" buildingAccess  :: begin");
         try {
@@ -89,6 +93,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('Building  Access request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process ..');
                     this.saveAuditLogWithParent(data.number, gs.getUserName(), "Building access request is approved , request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted", data.parent_number);
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
 
                 } else {
                     gs.addErrorMessage("Error while processing the Building Access request , please contact administrator for the reasons/logs ");
@@ -133,6 +138,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('New Badge request(' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process..');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("New Badge Request is unsuccessful");
@@ -176,6 +182,7 @@ AlertEnterprisePlatformAPIs.prototype = {
 				if (newBadgehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('New Badge request(' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process..');
                     this.saveAuditLog(requestData, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("New Badge Request is unsuccessful");
@@ -217,6 +224,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (updatehttpStatus == 200 && updateResponseObj.success) {
                     gs.addInfoMessage('Badge activation request (' + updateResponseObj.messages[0].valuesMap.id + ') placed with Alert, it will take sometime to process ..');
                     this.saveAuditLog(data.number, gs.getUserName(), "activateBadge  request has been placed with Alert", updateResponseObj.messages[0].valuesMap.id, "submitted");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("Badge activation isunsuccessful");
@@ -330,6 +338,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         var visitorId = responseObj.data[0].id;
                         this.addVisit(data, visitorId);
+						return this.sendDataToFlow(JSON.stringify(responseObj.messages));
                     }
                 } else {
                     gs.info("Error while processing the request , please contact administrator for the reasons/logs ");
@@ -426,6 +435,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.addInfoMessage('Mobile Credentials request has been placed with Alert ,it will take sometime to Process, it will update the status based on Alert response');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , Mobile Credentials request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                     gs.info("Mobile Credentials Request is created Successfully");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("Mobile Credentials Request is unsuccessful");
@@ -472,6 +482,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.addInfoMessage('Replace Badge request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process...');
                     this.saveAuditLog(data.number, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                     gs.info("Replace Badge Request is created Successfully");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("Replace Badge Request is unsuccessful");
@@ -515,6 +526,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                     gs.addInfoMessage('Replace Badge request (' + updateResponseObj.messages[0].valuesMap.id + ') has been placed with Alert ,it will take sometime to process...');
                     this.saveAuditLog(requestData, gs.getUserName(), "request is approved , New badge request  is created in Alert successfully", updateResponseObj.messages[0].valuesMap.id, "submitted");
                     gs.info("Replace Badge Request is created Successfully");
+					return this.sendDataToFlow(JSON.stringify(updateResponseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     gs.info("Replace Badge Request is unsuccessful");
@@ -559,6 +571,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (responsehttpStatus == 200 && responseObj.success) {
                     gs.addInfoMessage('Reset PIN request (' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert, will be processed shortly ...');
                     this.saveAuditLog(data.number, identityId, "Reset PIN  is successful", responseObj.messages[0].valuesMap.id, "submitted");
+					return this.sendDataToFlow(JSON.stringify(responseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     this.saveAuditLog(data.number, identityId, "Reset PIN  is unsuccessful reason : ==> " + responseObj.messages[0].messageDisplayText, "", "");
@@ -602,6 +615,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 if (responsehttpStatus == 200 && responseObj.success) {
                     gs.addInfoMessage('Update profile request(' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert Successfully , will be processed shortly');
                     this.saveAuditLog(data.number, userName, "profile request is successful", responseObj.messages[0].valuesMap.id, "submitted");
+					return this.sendDataToFlow(JSON.stringify(responseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
                     this.saveAuditLog(data.number, userName, "profile update is unsuccessful  reason ==> " + responseObj.messages[0].messageDisplayText, "", "");
@@ -656,25 +670,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         alertRequest.sys_created_on = new GlideDateTime();
         alertRequest.sys_updated_on = new GlideDateTime();
         alertRequest.insert();
-    },
-	updateAlertRequest: function(alert_request_no,status) {
-        gs.info('updateAlertRequest    ::  Begin ');
-        try {
-            if (null != alert_request_no && "" != alert_request_no ) {
-                var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_alert_request_status');
-                recordToInsert.addQuery('alert_request_no', alert_request_no);
-                recordToInsert.query();
-                while (recordToInsert.next()) {
-                    recordToInsert.status = status;
-                    recordToInsert.update();
-                    this.saveAuditLog(recordToInsert.snow_request_number, "System", "Request is updated in Alert " , alert_request_no, "status");
-                }
-            }
-
-        } catch (ex) {
-            var message = ex.message;
-            gs.info(" ##########################         " + message);
-        }
     },
     saveAuditLog: function(request_no, handler_name, notes, ae_request_number, ae_request_status) {
         var auditLog = new GlideRecordSecure('x_aleen_alertsnowp_audit_log');
@@ -831,19 +826,87 @@ AlertEnterprisePlatformAPIs.prototype = {
         }
         return 0;
     },
+    updateAlertRequest: function(alert_request_no,status) {
+        gs.info('updateAlertRequest    ::  Begin ');
+        try {
+            if (null != alert_request_no && "" != alert_request_no ) {
+                var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_alert_request_status');
+                recordToInsert.addQuery('alert_request_number', alert_request_no);
+                recordToInsert.query();
+                while (recordToInsert.next()) {
+                    recordToInsert.alert_request_status = status;
+                    recordToInsert.update();
+                    this.saveAuditLog(recordToInsert.snow_request_number, "System", "Request is updated in Alert " , alert_request_no, "status");
+                }
+            }
+
+        } catch (ex) {
+            var message = ex.message;
+            gs.info(" ##########################         " + message);
+        }
+    },
+	syncAlertRequestStatus: function() {
+        gs.info('syncAlertRequestStatus    ::  Begin ');
+		try {
+			var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_alert_request_status');
+			recordToInsert.addQuery('alert_request_status','open');
+			recordToInsert.query();
+			var alert_request_numbers = "";
+			while (recordToInsert.next()) {
+				if(alert_request_numbers == ""){
+					alert_request_numbers = '"'+recordToInsert.alert_request_number+'"';
+				} else {
+					alert_request_numbers = alert_request_numbers +',"'+recordToInsert.alert_request_number+'"';
+				}
+			}
+			gs.info("syncAlertRequestStatus ::--- "+alert_request_numbers);
+			gs.info('syncAlertRequestStatus    ::  check alert request status with request numbers ');
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.AlertRequestStatus', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{"filterCriteria": [{"fieldName": "extId","operator": "in","valueList": ['+alert_request_numbers + ']}],"projectionList":["extId","type","intStatus","workflowObjCatStatus"]}';
+                var requestBody = requestBody1.toString();
+                gs.info('syncAlertRequestStatus request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                var responseObj = JSON.parse(updateresponseBody);
+                if (updatehttpStatus == 200 && responseObj.success) {
+                    gs.info("Found Request Status ");
+					for (i = 0; i < responseObj.data.length; i++) {
+						var requestObj = responseObj.data[i];
+						this.updateAlertRequest(requestObj.extId,requestObj.workflowObjCatStatus);
+					}
+                } else {
+                    gs.info("Request Status not found");
+                }
+            } else {
+                gs.info("syncAlertRequestStatus  is unsuccessful due to API  server authentication / connectivity issue");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('syncAlertRequestStatus   :: ' + message);
+        }
+    },
     type: 'AlertEnterprisePlatformAPIs'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>345</sys_mod_count>
+        <sys_mod_count>367</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-22 13:09:12</sys_updated_on>
+        <sys_updated_on>2024-03-01 12:42:40</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -24,9 +24,9 @@ AlertMetadataScript.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_locations");
-                    gr.query();
-                    gr.deleteMultiple();
+                    // var gr = new GlideRecordSecure("x_aleen_alertsnowp_locations");
+                    // gr.query();
+                    // gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -37,7 +37,8 @@ AlertMetadataScript.prototype = {
                                 var city = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
                                 var latitude = (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0";
                                 var longitude = (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0";
-                                this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type, state, country, postal, city, latitude, longitude);
+								var deleted = (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus  == 3?true:false : false;
+								this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type, state, country, postal, city, latitude, longitude, deleted);
                             }
                         }
                         gs.info("Locations (" + responseObj.data.length + ") data sync is successful");
@@ -53,7 +54,7 @@ AlertMetadataScript.prototype = {
             gs.info('syncLocations  error  :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type, state, country, postal, city, latitude, longitude) {
+    saveLocation: function(id, name, location_type, state, country, postal, city, latitude, longitude, deleted) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
         gr.addQuery('id', id);
@@ -73,6 +74,7 @@ AlertMetadataScript.prototype = {
             location.city = city;
             location.latitude = latitude;
             location.longitude = longitude;
+			location.deleted = deleted;
             location.sys_created_on = new GlideDateTime();
             location.sys_updated_on = new GlideDateTime();
             location.insert();
@@ -89,18 +91,18 @@ AlertMetadataScript.prototype = {
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_access_levels");
-                    gr.query();
-                    gr.deleteMultiple();
-                    var grAL = new GlideRecordSecure("x_aleen_alertsnowp_accesslocations");
-                    grAL.query();
-                    grAL.deleteMultiple();
-                    var grAO = new GlideRecordSecure("x_aleen_alertsnowp_area_owners");
-                    grAO.query();
-                    grAO.deleteMultiple();
-                    var grAR = new GlideRecordSecure("x_aleen_alertsnowp_accessasset");
-                    grAR.query();
-                    grAR.deleteMultiple();
+                    // var gr = new GlideRecordSecure("x_aleen_alertsnowp_access_levels");
+                    // gr.query();
+                    // gr.deleteMultiple();
+                    // var grAL = new GlideRecordSecure("x_aleen_alertsnowp_accesslocations");
+                    // grAL.query();
+                    // grAL.deleteMultiple();
+                    // var grAO = new GlideRecordSecure("x_aleen_alertsnowp_area_owners");
+                    // grAO.query();
+                    // grAO.deleteMultiple();
+                    // var grAR = new GlideRecordSecure("x_aleen_alertsnowp_accessasset");
+                    // grAR.query();
+                    // grAR.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         gs.info(" Total access levels to sync  ==> " + responseObj.data.length);
@@ -109,30 +111,35 @@ AlertMetadataScript.prototype = {
                             var accessId = accessLevelObj.id.toString();
                             var accessName = accessLevelObj.text;
                             var systemId = accessLevelObj.system.text;
+							var deleted = accessLevelObj.intStatus == 3?true:false;
                             var sourceId = "";
                             if (accessLevelObj.sourceId) {
                                 sourceId = accessLevelObj.sourceId;
                             }
-                            this.saveAccessLevel(accessId, accessName, systemId, accessLevelObj.criticality, sourceId);
+                            this.saveAccessLevel(accessId, accessName, systemId, accessLevelObj.criticality, sourceId,deleted);
+							
                             if (accessLevelObj.accessLocations && accessLevelObj.accessLocations.length > 0) {
                                 var accessLocations = accessLevelObj.accessLocations;
                                 for (j = 0; j < accessLocations.length; j++) {
                                     var accessLocation = accessLocations[j];
-                                    this.saveAccessLevelLocation(accessId, accessName, accessLocation.locationId.toString());
+									var accessLocationsDeleted = accessLocations[j].intStatus == 3?true:false;
+                                    this.saveAccessLevelLocation(accessId, accessName, accessLocation.locationId.toString(),accessLocationsDeleted);
                                 }
 
                                 if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
                                     var accessOwners = accessLevelObj.accessOwners;
                                     for (jk = 0; jk < accessOwners.length; jk++) {
                                         var accessOwner = accessOwners[jk];
-                                        this.saveAccessLevelOwner(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId);
+										var accessOwnerDeleted = accessOwners[jk].intStatus == 3?true:false;
+                                        this.saveAccessLevelOwner(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId, accessOwnerDeleted);
                                     }
                                 }
                                 if (accessLevelObj.accessAssets && accessLevelObj.accessAssets.length > 0) {
                                     var accessAssets = accessLevelObj.accessAssets;
                                     for (kl = 0; kl < accessAssets.length; kl++) {
                                         var accessAsset = accessAssets[kl];
-                                        this.saveAccessLevelReader(accessId, accessName, accessAsset.asset.text, accessAsset.asset.id);
+										var accessAssetDeleted = accessAssets[kl].intStatus == 3?true:false;
+                                        this.saveAccessLevelReader(accessId, accessName, accessAsset.asset.text, accessAsset.asset.id, accessAssetDeleted);
                                     }
                                 }
                             } else {
@@ -151,7 +158,7 @@ AlertMetadataScript.prototype = {
             gs.info('syncAccessLevels   :: ' + message);
         }
     },
-    saveAccessLevel: function(id, name, system, criticality, sourceId) {
+    saveAccessLevel: function(id, name, system, criticality, sourceId, deleted) {
         var count = 0;
         var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
         gr.addQuery('access_level_id', id);
@@ -160,6 +167,7 @@ AlertMetadataScript.prototype = {
         while (gr.next()) {
             count = gr.getAggregate('COUNT');
         }
+		gs.info('count   :: ' + count);
         if (count == 0) {
             var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
             accessLevel.access_level_id = id;
@@ -170,9 +178,25 @@ AlertMetadataScript.prototype = {
             accessLevel.sys_created_on = new GlideDateTime();
             accessLevel.sys_updated_on = new GlideDateTime();
             accessLevel.insert();
-        }
+        } else {
+			var update = new GlideAggregate('x_aleen_alertsnowp_access_levels');
+			update.addQuery('access_level_id', id);
+			update.query();
+			while (update.next()) {
+				if(deleted){
+					update.deleteRecord();
+				} else {
+					update.access_level_name = name;
+					update.sourceid = sourceId;
+					update.system = system;
+					update.criticality = criticality;
+					update.sys_updated_on = new GlideDateTime();
+					update.update();
+				}
+			}
+		}
     },
-    saveAccessLevelOwner: function(id, accName, ownertype, masterUserId) {
+    saveAccessLevelOwner: function(id, accName, ownertype, masterUserId, deleted) {
         try {
             var grUser = new GlideRecordSecure('sys_user');
             if (grUser.get('user_name', masterUserId)) {
@@ -194,13 +218,29 @@ AlertMetadataScript.prototype = {
                     accessLevelAreaOwner.sys_created_on = new GlideDateTime();
                     accessLevelAreaOwner.sys_updated_on = new GlideDateTime();
                     accessLevelAreaOwner.insert();
-                }
+                } else {
+					var update = new GlideAggregate('x_aleen_alertsnowp_area_owners');
+					update.addQuery('access_level_id', id);
+					update.addQuery('owner', grUser.sys_id);
+					update.query();
+					while (update.next()) {
+						if(deleted){
+							update.deleteRecord();
+						} else {
+							update.access_level_name = accName;
+							update.owner = grUser.sys_id;
+							update.owner_type = ownertype;
+							update.sys_updated_on = new GlideDateTime();
+							update.update();
+						}
+					}
+				}
             }
         } catch (ex) {
             gs.info('saveAccessLevelOwners Error   :: ' + ex.message);
         }
     },
-    saveAccessLevelLocation: function(id, name, location_id) {
+    saveAccessLevelLocation: function(id, name, location_id, deleted) {
         try {
             var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
             if (grLocation.get('id', location_id)) {
@@ -225,14 +265,31 @@ AlertMetadataScript.prototype = {
                         accessLevelLocation.sys_created_on = new GlideDateTime();
                         accessLevelLocation.sys_updated_on = new GlideDateTime();
                         accessLevelLocation.insert();
-                    }
+                    } else {
+						var update = new GlideAggregate('x_aleen_alertsnowp_accesslocations');
+						update.addQuery('access_level', grAccessLevelRecord.sys_id);
+						update.addQuery('location', grLocation.sys_id);
+						update.query();
+						while (update.next()) {
+							if(deleted){
+								update.deleteRecord();
+							} else {
+								update.access_level_name = name;
+								update.access_level = grAccessLevelRecord.sys_id;
+								update.location = grLocation.sys_id;
+								update.location_name = grLocation.name;
+								update.sys_updated_on = new GlideDateTime();
+								update.update();
+							}
+						}
+					}
                 }
             }
         } catch (ex) {
             gs.info('saveAccessLevelLocations Error   :: ' + ex.message);
         }
     },
-    saveAccessLevelReader: function(id, accName, assetName, assetId) {
+    saveAccessLevelReader: function(id, accName, assetName, assetId, deleted) {
         try {
             var grReader = new GlideRecordSecure('x_aleen_alertsnowp_readers');
             if (grReader.get('id', assetId)) {
@@ -254,7 +311,23 @@ AlertMetadataScript.prototype = {
                     accessLevelAsset.sys_created_on = new GlideDateTime();
                     accessLevelAsset.sys_updated_on = new GlideDateTime();
                     accessLevelAsset.insert();
-                }
+                } else {
+					var update = new GlideAggregate('x_aleen_alertsnowp_accesslocations');
+					update.addQuery('access_level', grAccessLevelRecord.sys_id);
+					update.addQuery('location', grLocation.sys_id);
+					update.query();
+					while (update.next()) {
+						if(deleted){
+							update.deleteRecord();
+						} else {
+							update.access_level_name = accName;
+							update.reader = grReader.sys_id;
+							update.reader_name = assetName;
+							update.sys_updated_on = new GlideDateTime();
+							update.update();
+						}
+					}
+				}
             }
         } catch (ex) {
             gs.info('saveAccessLevelReaders   :: ' + ex.message);
@@ -273,7 +346,7 @@ AlertMetadataScript.prototype = {
                 if (updatehttpStatus == 200) {
                     var gr = new GlideRecordSecure("x_aleen_alertsnowp_badgetemplates");
                     gr.query();
-                    gr.deleteMultiple();
+                   // gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -314,7 +387,25 @@ AlertMetadataScript.prototype = {
             recordToInsert.sys_created_on = new GlideDateTime();
             recordToInsert.sys_updated_on = new GlideDateTime();
             recordToInsert.insert();
-        }
+        } else {
+			var update = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
+			update.addQuery('id', template.id);
+			update.query();
+			var deleted = template.intStatus == 3?true:false;
+			while (update.next()) {
+				if(deleted){
+					update.deleteRecord();
+				} else {
+					update.extid = template.extId;
+					update.text = template.text;
+					update.description = template.description;
+					update.frontsidebadgehtml = template.frontSideBadgeHTML;
+					update.backsidebadgehtml = template.backSideBadgeHTML;
+					update.sys_updated_on = new GlideDateTime();
+					update.update();
+				}
+			}
+		}
     },
     syncReaders: function() {
         gs.info('syncReaders  :: Begin');
@@ -329,7 +420,7 @@ AlertMetadataScript.prototype = {
                 if (updatehttpStatus == 200) {
                     var gr = new GlideRecordSecure("x_aleen_alertsnowp_readers");
                     gr.query();
-                    gr.deleteMultiple();
+                    //gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         for (i = 0; i < responseObj.data.length; i++) {
@@ -376,7 +467,28 @@ AlertMetadataScript.prototype = {
                     recordToInsert.sys_updated_on = new GlideDateTime();
                     recordToInsert.insert();
                 }
-            }
+            } else {
+				var update = new GlideAggregate('x_aleen_alertsnowp_readers');
+            	update.addQuery('id', template.id);
+				update.query();
+				var deleted = template.intStatus == 3?true:false;
+				while (update.next()) {
+					if(deleted){
+						update.deleteRecord();
+					} else {
+						update.extid = template.extId;
+						update.text = template.text;
+						update.type = template.type;
+						update.intstatus = template.intStatus;
+						update.subtype = template.subType;
+						update.serialno = template.serialNo;
+						update.assetstatus = template.assetStatus;
+						update.location = grLocation.sys_id;
+						update.sys_updated_on = new GlideDateTime();
+						update.update();
+					}
+				}
+			}
         } catch (ex) {
             var message = ex.message;
 			gs.info('save Reader   Error   :: ' + message);
@@ -387,14 +499,16 @@ AlertMetadataScript.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-29 07:06:22</sys_updated_on>
+        <sys_updated_on>2024-02-27 05:04:06</sys_updated_on>
     </sys_script_include>
 </record_update>
