@@ -2,37 +2,35 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access/>
         <acls/>
-        <active>false</active>
+        <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=734902000,viewActivatedIn=naturalLanguage</attributes>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description>Flow regarding request to activate badge.</description>
         <internal_name>alert_activate_badge_flow</internal_name>
-        <label_cache>[{"name":"Created_1.current.active","label":"Trigger - Record Created➛Activate Badge Record➛Active","reference":"","reference_display":"Active","type":"boolean","base_type":"boolean","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"active"},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Activate Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"number"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Activate Badge Table","reference":"x_aleen_alertsnowp_activate_badge","reference_display":"Activate Badge","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number","label":"1 - Alert API Action➛Alert Request Number","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_status","label":"1 - Alert API Action➛Alert Request Status","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_status","label":"1 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number","label":"1 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Activate Badge Table","reference":"x_aleen_alertsnowp_activate_badge","reference_display":"Activate Badge","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Activate Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"number"},{"name":"Created_1.current.active","label":"Trigger - Record Created➛Activate Badge Record➛Active","reference":"","reference_display":"Active","type":"boolean","base_type":"boolean","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"active"}]</label_cache>
+        <master_snapshot>7e6de2d11b3082106962fe60cd4bcbaa</master_snapshot>
         <name>Alert Activate Badge Flow</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id/>
+        <remote_trigger_id>d36d26d11b3082106962fe60cd4bcb49</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 08:56:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>cff9fee61b6cc250759455342a4bcbe2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Alert Activate Badge Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -40,11 +38,56 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_hub_flow_cff9fee61b6cc250759455342a4bcbe2</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:28</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=cff9fee61b6cc250759455342a4bcbe2"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_aleen_alertsnowp_activate_badge">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>d36d26d11b3082106962fe60cd4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <table>x_aleen_alertsnowp_activate_badge</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>cff9fee61b6cc250759455342a4bcbe2</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:54</sys_created_on>
+        <sys_id>9f6d26d11b3082106962fe60cd4bcb49</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <trigger display_value="">d36d26d11b3082106962fe60cd4bcb49</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN9f6d26d11b3082106962fe60cd4bcb49"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN7eaaf2621bacc250759455342a4bcbbb"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment>Record to request to activate badge</comment>
@@ -57,15 +100,15 @@
         <sys_created_on>2024-02-27 08:59:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7eaaf2621bacc250759455342a4bcbbb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -126,7 +169,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -186,15 +229,15 @@
         <sys_created_on>2024-02-27 08:59:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>76aaf2621bacc250759455342a4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -212,7 +255,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -272,15 +315,15 @@
         <sys_created_on>2024-02-27 08:59:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>feaaf2621bacc250759455342a4bcbb2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -296,7 +339,50 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=feaaf2621bacc250759455342a4bcbb2"/>
     <sys_hub_flow_output action="delete_multiple" query="model=cff9fee61b6cc250759455342a4bcbe2"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=cff9fee61b6cc250759455342a4bcbe2"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN72aaf2621bacc250759455342a4bcbc5,7aaaf2621bacc250759455342a4bcbcb"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN39fcca151bbc8210759455342a4bcb96,72aaf2621bacc250759455342a4bcbc5,7aaaf2621bacc250759455342a4bcbcb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Alert Status Sync API Action">ae5e9fcd1b7042106962fe60cd4bcb86</action_type>
+        <action_type_parent display_value="Alert Status Sync API Action">e2ab1f0d1b7042106962fe60cd4bcb1d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Activate Badge Flow">cff9fee61b6cc250759455342a4bcbe2</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 18:43:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>39fcca151bbc8210759455342a4bcb96</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <ui_id>f17a2ba8-1839-4d14-acde-d8222be06cec</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=39fcca151bbc8210759455342a4bcb96"/>
+    <sys_element_mapping action="delete_multiple" query="id=39fcca151bbc8210759455342a4bcb96"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>39fcca151bbc8210759455342a4bcb96</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 18:43:04</sys_created_on>
+        <sys_id>fdfcca151bbc8210759455342a4bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 18:43:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ae5e9fcd1b7042106962fe60cd4bcb86</table>
+        <value>{{16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=39fcca151bbc8210759455342a4bcb96"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=39fcca151bbc8210759455342a4bcb96"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -304,7 +390,6 @@
         <action_type_parent display_value="Alert API Action">5fa8c2e21b6cc6506962fe60cd4bcbad</action_type_parent>
         <attributes/>
         <comment/>
-        <compiled_snapshot/>
         <display_text/>
         <flow display_value="Alert Activate Badge Flow">cff9fee61b6cc250759455342a4bcbe2</flow>
         <order>1</order>
@@ -314,15 +399,15 @@
         <sys_created_on>2024-02-27 08:59:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>72aaf2621bacc250759455342a4bcbc5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <ui_id>16f703c2-9282-4fd9-98f4-3c35d8634aae</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=72aaf2621bacc250759455342a4bcbc5"/>
@@ -360,7 +445,6 @@
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
         <comment>Creating record in Alert Request status with details from API.</comment>
-        <compiled_snapshot/>
         <display_text/>
         <flow display_value="Alert Activate Badge Flow">cff9fee61b6cc250759455342a4bcbe2</flow>
         <order>2</order>
@@ -370,15 +454,15 @@
         <sys_created_on>2024-02-27 08:59:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7aaaf2621bacc250759455342a4bcbcb</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 08:59:28</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
         <ui_id>4bdad1f4-1544-4237-9e32-72d15593086e</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7aaaf2621bacc250759455342a4bcbcb"/>
@@ -424,7 +508,75 @@
     <sys_hub_input_scripts action="delete_multiple" query="instance=7aaaf2621bacc250759455342a4bcbcb"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=7aaaf2621bacc250759455342a4bcbcb"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT INf5fcca151bbc8210759455342a4bcb8a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f9fcca151bbc8210759455342a4bcb89</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Alert Activate Badge Flow">cff9fee61b6cc250759455342a4bcbe2</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 18:43:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f5fcca151bbc8210759455342a4bcb8a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <ui_id>f7e75abf-f9b2-475b-b958-f74cfb532edb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f5fcca151bbc8210759455342a4bcb8a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>f5fcca151bbc8210759455342a4bcb8a</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 18:43:04</sys_created_on>
+        <sys_id>31fcca151bbc8210759455342a4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 18:43:04</sys_updated_on>
+        <value>1970-01-01 00:00:30</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>f5fcca151bbc8210759455342a4bcb8a</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 18:43:04</sys_created_on>
+        <sys_id>39fcca151bbc8210759455342a4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 18:43:04</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=f5fcca151bbc8210759455342a4bcb8a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f5fcca151bbc8210759455342a4bcb8a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f5fcca151bbc8210759455342a4bcb8a"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=cff9fee61b6cc250759455342a4bcbe2"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=cff9fee61b6cc250759455342a4bcbe2"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN76aaf2621bacc250759455342a4bcbb6,f6aaf2621bacc250759455342a4bcbb9"/>
@@ -442,12 +594,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>76aaf2621bacc250759455342a4bcbb6</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cff9fee61b6cc250759455342a4bcbe2_current_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
         <url/>
@@ -467,12 +619,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f6aaf2621bacc250759455342a4bcbb9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Table Name</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cff9fee61b6cc250759455342a4bcbe2_table_name_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 08:59:27</sys_updated_on>
         <url/>
@@ -481,6 +633,621 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cff9fee61b6cc250759455342a4bcbe2"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_cff9fee61b6cc250759455342a4bcbe2"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cff9fee61b6cc250759455342a4bcbe2"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cff9fee61b6cc250759455342a4bcbe2"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow regarding request to activate badge.</description>
+        <internal_name>alert_activate_badge_flow</internal_name>
+        <label_cache>[{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_status","label":"1 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number","label":"1 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Activate Badge Table","reference":"x_aleen_alertsnowp_activate_badge","reference_display":"Activate Badge","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Activate Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"number"},{"name":"Created_1.current.active","label":"Trigger - Record Created➛Activate Badge Record➛Active","reference":"","reference_display":"Active","type":"boolean","base_type":"boolean","parent_table_name":"x_aleen_alertsnowp_activate_badge","column_name":"active"}]</label_cache>
+        <master>true</master>
+        <name>Alert Activate Badge Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Alert Activate Badge Flow">cff9fee61b6cc250759455342a4bcbe2</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>7e6de2d11b3082106962fe60cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT IN4b6d26d11b3082106962fe60cd4bcb0d"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Record to request to activate badge</comment>
+        <display_text/>
+        <flow display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4b6d26d11b3082106962fe60cd4bcb0d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4b6d26d11b3082106962fe60cd4bcb0d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>4b6d26d11b3082106962fe60cd4bcb0d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:53</sys_created_on>
+        <sys_id>476d26d11b3082106962fe60cd4bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:53</sys_updated_on>
+        <value>x_aleen_alertsnowp_activate_badge</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>4b6d26d11b3082106962fe60cd4bcb0d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:53</sys_created_on>
+        <sys_id>836d26d11b3082106962fe60cd4bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:53</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT INf66de2d11b3082106962fe60cd4bcbab"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7e6de2d11b3082106962fe60cd4bcbaa</id>
+        <name>Alert Activate Badge Flow</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f66de2d11b3082106962fe60cd4bcbab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f66de2d11b3082106962fe60cd4bcbab"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT IN7e6de2d11b3082106962fe60cd4bcbbb,fa6de2d11b3082106962fe60cd4bcbac"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</model>
+        <model_id>7e6de2d11b3082106962fe60cd4bcbaa</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e6de2d11b3082106962fe60cd4bcbbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7e6de2d11b3082106962fe60cd4bcbbb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</model>
+        <model_id>7e6de2d11b3082106962fe60cd4bcbaa</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fa6de2d11b3082106962fe60cd4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fa6de2d11b3082106962fe60cd4bcbac"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT IN0f6de2d11b3082106962fe60cd4bcbd5,876de2d11b3082106962fe60cd4bcbdd,c36d26d11b3082106962fe60cd4bcb0c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Alert API Action">17e94ea61b6cc6506962fe60cd4bcb9e</action_type>
+        <action_type_parent display_value="Alert API Action">5fa8c2e21b6cc6506962fe60cd4bcbad</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0f6de2d11b3082106962fe60cd4bcbd5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <ui_id>16f703c2-9282-4fd9-98f4-3c35d8634aae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0f6de2d11b3082106962fe60cd4bcbd5"/>
+    <sys_element_mapping action="delete_multiple" query="id=0f6de2d11b3082106962fe60cd4bcbd5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>0f6de2d11b3082106962fe60cd4bcbd5</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>836de2d11b3082106962fe60cd4bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_17e94ea61b6cc6506962fe60cd4bcb9e</table>
+        <value>{{Created_1.current.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>0f6de2d11b3082106962fe60cd4bcbd5</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>cf6de2d11b3082106962fe60cd4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_17e94ea61b6cc6506962fe60cd4bcb9e</table>
+        <value>{{Created_1.table_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0f6de2d11b3082106962fe60cd4bcbd5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0f6de2d11b3082106962fe60cd4bcbd5"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Creating record in Alert Request status with details from API.</comment>
+        <display_text/>
+        <flow display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>876de2d11b3082106962fe60cd4bcbdd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <ui_id>4bdad1f4-1544-4237-9e32-72d15593086e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=876de2d11b3082106962fe60cd4bcbdd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>876de2d11b3082106962fe60cd4bcbdd</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>8f6de2d11b3082106962fe60cd4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <value>x_aleen_alertsnowp_alert_request_status</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=876de2d11b3082106962fe60cd4bcbdd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>876de2d11b3082106962fe60cd4bcbdd</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>4b6de2d11b3082106962fe60cd4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>876de2d11b3082106962fe60cd4bcbdd</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>0f6de2d11b3082106962fe60cd4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>alert_request_number={{16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number}}^alert_request_status={{16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_status}}^snow_request_number={{Created_1.current.number}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=876de2d11b3082106962fe60cd4bcbdd"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=876de2d11b3082106962fe60cd4bcbdd"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Alert Status Sync API Action">ae5e9fcd1b7042106962fe60cd4bcb86</action_type>
+        <action_type_parent display_value="Alert Status Sync API Action">e2ab1f0d1b7042106962fe60cd4bcb1d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c36d26d11b3082106962fe60cd4bcb0c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:53</sys_updated_on>
+        <ui_id>f17a2ba8-1839-4d14-acde-d8222be06cec</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c36d26d11b3082106962fe60cd4bcb0c"/>
+    <sys_element_mapping action="delete_multiple" query="id=c36d26d11b3082106962fe60cd4bcb0c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>c36d26d11b3082106962fe60cd4bcb0c</id>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:53</sys_created_on>
+        <sys_id>076d26d11b3082106962fe60cd4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ae5e9fcd1b7042106962fe60cd4bcb86</table>
+        <value>{{16f703c2-9282-4fd9-98f4-3c35d8634aae.alert_request_number}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c36d26d11b3082106962fe60cd4bcb0c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c36d26d11b3082106962fe60cd4bcb0c"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT IN4f6de2d11b3082106962fe60cd4bcbc6"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f9fcca151bbc8210759455342a4bcb89</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Alert Activate Badge Flow">7e6de2d11b3082106962fe60cd4bcbaa</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4f6de2d11b3082106962fe60cd4bcbc6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <ui_id>f7e75abf-f9b2-475b-b958-f74cfb532edb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4f6de2d11b3082106962fe60cd4bcbc6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f6de2d11b3082106962fe60cd4bcbc6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>036de2d11b3082106962fe60cd4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <value>1970-01-01 00:00:30</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4f6de2d11b3082106962fe60cd4bcbc6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_id>4f6de2d11b3082106962fe60cd4bcbcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=4f6de2d11b3082106962fe60cd4bcbc6"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4f6de2d11b3082106962fe60cd4bcbc6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4f6de2d11b3082106962fe60cd4bcbc6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa^sys_idNOT IN366de2d11b3082106962fe60cd4bcbb8,cf6de2d11b3082106962fe60cd4bcbbf"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>366de2d11b3082106962fe60cd4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf6de2d11b3082106962fe60cd4bcbbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7e6de2d11b3082106962fe60cd4bcbaa"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>cff9fee61b6cc250759455342a4bcbe2</sys_id>
+        <latest_snapshot>7e6de2d11b3082106962fe60cd4bcbaa</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cff9fee61b6cc250759455342a4bcbe2^sys_idNOT IN536d26d11b3082106962fe60cd4bcb4b"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>cff9fee61b6cc250759455342a4bcbe2</plan_id>
+        <snapshot>7e6de2d11b3082106962fe60cd4bcbaa</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:04:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>536d26d11b3082106962fe60cd4bcb4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:04:54</sys_updated_on>
+        <trigger display_value="">d36d26d11b3082106962fe60cd4bcb49</trigger>
+    </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=cff9fee61b6cc250759455342a4bcbe2"/>
 </record_update>

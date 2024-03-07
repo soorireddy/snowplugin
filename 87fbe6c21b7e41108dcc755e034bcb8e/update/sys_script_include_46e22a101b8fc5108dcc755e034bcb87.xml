@@ -892,6 +892,58 @@ AlertEnterprisePlatformAPIs.prototype = {
             gs.info('syncAlertRequestStatus   :: ' + message);
         }
     },
+	syncAlertRequestStatusByRequestNumber: function(alert_request_numbers) {
+        gs.info('syncAlertRequestStatusByRequestNumber    ::  Begin ');
+		try {
+			var alert_request_numbersObj = '"'+alert_request_numbers+'"';
+				
+			
+			gs.info("syncAlertRequestStatusByRequestNumber ::--- "+alert_request_numbersObj);
+			gs.info('syncAlertRequestStatusByRequestNumber    ::  check alert request status with request numbers ');
+            if (null != this.jwt_token) {
+                var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.AlertRequestStatus', 'POST');
+                r.setStringParameter('baseURL', this.baseURLProp);
+                r.setRequestHeader('Content-Type', 'application/json');
+                r.setRequestHeader('Authorization', this.jwt_token);
+                var requestBody1 =
+                    '{"filterCriteria": [{"fieldName": "extId","operator": "in","valueList": ['+alert_request_numbersObj + ']}],"projectionList":["extId","type","intStatus","workflowObjCatStatus"]}';
+                var requestBody = requestBody1.toString();
+                gs.info('syncAlertRequestStatusByRequestNumber request body ::  ==> ' + requestBody);
+                r.setRequestBody(requestBody);
+                var updateresponse = r.executeAsync();
+				gs.info("updateresponse "+JSON.stringify(updateresponse));
+                var updateresponseBody = updateresponse.getBody();
+                var updatehttpStatus = updateresponse.getStatusCode();
+                var responseObj = JSON.parse(updateresponseBody);
+				gs.info("responseObj "+JSON.stringify(responseObj));
+                if (updatehttpStatus == 200 && responseObj.success) {
+                    gs.info("Found Request Status ");
+					if(responseObj.data){
+						for (i = 0; i < responseObj.data.length; i++) {
+							var requestObj = responseObj.data[i];
+							if(requestObj.workflowObjCatStatus){
+								this.updateAlertRequest(requestObj.extId,requestObj.workflowObjCatStatus);
+								return this.sendDataToFlow(JSON.stringify(requestObj.workflowObjCatStatus));
+							} else if (requestObj.intStatus){
+								this.updateAlertRequest(requestObj.extId,requestObj.intStatus==0?'Active':'');
+								return this.sendDataToFlow(JSON.stringify(requestObj.intStatus==0?'Active':''));
+							}
+						}
+					} else {
+						return this.sendDataToFlow("Request Status not found");
+					}
+					
+                } else {
+					return this.sendDataToFlow(JSON.stringify(responseObj.messages));
+                }
+            } else {
+                gs.info("syncAlertRequestStatusByRequestNumber  is unsuccessful due to API  server authentication / connectivity issue");
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.info('syncAlertRequestStatusByRequestNumber error   :: ' + message);
+        }
+    },
     type: 'AlertEnterprisePlatformAPIs'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -899,14 +951,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>367</sys_mod_count>
+        <sys_mod_count>380</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-01 12:42:40</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-06 20:57:53</sys_updated_on>
     </sys_script_include>
 </record_update>
