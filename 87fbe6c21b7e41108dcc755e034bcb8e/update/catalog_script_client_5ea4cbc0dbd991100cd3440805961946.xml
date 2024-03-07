@@ -20,7 +20,7 @@
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
     g_form.hideFieldMsg('request_for');
-    g_form.setValue('existing_access_levels', '');
+   // g_form.setValue('existing_access_levels', '');
     if (isLoading || newValue == '') {
         return;
     } else {
@@ -35,34 +35,33 @@
             function userDatacallback(response) {
                 var userHasExistingAccess = false;
                 var responseObj = JSON.parse(response);
-                var acLevelTable = '<table style="align:center; border-collapse: collapse;">';
-                acLevelTable += '<tr><th>Access level ID</th><th>Access Level Name</th><th>Valid From </th><th>Valid To</th></tr>';
-                var badgeTable = '<table style="align:center; border-collapse: collapse;">';
-                badgeTable += '<tr><th>Badge ID</th><th>Badge Status</th><th>Badge Type</th><th>Valid From </th><th>Valid To</th></tr>';
+                var mrvsData = [];
                 if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                     if (responseObj.data[0].identityAccess && responseObj.data[0].identityAccess.length > 0) {
                         userHasExistingAccess = true;
                         var accessLevels = responseObj.data[0].identityAccess;
                         for (var j = 0; j < accessLevels.length; j++) {
-                            var accessLevel = accessLevels[j];
-                            acLevelTable += '<tr>';
-                            acLevelTable += '<td>' + accessLevels[j].access.id
-                            acLevelTable += '<td>' + accessLevels[j].access.text + '</td>';
-							acLevelTable += '<td>' + accessLevels[j].validFrom + '</td>';
-                            acLevelTable += '<td>' + accessLevels[j].validTo + '</td>';
-                            acLevelTable += '</tr>';
+                            var accessLevel = {};
+                            accessLevel.access_level_id = accessLevels[j].access.id;
+							accessLevel.access_level_name = accessLevels[j].access.text;
+							var validFrom = new Date(accessLevels[j].validFrom);
+							accessLevel.valid_from = validFrom.toLocaleString();
+							var validTo = new Date(accessLevels[j].validTo);
+							accessLevel.valid_to = validTo.toLocaleString();
+							mrvsData.push(accessLevel);
                         }
                     }
                    
 					g_form.hideFieldMsg('request_for');
 
                     if (!userHasExistingAccess) {
-                        acLevelTable += '<tr>';
-                        acLevelTable += '<td colspan="2" >' + 'No Access levels Found' + '</td>';
-                        acLevelTable += '</tr>';
+                        // acLevelTable += '<tr>';
+                        // acLevelTable += '<td colspan="2" >' + 'No Access levels Found' + '</td>';
+                        // acLevelTable += '</tr>';
                     }
-                    acLevelTable += '</table>';
-                    g_form.setValue('existing_access_levels', acLevelTable);
+                    // acLevelTable += '</table>';
+                    // g_form.setValue('existing_access_levels', acLevelTable);
+					g_form.setValue('existing_access_levels',JSON.stringify(mrvsData));
 					
                 }
 				else{
@@ -76,21 +75,24 @@
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 09:46:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>On change User check badge Assigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-24 05:33:17</sys_updated_on>
+        <sys_updated_on>2024-02-29 06:15:08</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
+        <va_supported>true</va_supported>
         <variable_set/>
         <view/>
     </catalog_script_client>

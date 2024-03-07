@@ -20,7 +20,7 @@
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
     g_form.hideFieldMsg('request_for');
-    g_form.setValue('existing_badges', '');
+    //g_form.setValue('existing_badges', '');
     if (isLoading || newValue == '') {
         return;
     } else {
@@ -35,30 +35,32 @@
             function userDatacallback(response) {
                 var userHasBadges = false;
                 var responseObj = JSON.parse(response);
-                var badgeTable = '<table style="align:center; border-collapse: collapse;">';
-                badgeTable += '<tr><th>Badge ID</th><th>Badge Status</th><th>Badge Type</th><th>Valid From </th><th>Valid To</th></tr>';
+                var mrvsData = [];
                 if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                   if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
                         userHasBadges = true;
                         var assets = responseObj.data[0].identityAssets;
                         for (var ij = 0; ij < assets.length; ij++) {
-                            badgeTable += '<tr>';
-                            badgeTable += '<td>' + assets[ij].asset.extId
-                            badgeTable += '<td>' + getStatusString(assets[ij].intStatus) + '</td>';
-                            badgeTable += '<td>' + assets[ij].asset.assetType.text + '</td>';
-                            badgeTable += '<td>' + assets[ij].validFrom + '</td>';
-                            badgeTable += '<td>' + assets[ij].validTo + '</td>';
-                            badgeTable += '</tr>';
+							var badgeObj = {};
+							badgeObj.badge_id = assets[ij].asset.extId;
+							badgeObj.badge_status = getStatusString(assets[ij].intStatus);
+							badgeObj.badge_type = assets[ij].asset.assetType.text;
+							var validFrom = new Date(assets[ij].validFrom);
+							badgeObj.valid_from = validFrom.toLocaleString();
+							var validTo = new Date(assets[ij].validTo);
+							badgeObj.valid_to = validTo.toLocaleString();
+							mrvsData.push(badgeObj);
                         }
                     }
 					g_form.hideFieldMsg('request_for');
                     if (!userHasBadges) {
-                        badgeTable += '<tr>';
-                        badgeTable += '<td colspan="5" >' + 'No Badges Found' + '</td>';
-                        badgeTable += '</tr>';
+                        // badgeTable += '<tr>';
+                        // badgeTable += '<td colspan="5" >' + 'No Badges Found' + '</td>';
+                        // badgeTable += '</tr>';
                     }
-                    badgeTable += '</table>';
-                    g_form.setValue('existing_badges', badgeTable);
+                    //badgeTable += '</table>';
+                    //g_form.setValue('existing_badges', badgeTable);
+					g_form.setValue('existing_badges',JSON.stringify(mrvsData));	
                 }
 				else{
 					g_form.hideFieldMsg('request_for');
@@ -80,21 +82,24 @@
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-24 04:50:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1d2653141bd0fd10234b0f6e6e4bcb01</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>On change User check Existing badges </sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_1d2653141bd0fd10234b0f6e6e4bcb01</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-29 07:00:08</sys_updated_on>
+        <sys_updated_on>2024-02-29 06:08:50</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
+        <va_supported>true</va_supported>
         <variable_set/>
         <view/>
     </catalog_script_client>
