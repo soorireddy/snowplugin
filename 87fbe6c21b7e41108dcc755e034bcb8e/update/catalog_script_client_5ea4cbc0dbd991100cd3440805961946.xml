@@ -34,6 +34,7 @@
 
             function userDatacallback(response) {
                 var userHasExistingAccess = false;
+				var userHasActiveBadges = false;
                 var responseObj = JSON.parse(response);
                 var mrvsData = [];
                 if (responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
@@ -51,6 +52,14 @@
 							mrvsData.push(accessLevel);
                         }
                     }
+					if (responseObj.data[0].identityAssets && responseObj.data[0].identityAssets.length > 0) {
+						var assets = responseObj.data[0].identityAssets;
+						for (var ij = 0; ij < assets.length; ij++) {
+							if(assets[ij].intStatus === 0){
+								userHasActiveBadges = true;
+							}
+						}
+					}
                    
 					g_form.hideFieldMsg('request_for');
 
@@ -62,7 +71,11 @@
                     // acLevelTable += '</table>';
                     // g_form.setValue('existing_access_levels', acLevelTable);
 					g_form.setValue('existing_access_levels',JSON.stringify(mrvsData));
-					
+
+					if (!userHasActiveBadges) {
+						g_form.showFieldMsg("request_for", "No Active Badges Found", "error");
+						this.document.getElementById("submit-btn").style.display  = 'none';
+					} 
                 }
 				else{
 					g_form.hideFieldMsg('request_for');
@@ -79,7 +92,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ea4cbc0dbd991100cd3440805961946</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>On change User check badge Assigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -87,8 +100,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_script_client_5ea4cbc0dbd991100cd3440805961946</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-29 06:15:08</sys_updated_on>
+        <sys_updated_by>krishan.chopra</sys_updated_by>
+        <sys_updated_on>2024-03-13 05:11:16</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
