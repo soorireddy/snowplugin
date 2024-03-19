@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_aleen_alertsnowp_accessasset</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-13 12:16:52</sys_created_on>
+        <sys_id>31c318491b8475108dcc755e034bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_accessasset</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>ua_table_licensing_config_31c318491b8475108dcc755e034bcbb1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-13 12:16:52</sys_updated_on>
+    </ua_table_licensing_config>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>e930a3a4db4f5780cbf6d5b0cf9619fd</instance_id>
+        <instance_name>ven02573</instance_name>
+        <name>ua_table_licensing_config_31c318491b8475108dcc755e034bcbb1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_aleen_alertsnowp_accessasset</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-13 12:16:52</sys_created_on>
+        <sys_id>31c318491b8475108dcc755e034bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_accessasset</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>ua_table_licensing_config_31c318491b8475108dcc755e034bcbb1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-13 12:16:52</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>]]></payload>
+        <payload_hash>95402666</payload_hash>
+        <record_name>x_aleen_alertsnowp_accessasset</record_name>
+        <reverted_from/>
+        <source>2d2cd5591b48c2506962fe60cd4bcbf7</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-29 08:24:35</sys_created_on>
+        <sys_id>d99c9dd91b48c2506962fe60cd4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d5451fcc10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-29 08:24:35</sys_updated_on>
+        <type>Table Subscription Configuration</type>
+        <update_guid>959c9dd94448c250186f6396c53a7c49</update_guid>
+        <update_guid_history>959c9dd94448c250186f6396c53a7c49:0,af5c7677b9f6719057fde6e2c66fcdc2:385572128</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-19 08:28:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>0a937866cf8149b6811eccac0c730a84</sys_id>
+        <sys_metadata>31c318491b8475108dcc755e034bcbb1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_accessasset</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_31c318491b8475108dcc755e034bcbb1</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_31c318491b8475108dcc755e034bcbb1">d99c9dd91b48c2506962fe60cd4bcb49</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-19 08:28:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
