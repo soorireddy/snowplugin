@@ -20,7 +20,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         return msg;
     },
     buildingAccess: function(data) {
-        gs.info(" buildingAccess  :: begin");
+        gs.info("Include Script  buildingAccess  :: begin");
         try {
             if (null != this.jwt_token) {
                 var grUserXZ = new GlideRecordSecure('sys_user');
@@ -45,11 +45,13 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var processedSysId = [];
                 var accessLevelSourceIdList = [];
                 var myArray = data.sourceid.split('###');
+                gs.info("IncludeScript Building Access source id "+data.sourceid);
                 for (var i = 0; i < myArray.length; i++) {
                     if (myArray[i] && myArray[i] != "") {
                         accessLevelSourceIdList.push(myArray[i]);
                     }
                 }
+                gs.info("IncludeScript Building Access length of access array "+myArray.length);
                 var requestAccessList = [];
                 var accessLevelId = "";
                 for (var j = 0; j < accessLevelSourceIdList.length; j++) {
@@ -84,7 +86,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
                 r.setRequestHeader('Authorization', this.jwt_token);
-                gs.info('buildingAccess  NEW request body ::  ==> ' + reqPayload);
+                gs.info('IncludeScript Building Access  NEW request body ::  ==> ' + reqPayload);
                 r.setRequestBody(reqPayload);
                 var newBadgeResponse = r.executeAsync();
                 var newBadgeResponseBody = newBadgeResponse.getBody();
@@ -852,7 +854,7 @@ AlertEnterprisePlatformAPIs.prototype = {
             recordToInsert.addQuery('alert_request_status', 'open');
             recordToInsert.query();
             var alert_request_numbers = "";
-            if (recordToInsert.next()) {
+            if (recordToInsert.hasNext()) {
                 while (recordToInsert.next()) {
                     if (alert_request_numbers == "") {
                         alert_request_numbers = '"' + recordToInsert.alert_request_number + '"';
@@ -888,8 +890,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                 } else {
                     gs.info("syncAlertRequestStatus  is unsuccessful due to API  server authentication / connectivity issue");
                 }
+            }else{
+                gs.info("syncAlertRequestStatus:: No request found with open status");
             }
-			gs.info("syncAlertRequestStatus:: No request found with open status");
         } catch (ex) {
             var message = ex.message;
             gs.info('syncAlertRequestStatus   :: ' + message);
@@ -922,11 +925,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                         for (i = 0; i < responseObj.data.length; i++) {
                             var requestObj = responseObj.data[i];
 							gs.info("requestObj " + JSON.stringify(requestObj));
-                            if (requestObj.workflowObjCatStatus) {
+							if (requestObj.workflowObjCatStatus != undefined) {
 								gs.info("requestObj.workflowObjCatStatus ::--- " + requestObj.workflowObjCatStatus);
                                 this.updateAlertRequest(requestObj.extId, requestObj.workflowObjCatStatus);
                                 return this.sendDataToFlow(JSON.stringify(requestObj.workflowObjCatStatus));
-                            } else if (requestObj.intStatus) {
+                            } else if (requestObj.intStatus != undefined) {
 								gs.info("requestObj.intStatus ::--- " + requestObj.intStatus == 0 ? 'Active' : '');
                                 this.updateAlertRequest(requestObj.extId, requestObj.intStatus == 0 ? 'Active' : '');
 								gs.info("sendDataToFlow ::--- " + JSON.stringify(requestObj.intStatus == 0 ? 'Active' : ''));
@@ -955,7 +958,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>385</sys_mod_count>
+        <sys_mod_count>391</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy>read</sys_policy>
@@ -963,6 +966,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-13 02:35:58</sys_updated_on>
+        <sys_updated_on>2024-03-19 02:36:37</sys_updated_on>
     </sys_script_include>
 </record_update>
