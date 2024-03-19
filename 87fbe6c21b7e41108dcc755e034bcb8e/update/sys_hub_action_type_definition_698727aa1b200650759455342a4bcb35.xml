@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>698727aa1b200650759455342a4bcb35</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>Action Create Access level Task for Area owner</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -34,8 +34,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_698727aa1b200650759455342a4bcb35</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-05 03:53:56</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:54</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -62,10 +62,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 12:18:56</sys_created_on>
         <sys_id>f4586fea1b200650759455342a4bcb20</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-13 15:24:49</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">b8586fea1b200650759455342a4bcb13</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35^id=698727aa1b200650759455342a4bcb35"/>
@@ -89,15 +89,15 @@
         <sys_created_on>2024-02-27 12:18:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d448ebea1b200650759455342a4bcb60</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:06</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d448ebea1b200650759455342a4bcb60"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -108,29 +108,36 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 12:18:37</sys_created_on>
         <sys_id>9448ebea1b200650759455342a4bcb7e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:06</sys_updated_on>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:44</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 var buildingGr = new GlideRecordSecure(inputs.table);&#13;
 buildingGr.initialize();&#13;
 buildingGr.get("number",inputs.record_number);&#13;
 buildingGr.query();&#13;
+gs.info("Action BRT "+inputs.record_number);&#13;
 gs.info("Building Access Levels in request "+buildingGr.access_levels);&#13;
 var accessLevels = buildingGr.access_levels;&#13;
 var accessLevelsList = accessLevels.split(',');&#13;
 var singleOwnerRecords = [];&#13;
 var lowAccessLevelRecords = [];&#13;
 var needApproval = false;&#13;
+gs.info("Action BRT length of array "+accessLevelsList.length);&#13;
 for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
-    gs.info("Inside Loop");&#13;
+	gs.info("Action BRT list length of AL "+accessLevelsList.length);&#13;
     needApproval = false;&#13;
-	gs.info("Ith index accessLevel "+accessLevelsList[i]);&#13;
+	gs.info("Action BRT Ith index accessLevel "+accessLevelsList[i]);&#13;
 	var accessLevelLocationGr = new GlideRecordSecure('x_aleen_alertsnowp_accesslocations');&#13;
-    if (accessLevelLocationGr.get(accessLevelsList[i])) {&#13;
-	gs.info("got accesslevel Location record  of " + accessLevelLocationGr.access_level_name);&#13;
+	accessLevelLocationGr.initialize();&#13;
+	gs.info("Action BRT Getting Access location from access level ");&#13;
+	if (accessLevelLocationGr.get("access_level",accessLevelsList[i])) { // SNOW-81&#13;
+	gs.info("Action BRT got accesslevel Location record  of " + accessLevelLocationGr.getDisplayValue("access_level_name") +" "+accessLevelLocationGr.getDisplayValue("location"));&#13;
     var accessLevelGr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');&#13;
+	accessLevelGr.initialize();&#13;
+	gs.info("Action BRT Searching for access -&gt;"+accessLevelLocationGr.access_level);&#13;
     if (accessLevelGr.get(accessLevelLocationGr.access_level)) {&#13;
+		gs.info("Action BRT:: access level from access location "+accessLevelGr.getValue("access_level_name")+" "+accessLevelGr.getDisplayValue("access_level_name"));&#13;
         var count = 0;&#13;
         var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');&#13;
         gr.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
@@ -139,9 +146,12 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
         while (gr.next()) {&#13;
             count = gr.getAggregate('COUNT');&#13;
         }&#13;
+		gs.info("Action BRT Count of area owner "+count);&#13;
         if (count == 0) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has no Area owners");&#13;
+			gs.info("Action BRT "+accessLevelGr.getDisplayValue("access_level_name")+"has no owner");&#13;
             if (accessLevelGr.criticality == "LOW") {&#13;
+				gs.info("We have a low criticality access level with no owner");&#13;
                 if (lowAccessLevelRecords.length &gt; 0) {&#13;
                     lowAccessLevelRecords[0]['access_level_id'] = lowAccessLevelRecords[0]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
                     lowAccessLevelRecords[0]['access_level_name'] = lowAccessLevelRecords[0]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
@@ -151,9 +161,11 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     lmap['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     lmap['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					lmap['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(lmap));&#13;
                     lowAccessLevelRecords.push(lmap);&#13;
                 }&#13;
             } else {&#13;
+				gs.info("Action BRT We have a High Criticality with no owner setting to default approver");&#13;
                 needApproval = true;&#13;
                 foundIndex = -1;&#13;
                 for (var icv = 0; icv &lt; singleOwnerRecords.length; icv++) {&#13;
@@ -172,6 +184,7 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     mapa['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     mapa['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					mapa['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(mapa));&#13;
                     singleOwnerRecords.push(mapa);&#13;
                 }&#13;
             }&#13;
@@ -180,12 +193,14 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
         }&#13;
         if (count == 1) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has one Area owner");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has one area owner");&#13;
             var grAO = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');&#13;
             grAO.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
             grAO.query();&#13;
             while (grAO.next()) {&#13;
                 var refSysUser = grAO.owner.getRefRecord();&#13;
                 var approverID = refSysUser.sys_id;&#13;
+				gs.info("Action BRT Setting Approver id "+approverID);&#13;
                 indexFound = -1;&#13;
                 for (var icx = 0; icx &lt; singleOwnerRecords.length; icx++) {&#13;
                     var mmpa = singleOwnerRecords[icx];&#13;
@@ -204,12 +219,15 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     map['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     map['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					map['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT map to be pushed "+JSON.stringify(map));&#13;
                     singleOwnerRecords.push(map);&#13;
                 }&#13;
             }&#13;
         }&#13;
         if (count &gt; 1) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has multiple Area owners");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has multiple area owner");&#13;
+			gs.info("Action BRT Record inserted in Building Access Task for multiple owners");&#13;
             var buildingAccessTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
             buildingAccessTask.access_level_id = accessLevelGr.access_level_id;&#13;
             buildingAccessTask.access_level_name = accessLevelGr.access_level_name;&#13;
@@ -226,13 +244,19 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
             buildingAccessTask.insert();&#13;
         }&#13;
     }&#13;
+	}else{&#13;
+		gs.info("Action BRT NO ACCESS FOUND IN Access LOCATION table for access sys id"+accessLevelsList[i]);&#13;
 	}&#13;
 }&#13;
+gs.info("Action BRT singleOwnerRecords.length "+singleOwnerRecords.length);&#13;
 for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
+	gs.info("Action BRT Inserting Single area owner access ");&#13;
     var mapva = singleOwnerRecords[icc];&#13;
     var buildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
     buildingAccTask.access_level_id = mapva['access_level_id'];&#13;
+	gs.info("Action BRT Single Owner access id "+mapva['access_level_id']);&#13;
     buildingAccTask.access_level_name = mapva['access_level_name'];&#13;
+	gs.info("Action BRT Single area owner Record source id "+mapva['sourceid']);&#13;
 	buildingAccTask.sourceid = mapva['sourceid'];&#13;
     buildingAccTask.needapproval = true;&#13;
     buildingAccTask.parent_number = buildingGr.number;&#13;
@@ -247,12 +271,16 @@ for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
     singleOwnerRecords.splice(icc, 1);&#13;
     --icc;&#13;
 }&#13;
+gs.info("Action BRT low access level record length "+lowAccessLevelRecords.length);&#13;
 for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
+	gs.info("Action BRT lowAcces level Record inserting");&#13;
     var mapval = lowAccessLevelRecords[iccl];&#13;
     var lowbuildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
     lowbuildingAccTask.access_level_id = mapval['access_level_id'];&#13;
+	gs.info("Action BRT low access access id "+mapval['access_level_id']);&#13;
     lowbuildingAccTask.access_level_name = mapval['access_level_name'];&#13;
 	lowbuildingAccTask.sourceid = mapval['sourceid'];&#13;
+	gs.info("Action BRT low level source id "+mapval['sourceid']);&#13;
     lowbuildingAccTask.needapproval = false;&#13;
     lowbuildingAccTask.parent_number = buildingGr.number;&#13;
     lowbuildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
@@ -296,6 +324,18 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_d448ebea1b200650759455342a4bcb60</table>
         <value>{{action.record_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>d448ebea1b200650759455342a4bcb60</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-12 09:58:51</sys_created_on>
+        <sys_id>ad8e0f8f1bf04210759455342a4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 09:58:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -724,15 +764,15 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_created_on>2024-02-27 12:18:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>74586fea1b200650759455342a4bcb18</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:11</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -863,12 +903,12 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1c48abea1b200650759455342a4bcbe1</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>table</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35_table_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
         <url/>
@@ -888,12 +928,12 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dc48abea1b200650759455342a4bcbdd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Record Number</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35_record_number_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
         <url/>
@@ -915,12 +955,12 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>78586fea1b200650759455342a4bcb1d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35___dont_treat_as_error___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
         <url/>
@@ -940,12 +980,12 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b4586fea1b200650759455342a4bcb17</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35___action_status___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
         <url/>
@@ -956,14 +996,14 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"75586fea1b200650759455342a4bcbda","name":"plan","plan_signature":null}}</plan>
-        <snapshot>91586fea1b200650759455342a4bcb9e</snapshot>
+        <snapshot>dc907e841bc90610759455342a4bcba4</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 12:19:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>75586fea1b200650759455342a4bcbda</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -971,8 +1011,8 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 12:19:00</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:56</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>package_private</access>
@@ -1020,10 +1060,10 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 12:18:58</sys_created_on>
         <sys_id>51586fea1b200650759455342a4bcb9c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-13 15:24:59</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">55586fea1b200650759455342a4bcb90</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1061,15 +1101,15 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_created_on>2024-02-27 12:18:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>15586fea1b200650759455342a4bcb66</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:13</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:54</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=15586fea1b200650759455342a4bcb66"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1080,29 +1120,36 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 12:18:58</sys_created_on>
         <sys_id>91586fea1b200650759455342a4bcb8d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:14</sys_updated_on>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:54</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 var buildingGr = new GlideRecordSecure(inputs.table);&#13;
 buildingGr.initialize();&#13;
 buildingGr.get("number",inputs.record_number);&#13;
 buildingGr.query();&#13;
+gs.info("Action BRT "+inputs.record_number);&#13;
 gs.info("Building Access Levels in request "+buildingGr.access_levels);&#13;
 var accessLevels = buildingGr.access_levels;&#13;
 var accessLevelsList = accessLevels.split(',');&#13;
 var singleOwnerRecords = [];&#13;
 var lowAccessLevelRecords = [];&#13;
 var needApproval = false;&#13;
+gs.info("Action BRT length of array "+accessLevelsList.length);&#13;
 for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
-    gs.info("Inside Loop");&#13;
+	gs.info("Action BRT list length of AL "+accessLevelsList.length);&#13;
     needApproval = false;&#13;
-	gs.info("Ith index accessLevel "+accessLevelsList[i]);&#13;
+	gs.info("Action BRT Ith index accessLevel "+accessLevelsList[i]);&#13;
 	var accessLevelLocationGr = new GlideRecordSecure('x_aleen_alertsnowp_accesslocations');&#13;
-    if (accessLevelLocationGr.get(accessLevelsList[i])) {&#13;
-	gs.info("got accesslevel Location record  of " + accessLevelLocationGr.access_level_name);&#13;
+	accessLevelLocationGr.initialize();&#13;
+	gs.info("Action BRT Getting Access location from access level ");&#13;
+	if (accessLevelLocationGr.get("access_level",accessLevelsList[i])) { // SNOW-81&#13;
+	gs.info("Action BRT got accesslevel Location record  of " + accessLevelLocationGr.getDisplayValue("access_level_name") +" "+accessLevelLocationGr.getDisplayValue("location"));&#13;
     var accessLevelGr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');&#13;
+	accessLevelGr.initialize();&#13;
+	gs.info("Action BRT Searching for access -&gt;"+accessLevelLocationGr.access_level);&#13;
     if (accessLevelGr.get(accessLevelLocationGr.access_level)) {&#13;
+		gs.info("Action BRT:: access level from access location "+accessLevelGr.getValue("access_level_name")+" "+accessLevelGr.getDisplayValue("access_level_name"));&#13;
         var count = 0;&#13;
         var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');&#13;
         gr.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
@@ -1111,9 +1158,12 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
         while (gr.next()) {&#13;
             count = gr.getAggregate('COUNT');&#13;
         }&#13;
+		gs.info("Action BRT Count of area owner "+count);&#13;
         if (count == 0) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has no Area owners");&#13;
+			gs.info("Action BRT "+accessLevelGr.getDisplayValue("access_level_name")+"has no owner");&#13;
             if (accessLevelGr.criticality == "LOW") {&#13;
+				gs.info("We have a low criticality access level with no owner");&#13;
                 if (lowAccessLevelRecords.length &gt; 0) {&#13;
                     lowAccessLevelRecords[0]['access_level_id'] = lowAccessLevelRecords[0]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
                     lowAccessLevelRecords[0]['access_level_name'] = lowAccessLevelRecords[0]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
@@ -1123,9 +1173,11 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     lmap['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     lmap['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					lmap['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(lmap));&#13;
                     lowAccessLevelRecords.push(lmap);&#13;
                 }&#13;
             } else {&#13;
+				gs.info("Action BRT We have a High Criticality with no owner setting to default approver");&#13;
                 needApproval = true;&#13;
                 foundIndex = -1;&#13;
                 for (var icv = 0; icv &lt; singleOwnerRecords.length; icv++) {&#13;
@@ -1144,6 +1196,7 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     mapa['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     mapa['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					mapa['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(mapa));&#13;
                     singleOwnerRecords.push(mapa);&#13;
                 }&#13;
             }&#13;
@@ -1152,12 +1205,14 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
         }&#13;
         if (count == 1) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has one Area owner");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has one area owner");&#13;
             var grAO = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');&#13;
             grAO.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
             grAO.query();&#13;
             while (grAO.next()) {&#13;
                 var refSysUser = grAO.owner.getRefRecord();&#13;
                 var approverID = refSysUser.sys_id;&#13;
+				gs.info("Action BRT Setting Approver id "+approverID);&#13;
                 indexFound = -1;&#13;
                 for (var icx = 0; icx &lt; singleOwnerRecords.length; icx++) {&#13;
                     var mmpa = singleOwnerRecords[icx];&#13;
@@ -1176,12 +1231,15 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
                     map['access_level_id'] = accessLevelGr.access_level_id;&#13;
                     map['access_level_name'] = accessLevelGr.access_level_name;&#13;
 					map['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT map to be pushed "+JSON.stringify(map));&#13;
                     singleOwnerRecords.push(map);&#13;
                 }&#13;
             }&#13;
         }&#13;
         if (count &gt; 1) {&#13;
 			gs.info(accessLevelGr.access_level_name +"  has multiple Area owners");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has multiple area owner");&#13;
+			gs.info("Action BRT Record inserted in Building Access Task for multiple owners");&#13;
             var buildingAccessTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
             buildingAccessTask.access_level_id = accessLevelGr.access_level_id;&#13;
             buildingAccessTask.access_level_name = accessLevelGr.access_level_name;&#13;
@@ -1198,13 +1256,19 @@ for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
             buildingAccessTask.insert();&#13;
         }&#13;
     }&#13;
+	}else{&#13;
+		gs.info("Action BRT NO ACCESS FOUND IN Access LOCATION table for access sys id"+accessLevelsList[i]);&#13;
 	}&#13;
 }&#13;
+gs.info("Action BRT singleOwnerRecords.length "+singleOwnerRecords.length);&#13;
 for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
+	gs.info("Action BRT Inserting Single area owner access ");&#13;
     var mapva = singleOwnerRecords[icc];&#13;
     var buildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
     buildingAccTask.access_level_id = mapva['access_level_id'];&#13;
+	gs.info("Action BRT Single Owner access id "+mapva['access_level_id']);&#13;
     buildingAccTask.access_level_name = mapva['access_level_name'];&#13;
+	gs.info("Action BRT Single area owner Record source id "+mapva['sourceid']);&#13;
 	buildingAccTask.sourceid = mapva['sourceid'];&#13;
     buildingAccTask.needapproval = true;&#13;
     buildingAccTask.parent_number = buildingGr.number;&#13;
@@ -1219,12 +1283,16 @@ for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
     singleOwnerRecords.splice(icc, 1);&#13;
     --icc;&#13;
 }&#13;
+gs.info("Action BRT low access level record length "+lowAccessLevelRecords.length);&#13;
 for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
+	gs.info("Action BRT lowAcces level Record inserting");&#13;
     var mapval = lowAccessLevelRecords[iccl];&#13;
     var lowbuildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
     lowbuildingAccTask.access_level_id = mapval['access_level_id'];&#13;
+	gs.info("Action BRT low access access id "+mapval['access_level_id']);&#13;
     lowbuildingAccTask.access_level_name = mapval['access_level_name'];&#13;
 	lowbuildingAccTask.sourceid = mapval['sourceid'];&#13;
+	gs.info("Action BRT low level source id "+mapval['sourceid']);&#13;
     lowbuildingAccTask.needapproval = false;&#13;
     lowbuildingAccTask.parent_number = buildingGr.number;&#13;
     lowbuildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
@@ -1268,6 +1336,18 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_15586fea1b200650759455342a4bcb66</table>
         <value>{{action.record_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>15586fea1b200650759455342a4bcb66</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-12 09:58:59</sys_created_on>
+        <sys_id>938e4f8f1bf04210759455342a4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 09:58:59</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -1785,15 +1865,15 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_created_on>2024-02-27 12:18:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>59586fea1b200650759455342a4bcb94</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-28 13:52:14</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-15 10:21:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1835,7 +1915,7 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>11586fea1b200650759455342a4bcb64</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>table</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -1860,7 +1940,7 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>55586fea1b200650759455342a4bcb60</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Record Number</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -1887,7 +1967,7 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>91586fea1b200650759455342a4bcb99</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -1912,7 +1992,7 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <sys_customer_update>false</sys_customer_update>
         <sys_id>99586fea1b200650759455342a4bcb93</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
+        <sys_name/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -1927,6 +2007,6 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>698727aa1b200650759455342a4bcb35</sys_id>
         <latest_snapshot>9d586fea1b200650759455342a4bcb4c</latest_snapshot>
-        <compiler_build>glide-vancouver-07-06-2023__patch6-01-11-2024_01-22-2024_2201.zip</compiler_build>
+        <compiler_build>glide-vancouver-07-06-2023__patch7-02-08-2024_02-19-2024_0243.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
