@@ -4,6 +4,7 @@
         <element label="Access Level ID" max_length="40" name="u_access_level_id" type="string"/>
         <element label="Access Level Name" max_length="40" name="u_access_level_name" type="string"/>
         <element label="Criticality" max_length="40" name="u_criticality" type="string"/>
+        <element label="Deleted" max_length="40" name="u_deleted" type="boolean"/>
         <element label="Source ID" max_length="40" name="u_sourceid" type="string"/>
         <element label="System" max_length="40" name="u_system" type="string"/>
     </element>

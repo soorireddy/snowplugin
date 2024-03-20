@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="03518b551b45ca106962fe60cd4bcb36" extends="sys_import_set_row" label="U Access Locations Import Set" max_length="40" name="x_aleen_alertsnowp_u_access_locations_import_set" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Access Level" max_length="40" name="u_access_level" type="string"/>
+        <element label="Access Level Id" max_length="40" name="u_access_level_id" type="string"/>
+        <element label="Access Level Name" max_length="40" name="u_access_level_name" type="string"/>
+        <element label="Access Location Id" max_length="40" name="u_access_location_id" type="string"/>
+        <element default="False" label="Deleted" max_length="40" name="u_deleted" type="boolean"/>
+        <element label="Location Name" max_length="40" name="u_location_name" type="string"/>
     </element>
 </database>

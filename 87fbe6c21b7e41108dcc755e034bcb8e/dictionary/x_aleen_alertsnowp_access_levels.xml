@@ -9,6 +9,7 @@
                 <element inactive_on_update="false" label="Medium" value="MEDIUM"/>
             </choice>
         </element>
+        <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="sourceId" mandatory="true" max_length="40" name="sourceid" type="string"/>
         <element label="System" mandatory="true" max_length="40" name="system" type="string"/>
     </element>
