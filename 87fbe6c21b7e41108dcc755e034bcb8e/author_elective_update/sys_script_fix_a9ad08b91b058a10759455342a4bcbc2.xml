@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <before>false</before>
+        <description/>
+        <name>Token Test</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
+gs.info("this.use_oauth : "+oauth);
+		if (oauth=='false') {
+			gs.info("Message -- ");
+		}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-20 09:00:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a9ad08b91b058a10759455342a4bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Test</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_script_fix_a9ad08b91b058a10759455342a4bcbc2</sys_update_name>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-20 09:00:03</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>e930a3a4db4f5780cbf6d5b0cf9619fd</instance_id>
+        <instance_name>ven02573</instance_name>
+        <name>sys_script_fix_a9ad08b91b058a10759455342a4bcbc2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;before&gt;false&lt;/before&gt;&lt;description/&gt;&lt;name&gt;Token Test&lt;/name&gt;&lt;record_for_rollback&gt;true&lt;/record_for_rollback&gt;&lt;script&gt;&lt;![CDATA[var oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
+gs.info("this.use_oauth : "+oauth);
+		if (oauth=='false') {
+			gs.info("Message -- ");
+		}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chirag.chanana&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-03-20 09:00:03&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;a9ad08b91b058a10759455342a4bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Token Test&lt;/sys_name&gt;&lt;sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Workplace Access and Security"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_a9ad08b91b058a10759455342a4bcbc2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chirag.chanana&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-03-20 09:00:03&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-112450021</payload_hash>
+        <record_name>Token Test</record_name>
+        <reverted_from/>
+        <source>2ac223151b054a10759455342a4bcb66</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-20 09:00:03</sys_created_on>
+        <sys_id>d6cd04b91b058a10759455342a4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e5b16c9e80000001</sys_recorded_at>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-20 09:00:03</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>dacd04b9cf058a10d883e273784a88b8</update_guid>
+        <update_guid_history>dacd04b9cf058a10d883e273784a88b8:-112450021</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-20 09:32:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>04f5adda70a546e880311421e6f76009</sys_id>
+        <sys_metadata>a9ad08b91b058a10759455342a4bcbc2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Test</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_script_fix_a9ad08b91b058a10759455342a4bcbc2</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_a9ad08b91b058a10759455342a4bcbc2">d6cd04b91b058a10759455342a4bcbb9</sys_update_version>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-20 09:32:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
