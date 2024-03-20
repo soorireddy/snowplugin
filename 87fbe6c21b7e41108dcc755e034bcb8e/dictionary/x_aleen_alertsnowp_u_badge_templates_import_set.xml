@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="81110f551b45ca106962fe60cd4bcb51" extends="sys_import_set_row" label="U Badge Templates Import Set" max_length="40" name="x_aleen_alertsnowp_u_badge_templates_import_set" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="backSideBadgeHTML" max_length="20000" name="u_backside_badge_html" type="string_full_utf8"/>
+        <element label="Description" max_length="40" name="u_description" type="string"/>
+        <element label="extId" max_length="40" name="u_extid" type="string"/>
+        <element label="frontSideBadgeHTML" max_length="20000" name="u_frontside_badge_html" type="string_full_utf8"/>
+        <element label="ID" max_length="40" name="u_id" type="longint"/>
+        <element label="Text" max_length="40" name="u_text" type="string"/>
     </element>
 </database>

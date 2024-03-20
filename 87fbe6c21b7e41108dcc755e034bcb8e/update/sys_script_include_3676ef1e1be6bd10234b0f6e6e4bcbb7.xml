@@ -13,8 +13,11 @@ AlertMetadataScript.prototype = {
     initialize: function() {
         this.jwt_token = "..";
         this.use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
-        if (!this.use_oauth) {
+        gs.info("this.use_oauth : "+!this.use_oauth);
+		if (this.use_oauth=="false") {
+			gs.info("Message -- ");
             this.jwt_token = accessTokenScriptScript.getToken();
+			gs.info("Metadata Token -- "+this.jwt_token);
         }
     },
     syncLocations: function() {
@@ -27,7 +30,7 @@ AlertMetadataScript.prototype = {
                     new OauthHelper().validateToken("GetLocations");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
-                    r.setRequestHeader('Authorization', this.jwt_token);
+                    r.setRequestHeader('Authorization', this.jwt_token); 
                 }
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
@@ -111,27 +114,7 @@ AlertMetadataScript.prototype = {
                             if (accessLevelObj.sourceId) {
                                 sourceId = accessLevelObj.sourceId;
                             }
-                            this.saveAccessLevel(accessId, accessName, systemId, accessLevelObj.criticality, sourceId, deleted);
-
-                            if (accessLevelObj.accessLocations && accessLevelObj.accessLocations.length > 0) {
-                                var accessLocations = accessLevelObj.accessLocations;
-                                for (j = 0; j < accessLocations.length; j++) {
-                                    var accessLocation = accessLocations[j];
-                                    var accessLocationsDeleted = accessLocations[j].intStatus == 3 ? true : false;
-                                    this.saveAccessLevelLocation(accessId, accessName, accessLocation.locationId.toString(), accessLocationsDeleted);
-                                }
-
-                                if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
-                                    var accessOwners = accessLevelObj.accessOwners;
-                                    for (jk = 0; jk < accessOwners.length; jk++) {
-                                        var accessOwner = accessOwners[jk];
-                                        var accessOwnerDeleted = accessOwners[jk].intStatus == 3 ? true : false;
-                                        this.saveAccessLevelOwner(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId, accessOwnerDeleted);
-                                    }
-                                }
-                            } else {
-                                gs.info("Access level " + accessName + "  has no location so not saving");
-                            }
+                           
                         }
                     }
                 } else {
@@ -277,18 +260,13 @@ AlertMetadataScript.prototype = {
         }
     },
 
-    syncBadgeTemplates: function() {
+	syncBadgeTemplates: function() {
         gs.info('syncBadgeTemplates  :: Begin');
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetBadgeTemplates', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                if (this.use_oauth) {
-                    new OauthHelper().validateToken("GetBadgeTemplates");
-                    r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
-                } else {
-                    r.setRequestHeader('Authorization', this.jwt_token);
-                }
+                r.setRequestHeader('Authorization', this.jwt_token);
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
@@ -298,14 +276,68 @@ AlertMetadataScript.prototype = {
                     // gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+						
+						//import set initialize------------------
+						
+						var impSet = new GlideRecord('sys_import_set');
+                        impSet.initialize();
+						
+						//impSet.mode = "asynchronous";
+                        //impSet.state = "loading";
+						
+						impSet.table_name = "x_aleen_alertsnowp_u_badge_templates_import_set";
+						impSet.short_description = "Importing Data from x_aleen_alertsnowp_u_badge_templates_import_set";
+						impSet.insert();
+					
+						//----------------------------
+					
                         for (i = 0; i < responseObj.data.length; i++) {
+						
+							//importSetRowGr---------------------------
+						
+							var importSetRowGr = new GlideRecordSecure(impSet.table_name);
+						
                             var template = responseObj.data[i];
-                            this.saveTemplate(template);
+                            
+							//-----this.saveTemplate(template);
+							
+							importSetRowGr.setValue('u_id',template.id);
+							importSetRowGr.setValue('u_extid',template.extId);
+							importSetRowGr.setValue('u_text',template.text);
+							importSetRowGr.setValue('u_description',template.description);
+							importSetRowGr.setValue('u_frontside_badge_html',template.frontSideBadgeHTML);
+							importSetRowGr.setValue('u_backside_badge_html',template.backSideBadgeHTML);			
+							importSetRowGr.insert();
+							
                         }
-                        gs.info("BadgeTemplates(" + responseObj.data.length + ")  sync is successful");
+						
+						//update state of impSet-----------------------
+						
+						impSet.state = "loaded";
+                        impSet.load_completed = new GlideDateTime();
+                        impSet.update();
+						
+						//transformAllMaps-----------------------------
+						
+						var transformer = new GlideImportSetTransformer();
+                        transformer.transformAllMaps(impSet);
+                        if (transformer.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("Completed Transformation");
+							//TO ADD-------------------
+							gs.info("BadgeTemplates(" + responseObj.data.length + ")  sync is successful");
+                        }
+						
+						//-------------------------------
+						
+						//TO DELETE----------------
+                        /*
+						gs.info("BadgeTemplates(" + responseObj.data.length + ")  sync is successful");
+						*/
                     }
                 } else {
-                    gs.info("BadgeTemplates data sync is unsuccessful  due to API error  :: syncBadgeTemplates  & Response code =>" + updatehttpStatus);
+                    gs.info("BadgeTemplates data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
                 }
             } else {
                 gs.info("BadgeTemplates data sync is unsuccessful due to API  server authentication / connectivity issue  :: syncBadgeTemplates");
@@ -316,46 +348,7 @@ AlertMetadataScript.prototype = {
             gs.info('syncTemplates   :: ' + message);
         }
     },
-    saveTemplate: function(template) {
-        var count = 0;
-        var gr = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
-        gr.addQuery('id', template.id);
-        gr.addAggregate('COUNT');
-        gr.query();
-        while (gr.next()) {
-            count = gr.getAggregate('COUNT');
-        }
-        if (count == 0) {
-            var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
-            recordToInsert.id = template.id;
-            recordToInsert.extid = template.extId;
-            recordToInsert.text = template.text;
-            recordToInsert.description = template.description;
-            recordToInsert.frontsidebadgehtml = template.frontSideBadgeHTML;
-            recordToInsert.backsidebadgehtml = template.backSideBadgeHTML;
-            recordToInsert.sys_created_on = new GlideDateTime();
-            recordToInsert.sys_updated_on = new GlideDateTime();
-            recordToInsert.insert();
-        } else {
-            var update = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
-            update.addQuery('id', template.id);
-            update.query();
-            var deleted = template.intStatus == 3 ? true : false;
-            while (update.next()) {
-                if (deleted) {
-                    update.deleteRecord();
-                } else {
-                    update.extid = template.extId;
-                    update.text = template.text;
-                    update.description = template.description;
-                    update.frontsidebadgehtml = template.frontSideBadgeHTML;
-                    update.backsidebadgehtml = template.backSideBadgeHTML;
-                    update.sys_updated_on = new GlideDateTime();
-                    update.update();
-                }
-            }
-        }
-    },
+    
     type: 'AlertMetadataScript'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -363,14 +356,14 @@ AlertMetadataScript.prototype = {
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-20 05:23:05</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-20 09:00:48</sys_updated_on>
     </sys_script_include>
 </record_update>
