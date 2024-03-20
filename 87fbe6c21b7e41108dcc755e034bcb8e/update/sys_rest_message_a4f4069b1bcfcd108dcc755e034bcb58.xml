@@ -7,21 +7,23 @@
         <basic_auth_user/>
         <description>To All locations</description>
         <name>GetLocations</name>
-        <oauth2_profile/>
+        <oauth2_profile display_value="OAuth Workplace Profile">dd88a3d11b09ca106962fe60cd4bcbc2</oauth2_profile>
         <protocol_name/>
         <rest_endpoint>${baseURL}/api/location/find</rest_endpoint>
         <sys_class_name>sys_rest_message</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-29 10:57:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>a4f4069b1bcfcd108dcc755e034bcb58</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>GetLocations</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_rest_message_a4f4069b1bcfcd108dcc755e034bcb58</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 07:31:00</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-20 12:03:36</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mutual_auth>false</use_mutual_auth>
     </sys_rest_message>
