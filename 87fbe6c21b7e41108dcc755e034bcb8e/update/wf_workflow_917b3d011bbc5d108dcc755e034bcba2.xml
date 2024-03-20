@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <activity_stages>{"stages":{},"ends":["9a7f306a1b55f510234b0f6e6e4bcb3a"],"activities":{},"subflows":[]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
@@ -31,9 +31,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-09-18 10:37:09</sys_created_on>
         <sys_id>527ffc2a1b55f510234b0f6e6e4bcbaa</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>ramon.amaral</sys_updated_by>
-        <sys_updated_on>2023-09-18 13:12:01</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:02:52</sys_updated_on>
         <table>x_aleen_alertsnowp_building_access_task</table>
         <timezone/>
         <validated>true</validated>
@@ -47,6 +47,7 @@
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-18 10:14:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>917b3d011bbc5d108dcc755e034bcba2</sys_id>
@@ -55,6 +56,7 @@
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>wf_workflow_917b3d011bbc5d108dcc755e034bcba2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
