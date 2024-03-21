@@ -13,11 +13,10 @@ AlertMetadataScript.prototype = {
     initialize: function() {
         this.jwt_token = "..";
         this.use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
-        gs.info("this.use_oauth : " + !this.use_oauth);
-        if (this.use_oauth == "false") {
-            gs.info("Message -- ");
+        gs.info("Metadata Is oauth enabled " + this.use_oauth + " "+ !this.use_oauth);
+        if (!this.use_oauth) {
+			gs.info("Metadata Oauth Unavailable using jwt");
             this.jwt_token = accessTokenScriptScript.getToken();
-            gs.info("Metadata Token -- " + this.jwt_token);
         }
     },
     syncLocations: function() {
@@ -272,14 +271,14 @@ AlertMetadataScript.prototype = {
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-20 12:40:27</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 05:45:43</sys_updated_on>
     </sys_script_include>
 </record_update>

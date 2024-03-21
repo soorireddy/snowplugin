@@ -18,6 +18,7 @@ OauthHelper.prototype = {
         var found_access_token = false;
         var found_refresh_token = false;
         var restMessageGr = new GlideRecordSecure('sys_rest_message');
+		restMessageGr.initialize();
         restMessageGr.addQuery('name', restmessage);
         restMessageGr.query();
         if (restMessageGr.next()) {
@@ -29,8 +30,10 @@ OauthHelper.prototype = {
             oauthGr.query();
             //gs.info(restmessage + "   ::: new GlideDateTime() ==>" + new GlideDateTime());
             while (oauthGr.next()) {
+				gs.info("OAuthHelper : Found Tokens ");
                 if (oauthGr.type == 'access_token') {
-                    //gs.info(restmessage + "   :::  oauthGr.expire  ACCESS ==>" + oauthGr.getValue('expires'));
+                    gs.info("OAuthHelper:: "+restmessage + "   :::  oauthGr.expire  ACCESS ==>" + oauthGr.getValue('expires'));
+					gs.info("OAuthHelper : Access token expire "+oauthGr.expires +"->"+new GlideDateTime()+"->"+new GlideDateTime(oauthGr.expires).before(new GlideDateTime()));
                     if (new GlideDateTime(oauthGr.expires).before(new GlideDateTime())) {
                         found_access_token = false;
                     } else {
@@ -38,7 +41,8 @@ OauthHelper.prototype = {
                     }
                 }
                 if (oauthGr.type == 'refresh_token') {
-                    //gs.info(restmessage + "  :::   oauthGr.expire  REFRESH ==>" + oauthGr.getValue('expires'));
+                    gs.info("OAuthHelper:: "+restmessage + "  :::   oauthGr.expire  REFRESH ==>" + oauthGr.getValue('expires'));
+					gs.info("OAuthHelper : Refresh token expire "+oauthGr.expires +"->"+new GlideDateTime()+"->"+new GlideDateTime(oauthGr.expires).before(new GlideDateTime()));
                     if (new GlideDateTime(oauthGr.expires).before(new GlideDateTime())) {
                         found_refresh_token = false;
                     } else {
@@ -47,13 +51,13 @@ OauthHelper.prototype = {
                 }
             }
         }
-        gs.info(restmessage + "(" + requestor_id + ")" + " :::::::::::: << found_access_token  >>" + found_access_token);
-        gs.info(restmessage + "(" + requestor_id + ")" + "  :::::::::::: <<found_refresh_token >>" + found_refresh_token);
+        gs.info("OAuthHelper:: Rest Message"+restmessage + "(" + requestor_id + ")" + " :::::::::::: << found_access_token  >>" + found_access_token);
+        gs.info("OAuthHelper:: Rest Message"+restmessage + "(" + requestor_id + ")" + "  :::::::::::: <<found_refresh_token >>" + found_refresh_token);
         if (!found_access_token && found_refresh_token) {
             gs.info("No Access Token Found using refresh token");
             //get the existing refresh token and pass it client request with grant type as refresh_token
-            var oAuthClientRefresh = new sn_auth.GlideOAuthClient();
-            var existingToken = oAuthClientRefresh.getToken(requestor_id, gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
+            //var oAuthClientRefresh = new sn_auth.GlideOAuthClient();
+            //var existingToken = oAuthClientRefresh.getToken(requestor_id, gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
             var tokenRequestNew = new sn_auth.GlideOAuthClientRequest();
             tokenRequestNew.setParameter('oauth_requestor_context', "sys_rest_message");
             tokenRequestNew.setParameter('oauth_requestor', requestor_id);
@@ -78,6 +82,14 @@ OauthHelper.prototype = {
             var oAuthClient = new sn_auth.GlideOAuthClient();
             oAuthClient.requestTokenByRequest(null, tokenRequest);
         }
+		//gs.info("Oauth Helper :: Valid Tokens available ")
+        return requestor_id;
+    },
+    getOauthToken: function(restmessage) {
+        var requid = this.validateToken(restmessage);
+        var oAuthClientReturn = new sn_auth.GlideOAuthClient();
+        var returningToken = oAuthClientReturn.getToken(requid, gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
+		return returningToken.getAccessToken();
     },
     type: 'OauthHelper'
 };]]></script>
@@ -86,14 +98,14 @@ OauthHelper.prototype = {
         <sys_created_on>2024-03-20 04:57:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5db4dfe11bc50e106962fe60cd4bcb98</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>OauthHelper</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_5db4dfe11bc50e106962fe60cd4bcb98</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-20 19:41:25</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 09:45:04</sys_updated_on>
     </sys_script_include>
 </record_update>
