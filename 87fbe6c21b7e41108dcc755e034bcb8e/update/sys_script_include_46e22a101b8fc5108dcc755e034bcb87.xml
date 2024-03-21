@@ -639,11 +639,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                 responseObj = JSON.parse(responseBody);
                 if (responsehttpStatus == 200 && responseObj.success) {
                     gs.addInfoMessage('Reset PIN request (' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert, will be processed shortly ...');
-                    this.saveAuditLog(data.number, identityId, "Reset PIN  is successful", responseObj.messages[0].valuesMap.id, "submitted");
+                    this.saveAuditLog(data.number, gs.getUserName(), "Reset PIN  is successful", responseObj.messages[0].valuesMap.id, "submitted");
                     return this.sendDataToFlow(JSON.stringify(responseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    this.saveAuditLog(data.number, identityId, "Reset PIN  is unsuccessful reason : ==> " + responseObj.messages[0].messageDisplayText, "", "");
+                    this.saveAuditLog(data.number, gs.getUserName(), "Reset PIN  is unsuccessful reason : ==> " + responseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                 }
             } else {
@@ -690,11 +690,11 @@ AlertEnterprisePlatformAPIs.prototype = {
                 gs.debug("responsehttpStatus   ::" + responsehttpStatus);
                 if (responsehttpStatus == 200 && responseObj.success) {
                     gs.addInfoMessage('Update profile request(' + responseObj.messages[0].valuesMap.id + ') has been placed with Alert Successfully , will be processed shortly');
-                    this.saveAuditLog(data.number, userName, "profile request is successful", responseObj.messages[0].valuesMap.id, "submitted");
+                    this.saveAuditLog(data.number, gs.getUserName(), "profile request is successful", responseObj.messages[0].valuesMap.id, "submitted");
                     return this.sendDataToFlow(JSON.stringify(responseObj.messages));
                 } else {
                     gs.addErrorMessage("Error while processing the request , please contact administrator for the reasons/logs ");
-                    this.saveAuditLog(data.number, userName, "profile update is unsuccessful  reason ==> " + responseObj.messages[0].messageDisplayText, "", "");
+                    this.saveAuditLog(data.number, gs.getUserName(), "profile update is unsuccessful  reason ==> " + responseObj.messages[0].messageDisplayText, "", "");
                     data.state = 4;
                 }
             } else {
@@ -1096,14 +1096,14 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>412</sys_mod_count>
+        <sys_mod_count>414</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-21 12:31:52</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 14:49:01</sys_updated_on>
     </sys_script_include>
 </record_update>
