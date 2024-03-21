@@ -13,6 +13,7 @@ OauthHelper.prototype = {
 
     },
     validateToken: function(restmessage) {
+        gs.info("Oauth helper :::  validate token");
         var requestor_id = "";
         var found_access_token = false;
         var found_refresh_token = false;
@@ -26,27 +27,48 @@ OauthHelper.prototype = {
             var oauthGr = new GlideRecordSecure('oauth_credential');
             oauthGr.addQuery('oauth_requestor_profile.requestor_id', requestor_id);
             oauthGr.query();
+            //gs.info(restmessage + "   ::: new GlideDateTime() ==>" + new GlideDateTime());
             while (oauthGr.next()) {
                 if (oauthGr.type == 'access_token') {
-                    found_access_token = true;
+                    //gs.info(restmessage + "   :::  oauthGr.expire  ACCESS ==>" + oauthGr.getValue('expires'));
+                    if (new GlideDateTime(oauthGr.expires).before(new GlideDateTime())) {
+                        found_access_token = false;
+                    } else {
+                        found_access_token = true;
+                    }
                 }
                 if (oauthGr.type == 'refresh_token') {
-                    found_refresh_token = true;
+                    //gs.info(restmessage + "  :::   oauthGr.expire  REFRESH ==>" + oauthGr.getValue('expires'));
+                    if (new GlideDateTime(oauthGr.expires).before(new GlideDateTime())) {
+                        found_refresh_token = false;
+                    } else {
+                        found_refresh_token = true;
+                    }
                 }
             }
         }
+        gs.info(restmessage + "(" + requestor_id + ")" + " :::::::::::: << found_access_token  >>" + found_access_token);
+        gs.info(restmessage + "(" + requestor_id + ")" + "  :::::::::::: <<found_refresh_token >>" + found_refresh_token);
         if (!found_access_token && found_refresh_token) {
-            //TODO :  get new access token using refresh token without getting new refresh token
+            gs.info("No Access Token Found using refresh token");
+            //get the existing refresh token and pass it client request with grant type as refresh_token
+            var oAuthClientRefresh = new sn_auth.GlideOAuthClient();
+            var existingToken = oAuthClientRefresh.getToken(requestor_id, gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
             var tokenRequestNew = new sn_auth.GlideOAuthClientRequest();
             tokenRequestNew.setParameter('oauth_requestor_context', "sys_rest_message");
             tokenRequestNew.setParameter('oauth_requestor', requestor_id);
             tokenRequestNew.setParameter('personal', null);
+            //TODO -FIX:  get new access token using refresh token without getting new refresh token
+            //https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0823628
+            //tokenRequestNew.setGrantType("refresh_token");
+            //tokenRequestNew.setRefreshToken(existingToken.getRefreshToken());
             tokenRequestNew.setParameter('oauth_provider_profile', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
             tokenRequestNew.setParameter('oauth_provider_id', null);
             var oAuthClientNew = new sn_auth.GlideOAuthClient();
             oAuthClientNew.requestTokenByRequest(null, tokenRequestNew);
         }
         if (!found_refresh_token) {
+            gs.info("Getting Tokens");
             var tokenRequest = new sn_auth.GlideOAuthClientRequest();
             tokenRequest.setParameter('oauth_requestor_context', "sys_rest_message");
             tokenRequest.setParameter('oauth_requestor', requestor_id);
@@ -56,9 +78,7 @@ OauthHelper.prototype = {
             var oAuthClient = new sn_auth.GlideOAuthClient();
             oAuthClient.requestTokenByRequest(null, tokenRequest);
         }
-
     },
-
     type: 'OauthHelper'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -66,7 +86,7 @@ OauthHelper.prototype = {
         <sys_created_on>2024-03-20 04:57:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5db4dfe11bc50e106962fe60cd4bcb98</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>OauthHelper</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -74,6 +94,6 @@ OauthHelper.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_5db4dfe11bc50e106962fe60cd4bcb98</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-20 09:21:30</sys_updated_on>
+        <sys_updated_on>2024-03-20 19:41:25</sys_updated_on>
     </sys_script_include>
 </record_update>

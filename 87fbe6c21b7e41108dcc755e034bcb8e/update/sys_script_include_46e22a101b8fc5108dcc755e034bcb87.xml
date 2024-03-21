@@ -12,7 +12,11 @@ var AlertEnterprisePlatformAPIs = Class.create();
 AlertEnterprisePlatformAPIs.prototype = {
     initialize: function() {
         this.baseURLProp = gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl');
-        this.jwt_token = accessTokenScriptScript.getToken();
+        this.jwt_token = "..";
+        this.use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
+        if (this.use_oauth == "false") {
+            this.jwt_token = accessTokenScriptScript.getToken();
+        }
         this.date_format = gs.getProperty('x_aleen_alertsnowp.alert_api_payload_dateformat');
     },
     sendDataToFlow: function(msg) {
@@ -78,14 +82,14 @@ AlertEnterprisePlatformAPIs.prototype = {
                 identityObj.masterIdentityId = userNameBA.toString();
                 var requestPayloadObject = {};
                 requestPayloadObject.type = "Request_Building_Access_SNow_V1";
-
                 requestPayloadObject.requestAccess = requestAccessList;
                 requestPayloadObject.customProperties = customPropertiesObj;
                 var reqPayload = new global.JSON().encode(requestPayloadObject);
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -132,7 +136,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
                 r.setRequestHeader('Content-Type', 'application/json');
 
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -180,7 +185,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 var assetId = this.getAssetInformation(data.badge_id);
                 r.setStringParameter('baseURL', this.baseURLProp);
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -227,7 +233,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 //var assetId = this.getAssetInformation(data.badge_number);
                 var assetId = data.badge_id;
                 r.setStringParameter('baseURL', this.baseURLProp);
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -272,7 +279,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 var assetId = data.asset_id;
                 r.setStringParameter('baseURL', this.baseURLProp);
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -308,7 +316,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 var assetId = data.asset_id;
                 r.setStringParameter('baseURL', this.baseURLProp);
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -351,7 +360,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateVisitor', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateVisitor");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -410,7 +420,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateVisit', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateVisit");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -457,7 +468,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -507,7 +519,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -556,7 +569,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -606,7 +620,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -652,7 +667,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.CreateAlertRequest', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                gs.info("use oauth " + gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication'));
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("CreateAlertRequest");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -665,6 +682,7 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var response = r.executeAsync();
                 var responseBody = response.getBody();
                 var responsehttpStatus = response.getStatusCode();
+                gs.info("http code " + responsehttpStatus);
                 responseObj = JSON.parse(responseBody);
                 gs.info(responseBody);
                 gs.info("responsehttpStatus   ::" + responsehttpStatus);
@@ -695,7 +713,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetIdentityId', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("GetIdentityId");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -779,7 +798,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameterNoEscape('baseURL', this.baseURLProp);
                 r.setStringParameterNoEscape('userId', username);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("UserBadgesAndAccessLevels");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -866,7 +886,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 r.setStringParameterNoEscape('baseURL', this.baseURLProp);
                 r.setStringParameterNoEscape('serialNo', serialNo);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("GetAssetInfo");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -934,7 +955,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                     var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.AlertRequestStatus', 'POST');
                     r.setStringParameter('baseURL', this.baseURLProp);
                     r.setRequestHeader('Content-Type', 'application/json');
-                    if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                    if (this.use_oauth) {
+                        new OauthHelper().validateToken("AlertRequestStatus");
                         r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                     } else {
                         r.setRequestHeader('Authorization', this.jwt_token);
@@ -978,7 +1000,8 @@ AlertEnterprisePlatformAPIs.prototype = {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.AlertRequestStatus', 'POST');
                 r.setStringParameter('baseURL', this.baseURLProp);
                 r.setRequestHeader('Content-Type', 'application/json');
-                if (gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication')) {
+                if (this.use_oauth) {
+                    new OauthHelper().validateToken("AlertRequestStatus");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
                     r.setRequestHeader('Authorization', this.jwt_token);
@@ -1032,7 +1055,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>393</sys_mod_count>
+        <sys_mod_count>400</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -1040,6 +1063,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-19 10:54:49</sys_updated_on>
+        <sys_updated_on>2024-03-20 19:23:58</sys_updated_on>
     </sys_script_include>
 </record_update>
