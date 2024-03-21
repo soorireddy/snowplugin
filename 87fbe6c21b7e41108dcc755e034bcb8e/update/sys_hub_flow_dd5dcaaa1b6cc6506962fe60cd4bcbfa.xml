@@ -4,14 +4,14 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1221829000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2003717000,viewActivatedIn=naturalLanguage</attributes>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Flow regarding requesting a new Badge</description>
         <internal_name>alert_new_badge_request</internal_name>
-        <label_cache>[{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_status","label":"18 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.__action_status__","label":"18 - Alert API Action➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"d6dbc94c-a66f-4c54-b3bf-845eb06119ed"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_number","label":"18 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.table_name","label":"2 - Update Record➛New Badge Table","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.request_for","label":"2 - Update Record➛New Badge Record➛Request For","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"request_for"},{"name":"flow_variable.badge_office_available","label":"Flow Variables➛Badge office available","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"902821a5-5ddb-4d7f-be07-1d1ae98e6a30"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.number","label":"2 - Update Record➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"502f797a-9408-4ac3-bb94-46b9ec07bd58.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record","label":"2 - Update Record➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"466e3b74-d4c6-4d5c-a919-8cbfd0d38781"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current","label":"Trigger - Record Created➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record","label":"9 - Create Record➛Badging Office Record","reference":"x_aleen_alertsnowp_badge_officer","reference_display":"Badging Office","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"88c8beb2-f0e4-4ab7-8a90-3044e14b82d4.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record.request_status","label":"9 - Create Record➛Badging Office Record➛Request Status","reference":"","reference_display":"Request Status","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_badge_officer","column_name":"request_status","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"Cancelled","reference":false,"rawLabel":"Cancelled","selected":false,"missing":false,"image":"","value":"CANCELLED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed Sucessfully","reference":false,"rawLabel":"Completed Sucessfully","selected":false,"missing":false,"image":"","value":"COMPLETE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed with Errors","reference":false,"rawLabel":"Completed with Errors","selected":false,"missing":false,"image":"","value":"COMPLETE_ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Error","reference":false,"rawLabel":"Error","selected":false,"missing":false,"image":"","value":"ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"In Process","reference":false,"rawLabel":"In Process","selected":false,"missing":false,"image":"","value":"INPROGRESS","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Rejected by BO","reference":false,"rawLabel":"Rejected by BO","selected":false,"missing":false,"image":"","value":"REJECTED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Submitted","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"image":"","value":"SUBMIT","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Waiting for BO Approval","reference":false,"rawLabel":"Waiting for BO Approval","selected":false,"missing":false,"image":"","value":"BO_APPROVE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}}]},{"name":"flow_variable.manager.last_name","label":"Flow Variables➛Manager➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.additional_assignee_list","label":"2 - Update Record➛New Badge Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"additional_assignee_list"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.sys_domain_path","label":"2 - Update Record➛New Badge Record➛Domain Path","reference":"","reference_display":"Domain Path","type":"domain_path","base_type":"domain_path","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"sys_domain_path"}]</label_cache>
+        <label_cache>[{"name":"2deddb56-11b9-4662-97e6-96303dfecac5.record.state","label":"15 - Update Record➛New Badge Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"state","choices":[{"used":false,"label":"Open","reference":false,"rawLabel":"Open","selected":false,"missing":false,"image":"","value":"1","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Closed Complete","reference":false,"rawLabel":"Closed Complete","selected":false,"missing":false,"image":"","value":"3","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Closed Incomplete","reference":false,"rawLabel":"Closed Incomplete","selected":false,"missing":false,"image":"","value":"4","parameters":{"name":"x_aleen_alertsnowp_new_badge"}}]},{"name":"flow_variable.manager.first_name","label":"Flow Variables➛Manager➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Created_1.current.request_for.manager.email","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.sys_domain_path","label":"2 - Update Record➛New Badge Record➛Domain Path","reference":"","reference_display":"Domain Path","type":"domain_path","base_type":"domain_path","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"sys_domain_path"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.additional_assignee_list","label":"2 - Update Record➛New Badge Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"additional_assignee_list"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"flow_variable.manager.last_name","label":"Flow Variables➛Manager➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record.request_status","label":"9 - Create Record➛Badging Office Record➛Request Status","reference":"","reference_display":"Request Status","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_badge_officer","column_name":"request_status","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"Cancelled","reference":false,"rawLabel":"Cancelled","selected":false,"missing":false,"image":"","value":"CANCELLED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed Sucessfully","reference":false,"rawLabel":"Completed Sucessfully","selected":false,"missing":false,"image":"","value":"COMPLETE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed with Errors","reference":false,"rawLabel":"Completed with Errors","selected":false,"missing":false,"image":"","value":"COMPLETE_ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Error","reference":false,"rawLabel":"Error","selected":false,"missing":false,"image":"","value":"ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"In Process","reference":false,"rawLabel":"In Process","selected":false,"missing":false,"image":"","value":"INPROGRESS","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Rejected by BO","reference":false,"rawLabel":"Rejected by BO","selected":false,"missing":false,"image":"","value":"REJECTED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Submitted","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"image":"","value":"SUBMIT","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Waiting for BO Approval","reference":false,"rawLabel":"Waiting for BO Approval","selected":false,"missing":false,"image":"","value":"BO_APPROVE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}}]},{"name":"88c8beb2-f0e4-4ab7-8a90-3044e14b82d4.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record","label":"9 - Create Record➛Badging Office Record","reference":"x_aleen_alertsnowp_badge_officer","reference_display":"Badging Office","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current.number","label":"Trigger - Record Created➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"466e3b74-d4c6-4d5c-a919-8cbfd0d38781"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record","label":"2 - Update Record➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"502f797a-9408-4ac3-bb94-46b9ec07bd58.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.number","label":"2 - Update Record➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"flow_variable.badge_office_available","label":"Flow Variables➛Badge office available","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"902821a5-5ddb-4d7f-be07-1d1ae98e6a30"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.request_for","label":"2 - Update Record➛New Badge Record➛Request For","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"request_for"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.table_name","label":"2 - Update Record➛New Badge Table","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_number","label":"18 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.__action_status__","label":"18 - Alert API Action➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"d6dbc94c-a66f-4c54-b3bf-845eb06119ed"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_status","label":"18 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"Created_1.current.request_for.email","label":"Trigger - Record Created➛New Badge Record➛Request For➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Created_1.current.request_for.first_name","label":"Trigger - Record Created➛New Badge Record➛Request For➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Created_1.current.request_for.last_name","label":"Trigger - Record Created➛New Badge Record➛Request For➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"ba3dfba7-56b4-48ba-8d70-d406f3d19e67.record.reason","label":"27 - Update Record➛New Badge Record➛Reason","reference":"","reference_display":"Reason","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"reason","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"New Hire","reference":false,"rawLabel":"New Hire","selected":false,"missing":false,"image":"","value":"NEW","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Others","reference":false,"rawLabel":"Others","selected":false,"missing":false,"image":"","value":"OTHERS","parameters":{"name":"x_aleen_alertsnowp_new_badge"}}]}]</label_cache>
         <master_snapshot>e95fee951b3082106962fe60cd4bcb8c</master_snapshot>
         <name>Alert New Badge Request</name>
         <natlang/>
@@ -30,7 +30,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>dd5dcaaa1b6cc6506962fe60cd4bcbfa</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Alert New Badge Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -38,8 +38,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_hub_flow_dd5dcaaa1b6cc6506962fe60cd4bcbfa</sys_update_name>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:01</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=dd5dcaaa1b6cc6506962fe60cd4bcbfa"/>
@@ -79,15 +79,15 @@
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>dd5dcaaa1b6cc6506962fe60cd4bcbfa</identifier>
         <runner>FDTriggerRunner</runner>
-        <sys_created_by>anurag.yadav</sys_created_by>
-        <sys_created_on>2024-03-12 10:05:29</sys_created_on>
-        <sys_id>6a0097431b344210759455342a4bcb1a</sys_id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:58</sys_created_on>
+        <sys_id>65b6f1421b49ca10759455342a4bcb16</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:58</sys_updated_on>
         <trigger display_value="">f65f62d51b3082106962fe60cd4bcb61</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN6a0097431b344210759455342a4bcb1a"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN65b6f1421b49ca10759455342a4bcb16"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN30ca92661b2cc250759455342a4bcb64"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment>Request created for new badge request</comment>
@@ -100,15 +100,15 @@
         <sys_created_on>2024-02-27 06:40:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>30ca92661b2cc250759455342a4bcb64</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -229,15 +229,15 @@
         <sys_created_on>2024-02-27 06:40:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>38ca92661b2cc250759455342a4bcb5f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -315,15 +315,15 @@
         <sys_created_on>2024-02-27 06:40:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fcca92661b2cc250759455342a4bcb5a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -339,7 +339,7 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fcca92661b2cc250759455342a4bcb5a"/>
     <sys_hub_flow_output action="delete_multiple" query="model=dd5dcaaa1b6cc6506962fe60cd4bcbfa"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=dd5dcaaa1b6cc6506962fe60cd4bcbfa"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN01ca92661b2cc250759455342a4bcbb6,19ca92661b2cc250759455342a4bcbeb,29cad2661b2cc250759455342a4bcb06,7e838f631ba8c650759455342a4bcbbf,81ca92661b2cc250759455342a4bcbaf,89ca92661b2cc250759455342a4bcbbd,91ca92661b2cc250759455342a4bcbf1,950f13411bb042106962fe60cd4bcbbc,99ca92661b2cc250759455342a4bcbd5,c5ca92661b2cc250759455342a4bcbc9,ddca92661b2cc250759455342a4bcbf7,f6838f631ba8c650759455342a4bcba6,f6838f631ba8c650759455342a4bcbb2"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN01ca92661b2cc250759455342a4bcbb6,19ca92661b2cc250759455342a4bcbeb,29cad2661b2cc250759455342a4bcb06,589639021b49ca10759455342a4bcb6c,7e838f631ba8c650759455342a4bcbbf,81ca92661b2cc250759455342a4bcbaf,89ca92661b2cc250759455342a4bcbbd,91ca92661b2cc250759455342a4bcbf1,950f13411bb042106962fe60cd4bcbbc,99ca92661b2cc250759455342a4bcbd5,ac9639021b49ca10759455342a4bcb9e,c5ca92661b2cc250759455342a4bcbc9,ddca92661b2cc250759455342a4bcbf7,f6838f631ba8c650759455342a4bcba6,f6838f631ba8c650759455342a4bcbb2"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -356,15 +356,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01ca92661b2cc250759455342a4bcbb6</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>0585f7ad-1e18-4a1e-88f8-a801933560f3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=01ca92661b2cc250759455342a4bcbb6"/>
@@ -438,15 +438,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>19ca92661b2cc250759455342a4bcbeb</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>5bdadf07-2aee-4c30-8159-3e850d8ecca7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=19ca92661b2cc250759455342a4bcbeb"/>
@@ -486,22 +486,22 @@
         <comment>Closing Request with Closed Incomplete as it is rejected by manager.</comment>
         <display_text/>
         <flow display_value="Alert New Badge Request">dd5dcaaa1b6cc6506962fe60cd4bcbfa</flow>
-        <order>26</order>
+        <order>27</order>
         <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>29cad2661b2cc250759455342a4bcb06</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>ba3dfba7-56b4-48ba-8d70-d406f3d19e67</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=29cad2661b2cc250759455342a4bcb06"/>
@@ -575,6 +575,104 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert New Badge Request">dd5dcaaa1b6cc6506962fe60cd4bcbfa</flow>
+        <order>23</order>
+        <parent_ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>589639021b49ca10759455342a4bcb6c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
+        <ui_id>bda689d5-d672-4165-9bc6-34555e17998f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=589639021b49ca10759455342a4bcb6c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>589639021b49ca10759455342a4bcb6c</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>149639021b49ca10759455342a4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value>Request Status</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>589639021b49ca10759455342a4bcb6c</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>1c9639021b49ca10759455342a4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=589639021b49ca10759455342a4bcb6c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>589639021b49ca10759455342a4bcb6c</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>d49639021b49ca10759455342a4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hi,&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Flow Variables &amp;gt; Manager &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Flow Variables&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:9b43aba4-d420-4f23-aa8d-a9f09e9aa557}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:9b43aba4-d420-4f23-aa8d-a9f09e9aa557}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Flow Variables &amp;gt; Manager &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Flow Variables&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_9b43aba4-d420-4f23-aa8d-a9f09e9aa557" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Request Status for&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:cad25313-ed5b-4fb7-aa6f-4743460f2268}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:cad25313-ed5b-4fb7-aa6f-4743460f2268}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Number"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Number&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_cad25313-ed5b-4fb7-aa6f-4743460f2268" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; is&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:42152af7-ada8-4126-a0c2-0a496ee28001}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:42152af7-ada8-4126-a0c2-0a496ee28001}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="15 - Update Record &amp;gt; New Badge Record &amp;gt; State"&gt;&lt;span class="pill-start"&gt;15 - Update Record&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;State&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_42152af7-ada8-4126-a0c2-0a496ee28001" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Please act accordingly,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Thanks&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>589639021b49ca10759455342a4bcb6c</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>989639021b49ca10759455342a4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>589639021b49ca10759455342a4bcb6c</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>109639021b49ca10759455342a4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.request_for.manager.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=589639021b49ca10759455342a4bcb6c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=589639021b49ca10759455342a4bcb6c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
         <attributes/>
@@ -588,15 +686,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7e838f631ba8c650759455342a4bcbbf</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>2deddb56-11b9-4662-97e6-96303dfecac5</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7e838f631ba8c650759455342a4bcbbf"/>
@@ -683,15 +781,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>81ca92661b2cc250759455342a4bcbaf</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>c690f837-82e7-44d4-b4cb-1822bdc2529c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=81ca92661b2cc250759455342a4bcbaf"/>
@@ -764,15 +862,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89ca92661b2cc250759455342a4bcbbd</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>502f797a-9408-4ac3-bb94-46b9ec07bd58</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=89ca92661b2cc250759455342a4bcbbd"/>
@@ -923,15 +1021,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>91ca92661b2cc250759455342a4bcbf1</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>5ed009d8-4182-4a64-bc65-7b0607f6736d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=91ca92661b2cc250759455342a4bcbf1"/>
@@ -992,15 +1090,15 @@
         <sys_created_on>2024-03-06 06:03:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>950f13411bb042106962fe60cd4bcbbc</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>85eb2063-00ae-4194-8dc2-ebf2652a1b61</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=950f13411bb042106962fe60cd4bcbbc"/>
@@ -1035,15 +1133,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>99ca92661b2cc250759455342a4bcbd5</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>37e37fe5-a91c-45fe-9493-5675cba4cb1f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=99ca92661b2cc250759455342a4bcbd5"/>
@@ -1091,6 +1189,108 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert New Badge Request">dd5dcaaa1b6cc6506962fe60cd4bcbfa</flow>
+        <order>28</order>
+        <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ac9639021b49ca10759455342a4bcb9e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:01</sys_updated_on>
+        <ui_id>281f8233-54bc-4370-87e2-d4f35f1e6492</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ac9639021b49ca10759455342a4bcb9e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ac9639021b49ca10759455342a4bcb9e</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>249639021b49ca10759455342a4bcba1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value>Request Rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ac9639021b49ca10759455342a4bcb9e</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>609639021b49ca10759455342a4bcba1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ac9639021b49ca10759455342a4bcb9e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>ac9639021b49ca10759455342a4bcb9e</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>2c9639021b49ca10759455342a4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hi&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:984a9843-ca0e-4dd8-b030-1bfb679d7cbd}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:984a9843-ca0e-4dd8-b030-1bfb679d7cbd}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_984a9843-ca0e-4dd8-b030-1bfb679d7cbd" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:1fe3f696-1a39-4123-ad0b-32d96d161e8c}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:1fe3f696-1a39-4123-ad0b-32d96d161e8c}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_1fe3f696-1a39-4123-ad0b-32d96d161e8c" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Your request for New Badge has been rejected.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Requested ID :&lt;/strong&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:de71f1bb-fc61-4cbf-b22a-0054547cfdb2}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:de71f1bb-fc61-4cbf-b22a-0054547cfdb2}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Number"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Number&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_de71f1bb-fc61-4cbf-b22a-0054547cfdb2" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requested By :&lt;/strong&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:b14b896c-b521-4b04-95b5-288cc397c199}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:b14b896c-b521-4b04-95b5-288cc397c199}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_b14b896c-b521-4b04-95b5-288cc397c199" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:651ac7d3-009f-40e4-9ef6-c196a6d4b843}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:651ac7d3-009f-40e4-9ef6-c196a6d4b843}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_651ac7d3-009f-40e4-9ef6-c196a6d4b843" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reason :&amp;nbsp;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p data-tinymcerootblock=""&gt;Thanks&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>ac9639021b49ca10759455342a4bcb9e</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>ec9639021b49ca10759455342a4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>ac9639021b49ca10759455342a4bcb9e</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:21</sys_created_on>
+        <sys_id>689639021b49ca10759455342a4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.request_for.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ac9639021b49ca10759455342a4bcb9e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ac9639021b49ca10759455342a4bcb9e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
@@ -1104,15 +1304,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c5ca92661b2cc250759455342a4bcbc9</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>d67307dd-fdf4-4ec3-ac63-00551fc3b22f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c5ca92661b2cc250759455342a4bcbc9"/>
@@ -1186,15 +1386,15 @@
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ddca92661b2cc250759455342a4bcbf7</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>1fa75a3c-d2c7-4dd6-8767-d2616b675bae</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ddca92661b2cc250759455342a4bcbf7"/>
@@ -1215,6 +1415,20 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_instance</document>
         <document_key>ddca92661b2cc250759455342a4bcbf7</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 11:01:41</sys_created_on>
+        <sys_id>6d3379ca1bc18e106962fe60cd4bcb5d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">cdce8a4187120010663ca1bb36cb0bf9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ddca92661b2cc250759455342a4bcbf7</document_key>
         <order>3</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -1225,6 +1439,20 @@
         <sys_updated_on>2024-02-27 06:40:06</sys_updated_on>
         <value>state!=1</value>
         <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ddca92661b2cc250759455342a4bcbf7</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 11:01:41</sys_created_on>
+        <sys_id>a93379ca1bc18e106962fe60cd4bcb5d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:21</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Enable timeout">0dce8a4187120010663ca1bb36cb0bf4</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=ddca92661b2cc250759455342a4bcbf7"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
@@ -1263,6 +1491,30 @@
         <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
         <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>timeout_duration</field>
+        <id>ddca92661b2cc250759455342a4bcbf7</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 11:01:41</sys_created_on>
+        <sys_id>293379ca1bc18e106962fe60cd4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:01:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>timeout_flag</field>
+        <id>ddca92661b2cc250759455342a4bcbf7</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 11:01:41</sys_created_on>
+        <sys_id>653379ca1bc18e106962fe60cd4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:01:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=ddca92661b2cc250759455342a4bcbf7"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=ddca92661b2cc250759455342a4bcbf7"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
@@ -1281,15 +1533,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f6838f631ba8c650759455342a4bcba6</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>88c8beb2-f0e4-4ab7-8a90-3044e14b82d4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f6838f631ba8c650759455342a4bcba6"/>
@@ -1376,15 +1628,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f6838f631ba8c650759455342a4bcbb2</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>3015351f-0597-49ef-b757-2d55c80beac7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f6838f631ba8c650759455342a4bcbb2"/>
@@ -1481,15 +1733,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>09ca92661b2cc250759455342a4bcba6</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>31e2f646-3231-426e-8b70-292affcd73a5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1524,7 +1776,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>25</order>
+        <order>26</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -1533,15 +1785,15 @@
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>15cad2661b2cc250759455342a4bcb00</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1564,7 +1816,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>24</order>
+        <order>25</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>f9025e28-5e69-4068-a407-d5382a350881</parent_ui_id>
@@ -1573,15 +1825,15 @@
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>19ca92661b2cc250759455342a4bcbfd</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>7999ab75-54cf-43f3-a747-33981c1a4ba6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1613,15 +1865,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1dca92661b2cc250759455342a4bcbdf</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>e079c66c-07c4-4d8f-a6ed-b31f0281d5bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1644,7 +1896,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>23</order>
+        <order>24</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</parent_ui_id>
@@ -1653,15 +1905,15 @@
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1dca92661b2cc250759455342a4bcbfa</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>ccc2ab22-9e70-427b-a48f-f264c1dd051f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1693,15 +1945,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36838f631ba8c650759455342a4bcbb5</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>f2adaaac-a9d7-4132-a0ce-80831edf6454</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1733,15 +1985,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>49ca92661b2cc250759455342a4bcbcb</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>7b44fa98-fb68-4e12-96cc-ffc4b4106b81</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1787,15 +2039,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>59ca92661b2cc250759455342a4bcbce</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>421b90fa-5649-4cab-9791-7f1de9e4cb88</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1866,15 +2118,15 @@
         <sys_created_on>2024-02-27 06:40:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>59ca92661b2cc250759455342a4bcbe2</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1907,15 +2159,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>72838f631ba8c650759455342a4bcbb8</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>21ca44a4-f956-4b0a-ac1f-51ffeabc7381</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1987,15 +2239,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8dca92661b2cc250759455342a4bcbc1</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <ui_id>f9025e28-5e69-4068-a407-d5382a350881</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2066,15 +2318,15 @@
         <sys_created_on>2024-03-06 06:03:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>910f13411bb042106962fe60cd4bcbb1</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>96a20cd4-f03e-4504-afa0-6a6b7259df9c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2136,15 +2388,15 @@
         <sys_created_on>2024-03-01 12:12:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>be838f631ba8c650759455342a4bcbaa</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:30</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:00</sys_updated_on>
         <ui_id>a0d8b19c-51d9-4f84-8cf6-32bcb6c379e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2206,7 +2458,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>27</order>
+        <order>29</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
@@ -2215,15 +2467,15 @@
         <sys_created_on>2024-02-27 06:40:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>edcad2661b2cc250759455342a4bcb08</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:31</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:17:01</sys_updated_on>
         <ui_id>d5d1bc2b-4e2f-467a-bc1a-4260a85744e2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2232,7 +2484,177 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_dd5dcaaa1b6cc6506962fe60cd4bcbfa^id=edcad2661b2cc250759455342a4bcb08"/>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=edcad2661b2cc250759455342a4bcb08"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=edcad2661b2cc250759455342a4bcb08"/>
-    <sys_hub_pill_compound action="delete_multiple" query="attached_to=dd5dcaaa1b6cc6506962fe60cd4bcbfa"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT IN289639021b49ca10759455342a4bcbb4,2c9639021b49ca10759455342a4bcbb3,609639021b49ca10759455342a4bcbb5,649639021b49ca10759455342a4bcbb4,689639021b49ca10759455342a4bcbb3,a09639021b49ca10759455342a4bcbb3,a09639021b49ca10759455342a4bcbb4,ac9639021b49ca10759455342a4bcbb4,e89639021b49ca10759455342a4bcbb4,ec9639021b49ca10759455342a4bcbb3"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>289639021b49ca10759455342a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>de71f1bb-fc61-4cbf-b22a-0054547cfdb2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>2c9639021b49ca10759455342a4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cad25313-ed5b-4fb7-aa6f-4743460f2268</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{ba3dfba7-56b4-48ba-8d70-d406f3d19e67.record.reason}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>609639021b49ca10759455342a4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f30a6bd1-8a8e-4a96-a169-4bdb143c7b4e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>649639021b49ca10759455342a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1fe3f696-1a39-4123-ad0b-32d96d161e8c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.manager.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>689639021b49ca10759455342a4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9b43aba4-d420-4f23-aa8d-a9f09e9aa557</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.manager.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>a09639021b49ca10759455342a4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>a09639021b49ca10759455342a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>984a9843-ca0e-4dd8-b030-1bfb679d7cbd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>ac9639021b49ca10759455342a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>651ac7d3-009f-40e4-9ef6-c196a6d4b843</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>e89639021b49ca10759455342a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b14b896c-b521-4b04-95b5-288cc397c199</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dd5dcaaa1b6cc6506962fe60cd4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2deddb56-11b9-4662-97e6-96303dfecac5.record.state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:22</sys_created_on>
+        <sys_id>ec9639021b49ca10759455342a4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>42152af7-ada8-4126-a0c2-0a496ee28001</ui_id>
+    </sys_hub_pill_compound>
     <sys_hub_flow_variable action="delete_multiple" query="model=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT INf0ca92661b2cc250759455342a4bcb68,f0ca92661b2cc250759455342a4bcb9f"/>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -2383,15 +2805,15 @@
         <sys_created_on>2024-02-27 06:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f0ca92661b2cc250759455342a4bcb9f</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>56</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2470,7 +2892,7 @@
         <copied_from_name/>
         <description>Flow regarding requesting a new Badge</description>
         <internal_name>alert_new_badge_request</internal_name>
-        <label_cache>[{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_status","label":"18 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.__action_status__","label":"18 - Alert API Action➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"d6dbc94c-a66f-4c54-b3bf-845eb06119ed"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_number","label":"18 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.table_name","label":"2 - Update Record➛New Badge Table","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.request_for","label":"2 - Update Record➛New Badge Record➛Request For","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"request_for"},{"name":"flow_variable.badge_office_available","label":"Flow Variables➛Badge office available","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"902821a5-5ddb-4d7f-be07-1d1ae98e6a30"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.number","label":"2 - Update Record➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"502f797a-9408-4ac3-bb94-46b9ec07bd58.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record","label":"2 - Update Record➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"466e3b74-d4c6-4d5c-a919-8cbfd0d38781"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current","label":"Trigger - Record Created➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record","label":"9 - Create Record➛Badging Office Record","reference":"x_aleen_alertsnowp_badge_officer","reference_display":"Badging Office","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"88c8beb2-f0e4-4ab7-8a90-3044e14b82d4.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record.request_status","label":"9 - Create Record➛Badging Office Record➛Request Status","reference":"","reference_display":"Request Status","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_badge_officer","column_name":"request_status","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"Cancelled","reference":false,"rawLabel":"Cancelled","selected":false,"missing":false,"image":"","value":"CANCELLED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed Sucessfully","reference":false,"rawLabel":"Completed Sucessfully","selected":false,"missing":false,"image":"","value":"COMPLETE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed with Errors","reference":false,"rawLabel":"Completed with Errors","selected":false,"missing":false,"image":"","value":"COMPLETE_ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Error","reference":false,"rawLabel":"Error","selected":false,"missing":false,"image":"","value":"ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"In Process","reference":false,"rawLabel":"In Process","selected":false,"missing":false,"image":"","value":"INPROGRESS","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Rejected by BO","reference":false,"rawLabel":"Rejected by BO","selected":false,"missing":false,"image":"","value":"REJECTED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Submitted","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"image":"","value":"SUBMIT","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Waiting for BO Approval","reference":false,"rawLabel":"Waiting for BO Approval","selected":false,"missing":false,"image":"","value":"BO_APPROVE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}}]},{"name":"flow_variable.manager.last_name","label":"Flow Variables➛Manager➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.additional_assignee_list","label":"2 - Update Record➛New Badge Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"additional_assignee_list"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.sys_domain_path","label":"2 - Update Record➛New Badge Record➛Domain Path","reference":"","reference_display":"Domain Path","type":"domain_path","base_type":"domain_path","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"sys_domain_path"}]</label_cache>
+        <label_cache>[{"name":"2deddb56-11b9-4662-97e6-96303dfecac5.record.state","label":"15 - Update Record➛New Badge Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"state","choices":[{"used":false,"label":"Open","reference":false,"rawLabel":"Open","selected":false,"missing":false,"image":"","value":"1","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Closed Complete","reference":false,"rawLabel":"Closed Complete","selected":false,"missing":false,"image":"","value":"3","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Closed Incomplete","reference":false,"rawLabel":"Closed Incomplete","selected":false,"missing":false,"image":"","value":"4","parameters":{"name":"x_aleen_alertsnowp_new_badge"}}]},{"name":"flow_variable.manager.first_name","label":"Flow Variables➛Manager➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Created_1.current.request_for.manager.email","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.sys_domain_path","label":"2 - Update Record➛New Badge Record➛Domain Path","reference":"","reference_display":"Domain Path","type":"domain_path","base_type":"domain_path","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"sys_domain_path"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.additional_assignee_list","label":"2 - Update Record➛New Badge Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"additional_assignee_list"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"flow_variable.manager.last_name","label":"Flow Variables➛Manager➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record.request_status","label":"9 - Create Record➛Badging Office Record➛Request Status","reference":"","reference_display":"Request Status","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_badge_officer","column_name":"request_status","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"Cancelled","reference":false,"rawLabel":"Cancelled","selected":false,"missing":false,"image":"","value":"CANCELLED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed Sucessfully","reference":false,"rawLabel":"Completed Sucessfully","selected":false,"missing":false,"image":"","value":"COMPLETE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Completed with Errors","reference":false,"rawLabel":"Completed with Errors","selected":false,"missing":false,"image":"","value":"COMPLETE_ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Error","reference":false,"rawLabel":"Error","selected":false,"missing":false,"image":"","value":"ERROR","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"In Process","reference":false,"rawLabel":"In Process","selected":false,"missing":false,"image":"","value":"INPROGRESS","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Rejected by BO","reference":false,"rawLabel":"Rejected by BO","selected":false,"missing":false,"image":"","value":"REJECTED","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Submitted","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"image":"","value":"SUBMIT","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}},{"used":false,"label":"Waiting for BO Approval","reference":false,"rawLabel":"Waiting for BO Approval","selected":false,"missing":false,"image":"","value":"BO_APPROVE","parameters":{"name":"x_aleen_alertsnowp_badge_officer"}}]},{"name":"88c8beb2-f0e4-4ab7-8a90-3044e14b82d4.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"37e37fe5-a91c-45fe-9493-5675cba4cb1f.record","label":"9 - Create Record➛Badging Office Record","reference":"x_aleen_alertsnowp_badge_officer","reference_display":"Badging Office","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛New Badge Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current.number","label":"Trigger - Record Created➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"466e3b74-d4c6-4d5c-a919-8cbfd0d38781"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record","label":"2 - Update Record➛New Badge Record","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"502f797a-9408-4ac3-bb94-46b9ec07bd58.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.number","label":"2 - Update Record➛New Badge Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"number"},{"name":"flow_variable.badge_office_available","label":"Flow Variables➛Badge office available","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"902821a5-5ddb-4d7f-be07-1d1ae98e6a30"}},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.record.request_for","label":"2 - Update Record➛New Badge Record➛Request For","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"request_for"},{"name":"c690f837-82e7-44d4-b4cb-1822bdc2529c.table_name","label":"2 - Update Record➛New Badge Table","reference":"x_aleen_alertsnowp_new_badge","reference_display":"New Badge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_number","label":"18 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.__action_status__","label":"18 - Alert API Action➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"d6dbc94c-a66f-4c54-b3bf-845eb06119ed"}},{"name":"5bdadf07-2aee-4c30-8159-3e850d8ecca7.alert_request_status","label":"18 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"Created_1.current.request_for.email","label":"Trigger - Record Created➛New Badge Record➛Request For➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Created_1.current.request_for.first_name","label":"Trigger - Record Created➛New Badge Record➛Request For➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Created_1.current.request_for.last_name","label":"Trigger - Record Created➛New Badge Record➛Request For➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"ba3dfba7-56b4-48ba-8d70-d406f3d19e67.record.reason","label":"27 - Update Record➛New Badge Record➛Reason","reference":"","reference_display":"Reason","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_new_badge","column_name":"reason","choices":[{"label":"-- None --","used":false,"reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","value":""},{"used":false,"label":"New Hire","reference":false,"rawLabel":"New Hire","selected":false,"missing":false,"image":"","value":"NEW","parameters":{"name":"x_aleen_alertsnowp_new_badge"}},{"used":false,"label":"Others","reference":false,"rawLabel":"Others","selected":false,"missing":false,"image":"","value":"OTHERS","parameters":{"name":"x_aleen_alertsnowp_new_badge"}}]}]</label_cache>
         <master>true</master>
         <name>Alert New Badge Request</name>
         <natlang/>
@@ -2487,7 +2909,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e95fee951b3082106962fe60cd4bcb8c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2495,8 +2917,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:25</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=e95fee951b3082106962fe60cd4bcb8c"/>
@@ -2512,15 +2934,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>da5f22d51b3082106962fe60cd4bcba2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:29</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:58</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -2641,15 +3063,15 @@
         <sys_created_on>2024-03-06 21:13:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>615fee951b3082106962fe60cd4bcb8f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2727,15 +3149,15 @@
         <sys_created_on>2024-03-06 21:13:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e55fee951b3082106962fe60cd4bcba6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2751,7 +3173,7 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e55fee951b3082106962fe60cd4bcba6"/>
     <sys_hub_flow_output action="delete_multiple" query="model=e95fee951b3082106962fe60cd4bcb8c"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e95fee951b3082106962fe60cd4bcb8c"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=e95fee951b3082106962fe60cd4bcb8c^sys_idNOT IN065f22d51b3082106962fe60cd4bcb3f,165f22d51b3082106962fe60cd4bcb93,4a5f22d51b3082106962fe60cd4bcb50,4e5f22d51b3082106962fe60cd4bcb6c,4e5f22d51b3082106962fe60cd4bcb77,7d5f22d51b3082106962fe60cd4bcb36,8a5f22d51b3082106962fe60cd4bcb5f,9e5f22d51b3082106962fe60cd4bcba0,c65f22d51b3082106962fe60cd4bcb56,ca5f22d51b3082106962fe60cd4bcb48,ca5f22d51b3082106962fe60cd4bcb66,d25f22d51b3082106962fe60cd4bcb9a,da5f22d51b3082106962fe60cd4bcb7d"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=e95fee951b3082106962fe60cd4bcb8c^sys_idNOT IN065f22d51b3082106962fe60cd4bcb3f,165f22d51b3082106962fe60cd4bcb93,23a6fd021b49ca10759455342a4bcbac,4a5f22d51b3082106962fe60cd4bcb50,4e5f22d51b3082106962fe60cd4bcb6c,4e5f22d51b3082106962fe60cd4bcb77,7d5f22d51b3082106962fe60cd4bcb36,8a5f22d51b3082106962fe60cd4bcb5f,9e5f22d51b3082106962fe60cd4bcba0,a7a6fd021b49ca10759455342a4bcba1,c65f22d51b3082106962fe60cd4bcb56,ca5f22d51b3082106962fe60cd4bcb48,ca5f22d51b3082106962fe60cd4bcb66,d25f22d51b3082106962fe60cd4bcb9a,da5f22d51b3082106962fe60cd4bcb7d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -2768,15 +3190,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>065f22d51b3082106962fe60cd4bcb3f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>0585f7ad-1e18-4a1e-88f8-a801933560f3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=065f22d51b3082106962fe60cd4bcb3f"/>
@@ -2850,15 +3272,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>165f22d51b3082106962fe60cd4bcb93</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>85eb2063-00ae-4194-8dc2-ebf2652a1b61</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=165f22d51b3082106962fe60cd4bcb93"/>
@@ -2880,6 +3302,108 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert New Badge Request">e95fee951b3082106962fe60cd4bcb8c</flow>
+        <order>28</order>
+        <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>23a6fd021b49ca10759455342a4bcbac</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
+        <ui_id>281f8233-54bc-4370-87e2-d4f35f1e6492</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=23a6fd021b49ca10759455342a4bcbac"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>23a6fd021b49ca10759455342a4bcbac</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>a7a6fd021b49ca10759455342a4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <value>Request Rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>23a6fd021b49ca10759455342a4bcbac</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>e3a6fd021b49ca10759455342a4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=23a6fd021b49ca10759455342a4bcbac"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>23a6fd021b49ca10759455342a4bcbac</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>afa6fd021b49ca10759455342a4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hi&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:984a9843-ca0e-4dd8-b030-1bfb679d7cbd}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:984a9843-ca0e-4dd8-b030-1bfb679d7cbd}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_984a9843-ca0e-4dd8-b030-1bfb679d7cbd" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:1fe3f696-1a39-4123-ad0b-32d96d161e8c}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:1fe3f696-1a39-4123-ad0b-32d96d161e8c}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_1fe3f696-1a39-4123-ad0b-32d96d161e8c" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Your request for New Badge has been rejected.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Requested ID :&lt;/strong&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:de71f1bb-fc61-4cbf-b22a-0054547cfdb2}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:de71f1bb-fc61-4cbf-b22a-0054547cfdb2}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Number"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Number&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_de71f1bb-fc61-4cbf-b22a-0054547cfdb2" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requested By :&lt;/strong&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:b14b896c-b521-4b04-95b5-288cc397c199}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:b14b896c-b521-4b04-95b5-288cc397c199}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_b14b896c-b521-4b04-95b5-288cc397c199" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:651ac7d3-009f-40e4-9ef6-c196a6d4b843}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:651ac7d3-009f-40e4-9ef6-c196a6d4b843}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Request For &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_651ac7d3-009f-40e4-9ef6-c196a6d4b843" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reason :&amp;nbsp;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p data-tinymcerootblock=""&gt;Thanks&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>23a6fd021b49ca10759455342a4bcbac</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>63a6fd021b49ca10759455342a4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>23a6fd021b49ca10759455342a4bcbac</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>eba6fd021b49ca10759455342a4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.request_for.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=23a6fd021b49ca10759455342a4bcbac"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=23a6fd021b49ca10759455342a4bcbac"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
@@ -2893,15 +3417,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4a5f22d51b3082106962fe60cd4bcb50</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>d67307dd-fdf4-4ec3-ac63-00551fc3b22f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4a5f22d51b3082106962fe60cd4bcb50"/>
@@ -2975,15 +3499,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4e5f22d51b3082106962fe60cd4bcb6c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>2deddb56-11b9-4662-97e6-96303dfecac5</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4e5f22d51b3082106962fe60cd4bcb6c"/>
@@ -3056,15 +3580,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4e5f22d51b3082106962fe60cd4bcb77</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>5bdadf07-2aee-4c30-8159-3e850d8ecca7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4e5f22d51b3082106962fe60cd4bcb77"/>
@@ -3111,15 +3635,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7d5f22d51b3082106962fe60cd4bcb36</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>c690f837-82e7-44d4-b4cb-1822bdc2529c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7d5f22d51b3082106962fe60cd4bcb36"/>
@@ -3192,15 +3716,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8a5f22d51b3082106962fe60cd4bcb5f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>88c8beb2-f0e4-4ab7-8a90-3044e14b82d4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8a5f22d51b3082106962fe60cd4bcb5f"/>
@@ -3280,22 +3804,22 @@
         <comment>Closing Request with Closed Incomplete as it is rejected by manager.</comment>
         <display_text/>
         <flow display_value="Alert New Badge Request">e95fee951b3082106962fe60cd4bcb8c</flow>
-        <order>26</order>
+        <order>27</order>
         <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9e5f22d51b3082106962fe60cd4bcba0</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>ba3dfba7-56b4-48ba-8d70-d406f3d19e67</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9e5f22d51b3082106962fe60cd4bcba0"/>
@@ -3355,6 +3879,104 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert New Badge Request">e95fee951b3082106962fe60cd4bcb8c</flow>
+        <order>23</order>
+        <parent_ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a7a6fd021b49ca10759455342a4bcba1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
+        <ui_id>bda689d5-d672-4165-9bc6-34555e17998f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a7a6fd021b49ca10759455342a4bcba1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7a6fd021b49ca10759455342a4bcba1</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>2fa6fd021b49ca10759455342a4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <value>Request Status</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7a6fd021b49ca10759455342a4bcba1</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>6ba6fd021b49ca10759455342a4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a7a6fd021b49ca10759455342a4bcba1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>a7a6fd021b49ca10759455342a4bcba1</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>27a6fd021b49ca10759455342a4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hi,&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Flow Variables &amp;gt; Manager &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Flow Variables&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:9b43aba4-d420-4f23-aa8d-a9f09e9aa557}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:9b43aba4-d420-4f23-aa8d-a9f09e9aa557}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Flow Variables &amp;gt; Manager &amp;gt; Last name"&gt;&lt;span class="pill-start"&gt;Flow Variables&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Last name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_9b43aba4-d420-4f23-aa8d-a9f09e9aa557" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Request Status for&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:cad25313-ed5b-4fb7-aa6f-4743460f2268}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:cad25313-ed5b-4fb7-aa6f-4743460f2268}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; New Badge Record &amp;gt; Number"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Number&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_cad25313-ed5b-4fb7-aa6f-4743460f2268" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; is&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:42152af7-ada8-4126-a0c2-0a496ee28001}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:42152af7-ada8-4126-a0c2-0a496ee28001}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="15 - Update Record &amp;gt; New Badge Record &amp;gt; State"&gt;&lt;span class="pill-start"&gt;15 - Update Record&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;State&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_42152af7-ada8-4126-a0c2-0a496ee28001" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Please act accordingly,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Thanks&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>a7a6fd021b49ca10759455342a4bcba1</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>e7a6fd021b49ca10759455342a4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>a7a6fd021b49ca10759455342a4bcba1</id>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:50</sys_created_on>
+        <sys_id>63a6fd021b49ca10759455342a4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.request_for.manager.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a7a6fd021b49ca10759455342a4bcba1"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a7a6fd021b49ca10759455342a4bcba1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
@@ -3368,15 +3990,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c65f22d51b3082106962fe60cd4bcb56</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>37e37fe5-a91c-45fe-9493-5675cba4cb1f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c65f22d51b3082106962fe60cd4bcb56"/>
@@ -3437,15 +4059,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ca5f22d51b3082106962fe60cd4bcb48</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>502f797a-9408-4ac3-bb94-46b9ec07bd58</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ca5f22d51b3082106962fe60cd4bcb48"/>
@@ -3596,15 +4218,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ca5f22d51b3082106962fe60cd4bcb66</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>3015351f-0597-49ef-b757-2d55c80beac7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ca5f22d51b3082106962fe60cd4bcb66"/>
@@ -3677,15 +4299,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d25f22d51b3082106962fe60cd4bcb9a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>1fa75a3c-d2c7-4dd6-8767-d2616b675bae</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d25f22d51b3082106962fe60cd4bcb9a"/>
@@ -3772,15 +4394,15 @@
         <sys_created_on>2024-03-06 21:13:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>da5f22d51b3082106962fe60cd4bcb7d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>5ed009d8-4182-4a64-bc65-7b0607f6736d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=da5f22d51b3082106962fe60cd4bcb7d"/>
@@ -3851,15 +4473,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>355fee951b3082106962fe60cd4bcbfc</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>21ca44a4-f956-4b0a-ac1f-51ffeabc7381</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3930,15 +4552,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d5f22d51b3082106962fe60cd4bcb06</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>96a20cd4-f03e-4504-afa0-6a6b7259df9c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3990,7 +4612,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>25</order>
+        <order>26</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -3999,15 +4621,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>755f22d51b3082106962fe60cd4bcb2b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4030,7 +4652,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>24</order>
+        <order>25</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>f9025e28-5e69-4068-a407-d5382a350881</parent_ui_id>
@@ -4039,15 +4661,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>795f22d51b3082106962fe60cd4bcb0f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>7999ab75-54cf-43f3-a747-33981c1a4ba6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4080,15 +4702,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>795fee951b3082106962fe60cd4bcbd8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>31e2f646-3231-426e-8b70-292affcd73a5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4133,15 +4755,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>795fee951b3082106962fe60cd4bcbf1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>421b90fa-5649-4cab-9791-7f1de9e4cb88</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4212,15 +4834,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7d5f22d51b3082106962fe60cd4bcb00</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>e079c66c-07c4-4d8f-a6ed-b31f0281d5bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4253,15 +4875,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b55fee951b3082106962fe60cd4bcbf5</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>a0d8b19c-51d9-4f84-8cf6-32bcb6c379e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4323,7 +4945,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>27</order>
+        <order>29</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>e1a5e6bc-4ee0-4468-b25e-d8e9f9127fa9</parent_ui_id>
@@ -4332,15 +4954,15 @@
         <sys_created_on>2024-03-06 21:13:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f15f22d51b3082106962fe60cd4bcb2e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:25</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
         <ui_id>d5d1bc2b-4e2f-467a-bc1a-4260a85744e2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4372,15 +4994,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f15fee951b3082106962fe60cd4bcbee</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>7b44fa98-fb68-4e12-96cc-ffc4b4106b81</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4425,15 +5047,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f15fee951b3082106962fe60cd4bcbf9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>f2adaaac-a9d7-4132-a0ce-80831edf6454</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4465,15 +5087,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f95f22d51b3082106962fe60cd4bcb03</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4496,7 +5118,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>23</order>
+        <order>24</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>b8d4d8cb-d21a-418b-a754-efcaeb318383</parent_ui_id>
@@ -4505,15 +5127,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f95f22d51b3082106962fe60cd4bcb0c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:24</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:53</sys_updated_on>
         <ui_id>ccc2ab22-9e70-427b-a48f-f264c1dd051f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4546,15 +5168,15 @@
         <sys_created_on>2024-03-06 21:13:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fd5fee951b3082106962fe60cd4bcbdc</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-12 10:05:23</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:52</sys_updated_on>
         <ui_id>f9025e28-5e69-4068-a407-d5382a350881</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4602,7 +5224,177 @@
     </sys_element_mapping>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=fd5fee951b3082106962fe60cd4bcbdc"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=fd5fee951b3082106962fe60cd4bcbdc"/>
-    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e95fee951b3082106962fe60cd4bcb8c"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e95fee951b3082106962fe60cd4bcb8c^sys_idNOT IN10b631421b49ca10759455342a4bcbe5,14b631421b49ca10759455342a4bcbe4,18b631421b49ca10759455342a4bcbe3,50b631421b49ca10759455342a4bcbe4,5cb631421b49ca10759455342a4bcbe4,98b631421b49ca10759455342a4bcbe4,9cb631421b49ca10759455342a4bcbe3,d0b631421b49ca10759455342a4bcbe5,d4b631421b49ca10759455342a4bcbe4,d8b631421b49ca10759455342a4bcbe3"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.manager.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>10b631421b49ca10759455342a4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4dbb20f2-52b8-4ef9-9fb5-ab5b508777a4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>14b631421b49ca10759455342a4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b14b896c-b521-4b04-95b5-288cc397c199</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>18b631421b49ca10759455342a4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cad25313-ed5b-4fb7-aa6f-4743460f2268</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>50b631421b49ca10759455342a4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>984a9843-ca0e-4dd8-b030-1bfb679d7cbd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>5cb631421b49ca10759455342a4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>de71f1bb-fc61-4cbf-b22a-0054547cfdb2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>98b631421b49ca10759455342a4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>651ac7d3-009f-40e4-9ef6-c196a6d4b843</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.request_for.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>9cb631421b49ca10759455342a4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1fe3f696-1a39-4123-ad0b-32d96d161e8c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2deddb56-11b9-4662-97e6-96303dfecac5.record.state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>d0b631421b49ca10759455342a4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>42152af7-ada8-4126-a0c2-0a496ee28001</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.manager.last_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>d4b631421b49ca10759455342a4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9b43aba4-d420-4f23-aa8d-a9f09e9aa557</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e95fee951b3082106962fe60cd4bcb8c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{ba3dfba7-56b4-48ba-8d70-d406f3d19e67.record.reason}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>chirag.chanana</sys_created_by>
+        <sys_created_on>2024-03-21 11:16:54</sys_created_on>
+        <sys_id>d8b631421b49ca10759455342a4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f30a6bd1-8a8e-4a96-a169-4bdb143c7b4e</ui_id>
+    </sys_hub_pill_compound>
     <sys_hub_flow_variable action="delete_multiple" query="model=e95fee951b3082106962fe60cd4bcb8c^sys_idNOT IN3d5fee951b3082106962fe60cd4bcbce,b95fee951b3082106962fe60cd4bcbd3"/>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -4831,12 +5623,12 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>dd5dcaaa1b6cc6506962fe60cd4bcbfa</sys_id>
         <latest_snapshot>e95fee951b3082106962fe60cd4bcb8c</latest_snapshot>
-        <compiler_build/>
+        <compiler_build>glide-vancouver-07-06-2023__patch7-02-08-2024_02-19-2024_0243.zip</compiler_build>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=dd5dcaaa1b6cc6506962fe60cd4bcbfa^sys_idNOT INf25f62d51b3082106962fe60cd4bcb7c"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
-        <plan/>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f25f62d51b3082106962fe60cd4bcb7c","name":"plan","plan_signature":null}}</plan>
         <plan_id>dd5dcaaa1b6cc6506962fe60cd4bcbfa</plan_id>
         <snapshot>e95fee951b3082106962fe60cd4bcb8c</snapshot>
         <sys_class_name>sys_flow_trigger_plan</sys_class_name>
@@ -4845,7 +5637,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>f25f62d51b3082106962fe60cd4bcb7c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -4853,8 +5645,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:13:20</sys_updated_on>
+        <sys_updated_by>chirag.chanana</sys_updated_by>
+        <sys_updated_on>2024-03-21 11:16:58</sys_updated_on>
         <trigger display_value="">f65f62d51b3082106962fe60cd4bcb61</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=dd5dcaaa1b6cc6506962fe60cd4bcbfa"/>
