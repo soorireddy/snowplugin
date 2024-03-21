@@ -926,14 +926,12 @@ AlertEnterprisePlatformAPIs.prototype = {
                 recordToInsert.query();
                 while (recordToInsert.next()) {
                     var statusUc = status.toUpperCase();
-                    if (statusUc.indexOf("CLOSE") != -1 || statusUc.indexOf("ERROR") != -1 || statusUc.indexOf("REJECTED") != -1) {
-
+                    if (statusUc.indexOf("CLOSE") != -1 || statusUc.indexOf("ERROR") != -1 || statusUc.indexOf("REJECTED") != -1 || statusUc.indexOf("CLOSED_WITH_PROVISIONING")) {
                         recordToInsert.alert_request_status = status;
                         recordToInsert.update();
                         this.saveAuditLog(recordToInsert.snow_request_number, "System", "Change in  Alert Request status   [" + statusUc + "]", alert_request_no, status);
                         var request_table_name = "";
                         var service_now_request_number = recordToInsert.snow_request_number.toString();
-
                         if (service_now_request_number.indexOf("NEW_BADGE") != -1) {
                             request_table_name = "x_aleen_alertsnowp_new_badge";
                         } else if (service_now_request_number.indexOf("ACTIVATE_BADGE") != -1) {
@@ -950,6 +948,9 @@ AlertEnterprisePlatformAPIs.prototype = {
                             request_table_name = "x_aleen_alertsnowp_visitor";
                         } else if (service_now_request_number.indexOf("RESET_PIN") != -1) {
                             request_table_name = "x_aleen_alertsnowp_reset_pin";
+                        }else if (service_now_request_number.indexOf("BUILDING_ACCESS_TASK") != -1) {
+							gs.info("Building Access task include script");
+                            request_table_name = "x_aleen_alertsnowp_building_access_task";
                         }
                         var glideRecordRequest = new GlideRecordSecure(request_table_name);
                         glideRecordRequest.addQuery('number', service_now_request_number);
@@ -964,7 +965,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                             } else if (statusUc.indexOf("REJECTED") != -1) {
                                 glideRecordRequest.state = 4;
                                 glideRecordRequest.work_notes = "Request is Rejected  [" + statusUc + "]";
-                            }
+                            }else if(statusUc.indexOf("CLOSED_WITH_PROVISIONING")!=-1){
+								glideRecordRequest.state = 3;
+                                glideRecordRequest.work_notes = "Request is Closed  [" + statusUc + "]";
+							}
                             glideRecordRequest.update();
                         }
                     }
@@ -1068,10 +1072,10 @@ AlertEnterprisePlatformAPIs.prototype = {
                                 this.updateAlertRequest(requestObj.extId, requestObj.workflowObjCatStatus);
                                 return this.sendDataToFlow(JSON.stringify(requestObj.workflowObjCatStatus));
                             } else if (requestObj.intStatus != undefined) {
-                                gs.debug("requestObj.intStatus ::--- " + requestObj.intStatus == 0 ? 'Active' : '');
-                                this.updateAlertRequest(requestObj.extId, requestObj.intStatus == 0 ? 'Active' : '');
-                                gs.debug("sendDataToFlow ::--- " + JSON.stringify(requestObj.intStatus == 0 ? 'Active' : ''));
-                                return this.sendDataToFlow(JSON.stringify(requestObj.intStatus == 0 ? 'Active' : ''));
+                                gs.debug("requestObj.intStatus ::--- " + requestObj.intStatus == 0 ? 'open' : '');
+                                this.updateAlertRequest(requestObj.extId, requestObj.intStatus == 0 ? 'open' : '');
+                                gs.debug("sendDataToFlow ::--- " + JSON.stringify(requestObj.intStatus == 0 ? 'open' : ''));
+                                return this.sendDataToFlow(JSON.stringify(requestObj.intStatus == 0 ? 'open' : ''));
                             }
                         }
                     } else {
@@ -1096,7 +1100,7 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_created_on>2022-04-20 05:24:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>46e22a101b8fc5108dcc755e034bcb87</sys_id>
-        <sys_mod_count>414</sys_mod_count>
+        <sys_mod_count>420</sys_mod_count>
         <sys_name>AlertEnterprisePlatformAPIs</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -1104,6 +1108,6 @@ AlertEnterprisePlatformAPIs.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_46e22a101b8fc5108dcc755e034bcb87</sys_update_name>
         <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-21 14:49:01</sys_updated_on>
+        <sys_updated_on>2024-03-21 21:15:20</sys_updated_on>
     </sys_script_include>
 </record_update>
