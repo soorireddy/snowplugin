@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
-        <active>false</active>
-        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["43169d6e1baebd10234b0f6e6e4bcb2e"]}</activity_stages>
+        <active>true</active>
+        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["1dc9ecca1b8d4e106962fe60cd4bcb47"]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -9,10 +9,10 @@
         <condition/>
         <condition_type>run_match</condition_type>
         <description>Alert Building Access request  workflow</description>
-        <expected_sequences>8b1615ae1baebd10234b0f6e6e4bcbbb,0b1615ae1baebd10234b0f6e6e4bcbb9,831615ae1baebd10234b0f6e6e4bcbb3,0b1615ae1baebd10234b0f6e6e4bcbbc,871615ae1baebd10234b0f6e6e4bcbba,43169d6e1baebd10234b0f6e6e4bcb2e</expected_sequences>
+        <expected_sequences>d1c9ecca1b8d4e106962fe60cd4bcb4f,55c9ecca1b8d4e106962fe60cd4bcb45,ddc9ecca1b8d4e106962fe60cd4bcb46,ddc9ecca1b8d4e106962fe60cd4bcb4d,1dc9ecca1b8d4e106962fe60cd4bcb47</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>8b1615ae1baebd10234b0f6e6e4bcbbb,0b1615ae1baebd10234b0f6e6e4bcbb9,831615ae1baebd10234b0f6e6e4bcbb3,0b1615ae1baebd10234b0f6e6e4bcbbc,c71615ae1baebd10234b0f6e6e4bcbb8,871615ae1baebd10234b0f6e6e4bcbba,cb1615ae1baebd10234b0f6e6e4bcbb1,43169d6e1baebd10234b0f6e6e4bcb2e</full_sequences>
+        <full_sequences>d1c9ecca1b8d4e106962fe60cd4bcb4f,55c9ecca1b8d4e106962fe60cd4bcb45,ddc9ecca1b8d4e106962fe60cd4bcb46,ddc9ecca1b8d4e106962fe60cd4bcb4d,1dc9ecca1b8d4e106962fe60cd4bcb47</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
         <name>Alert Building Access</name>
@@ -27,13 +27,13 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">8b1615ae1baebd10234b0f6e6e4bcbbb</start>
+        <start display_value="Begin">d1c9ecca1b8d4e106962fe60cd4bcb4f</start>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f169d6e1baebd10234b0f6e6e4bcb2b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-21 04:40:03</sys_updated_on>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>ddc924ca1b8d4e106962fe60cd4bcb22</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-21 05:41:48</sys_updated_on>
         <table>x_aleen_alertsnowp_building_access</table>
         <timezone/>
         <validated>false</validated>
@@ -66,92 +66,6 @@
         <vars/>
     </wf_workflow>
     <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
-        <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>7</databus_lookup_id>
-        <height/>
-        <input>{}</input>
-        <is_parent>false</is_parent>
-        <name>Audit Log as Rejected</name>
-        <new_activity_definition/>
-        <notes/>
-        <out_of_date>false</out_of_date>
-        <parent/>
-        <pinned>false</pinned>
-        <pinned_version/>
-        <stage/>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <timeout>1970-01-01 00:00:00</timeout>
-        <vars/>
-        <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>476</x>
-        <y>394</y>
-    </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=cb1615ae1baebd10234b0f6e6e4bcbb1"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>cb1615ae1baebd10234b0f6e6e4bcbb1</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>executeAlertApi();&#13;
-function executeAlertApi() {&#13;
-   var includeScript = new AlertEnterprisePlatformAPIs();&#13;
-   includeScript.saveAuditLog(current.number,gs.getUserName(),"Request is rejected","","");&#13;
-}</value>
-        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>cb1615ae1baebd10234b0f6e6e4bcbb1</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>executeAlertApi();&#13;
-function executeAlertApi() {&#13;
-   var includeScript = new AlertEnterprisePlatformAPIs();&#13;
-   includeScript.saveAuditLog(current.number,gs.getUserName(),"Request is rejected","","");&#13;
-}</value>
-        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
-    </sys_variable_value>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Audit Log as Rejected">cb1615ae1baebd10234b0f6e6e4bcbb1</activity>
-        <condition>true</condition>
-        <condition_default/>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>true</is_positive>
-        <name>Always</name>
-        <order>0</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-    </wf_condition>
-    <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
         <databus_lookup_id>1</databus_lookup_id>
@@ -167,21 +81,21 @@ function executeAlertApi() {&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbbb</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d1c9ecca1b8d4e106962fe60cd4bcb4f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
         <x>20</x>
         <y>20</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=8b1615ae1baebd10234b0f6e6e4bcbbb"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d1c9ecca1b8d4e106962fe60cd4bcb4f"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">8b1615ae1baebd10234b0f6e6e4bcbbb</activity>
+        <activity display_value="Begin">d1c9ecca1b8d4e106962fe60cd4bcb4f</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -195,11 +109,11 @@ function executeAlertApi() {&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>431615ae1baebd10234b0f6e6e4bcbbc</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>99c9ecca1b8d4e106962fe60cd4bcb4f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
@@ -217,30 +131,30 @@ function executeAlertApi() {&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbbc</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>ddc9ecca1b8d4e106962fe60cd4bcb46</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:36:41</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:41:31</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>406</x>
-        <y>19</y>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
+        <x>388</x>
+        <y>8</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=0b1615ae1baebd10234b0f6e6e4bcbbc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ddc9ecca1b8d4e106962fe60cd4bcb46"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>0b1615ae1baebd10234b0f6e6e4bcbbc</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb46</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbbc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>51c9ecca1b8d4e106962fe60cd4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:36:41</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>var accessLevels = current.access_levels;&#13;
 var accessLevelsList = accessLevels.split(',');&#13;
 var singleOwnerRecords = [];&#13;
@@ -393,15 +307,15 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>0b1615ae1baebd10234b0f6e6e4bcbbc</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb46</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbbc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>51c9ecca1b8d4e106962fe60cd4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:36:41</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>var accessLevels = current.access_levels;&#13;
 var accessLevelsList = accessLevels.split(',');&#13;
 var singleOwnerRecords = [];&#13;
@@ -553,7 +467,7 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Create Access Level Task for Area Owner">0b1615ae1baebd10234b0f6e6e4bcbbc</activity>
+        <activity display_value="Create Access Level Task for Area Owner">ddc9ecca1b8d4e106962fe60cd4bcb46</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -567,11 +481,11 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f1615ae1baebd10234b0f6e6e4bcbbc</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>55c9ecca1b8d4e106962fe60cd4bcb47</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -589,844 +503,19 @@ for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>43169d6e1baebd10234b0f6e6e4bcb2e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>1dc9ecca1b8d4e106962fe60cd4bcb47</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:41:41</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>851</x>
-        <y>432</y>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
+        <x>692</x>
+        <y>134</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=43169d6e1baebd10234b0f6e6e4bcb2e"/>
-    <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Approval - User">35433da80a0a029a0028c639a1e51eb4</activity_definition>
-        <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>3</databus_lookup_id>
-        <height/>
-        <input>{}</input>
-        <is_parent>false</is_parent>
-        <name>Manager  Approval</name>
-        <new_activity_definition/>
-        <notes/>
-        <out_of_date>false</out_of_date>
-        <parent/>
-        <pinned>false</pinned>
-        <pinned_version/>
-        <stage/>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <timeout>1970-01-01 00:00:00</timeout>
-        <vars/>
-        <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>200</x>
-        <y>90</y>
-    </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=831615ae1baebd10234b0f6e6e4bcbb3"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>031615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>071615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>approval_history</value>
-        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>103</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1370</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0f1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
-//&#13;
-//    counts.total = total number of users that are part of this approval&#13;
-//    counts.approved = # of users that approved so far&#13;
-//    counts.rejected = # of users that rejected so far&#13;
-//    counts.requested = # of users that are pending approval&#13;
-//    counts.not_requested = # of users that are not pending approval&#13;
-//    counts.not_required = # of users that approval is not required&#13;
-//&#13;
-</value>
-        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0f1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>all</value>
-        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>431615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>${request_for.manager}</value>
-        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>101</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>approval</value>
-        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>115</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>2000</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4b1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>0</value>
-        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>104</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4b1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>50</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4f1615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>state=1^EQ</value>
-        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>2050</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
-//&#13;
-// For example:&#13;
-//       answer = [];&#13;
-//       answer.push('id1');&#13;
-//       answer.push('id2');&#13;
-</value>
-        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>871615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>871615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1360</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
-answer = 0;</value>
-        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1150</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c31615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>310</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c71615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>reject</value>
-        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>50</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4f1615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>state=1^EQ</value>
-        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0f1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>all</value>
-        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>101</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>approval</value>
-        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>103</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>104</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4b1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>871615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>115</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>431615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>${request_for.manager}</value>
-        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>310</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c71615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>reject</value>
-        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>071615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>approval_history</value>
-        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>871615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>900</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbb5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>031615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1150</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c31615ae1baebd10234b0f6e6e4bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1330</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value/>
-        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1360</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f1615ae1baebd10234b0f6e6e4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
-answer = 0;</value>
-        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>1370</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0f1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
-//&#13;
-//    counts.total = total number of users that are part of this approval&#13;
-//    counts.approved = # of users that approved so far&#13;
-//    counts.rejected = # of users that rejected so far&#13;
-//    counts.requested = # of users that are pending approval&#13;
-//    counts.not_requested = # of users that are not pending approval&#13;
-//    counts.not_required = # of users that approval is not required&#13;
-//&#13;
-</value>
-        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>2000</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4b1615ae1baebd10234b0f6e6e4bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>0</value>
-        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>831615ae1baebd10234b0f6e6e4bcbb3</document_key>
-        <order>2050</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
-//&#13;
-// For example:&#13;
-//       answer = [];&#13;
-//       answer.push('id1');&#13;
-//       answer.push('id2');&#13;
-</value>
-        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
-    </sys_variable_value>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Manager  Approval">831615ae1baebd10234b0f6e6e4bcbb3</activity>
-        <condition>activity.result == 'approved' || activity.result == 'skipped'</condition>
-        <condition_default display_value="Approved">586e1fa60a0a0b5c008121ab894f2b06</condition_default>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>true</is_positive>
-        <name>Approved</name>
-        <order>1</order>
-        <short_description>Approval request was approved</short_description>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>031615ae1baebd10234b0f6e6e4bcbb8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-    </wf_condition>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Manager  Approval">831615ae1baebd10234b0f6e6e4bcbb3</activity>
-        <condition>activity.result == 'rejected'</condition>
-        <condition_default display_value="Rejected">586e4ef60a0a0b5c00440b56c014c8a5</condition_default>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>false</is_positive>
-        <name>Rejected</name>
-        <order>2</order>
-        <short_description>Approval request was rejected</short_description>
-        <skip_during_generate>true</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f1615ae1baebd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-    </wf_condition>
-    <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
-        <activity_definition_updated>false</activity_definition_updated>
-        <databus_lookup_id>5</databus_lookup_id>
-        <height/>
-        <input>{}</input>
-        <is_parent>false</is_parent>
-        <name>Mark as Closed Incomplete</name>
-        <new_activity_definition/>
-        <notes/>
-        <out_of_date>false</out_of_date>
-        <parent/>
-        <pinned>false</pinned>
-        <pinned_version/>
-        <stage/>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c71615ae1baebd10234b0f6e6e4bcbb8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <timeout>1970-01-01 00:00:00</timeout>
-        <vars/>
-        <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>358</x>
-        <y>212</y>
-    </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=c71615ae1baebd10234b0f6e6e4bcbb8"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c71615ae1baebd10234b0f6e6e4bcbb8</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>state=4^EQ</value>
-        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c71615ae1baebd10234b0f6e6e4bcbb8</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cb1615ae1baebd10234b0f6e6e4bcbb8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <value>state=4^EQ</value>
-        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
-    </sys_variable_value>
-    <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Mark as Closed Incomplete">c71615ae1baebd10234b0f6e6e4bcbb8</activity>
-        <condition>true</condition>
-        <condition_default/>
-        <condition_type>standard</condition_type>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <is_positive>true</is_positive>
-        <name>Always</name>
-        <order>0</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>431615ae1baebd10234b0f6e6e4bcbb9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-    </wf_condition>
+    <sys_variable_value action="delete_multiple" query="document_key=1dc9ecca1b8d4e106962fe60cd4bcb47"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -1443,51 +532,51 @@ answer = 0;</value>
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbb9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>55c9ecca1b8d4e106962fe60cd4bcb45</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:41:25</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>56</x>
-        <y>211</y>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
+        <x>152</x>
+        <y>58</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=0b1615ae1baebd10234b0f6e6e4bcbb9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=55c9ecca1b8d4e106962fe60cd4bcb45"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>0b1615ae1baebd10234b0f6e6e4bcbb9</document_key>
+        <document_key>55c9ecca1b8d4e106962fe60cd4bcb45</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbb9</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d9c9ecca1b8d4e106962fe60cd4bcb45</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>gs.info("Setting manager");&#13;
 current.assigned_to=current.request_for.manager;</value>
         <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>0b1615ae1baebd10234b0f6e6e4bcbb9</document_key>
+        <document_key>55c9ecca1b8d4e106962fe60cd4bcb45</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbb9</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d9c9ecca1b8d4e106962fe60cd4bcb45</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>gs.info("Setting manager");&#13;
 current.assigned_to=current.request_for.manager;</value>
         <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Set manger as  Assigned To">0b1615ae1baebd10234b0f6e6e4bcbb9</activity>
+        <activity display_value="Set manger as  Assigned To">55c9ecca1b8d4e106962fe60cd4bcb45</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1501,11 +590,11 @@ current.assigned_to=current.request_for.manager;</value>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8f1615ae1baebd10234b0f6e6e4bcbb9</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>95c9ecca1b8d4e106962fe60cd4bcb46</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
@@ -1523,79 +612,79 @@ current.assigned_to=current.request_for.manager;</value>
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>871615ae1baebd10234b0f6e6e4bcbba</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>ddc9ecca1b8d4e106962fe60cd4bcb4d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:41:38</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
-        <x>690</x>
-        <y>64</y>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
+        <x>621</x>
+        <y>0</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=871615ae1baebd10234b0f6e6e4bcbba"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ddc9ecca1b8d4e106962fe60cd4bcb4d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>871615ae1baebd10234b0f6e6e4bcbba</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb4d</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4f1615ae1baebd10234b0f6e6e4bcbba</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>95c9ecca1b8d4e106962fe60cd4bcb4e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>state!=1^EQ</value>
         <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>871615ae1baebd10234b0f6e6e4bcbba</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb4d</document_key>
         <order>2</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbba</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d1c9ecca1b8d4e106962fe60cd4bcb4e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;</value>
         <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>871615ae1baebd10234b0f6e6e4bcbba</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb4d</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>4f1615ae1baebd10234b0f6e6e4bcbba</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>95c9ecca1b8d4e106962fe60cd4bcb4e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>state!=1^EQ</value>
         <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>871615ae1baebd10234b0f6e6e4bcbba</document_key>
+        <document_key>ddc9ecca1b8d4e106962fe60cd4bcb4d</document_key>
         <order>2</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbba</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d1c9ecca1b8d4e106962fe60cd4bcb4e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;</value>
         <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Wait for all Area Owners action">871615ae1baebd10234b0f6e6e4bcbba</activity>
+        <activity display_value="Wait for all Area Owners action">ddc9ecca1b8d4e106962fe60cd4bcb4d</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -1609,113 +698,69 @@ answer = true;</value>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c31615ae1baebd10234b0f6e6e4bcbbb</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>1dc9ecca1b8d4e106962fe60cd4bcb4e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">431615ae1baebd10234b0f6e6e4bcbbc</condition>
-        <from display_value="Begin">8b1615ae1baebd10234b0f6e6e4bcbbb</from>
+        <condition display_value="Always">99c9ecca1b8d4e106962fe60cd4bcb4f</condition>
+        <from display_value="Begin">d1c9ecca1b8d4e106962fe60cd4bcb4f</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0b1615ae1baebd10234b0f6e6e4bcbbe</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>11c9ecca1b8d4e106962fe60cd4bcb61</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Set manger as  Assigned To">0b1615ae1baebd10234b0f6e6e4bcbb9</to>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
+        <to display_value="Set manger as  Assigned To">55c9ecca1b8d4e106962fe60cd4bcb45</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">431615ae1baebd10234b0f6e6e4bcbb9</condition>
-        <from display_value="Mark as Closed Incomplete">c71615ae1baebd10234b0f6e6e4bcbb8</from>
+        <condition display_value="Always">1dc9ecca1b8d4e106962fe60cd4bcb4e</condition>
+        <from display_value="Wait for all Area Owners action">ddc9ecca1b8d4e106962fe60cd4bcb4d</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>0f1615ae1baebd10234b0f6e6e4bcbbe</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>9dc9ecca1b8d4e106962fe60cd4bcb5f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Audit Log as Rejected">cb1615ae1baebd10234b0f6e6e4bcbb1</to>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
+        <to display_value="End">1dc9ecca1b8d4e106962fe60cd4bcb47</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">cb1615ae1baebd10234b0f6e6e4bcbb2</condition>
-        <from display_value="Audit Log as Rejected">cb1615ae1baebd10234b0f6e6e4bcbb1</from>
+        <condition display_value="Always">95c9ecca1b8d4e106962fe60cd4bcb46</condition>
+        <from display_value="Set manger as  Assigned To">55c9ecca1b8d4e106962fe60cd4bcb45</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbbe</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d5c9ecca1b8d4e106962fe60cd4bcb60</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="End">43169d6e1baebd10234b0f6e6e4bcb2e</to>
+        <sys_updated_on>2024-03-21 05:41:12</sys_updated_on>
+        <to display_value="Create Access Level Task for Area Owner">ddc9ecca1b8d4e106962fe60cd4bcb46</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Approved">031615ae1baebd10234b0f6e6e4bcbb8</condition>
-        <from display_value="Manager  Approval">831615ae1baebd10234b0f6e6e4bcbb3</from>
+        <condition display_value="Always">55c9ecca1b8d4e106962fe60cd4bcb47</condition>
+        <from display_value="Create Access Level Task for Area Owner">ddc9ecca1b8d4e106962fe60cd4bcb46</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>471615ae1baebd10234b0f6e6e4bcbbf</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>d9c9ecca1b8d4e106962fe60cd4bcb5f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Create Access Level Task for Area Owner">0b1615ae1baebd10234b0f6e6e4bcbbc</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">c31615ae1baebd10234b0f6e6e4bcbbb</condition>
-        <from display_value="Wait for all Area Owners action">871615ae1baebd10234b0f6e6e4bcbba</from>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>831615ae1baebd10234b0f6e6e4bcbbf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="End">43169d6e1baebd10234b0f6e6e4bcb2e</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">8f1615ae1baebd10234b0f6e6e4bcbbc</condition>
-        <from display_value="Create Access Level Task for Area Owner">0b1615ae1baebd10234b0f6e6e4bcbbc</from>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>8b1615ae1baebd10234b0f6e6e4bcbbf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Wait for all Area Owners action">871615ae1baebd10234b0f6e6e4bcbba</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Rejected">8f1615ae1baebd10234b0f6e6e4bcbb7</condition>
-        <from display_value="Manager  Approval">831615ae1baebd10234b0f6e6e4bcbb3</from>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c71615ae1baebd10234b0f6e6e4bcbbf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Mark as Closed Incomplete">c71615ae1baebd10234b0f6e6e4bcbb8</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">8f1615ae1baebd10234b0f6e6e4bcbb9</condition>
-        <from display_value="Set manger as  Assigned To">0b1615ae1baebd10234b0f6e6e4bcbb9</from>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>cf1615ae1baebd10234b0f6e6e4bcbbe</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <to display_value="Manager  Approval">831615ae1baebd10234b0f6e6e4bcbb3</to>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
+        <to display_value="Wait for all Area Owners action">ddc9ecca1b8d4e106962fe60cd4bcb4d</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-11-19 15:34:31</sys_created_on>
-        <sys_id>c3169d6e1baebd10234b0f6e6e4bcb2c</sys_id>
+        <sys_created_on>2024-03-21 05:40:48</sys_created_on>
+        <sys_id>15c924ca1b8d4e106962fe60cd4bcb23</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-19 15:34:31</sys_updated_on>
-        <workflow_version display_value="Alert Building Access">8f169d6e1baebd10234b0f6e6e4bcb2b</workflow_version>
+        <sys_updated_on>2024-03-21 05:40:48</sys_updated_on>
+        <workflow_version display_value="Alert Building Access">ddc924ca1b8d4e106962fe60cd4bcb22</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=0a0daca21bbe81108dcc755e034bcbe8^sys_id!=8f169d6e1baebd10234b0f6e6e4bcb2b">
+    <wf_workflow_version action="update_multiple" query="workflow=0a0daca21bbe81108dcc755e034bcbe8^sys_id!=ddc924ca1b8d4e106962fe60cd4bcb22">
         <published>false</published>
     </wf_workflow_version>
 </record_update>
