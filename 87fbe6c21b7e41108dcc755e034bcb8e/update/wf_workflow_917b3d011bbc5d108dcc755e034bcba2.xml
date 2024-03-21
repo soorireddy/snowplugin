@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["d451fb1d1b09ca106962fe60cd4bcb11"]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
@@ -31,12 +31,12 @@
         <sys_created_by>anurag.yadav</sys_created_by>
         <sys_created_on>2024-03-19 12:17:11</sys_created_on>
         <sys_id>9c517b1d1b09ca106962fe60cd4bcbc0</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-21 05:43:31</sys_updated_on>
+        <sys_updated_on>2024-03-21 09:54:52</sys_updated_on>
         <table>x_aleen_alertsnowp_building_access_task</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Alert Building Access Item level WF">917b3d011bbc5d108dcc755e034bcba2</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">

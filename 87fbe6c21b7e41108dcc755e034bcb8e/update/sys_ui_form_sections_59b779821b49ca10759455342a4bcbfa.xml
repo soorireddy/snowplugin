@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_form_sections form_id="260ab75e1bfa81108dcc755e034bcbc5" sys_domain="global" table="x_aleen_alertsnowp_repalce_badge" version="3">
+    <sys_ui_form_sections form_id="59b779821b49ca10759455342a4bcbfa" sys_domain="global" table="x_aleen_alertsnowp_building_access_task" version="3">
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-14 06:34:31</sys_created_on>
+            <sys_created_on>2024-03-21 11:21:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>a60ab75e1bfa81108dcc755e034bcbc8</sys_id>
+            <sys_id>adb7b9821b49ca10759455342a4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_aleen_alertsnowp_repalce_badge" name="x_aleen_alertsnowp_repalce_badge" sys_domain="global" view="Default view">260ab75e1bfa81108dcc755e034bcbc5</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_repalce_badge" sys_domain="global" view="Default view">b4c7bfda1bfa81108dcc755e034bcb84</sys_ui_section>
+            <sys_ui_form display_value="x_aleen_alertsnowp_building_access_task" name="x_aleen_alertsnowp_building_access_task" sys_domain="global" view="Default view">59b779821b49ca10759455342a4bcbfa</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_aleen_alertsnowp_building_access_task" sys_domain="global" view="Default view">938fd10d1b3c5d108dcc755e034bcbfa</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-14 06:34:31</sys_updated_on>
+            <sys_updated_on>2024-03-21 11:21:20</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-21 11:22:29</sys_created_on>
+            <sys_created_on>2024-03-21 11:21:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>daf771c21b49ca10759455342a4bcb8e</sys_id>
+            <sys_id>e9b7b9821b49ca10759455342a4bcbb8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_aleen_alertsnowp_repalce_badge" name="x_aleen_alertsnowp_repalce_badge" sys_domain="global" view="Default view">260ab75e1bfa81108dcc755e034bcbc5</sys_ui_form>
-            <sys_ui_section caption="Audit Log" display_value="Audit Log" name="x_aleen_alertsnowp_repalce_badge" sys_domain="global" view="Default view">52f771c21b49ca10759455342a4bcb8d</sys_ui_section>
+            <sys_ui_form display_value="x_aleen_alertsnowp_building_access_task" name="x_aleen_alertsnowp_building_access_task" sys_domain="global" view="Default view">59b779821b49ca10759455342a4bcbfa</sys_ui_form>
+            <sys_ui_section caption="Audit Log" display_value="Audit Log" name="x_aleen_alertsnowp_building_access_task" sys_domain="global" view="Default view">99b779821b49ca10759455342a4bcbf9</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-21 11:22:29</sys_updated_on>
+            <sys_updated_on>2024-03-21 11:21:20</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
-            <name>x_aleen_alertsnowp_repalce_badge</name>
+            <name>x_aleen_alertsnowp_building_access_task</name>
             <roles/>
             <sys_class_name>sys_ui_form</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-04-14 06:34:30</sys_created_on>
+            <sys_created_on>2024-03-21 11:21:20</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>260ab75e1bfa81108dcc755e034bcbc5</sys_id>
+            <sys_id>59b779821b49ca10759455342a4bcbfa</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_aleen_alertsnowp_repalce_badge</sys_name>
+            <sys_name>x_aleen_alertsnowp_building_access_task</sys_name>
             <sys_overrides/>
             <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
-            <sys_update_name>sys_ui_form_sections_260ab75e1bfa81108dcc755e034bcbc5</sys_update_name>
+            <sys_update_name>sys_ui_form_sections_59b779821b49ca10759455342a4bcbfa</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-04-14 06:34:30</sys_updated_on>
+            <sys_updated_on>2024-03-21 11:21:20</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
