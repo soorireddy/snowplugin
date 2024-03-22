@@ -16,5 +16,8 @@
         <index name="index">
             <element name="access_level_id"/>
         </index>
+        <index name="index2" unique="true">
+            <element name="access_level_id"/>
+        </index>
     </element>
 </database>

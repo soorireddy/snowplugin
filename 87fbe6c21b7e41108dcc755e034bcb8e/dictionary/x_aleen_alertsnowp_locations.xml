@@ -13,5 +13,8 @@
         <index name="index">
             <element name="id"/>
         </index>
+        <index name="index2" unique="true">
+            <element name="id"/>
+        </index>
     </element>
 </database>
