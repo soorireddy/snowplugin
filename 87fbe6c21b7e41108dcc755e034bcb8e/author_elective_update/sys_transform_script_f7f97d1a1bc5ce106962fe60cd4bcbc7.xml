@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value="Access Locations Transform Map">42e4c4f51b890e106962fe60cd4bcbff</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+    if (source.u_deleted == 'true' || source.u_deleted == 'TRUE' || source.u_deleted == 'yes' || source.u_deleted == 'YES') {
+        target.deleted = true;
+    } else {
+        target.deleted = false;
+    }
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-22 06:09:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f7f97d1a1bc5ce106962fe60cd4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_transform_script_f7f97d1a1bc5ce106962fe60cd4bcbc7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 06:09:56</sys_updated_on>
+        <when>onStart</when>
+    </sys_transform_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>e930a3a4db4f5780cbf6d5b0cf9619fd</instance_id>
+        <instance_name>ven02573</instance_name>
+        <name>sys_transform_script_f7f97d1a1bc5ce106962fe60cd4bcbc7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;&lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;map display_value="Access Locations Transform Map"&gt;42e4c4f51b890e106962fe60cd4bcbff&lt;/map&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+    if (source.u_deleted == 'true' || source.u_deleted == 'TRUE' || source.u_deleted == 'yes' || source.u_deleted == 'YES') {
+        target.deleted = true;
+    } else {
+        target.deleted = false;
+    }
+
+})(source, map, log, target);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-03-22 06:09:56&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;f7f97d1a1bc5ce106962fe60cd4bcbc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;onStart&lt;/sys_name&gt;&lt;sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Workplace Access and Security"&gt;87fbe6c21b7e41108dcc755e034bcb8e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_script_f7f97d1a1bc5ce106962fe60cd4bcbc7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-03-22 06:09:56&lt;/sys_updated_on&gt;&lt;when&gt;onStart&lt;/when&gt;&lt;/sys_transform_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1147900258</payload_hash>
+        <record_name>onStart</record_name>
+        <reverted_from/>
+        <source>dffbe1d21b85ce106962fe60cd4bcb6e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-22 06:09:56</sys_created_on>
+        <sys_id>750ab51a1bc5ce106962fe60cd4bcbcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e64c7c2880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 06:09:56</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>790ab51a22c5ce102ad194bceb8e92cc</update_guid>
+        <update_guid_history>790ab51a22c5ce102ad194bceb8e92cc:1147900258</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-22 06:44:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>83283e5811624c408b7620147416d1f9</sys_id>
+        <sys_metadata>f7f97d1a1bc5ce106962fe60cd4bcbc7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent display_value="Access Locations Transform Map">42e4c4f51b890e106962fe60cd4bcbff</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_transform_script_f7f97d1a1bc5ce106962fe60cd4bcbc7</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_f7f97d1a1bc5ce106962fe60cd4bcbc7">750ab51a1bc5ce106962fe60cd4bcbcd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 06:44:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
