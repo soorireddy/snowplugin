@@ -107,6 +107,7 @@
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-15 15:50:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
         <sys_id>10bf918086b440e4a95e9553fe3f5ac4</sys_id>
         <sys_metadata>5e5132321b83b1108dcc755e034bcbe3</sys_metadata>
@@ -115,6 +116,7 @@
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent display_value="">362e6a3a1b477110234b0f6e6e4bcba9</sys_parent>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_dictionary_x_aleen_alertsnowp_system_parameters_property_default_value</sys_update_name>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Task table schema" source="com.glide.task">c754da2a1b0331108dcc755e034bcb09</dependency>
+        <dependency display_value="Task table schema" source="com.glide.task">2664e3a4db031300a3b6176a489619ec</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-13 06:36:44</sys_created_on>
-        <sys_id>73c13d7a1b437110234b0f6e6e4bcbee</sys_id>
+        <sys_id>7f558b841b77ad10759455342a4bcbb1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_updated_by>admin</sys_updated_by>

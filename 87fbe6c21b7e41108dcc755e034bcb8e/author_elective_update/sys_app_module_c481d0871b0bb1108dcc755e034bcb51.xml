@@ -65,10 +65,11 @@
         <update_guid_history>e18a5077a50f71108795ea9baf88f8df:94698582,8c81d0874a0bb110116a42659e0f3253:-245281194</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="system_param_category( Import Set )">ceda14771b0f7110234b0f6e6e4bcbd7</sys_audit_delete>
+        <sys_audit_delete display_value="">ceda14771b0f7110234b0f6e6e4bcbd7</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-18 04:59:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
         <sys_id>77703f3e51724af9b0d2fe83e7c64491</sys_id>
         <sys_metadata>c481d0871b0bb1108dcc755e034bcb51</sys_metadata>
@@ -77,6 +78,7 @@
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent/>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_app_module_c481d0871b0bb1108dcc755e034bcb51</sys_update_name>

@@ -41,10 +41,10 @@
         <sys_created_by/>
         <sys_created_on>2023-11-06 17:37:15</sys_created_on>
         <sys_id>bf5cb6771bf67190759455342a4bcb56</sys_id>
-        <sys_mod_count/>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>18ba5b5c4f80000000</sys_recorded_at>
-        <sys_updated_by/>
-        <sys_updated_on/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 03:02:38</sys_updated_on>
         <type>Table Subscription Configuration</type>
         <update_guid>7f5cb67729f6719002482c42c4d4eb56</update_guid>
         <update_guid_history>7f5cb67729f6719002482c42c4d4eb56:-994380616</update_guid_history>
