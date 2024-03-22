@@ -18,11 +18,15 @@ AlertGetAccessToken.prototype = {
             var requestBody1 =
                 '{ "username":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_username') +
                 '", "password":"' + gs.getProperty('x_aleen_alertsnowp.alert_api_password') + '"}';
+
             var requestBody = requestBody1.toString();
+            gs.info("requestBody  LOGIN" + requestBody);
             r.setRequestBody(requestBody);
             var response = r.executeAsync();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
+            gs.info("httpStatus  LOGIN" + httpStatus);
+            gs.info("responseBody  LOGIN" + responseBody);
             var Token = null;
             if (httpStatus == 200) {
                 var responseObj = JSON.parse(responseBody);
@@ -43,7 +47,7 @@ AlertGetAccessToken.prototype = {
         <sys_created_on>2023-11-19 07:01:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c760a3961be6bd10234b0f6e6e4bcb0f</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>AlertGetAccessToken</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -51,6 +55,6 @@ AlertGetAccessToken.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_c760a3961be6bd10234b0f6e6e4bcb0f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-19 08:36:34</sys_updated_on>
+        <sys_updated_on>2024-03-22 06:30:52</sys_updated_on>
     </sys_script_include>
 </record_update>
