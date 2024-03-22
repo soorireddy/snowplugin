@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="e38d87db1beb09108dcc755e034bcb3b" label="AccessLevels" max_length="40" name="x_aleen_alertsnowp_access_levels" type="collection">
-        <element label="Access Level ID" mandatory="true" max_length="40" name="access_level_id" type="string"/>
+        <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
         <element display="true" label="Access Level Name" mandatory="true" max_length="40" name="access_level_name" type="string"/>
         <element choice="3" default="LOW" label="Criticality" mandatory="true" max_length="40" name="criticality" type="string">
             <choice>

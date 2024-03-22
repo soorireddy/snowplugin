@@ -5,7 +5,7 @@
         <element label="Access Level Id" max_length="40" name="u_access_level_id" type="string"/>
         <element label="Access Level Name" max_length="40" name="u_access_level_name" type="string"/>
         <element label="Access Location Id" max_length="40" name="u_access_location_id" type="string"/>
-        <element default="False" label="Deleted" max_length="40" name="u_deleted" type="boolean"/>
+        <element label="Deleted" max_length="40" name="u_deleted" type="string"/>
         <element label="Location Name" max_length="40" name="u_location_name" type="string"/>
     </element>
 </database>
