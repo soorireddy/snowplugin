@@ -4,13 +4,17 @@
         <element display="true" label="Access Level Name" mandatory="true" max_length="40" name="access_level_name" type="string"/>
         <element choice="3" default="LOW" label="Criticality" mandatory="true" max_length="40" name="criticality" type="string">
             <choice>
-                <element inactive_on_update="false" label="High" value="HIGH"/>
-                <element inactive_on_update="false" label="Low" value="LOW"/>
-                <element inactive_on_update="false" label="Medium" value="MEDIUM"/>
+                <element inactive_on_update="false" label="Low" sequence="0" value="LOW"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="MEDIUM"/>
+                <element inactive_on_update="false" label="High" sequence="2" value="HIGH"/>
+                <element inactive_on_update="false" label="Critical" sequence="3" value="CRITICAL"/>
             </choice>
         </element>
         <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="sourceId" mandatory="true" max_length="40" name="sourceid" type="string"/>
         <element label="System" mandatory="true" max_length="40" name="system" type="string"/>
+        <index name="index">
+            <element name="access_level_id"/>
+        </index>
     </element>
 </database>
