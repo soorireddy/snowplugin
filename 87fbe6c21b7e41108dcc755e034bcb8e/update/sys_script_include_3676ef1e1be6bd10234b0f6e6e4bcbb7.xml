@@ -13,22 +13,26 @@ AlertMetadataScript.prototype = {
     initialize: function() {
         this.jwt_token = "..";
         this.use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
-        gs.info("Metadata Is oauth enabled " + this.use_oauth + " "+ !this.use_oauth);
-        if (!this.use_oauth) {
-			gs.info("Metadata Oauth Unavailable using jwt");
+        gs.info("Metadata Is oauth enabled " + this.use_oauth);
+        if (this.use_oauth === "false") {
+            gs.info("Metadata Oauth Unavailable using jwt");
             this.jwt_token = accessTokenScriptScript.getToken();
         }
     },
     syncLocations: function() {
         gs.info('syncLocations  :: Begin');
         try {
+            gs.info('syncLocations  :: BEFORE NULL CHECK' + this.jwt_token + ">>>>>>>>>" + this.use_oauth);
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetLocations', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                if (this.use_oauth) {
+                gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.use_oauth);
+                if (this.use_oauth === "true") {
+                    gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.jwt_token);
                     new OauthHelper().validateToken("GetLocations");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
+                    gs.info(" this.jwt_token ----> " + this.jwt_token);
                     r.setRequestHeader('Authorization', this.jwt_token);
                 }
                 var updateresponse = r.executeAsync();
@@ -54,7 +58,8 @@ AlertMetadataScript.prototype = {
                                 locationImportSetRowGr.setValue('u_city', (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "");
                                 locationImportSetRowGr.setValue('u_latitude', (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0");
                                 locationImportSetRowGr.setValue('u_longitude', (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0");
-                                locationImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? true : false : false);
+                                //locationImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
+                                locationImportSetRowGr.setValue('u_deleted', 'true');
                                 locationImportSetRowGr.setValue('u_id', responseObj.data[i].id.toString());
                                 locationImportSetRowGr.setValue('u_name', responseObj.data[i].text);
                                 locationImportSetRowGr.setValue('u_location_type', responseObj.data[i].type);
@@ -90,7 +95,7 @@ AlertMetadataScript.prototype = {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GETAccessLevels', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                if (this.use_oauth) {
+                if ((this.use_oauth === "true")) {
                     new OauthHelper().validateToken("GETAccessLevels");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
@@ -128,7 +133,7 @@ AlertMetadataScript.prototype = {
                             accessImportSetRowGr.setValue('u_access_level_name', responseObj.data[i].text);
                             accessImportSetRowGr.setValue('u_system', responseObj.data[i].system.text);
                             accessImportSetRowGr.setValue('u_criticality', responseObj.data[i].criticality);
-                            accessImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? true : false : false);
+                            accessImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
                             accessImportSetRowGr.setValue('u_sourceid', (responseObj.data[i].sourceId && responseObj.data[i].sourceId != "") ? responseObj.data[i].sourceId : "");
                             accessImportSetRowGr.insert();
 
@@ -143,7 +148,7 @@ AlertMetadataScript.prototype = {
                                     importSetRowGr2.setValue('u_access_level_name', responseObj.data[i].text);
                                     importSetRowGr2.setValue('u_access_location_id', accessLocations[j].locationId.toString());
                                     importSetRowGr2.setValue('u_location_name', accessLocations[j].location.text);
-                                    importSetRowGr2.setValue('u_deleted', (accessLocations[j].intStatus && accessLocations[j].intStatus != "") ? accessLocations[j].intStatus == 3 ? true : false : false);
+                                    importSetRowGr2.setValue('u_deleted', (accessLocations[j].intStatus && accessLocations[j].intStatus != "") ? accessLocations[j].intStatus == 3 ? 'true' : 'false' : 'false');
                                     importSetRowGr2.insert();
                                 }
                             }
@@ -156,7 +161,7 @@ AlertMetadataScript.prototype = {
                                     importSetRowGr3.setValue('u_access_level_name', responseObj.data[i].text); //??
                                     importSetRowGr3.setValue('u_owner_type', accessOwners[jk].type);
                                     importSetRowGr3.setValue('u_owner', accessOwners[jk].identity.masterIdentityId);
-                                    importSetRowGr3.setValue('u_deleted', (accessOwners[jk].intStatus && accessOwners[jk].intStatus != "") ? accessOwners[jk].intStatus == 3 ? true : false : false);
+                                    importSetRowGr3.setValue('u_deleted', (accessOwners[jk].intStatus && accessOwners[jk].intStatus != "") ? accessOwners[jk].intStatus == 3 ? 'true' : 'false' : 'false');
                                     importSetRowGr3.insert();
                                 }
                             }
@@ -211,7 +216,7 @@ AlertMetadataScript.prototype = {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetBadgeTemplates', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                if (this.use_oauth) {
+                if ((this.use_oauth === "true")) {
                     new OauthHelper().validateToken("GetBadgeTemplates");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
@@ -271,14 +276,14 @@ AlertMetadataScript.prototype = {
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-21 05:45:43</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 06:41:38</sys_updated_on>
     </sys_script_include>
 </record_update>
