@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b35287951b45ca106962fe60cd4bcb73" label="App Config" max_length="40" name="x_aleen_alertsnowp_app_config" type="collection">
+        <element label="Category" max_length="40" name="category" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Value" max_length="500" name="value" type="password2"/>
+    </element>
+</database>

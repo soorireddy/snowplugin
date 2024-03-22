@@ -64,6 +64,7 @@
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-15 09:01:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
         <sys_id>3bf67b73c09348d3be95022e99ec9019</sys_id>
         <sys_metadata>03e4f9b21b837110234b0f6e6e4bcb98</sys_metadata>
@@ -72,6 +73,7 @@
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent/>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_db_object_03e4f9b21b837110234b0f6e6e4bcb98</sys_update_name>

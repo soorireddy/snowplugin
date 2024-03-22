@@ -10,5 +10,8 @@
         <element display="true" label="Location Name" mandatory="true" max_length="40" name="name" type="string"/>
         <element label="Postal Code" max_length="40" name="postal_code" type="string"/>
         <element label="state" max_length="40" name="state" type="string"/>
+        <index name="index">
+            <element name="id"/>
+        </index>
     </element>
 </database>

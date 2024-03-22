@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="db8d47db1beb09108dcc755e034bcb99" extends="task" label="New Badge" max_length="40" name="x_aleen_alertsnowp_new_badge" type="collection">
+    <element audit="true" db_object_id="db8d47db1beb09108dcc755e034bcb99" extends="task" label="New Badge" max_length="40" name="x_aleen_alertsnowp_new_badge" type="collection">
         <element label="Delivery Comments" max_length="2000" name="delivery_comments" read_only="true" type="string"/>
         <element choice="1" display="true" label="Reason" max_length="40" name="reason" read_only="true" type="string">
             <choice>

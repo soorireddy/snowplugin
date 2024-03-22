@@ -3,6 +3,7 @@
         <element label="Access Level" max_length="32" name="access_level" reference="x_aleen_alertsnowp_access_levels" type="reference"/>
         <element label="Access Level ID" max_length="40" name="access_level_id" type="string"/>
         <element display="true" label="Access Level Name" max_length="40" name="access_level_name" type="string"/>
+        <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="Location" max_length="32" name="location" reference="x_aleen_alertsnowp_locations" type="reference"/>
         <element label="Location Name" max_length="40" name="location_name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>

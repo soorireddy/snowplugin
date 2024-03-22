@@ -28,12 +28,27 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-04-15 12:50:11</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-21 11:27:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5409f5061b49ca10759455342a4bcbbe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_aleen_alertsnowp_visitor" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">1f995efadb7601100cd344080596192a</sys_ui_form>
+            <sys_ui_section caption="Audit Log" display_value="Audit Log" name="x_aleen_alertsnowp_visitor" sys_domain="global" view="Default view">0809f5061b49ca10759455342a4bcbbb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-21 11:27:00</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_aleen_alertsnowp_visitor</name>
             <roles/>
             <sys_class_name>sys_ui_form</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-04-15 12:50:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>1f995efadb7601100cd344080596192a</sys_id>
@@ -42,6 +57,7 @@
             <sys_overrides/>
             <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_ui_form_sections_1f995efadb7601100cd344080596192a</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>

@@ -4,14 +4,14 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=743191000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2015251000,viewActivatedIn=naturalLanguage</attributes>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Flow regarding request for mobile credential flow.</description>
         <internal_name>alert_mobile_credentials_flow</internal_name>
-        <label_cache>[{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status","label":"5 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number","label":"5 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.table_name","label":"2 - Update Record➛Mobile Credential Table","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.number","label":"2 - Update Record➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record","label":"2 - Update Record➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"27628547-438d-4805-8518-e8300352141b"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛Mobile Credential Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"}]</label_cache>
+        <label_cache>[{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state","label":"3 - Update Record➛Mobile Credential Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"state","choices":[{"used":false,"image":"","label":"Open","reference":false,"rawLabel":"Open","selected":false,"missing":false,"value":"1","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}},{"used":false,"image":"","label":"Closed Complete","reference":false,"rawLabel":"Closed Complete","selected":false,"missing":false,"value":"3","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}},{"used":false,"image":"","label":"Closed Incomplete","reference":false,"rawLabel":"Closed Incomplete","selected":false,"missing":false,"value":"4","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}}]},{"name":"4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status","label":"13 - Alert Status Sync API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41544444-a204-455f-a4b7-59fc82d622b8"}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛Mobile Credential Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current","label":"Trigger - Record Created➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"27628547-438d-4805-8518-e8300352141b"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record","label":"3 - Update Record➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.number","label":"3 - Update Record➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.table_name","label":"3 - Update Record➛Mobile Credential Table","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number","label":"8 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status","label":"8 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"flow_variable.record_number","label":"Flow Variables➛Record number","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a4f143a6-a4bd-4c24-967b-ae348c803e67"}}]</label_cache>
         <master_snapshot>befe62951b3082106962fe60cd4bcb80</master_snapshot>
         <name>Alert Mobile Credentials Flow</name>
         <natlang/>
@@ -30,7 +30,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>8febd2a61b2cc250759455342a4bcb32</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Alert Mobile Credentials Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -38,8 +38,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_hub_flow_8febd2a61b2cc250759455342a4bcb32</sys_update_name>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=8febd2a61b2cc250759455342a4bcb32"/>
@@ -79,15 +79,15 @@
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>8febd2a61b2cc250759455342a4bcb32</identifier>
         <runner>FDTriggerRunner</runner>
-        <sys_created_by>krishan.chopra</sys_created_by>
-        <sys_created_on>2024-03-06 21:11:44</sys_created_on>
-        <sys_id>abfea2951b3082106962fe60cd4bcbcb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:44</sys_updated_on>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:32:51</sys_created_on>
+        <sys_id>bd413ec61b098e106962fe60cd4bcb74</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:51</sys_updated_on>
         <trigger display_value="">effea2951b3082106962fe60cd4bcbca</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8febd2a61b2cc250759455342a4bcb32^sys_idNOT INabfea2951b3082106962fe60cd4bcbcb"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8febd2a61b2cc250759455342a4bcb32^sys_idNOT INbd413ec61b098e106962fe60cd4bcb74"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=8febd2a61b2cc250759455342a4bcb32^sys_idNOT INb56eda2a1b2cc250759455342a4bcb9b"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment>Request is created for mobile credentials.</comment>
@@ -100,15 +100,15 @@
         <sys_created_on>2024-02-27 06:55:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b56eda2a1b2cc250759455342a4bcb9b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:51</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -229,15 +229,15 @@
         <sys_created_on>2024-02-27 06:55:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7d6eda2a1b2cc250759455342a4bcb92</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:44</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -315,15 +315,15 @@
         <sys_created_on>2024-02-27 06:55:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bd6eda2a1b2cc250759455342a4bcb96</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:44</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -339,7 +339,7 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bd6eda2a1b2cc250759455342a4bcb96"/>
     <sys_hub_flow_output action="delete_multiple" query="model=8febd2a61b2cc250759455342a4bcb32"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=8febd2a61b2cc250759455342a4bcb32"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN0a6eda2a1b2cc250759455342a4bcbcf,426eda2a1b2cc250759455342a4bcbd5,466eda2a1b2cc250759455342a4bcbdc,5a6eda2a1b2cc250759455342a4bcbe8,88925ad91bbc8210759455342a4bcbf8,966eda2a1b2cc250759455342a4bcbee,c26eda2a1b2cc250759455342a4bcbb9,c26eda2a1b2cc250759455342a4bcbc1"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN0a6eda2a1b2cc250759455342a4bcbcf,20d0f6861b098e106962fe60cd4bcbaf,23dda6821b098e106962fe60cd4bcb6c,28d0f6861b098e106962fe60cd4bcb88,426eda2a1b2cc250759455342a4bcbd5,466eda2a1b2cc250759455342a4bcbdc,5a6eda2a1b2cc250759455342a4bcbe8,6cd0f6861b098e106962fe60cd4bcb8f,78d0f6861b098e106962fe60cd4bcbb6,88925ad91bbc8210759455342a4bcbf8,966eda2a1b2cc250759455342a4bcbee,a0d0f6861b098e106962fe60cd4bcb81,a0d0f6861b098e106962fe60cd4bcba9,c26eda2a1b2cc250759455342a4bcbb9,c26eda2a1b2cc250759455342a4bcbc1,e8d0f6861b098e106962fe60cd4bcb95,f4d0f6861b098e106962fe60cd4bcbbc"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -349,22 +349,22 @@
         <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>5</order>
+        <order>8</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a6eda2a1b2cc250759455342a4bcbcf</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>9e7e2c42-0fa6-4cac-a4e4-f37abe627466</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0a6eda2a1b2cc250759455342a4bcbcf"/>
@@ -398,28 +398,259 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
-        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
         <attributes/>
-        <comment>Creating record in Alert Request status with details from API.</comment>
+        <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>6</order>
+        <order>15</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-02-27 06:55:59</sys_created_on>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>426eda2a1b2cc250759455342a4bcbd5</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_id>20d0f6861b098e106962fe60cd4bcbaf</sys_id>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>f2d76686-010c-450a-b1c5-d0889cd25589</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=20d0f6861b098e106962fe60cd4bcbaf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>20d0f6861b098e106962fe60cd4bcbaf</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>68d0f6861b098e106962fe60cd4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=20d0f6861b098e106962fe60cd4bcbaf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>20d0f6861b098e106962fe60cd4bcbaf</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>e4d0f6861b098e106962fe60cd4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>20d0f6861b098e106962fe60cd4bcbaf</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>60d0f6861b098e106962fe60cd4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>20d0f6861b098e106962fe60cd4bcbaf</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>24d0f6861b098e106962fe60cd4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=20d0f6861b098e106962fe60cd4bcbaf"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=20d0f6861b098e106962fe60cd4bcbaf"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>23dda6821b098e106962fe60cd4bcb6c</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>ad4db16a-9256-4443-a287-009098b0ec57</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=23dda6821b098e106962fe60cd4bcb6c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>23dda6821b098e106962fe60cd4bcb6c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:57</sys_created_on>
+        <sys_id>67dda6821b098e106962fe60cd4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:17:57</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=23dda6821b098e106962fe60cd4bcb6c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>23dda6821b098e106962fe60cd4bcb6c</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:57</sys_created_on>
+        <sys_id>23dda6821b098e106962fe60cd4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:17:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>23dda6821b098e106962fe60cd4bcb6c</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:57</sys_created_on>
+        <sys_id>e3dda6821b098e106962fe60cd4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:17:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>request_no={{flow_variable.record_number}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=23dda6821b098e106962fe60cd4bcb6c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=23dda6821b098e106962fe60cd4bcb6c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>7</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>28d0f6861b098e106962fe60cd4bcb88</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>0367e748-3f99-476e-afe5-2787074f5123</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=28d0f6861b098e106962fe60cd4bcb88"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>28d0f6861b098e106962fe60cd4bcb88</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>64d0f6861b098e106962fe60cd4bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=28d0f6861b098e106962fe60cd4bcb88"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>28d0f6861b098e106962fe60cd4bcb88</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>e0d0f6861b098e106962fe60cd4bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>28d0f6861b098e106962fe60cd4bcb88</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>6cd0f6861b098e106962fe60cd4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>28d0f6861b098e106962fe60cd4bcb88</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>20d0f6861b098e106962fe60cd4bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request {{flow_variable.record_number}} has been approved by Manager.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=28d0f6861b098e106962fe60cd4bcb88"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=28d0f6861b098e106962fe60cd4bcb88"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Creating record in Alert Request status with details from API.</comment>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>11</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 06:55:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>426eda2a1b2cc250759455342a4bcbd5</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>a45e05d6-0d7c-4787-b7be-c7831b3010bf</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=426eda2a1b2cc250759455342a4bcbd5"/>
@@ -473,22 +704,22 @@
         <comment>Waiting for request to be updated.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>9</order>
+        <order>16</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>466eda2a1b2cc250759455342a4bcbdc</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>26432752-164c-4ee2-9d55-8d4964b751ec</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=466eda2a1b2cc250759455342a4bcbdc"/>
@@ -505,6 +736,20 @@
         <sys_updated_on>2024-02-27 06:55:59</sys_updated_on>
         <value>x_aleen_alertsnowp_mobile_credential</value>
         <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>466eda2a1b2cc250759455342a4bcbdc</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:32:24</sys_created_on>
+        <sys_id>0f2176c61b098e106962fe60cd4bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:24</sys_updated_on>
+        <value>1970-01-01 00:30:00</value>
+        <variable display_value="Duration">cdce8a4187120010663ca1bb36cb0bf9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_instance</document>
@@ -557,6 +802,18 @@
         <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
         <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>timeout_duration</field>
+        <id>466eda2a1b2cc250759455342a4bcbdc</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:32:24</sys_created_on>
+        <sys_id>8b2176c61b098e106962fe60cd4bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=466eda2a1b2cc250759455342a4bcbdc"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=466eda2a1b2cc250759455342a4bcbdc"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
@@ -568,22 +825,22 @@
         <comment>Closing request with closed incomplete.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>12</order>
+        <order>21</order>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5a6eda2a1b2cc250759455342a4bcbe8</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>9ea5eab4-52e7-4e71-a79a-6dd2836a79c9</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5a6eda2a1b2cc250759455342a4bcbe8"/>
@@ -657,28 +914,192 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Alert Status Sync API Action">ae5e9fcd1b7042106962fe60cd4bcb86</action_type>
-        <action_type_parent display_value="Alert Status Sync API Action">e2ab1f0d1b7042106962fe60cd4bcb1d</action_type_parent>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>8</order>
+        <order>9</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>krishan.chopra</sys_created_by>
-        <sys_created_on>2024-03-06 19:07:31</sys_created_on>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>88925ad91bbc8210759455342a4bcbf8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_id>6cd0f6861b098e106962fe60cd4bcb8f</sys_id>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>35fcc366-25ad-4f02-9c50-e82974af3ed6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6cd0f6861b098e106962fe60cd4bcb8f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6cd0f6861b098e106962fe60cd4bcb8f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>24d0f6861b098e106962fe60cd4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6cd0f6861b098e106962fe60cd4bcb8f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>6cd0f6861b098e106962fe60cd4bcb8f</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>ecd0f6861b098e106962fe60cd4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>6cd0f6861b098e106962fe60cd4bcb8f</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>a0d0f6861b098e106962fe60cd4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6cd0f6861b098e106962fe60cd4bcb8f^sys_idNOT INe8d0f6861b098e106962fe60cd4bcb90"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>6cd0f6861b098e106962fe60cd4bcb8f</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>e8d0f6861b098e106962fe60cd4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6cd0f6861b098e106962fe60cd4bcb8f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>17</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>78d0f6861b098e106962fe60cd4bcbb6</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>47012620-cefe-4cd1-bcd3-89579b484586</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=78d0f6861b098e106962fe60cd4bcbb6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>78d0f6861b098e106962fe60cd4bcbb6</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>30d0f6861b098e106962fe60cd4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=78d0f6861b098e106962fe60cd4bcbb6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>78d0f6861b098e106962fe60cd4bcbb6</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>f8d0f6861b098e106962fe60cd4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>78d0f6861b098e106962fe60cd4bcbb6</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>bcd0f6861b098e106962fe60cd4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has moved to state {{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=78d0f6861b098e106962fe60cd4bcbb6^sys_idNOT INf4d0f6861b098e106962fe60cd4bcbb7"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>78d0f6861b098e106962fe60cd4bcbb6</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>f4d0f6861b098e106962fe60cd4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=78d0f6861b098e106962fe60cd4bcbb6"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Alert Status Sync API Action">ae5e9fcd1b7042106962fe60cd4bcb86</action_type>
+        <action_type_parent display_value="Alert Status Sync API Action">e2ab1f0d1b7042106962fe60cd4bcb1d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>13</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 19:07:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>88925ad91bbc8210759455342a4bcbf8</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>4d815347-f03f-4e3d-88e3-660ce0f0b4a3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=88925ad91bbc8210759455342a4bcbf8"/>
@@ -706,22 +1127,22 @@
         <comment>Creating audit log with updated request details.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>13</order>
+        <order>22</order>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>966eda2a1b2cc250759455342a4bcbee</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>b6e04be5-f857-44bf-8729-63746eef5dc5</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=966eda2a1b2cc250759455342a4bcbee"/>
@@ -782,28 +1203,192 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
-        <comment>Request is assigned to manager of requested for user.</comment>
+        <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>6</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-02-27 06:55:58</sys_created_on>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>c26eda2a1b2cc250759455342a4bcbb9</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_id>a0d0f6861b098e106962fe60cd4bcb81</sys_id>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>2e69a5b4-5ae3-40bd-9efc-1daa017d9b2e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a0d0f6861b098e106962fe60cd4bcb81"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a0d0f6861b098e106962fe60cd4bcb81</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>a8d0f6861b098e106962fe60cd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a0d0f6861b098e106962fe60cd4bcb81"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>a0d0f6861b098e106962fe60cd4bcb81</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>60d0f6861b098e106962fe60cd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>a0d0f6861b098e106962fe60cd4bcb81</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>28d0f6861b098e106962fe60cd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been approved by manager.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a0d0f6861b098e106962fe60cd4bcb81^sys_idNOT IN64d0f6861b098e106962fe60cd4bcb82"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>a0d0f6861b098e106962fe60cd4bcb81</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>64d0f6861b098e106962fe60cd4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a0d0f6861b098e106962fe60cd4bcb81"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>14</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0d0f6861b098e106962fe60cd4bcba9</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>c45f8bdd-6f1a-47c4-979a-b2f18a1238f2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a0d0f6861b098e106962fe60cd4bcba9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a0d0f6861b098e106962fe60cd4bcba9</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>68d0f6861b098e106962fe60cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a0d0f6861b098e106962fe60cd4bcba9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>a0d0f6861b098e106962fe60cd4bcba9</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>24d0f6861b098e106962fe60cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>a0d0f6861b098e106962fe60cd4bcba9</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>e4d0f6861b098e106962fe60cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a0d0f6861b098e106962fe60cd4bcba9^sys_idNOT IN20d0f6861b098e106962fe60cd4bcbaa"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>a0d0f6861b098e106962fe60cd4bcba9</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>20d0f6861b098e106962fe60cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a0d0f6861b098e106962fe60cd4bcba9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Request is assigned to manager of requested for user.</comment>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 06:55:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c26eda2a1b2cc250759455342a4bcbb9</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>1698dcbe-7b48-40b7-8dba-008c6ab9ac7b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c26eda2a1b2cc250759455342a4bcbb9"/>
@@ -869,22 +1454,22 @@
         <comment>Asking for approval from manager.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
-        <order>3</order>
+        <order>4</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-27 06:55:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c26eda2a1b2cc250759455342a4bcbc1</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c26eda2a1b2cc250759455342a4bcbc1"/>
@@ -1019,6 +1604,168 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=c26eda2a1b2cc250759455342a4bcbc1"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=c26eda2a1b2cc250759455342a4bcbc1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>10</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e8d0f6861b098e106962fe60cd4bcb95</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>7cc55c95-5697-432c-9c03-d4d90eeb7c55</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e8d0f6861b098e106962fe60cd4bcb95"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e8d0f6861b098e106962fe60cd4bcb95</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>24d0f6861b098e106962fe60cd4bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e8d0f6861b098e106962fe60cd4bcb95"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e8d0f6861b098e106962fe60cd4bcb95</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>a0d0f6861b098e106962fe60cd4bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e8d0f6861b098e106962fe60cd4bcb95</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>2cd0f6861b098e106962fe60cd4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e8d0f6861b098e106962fe60cd4bcb95</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:51</sys_created_on>
+        <sys_id>ecd0f6861b098e106962fe60cd4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e8d0f6861b098e106962fe60cd4bcb95"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e8d0f6861b098e106962fe60cd4bcb95"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
+        <order>18</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f4d0f6861b098e106962fe60cd4bcbbc</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
+        <ui_id>866a07b1-ca69-4417-823c-ec6d0b1933f0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f4d0f6861b098e106962fe60cd4bcbbc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f4d0f6861b098e106962fe60cd4bcbbc</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>30d0f6861b098e106962fe60cd4bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f4d0f6861b098e106962fe60cd4bcbbc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>f4d0f6861b098e106962fe60cd4bcbbc</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>bcd0f6861b098e106962fe60cd4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>f4d0f6861b098e106962fe60cd4bcbbc</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>38d0f6861b098e106962fe60cd4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f4d0f6861b098e106962fe60cd4bcbbc</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:30:52</sys_created_on>
+        <sys_id>f8d0f6861b098e106962fe60cd4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:30:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request {{flow_variable.record_number}} has been moved to state {{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f4d0f6861b098e106962fe60cd4bcbbc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f4d0f6861b098e106962fe60cd4bcbbc"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8febd2a61b2cc250759455342a4bcb32"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN1e6eda2a1b2cc250759455342a4bcbf0,466eda2a1b2cc250759455342a4bcbe2,4a6eda2a1b2cc250759455342a4bcbdf,866eda2a1b2cc250759455342a4bcbb1,866eda2a1b2cc250759455342a4bcbc5,ff825ad91bbc8210759455342a4bcbe0"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
@@ -1035,7 +1782,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>14</order>
+        <order>23</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
@@ -1044,15 +1791,15 @@
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1e6eda2a1b2cc250759455342a4bcbf0</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>5204a953-f2f4-4cbf-b80a-829eb68e9b53</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1075,7 +1822,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>11</order>
+        <order>20</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -1084,15 +1831,15 @@
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>466eda2a1b2cc250759455342a4bcbe2</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1115,7 +1862,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>10</order>
+        <order>19</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
@@ -1124,15 +1871,15 @@
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4a6eda2a1b2cc250759455342a4bcbdf</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>afeb0c07-c735-4499-a5b3-21c794ed6b8b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1153,7 +1900,7 @@
         <flow display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</flow>
         <flow_variable/>
         <flow_variable/>
-        <flow_variables_assigned>manager</flow_variables_assigned>
+        <flow_variables_assigned>manager,record_number</flow_variables_assigned>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>1</order>
@@ -1165,15 +1912,15 @@
         <sys_created_on>2024-02-27 06:55:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>866eda2a1b2cc250759455342a4bcbb1</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>b041f500-a68e-4a7d-a07d-60e72c77b88e</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1192,6 +1939,18 @@
         <table>var__m_sys_hub_flow_variable_8febd2a61b2cc250759455342a4bcb32</table>
         <value>{{Created_1.current.request_for.manager}}</value>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>866eda2a1b2cc250759455342a4bcbb1</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:56</sys_created_on>
+        <sys_id>27dda6821b098e106962fe60cd4bcb67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:17:56</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8febd2a61b2cc250759455342a4bcb32</table>
+        <value>{{Created_1.current.number}}</value>
+    </sys_element_mapping>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=866eda2a1b2cc250759455342a4bcbb1"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=866eda2a1b2cc250759455342a4bcbb1"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
@@ -1209,7 +1968,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>4</order>
+        <order>5</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -1218,15 +1977,15 @@
         <sys_created_on>2024-02-27 06:55:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>866eda2a1b2cc250759455342a4bcbc5</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1288,7 +2047,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>7</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
@@ -1297,15 +2056,15 @@
         <sys_created_on>2024-03-06 19:07:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff825ad91bbc8210759455342a4bcbe0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:45</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:52</sys_updated_on>
         <ui_id>5df8c5e8-e463-4279-8ae9-4d37007e4fed</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1333,10 +2092,10 @@
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 19:07:30</sys_created_on>
         <sys_id>4c925ad91bbc8210759455342a4bcbe5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 19:07:30</sys_updated_on>
-        <value>1970-01-01 00:00:30</value>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 10:03:25</sys_updated_on>
+        <value>1970-01-01 00:01:00</value>
         <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8febd2a61b2cc250759455342a4bcb32^id=ff825ad91bbc8210759455342a4bcbe0"/>
@@ -1344,7 +2103,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ff825ad91bbc8210759455342a4bcbe0"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=ff825ad91bbc8210759455342a4bcbe0"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=8febd2a61b2cc250759455342a4bcb32"/>
-    <sys_hub_flow_variable action="delete_multiple" query="model=8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN396eda2a1b2cc250759455342a4bcbaa"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN396eda2a1b2cc250759455342a4bcbaa,dfdda6821b098e106962fe60cd4bcb5a"/>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1430,6 +2189,91 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a4f143a6-a4bd-4c24-967b-ae348c803e67</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record number</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Alert Mobile Credentials Flow">8febd2a61b2cc250759455342a4bcb32</model>
+        <model_id>8febd2a61b2cc250759455342a4bcb32</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_8febd2a61b2cc250759455342a4bcb32</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:17:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dfdda6821b098e106962fe60cd4bcb5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:17:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8febd2a61b2cc250759455342a4bcb32^sys_idNOT IN316eda2a1b2cc250759455342a4bcb99,fd6eda2a1b2cc250759455342a4bcb95"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>table_name</element>
@@ -1496,7 +2340,7 @@
         <copied_from_name/>
         <description>Flow regarding request for mobile credential flow.</description>
         <internal_name>alert_mobile_credentials_flow</internal_name>
-        <label_cache>[{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status","label":"5 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number","label":"5 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.table_name","label":"2 - Update Record➛Mobile Credential Table","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.number","label":"2 - Update Record➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record","label":"2 - Update Record➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"27628547-438d-4805-8518-e8300352141b"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛Mobile Credential Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"}]</label_cache>
+        <label_cache>[{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state","label":"3 - Update Record➛Mobile Credential Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"state","choices":[{"used":false,"image":"","label":"Open","reference":false,"rawLabel":"Open","selected":false,"missing":false,"value":"1","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}},{"used":false,"image":"","label":"Closed Complete","reference":false,"rawLabel":"Closed Complete","selected":false,"missing":false,"value":"3","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}},{"used":false,"image":"","label":"Closed Incomplete","reference":false,"rawLabel":"Closed Incomplete","selected":false,"missing":false,"value":"4","parameters":{"name":"x_aleen_alertsnowp_mobile_credential"}}]},{"name":"4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status","label":"13 - Alert Status Sync API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41544444-a204-455f-a4b7-59fc82d622b8"}},{"name":"Created_1.current.request_for.manager","label":"Trigger - Record Created➛Mobile Credential Record➛Request For➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current","label":"Trigger - Record Created➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{}},{"name":"flow_variable.manager","label":"Flow Variables➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"27628547-438d-4805-8518-e8300352141b"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record","label":"3 - Update Record➛Mobile Credential Record","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.number","label":"3 - Update Record➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.table_name","label":"3 - Update Record➛Mobile Credential Table","reference":"x_aleen_alertsnowp_mobile_credential","reference_display":"Mobile Credential","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number","label":"8 - Alert API Action➛Alert Request Number","reference_display":"Alert Request Number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b25cb802-bfa5-4e97-9daf-ac589f8dd184"}},{"name":"9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status","label":"8 - Alert API Action➛Alert Request Status","reference_display":"Alert Request Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"46b17213-9263-4ca7-97ee-33722b696d63"}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Mobile Credential Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_aleen_alertsnowp_mobile_credential","column_name":"number"},{"name":"flow_variable.manager.user_name","label":"Flow Variables➛Manager➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"flow_variable.record_number","label":"Flow Variables➛Record number","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a4f143a6-a4bd-4c24-967b-ae348c803e67"}}]</label_cache>
         <master>true</master>
         <name>Alert Mobile Credentials Flow</name>
         <natlang/>
@@ -1513,7 +2357,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>befe62951b3082106962fe60cd4bcb80</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1521,8 +2365,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:48</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=befe62951b3082106962fe60cd4bcb80"/>
@@ -1538,15 +2382,15 @@
         <sys_created_on>2024-03-06 21:11:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1ffea2951b3082106962fe60cd4bcb3b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:44</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:51</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -1607,7 +2451,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1667,15 +2511,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36fe62951b3082106962fe60cd4bcb83</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1693,7 +2537,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1753,15 +2597,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>76fe62951b3082106962fe60cd4bcb99</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1777,7 +2621,7 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=76fe62951b3082106962fe60cd4bcb99"/>
     <sys_hub_flow_output action="delete_multiple" query="model=befe62951b3082106962fe60cd4bcb80"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=befe62951b3082106962fe60cd4bcb80"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=befe62951b3082106962fe60cd4bcb80^sys_idNOT IN0ffea2951b3082106962fe60cd4bcb2c,4bfea2951b3082106962fe60cd4bcb12,4ffe62951b3082106962fe60cd4bcbfb,5ffea2951b3082106962fe60cd4bcb33,5ffea2951b3082106962fe60cd4bcb39,c3fea2951b3082106962fe60cd4bcb1a,cbfea2951b3082106962fe60cd4bcb05,cbfea2951b3082106962fe60cd4bcb23"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=befe62951b3082106962fe60cd4bcb80^sys_idNOT IN0ffea2951b3082106962fe60cd4bcb2c,21e03e861b098e106962fe60cd4bcbde,29e03e861b098e106962fe60cd4bcb9b,2de03e861b098e106962fe60cd4bcb90,31e03e861b098e106962fe60cd4bcbe4,4bfea2951b3082106962fe60cd4bcb12,4ffe62951b3082106962fe60cd4bcbfb,5ffea2951b3082106962fe60cd4bcb33,5ffea2951b3082106962fe60cd4bcb39,b5e03e861b098e106962fe60cd4bcbec,b5e03e861b098e106962fe60cd4bcbf2,c3fea2951b3082106962fe60cd4bcb1a,cbfea2951b3082106962fe60cd4bcb05,cbfea2951b3082106962fe60cd4bcb23,e5e03e861b098e106962fe60cd4bcbcf,e5e03e861b098e106962fe60cd4bcbd5,ede03e861b098e106962fe60cd4bcbc7"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -1787,25 +2631,39 @@
         <comment>Waiting for request to be updated.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>9</order>
+        <order>16</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0ffea2951b3082106962fe60cd4bcb2c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>26432752-164c-4ee2-9d55-8d4964b751ec</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0ffea2951b3082106962fe60cd4bcb2c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0ffea2951b3082106962fe60cd4bcb2c</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:32:46</sys_created_on>
+        <sys_id>2041bac61b098e106962fe60cd4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:46</sys_updated_on>
+        <value>1970-01-01 00:30:00</value>
+        <variable display_value="Duration">cdce8a4187120010663ca1bb36cb0bf9</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_instance</document>
         <document_key>0ffea2951b3082106962fe60cd4bcb2c</document_key>
@@ -1871,8 +2729,334 @@
         <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
         <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>timeout_duration</field>
+        <id>0ffea2951b3082106962fe60cd4bcb2c</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:32:46</sys_created_on>
+        <sys_id>ac41bac61b098e106962fe60cd4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:46</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0ffea2951b3082106962fe60cd4bcb2c"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=0ffea2951b3082106962fe60cd4bcb2c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>14</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>21e03e861b098e106962fe60cd4bcbde</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>c45f8bdd-6f1a-47c4-979a-b2f18a1238f2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=21e03e861b098e106962fe60cd4bcbde"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>21e03e861b098e106962fe60cd4bcbde</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>f5e03e861b098e106962fe60cd4bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=21e03e861b098e106962fe60cd4bcbde"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>21e03e861b098e106962fe60cd4bcbde</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>b1e03e861b098e106962fe60cd4bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>21e03e861b098e106962fe60cd4bcbde</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>75e03e861b098e106962fe60cd4bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=21e03e861b098e106962fe60cd4bcbde^sys_idNOT INbde03e861b098e106962fe60cd4bcbde"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>21e03e861b098e106962fe60cd4bcbde</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>bde03e861b098e106962fe60cd4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=21e03e861b098e106962fe60cd4bcbde"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>6</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>29e03e861b098e106962fe60cd4bcb9b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>2e69a5b4-5ae3-40bd-9efc-1daa017d9b2e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=29e03e861b098e106962fe60cd4bcb9b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29e03e861b098e106962fe60cd4bcb9b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>25e03e861b098e106962fe60cd4bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=29e03e861b098e106962fe60cd4bcb9b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>29e03e861b098e106962fe60cd4bcb9b</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>ede03e861b098e106962fe60cd4bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>29e03e861b098e106962fe60cd4bcb9b</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>a1e03e861b098e106962fe60cd4bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been approved by manager.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=29e03e861b098e106962fe60cd4bcb9b^sys_idNOT INa5e03e861b098e106962fe60cd4bcb9c"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>29e03e861b098e106962fe60cd4bcb9b</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>a5e03e861b098e106962fe60cd4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=29e03e861b098e106962fe60cd4bcb9b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2de03e861b098e106962fe60cd4bcb90</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>ad4db16a-9256-4443-a287-009098b0ec57</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2de03e861b098e106962fe60cd4bcb90"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2de03e861b098e106962fe60cd4bcb90</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>21e03e861b098e106962fe60cd4bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2de03e861b098e106962fe60cd4bcb90"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>2de03e861b098e106962fe60cd4bcb90</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>e9e03e861b098e106962fe60cd4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>2de03e861b098e106962fe60cd4bcb90</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_id>ade03e861b098e106962fe60cd4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>request_no={{flow_variable.record_number}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2de03e861b098e106962fe60cd4bcb90"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2de03e861b098e106962fe60cd4bcb90"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>15</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>31e03e861b098e106962fe60cd4bcbe4</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>f2d76686-010c-450a-b1c5-d0889cd25589</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=31e03e861b098e106962fe60cd4bcbe4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>31e03e861b098e106962fe60cd4bcbe4</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>79e03e861b098e106962fe60cd4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=31e03e861b098e106962fe60cd4bcbe4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>31e03e861b098e106962fe60cd4bcbe4</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>f5e03e861b098e106962fe60cd4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>31e03e861b098e106962fe60cd4bcbe4</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>71e03e861b098e106962fe60cd4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>31e03e861b098e106962fe60cd4bcbe4</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>35e03e861b098e106962fe60cd4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{4d815347-f03f-4e3d-88e3-660ce0f0b4a3.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=31e03e861b098e106962fe60cd4bcbe4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=31e03e861b098e106962fe60cd4bcbe4"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -1882,22 +3066,22 @@
         <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>5</order>
+        <order>8</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4bfea2951b3082106962fe60cd4bcb12</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>9e7e2c42-0fa6-4cac-a4e4-f37abe627466</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4bfea2951b3082106962fe60cd4bcb12"/>
@@ -1937,22 +3121,22 @@
         <comment>Request is assigned to manager of requested for user.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>2</order>
+        <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4ffe62951b3082106962fe60cd4bcbfb</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>1698dcbe-7b48-40b7-8dba-008c6ab9ac7b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4ffe62951b3082106962fe60cd4bcbfb"/>
@@ -2018,22 +3202,22 @@
         <comment>Closing request with closed incomplete.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>12</order>
+        <order>21</order>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5ffea2951b3082106962fe60cd4bcb33</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:43</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>9ea5eab4-52e7-4e71-a79a-6dd2836a79c9</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5ffea2951b3082106962fe60cd4bcb33"/>
@@ -2099,22 +3283,22 @@
         <comment>Creating audit log with updated request details.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>13</order>
+        <order>22</order>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5ffea2951b3082106962fe60cd4bcb39</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:43</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>b6e04be5-f857-44bf-8729-63746eef5dc5</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5ffea2951b3082106962fe60cd4bcb39"/>
@@ -2178,25 +3362,188 @@
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
-        <comment>Creating record in Alert Request status with details from API.</comment>
+        <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>6</order>
+        <order>17</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>krishan.chopra</sys_created_by>
-        <sys_created_on>2024-03-06 21:11:42</sys_created_on>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>c3fea2951b3082106962fe60cd4bcb1a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>b5e03e861b098e106962fe60cd4bcbec</sys_id>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>47012620-cefe-4cd1-bcd3-89579b484586</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b5e03e861b098e106962fe60cd4bcbec"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b5e03e861b098e106962fe60cd4bcbec</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>7de03e861b098e106962fe60cd4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b5e03e861b098e106962fe60cd4bcbec"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>b5e03e861b098e106962fe60cd4bcbec</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>39e03e861b098e106962fe60cd4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>b5e03e861b098e106962fe60cd4bcbec</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>f9e03e861b098e106962fe60cd4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has moved to state {{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b5e03e861b098e106962fe60cd4bcbec^sys_idNOT IN35e03e861b098e106962fe60cd4bcbed"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>b5e03e861b098e106962fe60cd4bcbec</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>35e03e861b098e106962fe60cd4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b5e03e861b098e106962fe60cd4bcbec"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>18</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b5e03e861b098e106962fe60cd4bcbf2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>866a07b1-ca69-4417-823c-ec6d0b1933f0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b5e03e861b098e106962fe60cd4bcbf2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b5e03e861b098e106962fe60cd4bcbf2</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>fde03e861b098e106962fe60cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b5e03e861b098e106962fe60cd4bcbf2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>b5e03e861b098e106962fe60cd4bcbf2</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>7de03e861b098e106962fe60cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>b5e03e861b098e106962fe60cd4bcbf2</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>f5e03e861b098e106962fe60cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>b5e03e861b098e106962fe60cd4bcbf2</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>b9e03e861b098e106962fe60cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request {{flow_variable.record_number}} has been moved to state {{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record.state}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b5e03e861b098e106962fe60cd4bcbf2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b5e03e861b098e106962fe60cd4bcbf2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Creating record in Alert Request status with details from API.</comment>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>11</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>krishan.chopra</sys_created_by>
+        <sys_created_on>2024-03-06 21:11:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c3fea2951b3082106962fe60cd4bcb1a</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>a45e05d6-0d7c-4787-b7be-c7831b3010bf</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c3fea2951b3082106962fe60cd4bcb1a"/>
@@ -2250,22 +3597,22 @@
         <comment>Asking for approval from manager.</comment>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>3</order>
+        <order>4</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cbfea2951b3082106962fe60cd4bcb05</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>fdf59856-7dfc-4edb-9ef0-6ad0bd0e1fd7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cbfea2951b3082106962fe60cd4bcb05"/>
@@ -2409,22 +3756,22 @@
         <comment/>
         <display_text/>
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
-        <order>8</order>
+        <order>13</order>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cbfea2951b3082106962fe60cd4bcb23</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>4d815347-f03f-4e3d-88e3-660ce0f0b4a3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cbfea2951b3082106962fe60cd4bcb23"/>
@@ -2443,6 +3790,250 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=cbfea2951b3082106962fe60cd4bcb23"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=cbfea2951b3082106962fe60cd4bcb23"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>9</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e5e03e861b098e106962fe60cd4bcbcf</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>35fcc366-25ad-4f02-9c50-e82974af3ed6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e5e03e861b098e106962fe60cd4bcbcf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e5e03e861b098e106962fe60cd4bcbcf</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>ade03e861b098e106962fe60cd4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_audit_log</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e5e03e861b098e106962fe60cd4bcbcf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e5e03e861b098e106962fe60cd4bcbcf</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>69e03e861b098e106962fe60cd4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e5e03e861b098e106962fe60cd4bcbcf</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>2de03e861b098e106962fe60cd4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>{{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^ae_request_number={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}}^ae_request_status={{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}^request_no={{flow_variable.record_number}}^handler_name=fd-scripted^notes=Request {{flow_variable.record_number}} has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e5e03e861b098e106962fe60cd4bcbcf^sys_idNOT IN65e03e861b098e106962fe60cd4bcbd0"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>e5e03e861b098e106962fe60cd4bcbcf</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"handler_name":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn gs.getUserName();","savedValue":""}}</script>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>65e03e861b098e106962fe60cd4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e5e03e861b098e106962fe60cd4bcbcf"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>10</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e5e03e861b098e106962fe60cd4bcbd5</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>7cc55c95-5697-432c-9c03-d4d90eeb7c55</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e5e03e861b098e106962fe60cd4bcbd5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e5e03e861b098e106962fe60cd4bcbd5</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>21e03e861b098e106962fe60cd4bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e5e03e861b098e106962fe60cd4bcbd5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e5e03e861b098e106962fe60cd4bcbd5</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>ade03e861b098e106962fe60cd4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e5e03e861b098e106962fe60cd4bcbd5</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>29e03e861b098e106962fe60cd4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e5e03e861b098e106962fe60cd4bcbd5</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>e9e03e861b098e106962fe60cd4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request has been created in Guardian {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_number}} with current status {{9e7e2c42-0fa6-4cac-a4e4-f37abe627466.alert_request_status}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e5e03e861b098e106962fe60cd4bcbd5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e5e03e861b098e106962fe60cd4bcbd5"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
+        <order>7</order>
+        <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ede03e861b098e106962fe60cd4bcbc7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
+        <ui_id>0367e748-3f99-476e-afe5-2787074f5123</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ede03e861b098e106962fe60cd4bcbc7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ede03e861b098e106962fe60cd4bcbc7</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>29e03e861b098e106962fe60cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <value>x_aleen_alertsnowp_mobile_credential</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ede03e861b098e106962fe60cd4bcbc7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>ede03e861b098e106962fe60cd4bcbc7</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>a5e03e861b098e106962fe60cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1698dcbe-7b48-40b7-8dba-008c6ab9ac7b.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>ede03e861b098e106962fe60cd4bcbc7</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>21e03e861b098e106962fe60cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>ede03e861b098e106962fe60cd4bcbc7</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:12</sys_created_on>
+        <sys_id>e1e03e861b098e106962fe60cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>work_notes=Request {{flow_variable.record_number}} has been approved by Manager.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ede03e861b098e106962fe60cd4bcbc7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ede03e861b098e106962fe60cd4bcbc7"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=befe62951b3082106962fe60cd4bcb80"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=befe62951b3082106962fe60cd4bcb80^sys_idNOT IN72fe62951b3082106962fe60cd4bcbc2,76fe62951b3082106962fe60cd4bcbbd,87fe62951b3082106962fe60cd4bcbda,b6fe62951b3082106962fe60cd4bcbd7,bafe62951b3082106962fe60cd4bcbac,fefe62951b3082106962fe60cd4bcbc7"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
@@ -2459,7 +4050,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>7</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
@@ -2468,15 +4059,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>72fe62951b3082106962fe60cd4bcbc2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>5df8c5e8-e463-4279-8ae9-4d37007e4fed</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2490,10 +4081,10 @@
         <sys_created_by>krishan.chopra</sys_created_by>
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_id>32fe62951b3082106962fe60cd4bcbc7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
-        <value>1970-01-01 00:00:30</value>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 10:03:46</sys_updated_on>
+        <value>1970-01-01 00:01:00</value>
         <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2529,7 +4120,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>4</order>
+        <order>5</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -2538,15 +4129,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>76fe62951b3082106962fe60cd4bcbbd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2608,7 +4199,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>14</order>
+        <order>23</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</parent_ui_id>
@@ -2617,15 +4208,15 @@
         <sys_created_on>2024-03-06 21:11:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>87fe62951b3082106962fe60cd4bcbda</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:42</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>5204a953-f2f4-4cbf-b80a-829eb68e9b53</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2648,7 +4239,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>11</order>
+        <order>20</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -2657,15 +4248,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b6fe62951b3082106962fe60cd4bcbd7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>659991ab-f9e4-4296-8be0-527ea6a420f9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2686,7 +4277,7 @@
         <flow display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</flow>
         <flow_variable/>
         <flow_variable/>
-        <flow_variables_assigned>manager</flow_variables_assigned>
+        <flow_variables_assigned>manager,record_number</flow_variables_assigned>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>1</order>
@@ -2698,15 +4289,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bafe62951b3082106962fe60cd4bcbac</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>b041f500-a68e-4a7d-a07d-60e72c77b88e</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2725,6 +4316,18 @@
         <table>var__m_sys_hub_flow_variable_befe62951b3082106962fe60cd4bcb80</table>
         <value>{{Created_1.current.request_for.manager}}</value>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>bafe62951b3082106962fe60cd4bcbac</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:13</sys_created_on>
+        <sys_id>79e03e861b098e106962fe60cd4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:13</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_befe62951b3082106962fe60cd4bcb80</table>
+        <value>{{Created_1.current.number}}</value>
+    </sys_element_mapping>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=bafe62951b3082106962fe60cd4bcbac"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=bafe62951b3082106962fe60cd4bcbac"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
@@ -2741,7 +4344,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>10</order>
+        <order>19</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>cda43da2-1294-44ed-b4f8-0edcb51a77a6</parent_ui_id>
@@ -2750,15 +4353,15 @@
         <sys_created_on>2024-03-06 21:11:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fefe62951b3082106962fe60cd4bcbc7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-06 21:11:41</sys_updated_on>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:32:47</sys_updated_on>
         <ui_id>afeb0c07-c735-4499-a5b3-21c794ed6b8b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2768,7 +4371,92 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=fefe62951b3082106962fe60cd4bcbc7"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=fefe62951b3082106962fe60cd4bcbc7"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=befe62951b3082106962fe60cd4bcb80"/>
-    <sys_hub_flow_variable action="delete_multiple" query="model=befe62951b3082106962fe60cd4bcb80^sys_idNOT IN72fe62951b3082106962fe60cd4bcba6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=befe62951b3082106962fe60cd4bcb80^sys_idNOT IN19e03e861b098e106962fe60cd4bcb81,72fe62951b3082106962fe60cd4bcba6"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a4f143a6-a4bd-4c24-967b-ae348c803e67</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record number</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Alert Mobile Credentials Flow">befe62951b3082106962fe60cd4bcb80</model>
+        <model_id>befe62951b3082106962fe60cd4bcb80</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_befe62951b3082106962fe60cd4bcb80</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-21 15:31:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>19e03e861b098e106962fe60cd4bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 15:31:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>

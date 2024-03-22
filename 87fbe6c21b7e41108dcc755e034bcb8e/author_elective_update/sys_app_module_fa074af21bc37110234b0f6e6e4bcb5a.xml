@@ -65,10 +65,11 @@
         <update_guid_history>76074af2a9c371101423e88c03877f5c:274237793</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Alertsnowp 1702635489038">73478ef21bc37110234b0f6e6e4bcb14</sys_audit_delete>
+        <sys_audit_delete display_value="">73478ef21bc37110234b0f6e6e4bcb14</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-15 10:19:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
         <sys_id>10af1502702a4f4682a799cc0c5c48a9</sys_id>
         <sys_metadata>fa074af21bc37110234b0f6e6e4bcb5a</sys_metadata>
@@ -77,6 +78,7 @@
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_parent/>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
         <sys_update_name>sys_app_module_fa074af21bc37110234b0f6e6e4bcb5a</sys_update_name>

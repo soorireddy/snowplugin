@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-20 13:10:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5e1705391bcd0e106962fe60cd4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_area_owners.x_aleen_alertsnowp.admin</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_security_acl display_value="x_aleen_alertsnowp_area_owners">4ee2df931b2f09108dcc755e034bcb6e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_5e1705391bcd0e106962fe60cd4bcb95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:10:36</sys_updated_on>
+        <sys_user_role display_value="x_aleen_alertsnowp.admin" name="x_aleen_alertsnowp.admin">8f1c26c21b7e41108dcc755e034bcb38</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</application>
+        <file_path/>
+        <instance_id>e930a3a4db4f5780cbf6d5b0cf9619fd</instance_id>
+        <instance_name>ven02573</instance_name>
+        <name>sys_security_acl_role_5e1705391bcd0e106962fe60cd4bcb95</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-03-20 13:10:36</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>5e1705391bcd0e106962fe60cd4bcb95</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_aleen_alertsnowp_area_owners.x_aleen_alertsnowp.admin</sys_name><sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope><sys_security_acl display_value="x_aleen_alertsnowp_area_owners">4ee2df931b2f09108dcc755e034bcb6e</sys_security_acl><sys_update_name>sys_security_acl_role_5e1705391bcd0e106962fe60cd4bcb95</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-03-20 13:10:36</sys_updated_on><sys_user_role display_value="x_aleen_alertsnowp.admin" name="x_aleen_alertsnowp.admin">8f1c26c21b7e41108dcc755e034bcb38</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>42946615</payload_hash>
+        <record_name>x_aleen_alertsnowp_area_owners.x_aleen_alertsnowp.admin</record_name>
+        <reverted_from/>
+        <source>b11aef2d1b090e106962fe60cd4bcb8e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-20 13:10:36</sys_created_on>
+        <sys_id>5c2789391bcd0e106962fe60cd4bcbb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e5bfc2b9b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:10:36</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>502789395acd0e105ca7495c1196f6b6</update_guid>
+        <update_guid_history>502789395acd0e105ca7495c1196f6b6:42946615</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2024-03-20 06:34:36">44ac8dfd1bcd0e106962fe60cd4bcb5c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-20 13:34:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>4ae34ce1d3f345e1979d62e96d472f01</sys_id>
+        <sys_metadata>5e1705391bcd0e106962fe60cd4bcb95</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_area_owners.x_aleen_alertsnowp.admin</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_scope_delete display_value="">c2c547ae274b43509b01861c3b891a40</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_5e1705391bcd0e106962fe60cd4bcb95</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_5e1705391bcd0e106962fe60cd4bcb95">5c2789391bcd0e106962fe60cd4bcbb6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:34:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

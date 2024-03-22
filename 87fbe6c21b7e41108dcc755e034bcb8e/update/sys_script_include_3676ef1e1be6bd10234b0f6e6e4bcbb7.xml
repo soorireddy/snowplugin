@@ -11,40 +11,74 @@
 var AlertMetadataScript = Class.create();
 AlertMetadataScript.prototype = {
     initialize: function() {
-        this.jwt_token = accessTokenScriptScript.getToken();
+        this.jwt_token = "..";
+        this.use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
+        gs.info("Metadata Is oauth enabled " + this.use_oauth);
+        if (this.use_oauth === "false") {
+            gs.info("Metadata Oauth Unavailable using jwt");
+            this.jwt_token = accessTokenScriptScript.getToken();
+        }
     },
     syncLocations: function() {
         gs.info('syncLocations  :: Begin');
         try {
+            gs.info('syncLocations  :: BEFORE NULL CHECK' + this.jwt_token + ">>>>>>>>>" + this.use_oauth);
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetLocations', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                r.setRequestHeader('Authorization', this.jwt_token);
+                gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.use_oauth);
+                if (this.use_oauth === "true") {
+                    gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.jwt_token);
+                    new OauthHelper().validateToken("GetLocations");
+                    r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
+                } else {
+                    gs.info(" this.jwt_token ----> " + this.jwt_token);
+                    r.setRequestHeader('Authorization', this.jwt_token);
+                }
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    // var gr = new GlideRecordSecure("x_aleen_alertsnowp_locations");
-                    // gr.query();
-                    // gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                        var locationImportSet = new GlideRecord('sys_import_set');
+                        locationImportSet.initialize();
+                        //locationImportSet.mode = "asynchronous";
+                        //locationImportSet.state = "loading";
+                        locationImportSet.table_name = "x_aleen_alertsnowp_u_locations_import_set";
+                        locationImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_locations_import_set";
+                        locationImportSet.insert();
                         for (i = 0; i < responseObj.data.length; i++) {
-                            if (responseObj.data[i].type && responseObj.data[i].type != "" && ( responseObj.data[i].type.indexOf("building") != -1 || responseObj.data[i].type.indexOf("lobby") != -1  )) {
-                                var state = (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "";
-                                var country = (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "";
-                                var postal = (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "";
-                                var city = (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "";
-                                var latitude = (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0";
-                                var longitude = (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0";
-								var deleted = (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus  == 3?true:false : false;
-								this.saveLocation(responseObj.data[i].id.toString(), responseObj.data[i].text, responseObj.data[i].type, state, country, postal, city, latitude, longitude, deleted);
+                            if (responseObj.data[i].type && responseObj.data[i].type != "" && (responseObj.data[i].type.indexOf("building") != -1 || responseObj.data[i].type.indexOf("lobby") != -1)) {
+                                var locationImportSetRowGr = new GlideRecordSecure(locationImportSet.table_name);
+                                locationImportSetRowGr.setValue('sys_import_set', locationImportSet.sys_id);
+                                locationImportSetRowGr.setValue('u_state', (responseObj.data[i].stateProvince && responseObj.data[i].stateProvince != "") ? responseObj.data[i].stateProvince : "");
+                                locationImportSetRowGr.setValue('u_country', (responseObj.data[i].countryId && responseObj.data[i].countryId != "") ? responseObj.data[i].countryId : "");
+                                locationImportSetRowGr.setValue('u_postal_code', (responseObj.data[i].postalCode && responseObj.data[i].postalCode != "") ? responseObj.data[i].postalCode : "");
+                                locationImportSetRowGr.setValue('u_city', (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "");
+                                locationImportSetRowGr.setValue('u_latitude', (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0");
+                                locationImportSetRowGr.setValue('u_longitude', (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0");
+                                //locationImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
+                                locationImportSetRowGr.setValue('u_deleted', 'true');
+                                locationImportSetRowGr.setValue('u_id', responseObj.data[i].id.toString());
+                                locationImportSetRowGr.setValue('u_name', responseObj.data[i].text);
+                                locationImportSetRowGr.setValue('u_location_type', responseObj.data[i].type);
+                                locationImportSetRowGr.insert();
                             }
                         }
-                        gs.info("Locations (" + responseObj.data.length + ") data sync is successful");
+                        locationImportSet.state = "loaded";
+                        locationImportSet.load_completed = new GlideDateTime();
+                        locationImportSet.update();
+                        var transformer = new GlideImportSetTransformer();
+                        transformer.transformAllMaps(locationImportSet);
+                        if (transformer.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("Completed Transformation");
+                        }
                     }
                 } else {
-                    gs.info("Locations data sync is unsuccessful  due to API error");
+                    gs.info("Locations data sync is unsuccessful  due to API error & Response code =>" + updatehttpStatus);
                 }
             } else {
                 gs.info("Locations data sync is unsuccessful due to API  server authentication / connectivity issue");
@@ -54,97 +88,115 @@ AlertMetadataScript.prototype = {
             gs.info('syncLocations  error  :: ' + message);
         }
     },
-    saveLocation: function(id, name, location_type, state, country, postal, city, latitude, longitude, deleted) {
-        var count = 0;
-        var gr = new GlideAggregate('x_aleen_alertsnowp_locations');
-        gr.addQuery('id', id);
-        gr.addAggregate('COUNT');
-        gr.query();
-        while (gr.next()) {
-            count = gr.getAggregate('COUNT');
-        }
-        if (count == 0) {
-            var location = new GlideRecordSecure('x_aleen_alertsnowp_locations');
-            location.id = id;
-            location.name = name;
-            location.location_type = location_type;
-            location.state = state;
-            location.country = country;
-            location.postal_code = postal;
-            location.city = city;
-            location.latitude = latitude;
-            location.longitude = longitude;
-			location.deleted = deleted;
-            location.sys_created_on = new GlideDateTime();
-            location.sys_updated_on = new GlideDateTime();
-            location.insert();
-        }
-    },
+
     syncAccessLevels: function() {
         gs.info('syncAccessLevels  :: Begin');
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GETAccessLevels', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                r.setRequestHeader('Authorization', this.jwt_token);
+                if ((this.use_oauth === "true")) {
+                    new OauthHelper().validateToken("GETAccessLevels");
+                    r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
+                } else {
+                    r.setRequestHeader('Authorization', this.jwt_token);
+                }
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    // var gr = new GlideRecordSecure("x_aleen_alertsnowp_access_levels");
-                    // gr.query();
-                    // gr.deleteMultiple();
-                    // var grAL = new GlideRecordSecure("x_aleen_alertsnowp_accesslocations");
-                    // grAL.query();
-                    // grAL.deleteMultiple();
-                    // var grAO = new GlideRecordSecure("x_aleen_alertsnowp_area_owners");
-                    // grAO.query();
-                    // grAO.deleteMultiple();
-                    // var grAR = new GlideRecordSecure("x_aleen_alertsnowp_accessasset");
-                    // grAR.query();
-                    // grAR.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
-                        gs.info(" Total access levels to sync  ==> " + responseObj.data.length);
-                        for (i = 0; i < responseObj.data.length; i++) {
-                            var accessLevelObj = responseObj.data[i];
-                            var accessId = accessLevelObj.id.toString();
-                            var accessName = accessLevelObj.text;
-                            var systemId = accessLevelObj.system.text;
-							var deleted = accessLevelObj.intStatus == 3?true:false;
-                            var sourceId = "";
-                            if (accessLevelObj.sourceId) {
-                                sourceId = accessLevelObj.sourceId;
-                            }
-                            this.saveAccessLevel(accessId, accessName, systemId, accessLevelObj.criticality, sourceId,deleted);
-							
-                            if (accessLevelObj.accessLocations && accessLevelObj.accessLocations.length > 0) {
-                                var accessLocations = accessLevelObj.accessLocations;
-                                for (j = 0; j < accessLocations.length; j++) {
-                                    var accessLocation = accessLocations[j];
-									var accessLocationsDeleted = accessLocations[j].intStatus == 3?true:false;
-                                    this.saveAccessLevelLocation(accessId, accessName, accessLocation.locationId.toString(),accessLocationsDeleted);
-                                }
 
-                                if (accessLevelObj.accessOwners && accessLevelObj.accessOwners.length > 0) {
-                                    var accessOwners = accessLevelObj.accessOwners;
-                                    for (jk = 0; jk < accessOwners.length; jk++) {
-                                        var accessOwner = accessOwners[jk];
-										var accessOwnerDeleted = accessOwners[jk].intStatus == 3?true:false;
-                                        this.saveAccessLevelOwner(accessId, accessName, accessOwner.type, accessOwner.identity.masterIdentityId, accessOwnerDeleted);
-                                    }
+                        var accessImportSet = new GlideRecord('sys_import_set');
+                        accessImportSet.initialize();
+                        accessImportSet.table_name = "x_aleen_alertsnowp_u_acces_levels_import_set";
+                        accessImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_acces_levels_import_set";
+                        accessImportSet.insert();
+
+                        var accessLocationImportSet = new GlideRecord('sys_import_set');
+                        accessLocationImportSet.initialize();
+                        accessLocationImportSet.table_name = "x_aleen_alertsnowp_u_access_locations_import_set";
+                        accessLocationImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_access_locations_import_set";
+                        accessLocationImportSet.insert();
+
+                        var accessOwnerImportSet = new GlideRecord('sys_import_set');
+                        accessOwnerImportSet.initialize();
+                        accessOwnerImportSet.table_name = "x_aleen_alertsnowp_u_access_owners_import_set";
+                        accessOwnerImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_access_owners_import_set";
+                        accessOwnerImportSet.insert();
+
+                        for (i = 0; i < responseObj.data.length; i++) {
+                            var accessImportSetRowGr = new GlideRecordSecure(accessImportSet.table_name);
+                            accessImportSetRowGr.setValue('sys_import_set', accessImportSet.sys_id); //???
+                            accessImportSetRowGr.setValue('u_access_level_id', responseObj.data[i].id.toString());
+                            accessImportSetRowGr.setValue('u_access_level_name', responseObj.data[i].text);
+                            accessImportSetRowGr.setValue('u_system', responseObj.data[i].system.text);
+                            accessImportSetRowGr.setValue('u_criticality', responseObj.data[i].criticality);
+                            accessImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
+                            accessImportSetRowGr.setValue('u_sourceid', (responseObj.data[i].sourceId && responseObj.data[i].sourceId != "") ? responseObj.data[i].sourceId : "");
+                            accessImportSetRowGr.insert();
+
+                            if (responseObj.data[i].accessLocations && responseObj.data[i].accessLocations.length > 0) {
+
+                                var accessLocations = responseObj.data[i].accessLocations;
+                                for (j = 0; j < accessLocations.length; j++) {
+                                    var importSetRowGr2 = new GlideRecordSecure(accessLocationImportSet.table_name);
+                                    importSetRowGr2.setValue('sys_import_set', accessLocationImportSet.sys_id); //???
+                                    importSetRowGr2.setValue('u_access_level_id', responseObj.data[i].id.toString());
+                                    importSetRowGr2.setValue('u_access_level', responseObj.data[i].text);
+                                    importSetRowGr2.setValue('u_access_level_name', responseObj.data[i].text);
+                                    importSetRowGr2.setValue('u_access_location_id', accessLocations[j].locationId.toString());
+                                    importSetRowGr2.setValue('u_location_name', accessLocations[j].location.text);
+                                    importSetRowGr2.setValue('u_deleted', (accessLocations[j].intStatus && accessLocations[j].intStatus != "") ? accessLocations[j].intStatus == 3 ? 'true' : 'false' : 'false');
+                                    importSetRowGr2.insert();
                                 }
-                                if (accessLevelObj.accessAssets && accessLevelObj.accessAssets.length > 0) {
-                                    var accessAssets = accessLevelObj.accessAssets;
-                                    for (kl = 0; kl < accessAssets.length; kl++) {
-                                        var accessAsset = accessAssets[kl];
-										var accessAssetDeleted = accessAssets[kl].intStatus == 3?true:false;
-                                        this.saveAccessLevelReader(accessId, accessName, accessAsset.asset.text, accessAsset.asset.id, accessAssetDeleted);
-                                    }
-                                }
-                            } else {
-                                gs.info("Access level " + accessName + "  has no location so not saving");
                             }
+                            if (responseObj.data[i].accessOwners && responseObj.data[i].accessOwners.length > 0) {
+                                var accessOwners = responseObj.data[i].accessOwners;
+                                for (jk = 0; jk < accessOwners.length; jk++) {
+                                    var importSetRowGr3 = new GlideRecordSecure(accessOwnerImportSet.table_name);
+                                    importSetRowGr3.setValue('sys_import_set', accessOwnerImportSet.sys_id);
+                                    importSetRowGr3.setValue('u_access_level_id', responseObj.data[i].id.toString()); //??
+                                    importSetRowGr3.setValue('u_access_level_name', responseObj.data[i].text); //??
+                                    importSetRowGr3.setValue('u_owner_type', accessOwners[jk].type);
+                                    importSetRowGr3.setValue('u_owner', accessOwners[jk].identity.masterIdentityId);
+                                    importSetRowGr3.setValue('u_deleted', (accessOwners[jk].intStatus && accessOwners[jk].intStatus != "") ? accessOwners[jk].intStatus == 3 ? 'true' : 'false' : 'false');
+                                    importSetRowGr3.insert();
+                                }
+                            }
+                        }
+                        accessImportSet.state = "loaded";
+                        accessImportSet.load_completed = new GlideDateTime();
+                        accessImportSet.update();
+                        var transformer = new GlideImportSetTransformer();
+                        transformer.transformAllMaps(accessImportSet);
+                        if (transformer.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("Completed Transformation1");
+                        }
+
+                        accessLocationImportSet.state = "loaded";
+                        accessLocationImportSet.load_completed = new GlideDateTime();
+                        accessLocationImportSet.update();
+                        var transformer2 = new GlideImportSetTransformer();
+                        transformer2.transformAllMaps(accessLocationImportSet);
+                        if (transformer2.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("Completed Transformation2");
+                        }
+
+                        accessOwnerImportSet.state = "loaded";
+                        accessOwnerImportSet.load_completed = new GlideDateTime();
+                        accessOwnerImportSet.update();
+                        var transformer3 = new GlideImportSetTransformer();
+                        transformer3.transformAllMaps(accessOwnerImportSet);
+                        if (transformer3.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("Completed Transformation3");
                         }
                     }
                 } else {
@@ -158,202 +210,51 @@ AlertMetadataScript.prototype = {
             gs.info('syncAccessLevels   :: ' + message);
         }
     },
-    saveAccessLevel: function(id, name, system, criticality, sourceId, deleted) {
-        var count = 0;
-        var gr = new GlideAggregate('x_aleen_alertsnowp_access_levels');
-        gr.addQuery('access_level_id', id);
-        gr.addAggregate('COUNT');
-        gr.query();
-        while (gr.next()) {
-            count = gr.getAggregate('COUNT');
-        }
-		gs.info('count   :: ' + count);
-        if (count == 0) {
-            var accessLevel = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
-            accessLevel.access_level_id = id;
-            accessLevel.access_level_name = name;
-            accessLevel.sourceid = sourceId;
-            accessLevel.system = system;
-            accessLevel.criticality = criticality;
-            accessLevel.sys_created_on = new GlideDateTime();
-            accessLevel.sys_updated_on = new GlideDateTime();
-            accessLevel.insert();
-        } else {
-			var update = new GlideAggregate('x_aleen_alertsnowp_access_levels');
-			update.addQuery('access_level_id', id);
-			update.query();
-			while (update.next()) {
-				if(deleted){
-					update.deleteRecord();
-				} else {
-					update.access_level_name = name;
-					update.sourceid = sourceId;
-					update.system = system;
-					update.criticality = criticality;
-					update.sys_updated_on = new GlideDateTime();
-					update.update();
-				}
-			}
-		}
-    },
-    saveAccessLevelOwner: function(id, accName, ownertype, masterUserId, deleted) {
-        try {
-            var grUser = new GlideRecordSecure('sys_user');
-            if (grUser.get('user_name', masterUserId)) {
-                var count = 0;
-                var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');
-                gr.addQuery('access_level_id', id);
-                gr.addQuery('owner', grUser.sys_id);
-                gr.addAggregate('COUNT');
-                gr.query();
-                while (gr.next()) {
-                    count = gr.getAggregate('COUNT');
-                }
-                if (count == 0) {
-                    var accessLevelAreaOwner = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');
-                    accessLevelAreaOwner.access_level_id = id;
-                    accessLevelAreaOwner.access_level_name = accName;
-                    accessLevelAreaOwner.owner = grUser.sys_id;
-                    accessLevelAreaOwner.owner_type = ownertype;
-                    accessLevelAreaOwner.sys_created_on = new GlideDateTime();
-                    accessLevelAreaOwner.sys_updated_on = new GlideDateTime();
-                    accessLevelAreaOwner.insert();
-                } else {
-					var update = new GlideAggregate('x_aleen_alertsnowp_area_owners');
-					update.addQuery('access_level_id', id);
-					update.addQuery('owner', grUser.sys_id);
-					update.query();
-					while (update.next()) {
-						if(deleted){
-							update.deleteRecord();
-						} else {
-							update.access_level_name = accName;
-							update.owner = grUser.sys_id;
-							update.owner_type = ownertype;
-							update.sys_updated_on = new GlideDateTime();
-							update.update();
-						}
-					}
-				}
-            }
-        } catch (ex) {
-            gs.info('saveAccessLevelOwners Error   :: ' + ex.message);
-        }
-    },
-    saveAccessLevelLocation: function(id, name, location_id, deleted) {
-        try {
-            var grLocation = new GlideRecordSecure('x_aleen_alertsnowp_locations');
-            if (grLocation.get('id', location_id)) {
-                var grAccessLevelRecord = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');
-                if (grAccessLevelRecord.get('access_level_id', id)) {
-                    var count = 0;
-                    var gr = new GlideAggregate('x_aleen_alertsnowp_accesslocations');
-                    gr.addQuery('access_level', grAccessLevelRecord.sys_id);
-                    gr.addQuery('location', grLocation.sys_id);
-                    gr.addAggregate('COUNT');
-                    gr.query();
-                    while (gr.next()) {
-                        count = gr.getAggregate('COUNT');
-                    }
-                    if (count == 0) {
-                        var accessLevelLocation = new GlideRecordSecure('x_aleen_alertsnowp_accesslocations');
-                        accessLevelLocation.access_level_id = id;
-                        accessLevelLocation.access_level_name = name;
-                        accessLevelLocation.access_level = grAccessLevelRecord.sys_id;
-                        accessLevelLocation.location = grLocation.sys_id;
-                        accessLevelLocation.location_name = grLocation.name;
-                        accessLevelLocation.sys_created_on = new GlideDateTime();
-                        accessLevelLocation.sys_updated_on = new GlideDateTime();
-                        accessLevelLocation.insert();
-                    } else {
-						var update = new GlideAggregate('x_aleen_alertsnowp_accesslocations');
-						update.addQuery('access_level', grAccessLevelRecord.sys_id);
-						update.addQuery('location', grLocation.sys_id);
-						update.query();
-						while (update.next()) {
-							if(deleted){
-								update.deleteRecord();
-							} else {
-								update.access_level_name = name;
-								update.access_level = grAccessLevelRecord.sys_id;
-								update.location = grLocation.sys_id;
-								update.location_name = grLocation.name;
-								update.sys_updated_on = new GlideDateTime();
-								update.update();
-							}
-						}
-					}
-                }
-            }
-        } catch (ex) {
-            gs.info('saveAccessLevelLocations Error   :: ' + ex.message);
-        }
-    },
-    saveAccessLevelReader: function(id, accName, assetName, assetId, deleted) {
-        try {
-            var grReader = new GlideRecordSecure('x_aleen_alertsnowp_readers');
-            if (grReader.get('id', assetId)) {
-                var count = 0;
-                var grAsset = new GlideAggregate('x_aleen_alertsnowp_accessasset');
-                grAsset.addQuery('access_level_id', id);
-                grAsset.addQuery('reader', grReader.sys_id);
-                grAsset.addAggregate('COUNT');
-                grAsset.query();
-                while (grAsset.next()) {
-                    count = grAsset.getAggregate('COUNT');
-                }
-                if (count == 0) {
-                    var accessLevelAsset = new GlideRecordSecure('x_aleen_alertsnowp_accessasset');
-                    accessLevelAsset.access_level_id = id;
-                    accessLevelAsset.access_level_name = accName;
-                    accessLevelAsset.reader = grReader.sys_id;
-                    accessLevelAsset.reader_name = assetName;
-                    accessLevelAsset.sys_created_on = new GlideDateTime();
-                    accessLevelAsset.sys_updated_on = new GlideDateTime();
-                    accessLevelAsset.insert();
-                } else {
-					var update = new GlideAggregate('x_aleen_alertsnowp_accesslocations');
-					update.addQuery('access_level', grAccessLevelRecord.sys_id);
-					update.addQuery('location', grLocation.sys_id);
-					update.query();
-					while (update.next()) {
-						if(deleted){
-							update.deleteRecord();
-						} else {
-							update.access_level_name = accName;
-							update.reader = grReader.sys_id;
-							update.reader_name = assetName;
-							update.sys_updated_on = new GlideDateTime();
-							update.update();
-						}
-					}
-				}
-            }
-        } catch (ex) {
-            gs.info('saveAccessLevelReaders   :: ' + ex.message);
-        }
-    },
     syncBadgeTemplates: function() {
         gs.info('syncBadgeTemplates  :: Begin');
         try {
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetBadgeTemplates', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                r.setRequestHeader('Authorization', this.jwt_token);
+                if ((this.use_oauth === "true")) {
+                    new OauthHelper().validateToken("GetBadgeTemplates");
+                    r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
+                } else {
+                    r.setRequestHeader('Authorization', this.jwt_token);
+                }
                 var updateresponse = r.executeAsync();
                 var updateresponseBody = updateresponse.getBody();
                 var updatehttpStatus = updateresponse.getStatusCode();
                 if (updatehttpStatus == 200) {
-                    var gr = new GlideRecordSecure("x_aleen_alertsnowp_badgetemplates");
-                    gr.query();
-                   // gr.deleteMultiple();
                     var responseObj = JSON.parse(updateresponseBody);
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
+                        var templateImportSet = new GlideRecord('sys_import_set');
+                        templateImportSet.initialize();
+                        templateImportSet.table_name = "x_aleen_alertsnowp_u_badge_templates_import_set";
+                        templateImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_badge_templates_import_set";
+                        templateImportSet.insert();
                         for (i = 0; i < responseObj.data.length; i++) {
+                            var templateImportSetRowGr = new GlideRecordSecure(templateImportSet.table_name);
                             var template = responseObj.data[i];
-                            this.saveTemplate(template);
+                            templateImportSetRowGr.setValue('sys_import_set', templateImportSet.sys_id);
+                            templateImportSetRowGr.setValue('u_id', template.id);
+                            templateImportSetRowGr.setValue('u_extid', template.extId);
+                            templateImportSetRowGr.setValue('u_text', template.text);
+                            templateImportSetRowGr.setValue('u_description', template.description);
+                            templateImportSetRowGr.setValue('u_frontside_badge_html', template.frontSideBadgeHTML);
+                            templateImportSetRowGr.setValue('u_backside_badge_html', template.backSideBadgeHTML);
+                            templateImportSetRowGr.insert();
                         }
-                        gs.info("BadgeTemplates(" + responseObj.data.length + ")  sync is successful");
+                        templateImportSet.state = "loaded";
+                        templateImportSet.load_completed = new GlideDateTime();
+                        templateImportSet.update();
+                        var transformer = new GlideImportSetTransformer();
+                        transformer.transformAllMaps(templateImportSet);
+                        if (transformer.isError()) {
+                            gs.info('Error executing the transform');
+                        } else {
+                            gs.info("BadgeTemplates(" + responseObj.data.length + ")  sync is successful");
+                        }
                     }
                 } else {
                     gs.info("BadgeTemplates data sync is unsuccessful  due to API error  :: syncBadgeTemplates ");
@@ -367,46 +268,7 @@ AlertMetadataScript.prototype = {
             gs.info('syncTemplates   :: ' + message);
         }
     },
-    saveTemplate: function(template) {
-        var count = 0;
-        var gr = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
-        gr.addQuery('id', template.id);
-        gr.addAggregate('COUNT');
-        gr.query();
-        while (gr.next()) {
-            count = gr.getAggregate('COUNT');
-        }
-        if (count == 0) {
-            var recordToInsert = new GlideRecordSecure('x_aleen_alertsnowp_badgetemplates');
-            recordToInsert.id = template.id;
-            recordToInsert.extid = template.extId;
-            recordToInsert.text = template.text;
-            recordToInsert.description = template.description;
-            recordToInsert.frontsidebadgehtml = template.frontSideBadgeHTML;
-            recordToInsert.backsidebadgehtml = template.backSideBadgeHTML;
-            recordToInsert.sys_created_on = new GlideDateTime();
-            recordToInsert.sys_updated_on = new GlideDateTime();
-            recordToInsert.insert();
-        } else {
-			var update = new GlideAggregate('x_aleen_alertsnowp_badgetemplates');
-			update.addQuery('id', template.id);
-			update.query();
-			var deleted = template.intStatus == 3?true:false;
-			while (update.next()) {
-				if(deleted){
-					update.deleteRecord();
-				} else {
-					update.extid = template.extId;
-					update.text = template.text;
-					update.description = template.description;
-					update.frontsidebadgehtml = template.frontSideBadgeHTML;
-					update.backsidebadgehtml = template.backSideBadgeHTML;
-					update.sys_updated_on = new GlideDateTime();
-					update.update();
-				}
-			}
-		}
-    },
+
     type: 'AlertMetadataScript'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -414,14 +276,14 @@ AlertMetadataScript.prototype = {
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
-        <sys_updated_by>krishan.chopra</sys_updated_by>
-        <sys_updated_on>2024-03-07 04:23:20</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-22 06:41:38</sys_updated_on>
     </sys_script_include>
 </record_update>
