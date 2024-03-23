@@ -16,6 +16,7 @@
         <sys_class_name>request_filter</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-21 07:15:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>da0735cb1ba635508dcc755e034bcbeb</sys_id>
@@ -23,6 +24,7 @@
         <sys_name>Activate Badge Request</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>request_filter_da0735cb1ba635508dcc755e034bcbeb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
@@ -32,5 +34,4 @@
         <title>Activate Badge Request</title>
         <user/>
     </request_filter>
-    <sys_translated_text action="delete_multiple" query="documentkey=da0735cb1ba635508dcc755e034bcbeb"/>
 </record_update>

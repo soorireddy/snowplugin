@@ -10,7 +10,7 @@
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
-        <delivery_plan display_value="">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description><![CDATA[<p>Service Overview :</p>
@@ -75,11 +75,13 @@
         <sys_class_name>sc_cat_item_producer</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-14 10:25:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>23eee4261bbe81108dcc755e034bcbdd</sys_id>
         <sys_mod_count>31</sys_mod_count>
         <sys_name>Reset Pin</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_23eee4261bbe81108dcc755e034bcbdd</sys_update_name>
         <sys_updated_by>system</sys_updated_by>

@@ -73,6 +73,7 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-07-22 09:03:03</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>67615a1e1b7451508dcc755e034bcb4a</sys_id>
@@ -80,6 +81,7 @@
             <sys_name>x_aleen_alertsnowp_building_access_task</sys_name>
             <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
             <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
             <sys_update_name>sys_ui_list_x_aleen_alertsnowp_building_access_83101d8e1bf411508dcc755e034bcbe4_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>

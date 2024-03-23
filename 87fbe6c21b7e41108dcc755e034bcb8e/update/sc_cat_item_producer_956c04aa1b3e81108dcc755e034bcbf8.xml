@@ -7,10 +7,10 @@
         <billable>false</billable>
         <can_cancel>false</can_cancel>
         <category display_value="Workplace Access and Security">c92de6061b7e41108dcc755e034bcb19</category>
-        <checked_out>true</checked_out>
+        <checked_out>false</checked_out>
         <cost>0</cost>
         <custom_cart/>
-        <delivery_plan display_value="">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description><![CDATA[<p>Service Overview :</p>
@@ -32,7 +32,7 @@
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
         <name>Request Building Access</name>
-        <no_attachment_v2>false</no_attachment_v2>
+        <no_attachment_v2>true</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
         <no_delivery_time_v2>false</no_delivery_time_v2>
@@ -75,15 +75,17 @@
         <sys_class_name>sc_cat_item_producer</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-14 07:54:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>956c04aa1b3e81108dcc755e034bcbf8</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Request Building Access</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sc_cat_item_producer_956c04aa1b3e81108dcc755e034bcbf8</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-11-19 11:43:51</sys_updated_on>
+        <sys_updated_on>2024-03-23 15:36:32</sys_updated_on>
         <table_name>x_aleen_alertsnowp_building_access</table_name>
         <taxonomy_topic/>
         <template/>
@@ -91,7 +93,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>2</version>
+        <version>25</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

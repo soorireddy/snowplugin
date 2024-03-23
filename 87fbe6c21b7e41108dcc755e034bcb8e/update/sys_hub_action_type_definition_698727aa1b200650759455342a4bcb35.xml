@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>action_create_access_level_task_for_area_owner</internal_name>
+        <label_cache>[{"name":"{{action.record_number}}","label":"action➛Record Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.table}}","label":"action➛table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master_snapshot>9d586fea1b200650759455342a4bcb4c</master_snapshot>
+        <name>Action Create Access level Task for Area owner</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:15:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>698727aa1b200650759455342a4bcb35</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>Action Create Access level Task for Area owner</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_698727aa1b200650759455342a4bcb35</sys_update_name>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:48</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=698727aa1b200650759455342a4bcb35"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>698727aa1b200650759455342a4bcb35</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_id>34586fea1b200650759455342a4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">74586fea1b200650759455342a4bcb18</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>698727aa1b200650759455342a4bcb35</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_id>f4586fea1b200650759455342a4bcb20</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 04:58:58</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">b8586fea1b200650759455342a4bcb13</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35^id=698727aa1b200650759455342a4bcb35"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=698727aa1b200650759455342a4bcb35^sys_idNOT INd448ebea1b200650759455342a4bcb60"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</action>
+        <cid>7ecc6587-929b-47f0-ab51-c2dfed73fdf4</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d448ebea1b200650759455342a4bcb60</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:58:33</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d448ebea1b200650759455342a4bcb60"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d448ebea1b200650759455342a4bcb60</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_id>9448ebea1b200650759455342a4bcb7e</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:58:33</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+var buildingGr = new GlideRecordSecure(inputs.table);&#13;
+buildingGr.initialize();&#13;
+buildingGr.get("number",inputs.record_number);&#13;
+buildingGr.query();&#13;
+gs.info("Action BRT "+inputs.record_number);&#13;
+gs.info("Building Access Levels in request "+buildingGr.access_levels);&#13;
+var accessLevels = buildingGr.access_levels;&#13;
+var accessLevelsList = accessLevels.split(',');&#13;
+var singleOwnerRecords = [];&#13;
+var lowAccessLevelRecords = [];&#13;
+var needApproval = false;&#13;
+gs.info("Action BRT length of array "+accessLevelsList.length);&#13;
+for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
+	gs.info("Action BRT list length of AL "+accessLevelsList.length);&#13;
+    needApproval = false;&#13;
+	gs.info("Action BRT Ith index accessLevel "+accessLevelsList[i]);&#13;
+	var accessLevelLocationGr = new GlideRecordSecure('x_aleen_alertsnowp_accesslocations');&#13;
+	accessLevelLocationGr.initialize();&#13;
+	gs.info("Action BRT Getting Access location from access level ");&#13;
+	//if (accessLevelLocationGr.get("access_level",accessLevelsList[i])) { // SNOW-81&#13;
+    if (accessLevelLocationGr.get(accessLevelsList[i])) { &#13;
+	gs.info("Action BRT got accesslevel Location record  of " + accessLevelLocationGr.getDisplayValue("access_level_name") +" "+accessLevelLocationGr.getDisplayValue("location"));&#13;
+    var accessLevelGr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');&#13;
+	accessLevelGr.initialize();&#13;
+	gs.info("Action BRT Searching for access -&gt;"+accessLevelLocationGr.access_level);&#13;
+    if (accessLevelGr.get(accessLevelLocationGr.access_level)) {&#13;
+		gs.info("Action BRT:: access level from access location "+accessLevelGr.getValue("access_level_name")+" "+accessLevelGr.getDisplayValue("access_level_name"));&#13;
+        var count = 0;&#13;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');&#13;
+        gr.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
+        gr.addAggregate('COUNT');&#13;
+        gr.query();&#13;
+        while (gr.next()) {&#13;
+            count = gr.getAggregate('COUNT');&#13;
+        }&#13;
+		gs.info("Action BRT Count of area owner "+count);&#13;
+        if (count == 0) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has no Area owners");&#13;
+			gs.info("Action BRT "+accessLevelGr.getDisplayValue("access_level_name")+"has no owner");&#13;
+            if (accessLevelGr.criticality == "LOW") {&#13;
+				gs.info("We have a low criticality access level with no owner");&#13;
+                if (lowAccessLevelRecords.length &gt; 0) {&#13;
+                    lowAccessLevelRecords[0]['access_level_id'] = lowAccessLevelRecords[0]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    lowAccessLevelRecords[0]['access_level_name'] = lowAccessLevelRecords[0]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					lowAccessLevelRecords[0]['sourceid'] = lowAccessLevelRecords[0]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var lmap = {};&#13;
+                    lmap['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    lmap['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					lmap['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(lmap));&#13;
+                    lowAccessLevelRecords.push(lmap);&#13;
+                }&#13;
+            } else {&#13;
+				gs.info("Action BRT We have a High Criticality with no owner setting to default approver");&#13;
+                needApproval = true;&#13;
+                foundIndex = -1;&#13;
+                for (var icv = 0; icv &lt; singleOwnerRecords.length; icv++) {&#13;
+                    if (singleOwnerRecords[icv]['approver'] === "DEFAULT") {&#13;
+                        foundIndex = icv;&#13;
+                        break;&#13;
+                    }&#13;
+                }&#13;
+                if (foundIndex &gt; -1) {&#13;
+                    singleOwnerRecords[foundIndex]['access_level_id'] = singleOwnerRecords[foundIndex]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    singleOwnerRecords[foundIndex]['access_level_name'] = singleOwnerRecords[foundIndex]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					singleOwnerRecords[foundIndex]['sourceid'] = singleOwnerRecords[foundIndex]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var mapa = {};&#13;
+                    mapa['approver'] = "DEFAULT";&#13;
+                    mapa['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    mapa['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					mapa['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(mapa));&#13;
+                    singleOwnerRecords.push(mapa);&#13;
+                }&#13;
+            }&#13;
+        } else {&#13;
+            needApproval = true;&#13;
+        }&#13;
+        if (count == 1) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has one Area owner");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has one area owner");&#13;
+            var grAO = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');&#13;
+            grAO.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
+            grAO.query();&#13;
+            while (grAO.next()) {&#13;
+                var refSysUser = grAO.owner.getRefRecord();&#13;
+                var approverID = refSysUser.sys_id;&#13;
+				gs.info("Action BRT Setting Approver id "+approverID);&#13;
+                indexFound = -1;&#13;
+                for (var icx = 0; icx &lt; singleOwnerRecords.length; icx++) {&#13;
+                    var mmpa = singleOwnerRecords[icx];&#13;
+                    if (mmpa['approver'] == approverID) {&#13;
+                        indexFound = icx;&#13;
+                        break;&#13;
+                    }&#13;
+                }&#13;
+                if (indexFound &gt; -1) {&#13;
+                    singleOwnerRecords[indexFound]['access_level_id'] = singleOwnerRecords[indexFound]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    singleOwnerRecords[indexFound]['access_level_name'] = singleOwnerRecords[indexFound]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					singleOwnerRecords[indexFound]['sourceid'] = singleOwnerRecords[indexFound]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var map = {};&#13;
+                    map['approver'] = approverID;&#13;
+                    map['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    map['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					map['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT map to be pushed "+JSON.stringify(map));&#13;
+                    singleOwnerRecords.push(map);&#13;
+                }&#13;
+            }&#13;
+        }&#13;
+        if (count &gt; 1) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has multiple Area owners");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has multiple area owner");&#13;
+			gs.info("Action BRT Record inserted in Building Access Task for multiple owners");&#13;
+            var buildingAccessTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+            buildingAccessTask.access_level_id = accessLevelGr.access_level_id;&#13;
+            buildingAccessTask.access_level_name = accessLevelGr.access_level_name;&#13;
+			buildingAccessTask.sourceid = accessLevelGr.access_level_id;&#13;
+            buildingAccessTask.needapproval = needApproval;&#13;
+            buildingAccessTask.parent_number = buildingGr.number;&#13;
+            buildingAccessTask.access_end_date = buildingGr.access_end_date;&#13;
+            buildingAccessTask.access_start_date = buildingGr.access_start_date;&#13;
+            buildingAccessTask.request_for = buildingGr.request_for;&#13;
+            buildingAccessTask.notes = buildingGr.notes;&#13;
+            buildingAccessTask.reason = buildingGr.reason;&#13;
+            buildingAccessTask.sys_created_on = new GlideDateTime();&#13;
+            buildingAccessTask.sys_updated_on = new GlideDateTime();&#13;
+            buildingAccessTask.insert();&#13;
+        }&#13;
+    }&#13;
+	}else{&#13;
+		gs.info("Action BRT NO ACCESS FOUND IN Access LOCATION table for access sys id"+accessLevelsList[i]);&#13;
+	}&#13;
+}&#13;
+gs.info("Action BRT singleOwnerRecords.length "+singleOwnerRecords.length);&#13;
+for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
+	gs.info("Action BRT Inserting Single area owner access ");&#13;
+    var mapva = singleOwnerRecords[icc];&#13;
+    var buildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+    buildingAccTask.access_level_id = mapva['access_level_id'];&#13;
+	gs.info("Action BRT Single Owner access id "+mapva['access_level_id']);&#13;
+    buildingAccTask.access_level_name = mapva['access_level_name'];&#13;
+	gs.info("Action BRT Single area owner Record source id "+mapva['sourceid']);&#13;
+	buildingAccTask.sourceid = mapva['sourceid'];&#13;
+    buildingAccTask.needapproval = true;&#13;
+    buildingAccTask.parent_number = buildingGr.number;&#13;
+    buildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
+    buildingAccTask.access_start_date = buildingGr.access_start_date;&#13;
+    buildingAccTask.request_for = buildingGr.request_for;&#13;
+    buildingAccTask.notes = buildingGr.notes;&#13;
+    buildingAccTask.reason = buildingGr.reason;&#13;
+    buildingAccTask.sys_created_on = new GlideDateTime();&#13;
+    buildingAccTask.sys_updated_on = new GlideDateTime();&#13;
+    buildingAccTask.insert();&#13;
+    singleOwnerRecords.splice(icc, 1);&#13;
+    --icc;&#13;
+}&#13;
+gs.info("Action BRT low access level record length "+lowAccessLevelRecords.length);&#13;
+for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
+	gs.info("Action BRT lowAcces level Record inserting");&#13;
+    var mapval = lowAccessLevelRecords[iccl];&#13;
+    var lowbuildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+    lowbuildingAccTask.access_level_id = mapval['access_level_id'];&#13;
+	gs.info("Action BRT low access access id "+mapval['access_level_id']);&#13;
+    lowbuildingAccTask.access_level_name = mapval['access_level_name'];&#13;
+	lowbuildingAccTask.sourceid = mapval['sourceid'];&#13;
+	gs.info("Action BRT low level source id "+mapval['sourceid']);&#13;
+    lowbuildingAccTask.needapproval = false;&#13;
+    lowbuildingAccTask.parent_number = buildingGr.number;&#13;
+    lowbuildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
+    lowbuildingAccTask.access_start_date = buildingGr.access_start_date;&#13;
+    lowbuildingAccTask.request_for = buildingGr.request_for;&#13;
+    lowbuildingAccTask.notes = buildingGr.notes;&#13;
+    lowbuildingAccTask.reason = buildingGr.reason;&#13;
+    lowbuildingAccTask.sys_created_on = new GlideDateTime();&#13;
+    lowbuildingAccTask.sys_updated_on = new GlideDateTime();&#13;
+    lowbuildingAccTask.insert();&#13;
+    lowAccessLevelRecords.splice(iccl, 1);&#13;
+    --iccl;&#13;
+}&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d448ebea1b200650759455342a4bcb60</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_id>d048ebea1b200650759455342a4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d448ebea1b200650759455342a4bcb60"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>d448ebea1b200650759455342a4bcb60</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_id>1448ebea1b200650759455342a4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_d448ebea1b200650759455342a4bcb60</table>
+        <value>{{action.record_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>d448ebea1b200650759455342a4bcb60</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-12 09:58:51</sys_created_on>
+        <sys_id>ad8e0f8f1bf04210759455342a4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 09:58:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>d448ebea1b200650759455342a4bcb60</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_id>5048ebea1b200650759455342a4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_d448ebea1b200650759455342a4bcb60</table>
+        <value>{{action.table}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=d448ebea1b200650759455342a4bcb60"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=d448ebea1b200650759455342a4bcb60^sys_idNOT IN5048ebea1b200650759455342a4bcb68,9048ebea1b200650759455342a4bcb6b"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">d448ebea1b200650759455342a4bcb60</model>
+        <model_id>d448ebea1b200650759455342a4bcb60</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_d448ebea1b200650759455342a4bcb60</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5048ebea1b200650759455342a4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">d448ebea1b200650759455342a4bcb60</model>
+        <model_id>d448ebea1b200650759455342a4bcb60</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_d448ebea1b200650759455342a4bcb60</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9048ebea1b200650759455342a4bcb6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=d448ebea1b200650759455342a4bcb60"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d448ebea1b200650759455342a4bcb60"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_d448ebea1b200650759455342a4bcb60"/>
+    <sys_hub_action_input action="delete_multiple" query="model=698727aa1b200650759455342a4bcb35^sys_idNOT IN9c48abea1b200650759455342a4bcbde,dc48abea1b200650759455342a4bcbd9"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0e579b55-9984-40ff-90d3-13c93547da7e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>table</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</model>
+        <model_id>698727aa1b200650759455342a4bcb35</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9c48abea1b200650759455342a4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9c48abea1b200650759455342a4bcbde"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=66dbc5a9-330c-422b-b809-e42af2083fca</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Number</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</model>
+        <model_id>698727aa1b200650759455342a4bcb35</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dc48abea1b200650759455342a4bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dc48abea1b200650759455342a4bcbd9"/>
+    <sys_hub_action_output action="delete_multiple" query="model=698727aa1b200650759455342a4bcb35^sys_idNOT IN74586fea1b200650759455342a4bcb18,b8586fea1b200650759455342a4bcb13"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1db63402-fe88-4f00-9b3e-e66b38af5b6a,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</model>
+        <model_id>698727aa1b200650759455342a4bcb35</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>74586fea1b200650759455342a4bcb18</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=74586fea1b200650759455342a4bcb18"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=74586fea1b200650759455342a4bcb18"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=3ba4b41e-4e99-4dd5-a448-6b1d7fdc9e12</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</model>
+        <model_id>698727aa1b200650759455342a4bcb35</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b8586fea1b200650759455342a4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b8586fea1b200650759455342a4bcb13"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b8586fea1b200650759455342a4bcb13"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=698727aa1b200650759455342a4bcb35"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=698727aa1b200650759455342a4bcb35^sys_idNOT IN1448ebea1b200650759455342a4bcb83"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:38</sys_created_on>
+        <sys_id>1448ebea1b200650759455342a4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:38</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=1448ebea1b200650759455342a4bcb83"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35^sys_idNOT IN1c48abea1b200650759455342a4bcbe1,dc48abea1b200650759455342a4bcbdd"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table</element>
+        <help/>
+        <hint/>
+        <label>table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1c48abea1b200650759455342a4bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>record_number</element>
+        <help/>
+        <hint/>
+        <label>Record Number</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dc48abea1b200650759455342a4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_698727aa1b200650759455342a4bcb35"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35^sys_idNOT IN78586fea1b200650759455342a4bcb1d,b4586fea1b200650759455342a4bcb17"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>78586fea1b200650759455342a4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b4586fea1b200650759455342a4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_698727aa1b200650759455342a4bcb35"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=698727aa1b200650759455342a4bcb35^sys_idNOT IN75586fea1b200650759455342a4bcbda"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"75586fea1b200650759455342a4bcbda","name":"plan","plan_signature":null}}</plan>
+        <snapshot>6e72eb8e1bc98e106962fe60cd4bcb6b</snapshot>
+        <sys_class_name>sys_hub_action_plan</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:19:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>75586fea1b200650759455342a4bcbda</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:49</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>action_create_access_level_task_for_area_owner</internal_name>
+        <label_cache>[{"name":"{{action.record_number}}","label":"action➛Record Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.table}}","label":"action➛table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Action Create Access level Task for Area owner</name>
+        <natlang/>
+        <outputs/>
+        <parent_action display_value="Action Create Access level Task for Area owner">698727aa1b200650759455342a4bcb35</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>9d586fea1b200650759455342a4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:57</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=9d586fea1b200650759455342a4bcb4c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9d586fea1b200650759455342a4bcb4c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>51586fea1b200650759455342a4bcb9c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 04:59:04</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">55586fea1b200650759455342a4bcb90</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9d586fea1b200650759455342a4bcb4c</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>9d586fea1b200650759455342a4bcb9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">59586fea1b200650759455342a4bcb94</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c^id=9d586fea1b200650759455342a4bcb4c"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=9d586fea1b200650759455342a4bcb4c^sys_idNOT IN15586fea1b200650759455342a4bcb66"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</action>
+        <cid>7ecc6587-929b-47f0-ab51-c2dfed73fdf4</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>15586fea1b200650759455342a4bcb66</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:48</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=15586fea1b200650759455342a4bcb66"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>15586fea1b200650759455342a4bcb66</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>91586fea1b200650759455342a4bcb8d</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:48</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+var buildingGr = new GlideRecordSecure(inputs.table);&#13;
+buildingGr.initialize();&#13;
+buildingGr.get("number",inputs.record_number);&#13;
+buildingGr.query();&#13;
+gs.info("Action BRT "+inputs.record_number);&#13;
+gs.info("Building Access Levels in request "+buildingGr.access_levels);&#13;
+var accessLevels = buildingGr.access_levels;&#13;
+var accessLevelsList = accessLevels.split(',');&#13;
+var singleOwnerRecords = [];&#13;
+var lowAccessLevelRecords = [];&#13;
+var needApproval = false;&#13;
+gs.info("Action BRT length of array "+accessLevelsList.length);&#13;
+for (var i = 0; i &lt; accessLevelsList.length; i++) {&#13;
+	gs.info("Action BRT list length of AL "+accessLevelsList.length);&#13;
+    needApproval = false;&#13;
+	gs.info("Action BRT Ith index accessLevel "+accessLevelsList[i]);&#13;
+	var accessLevelLocationGr = new GlideRecordSecure('x_aleen_alertsnowp_accesslocations');&#13;
+	accessLevelLocationGr.initialize();&#13;
+	gs.info("Action BRT Getting Access location from access level ");&#13;
+	//if (accessLevelLocationGr.get("access_level",accessLevelsList[i])) { // SNOW-81&#13;
+    if (accessLevelLocationGr.get(accessLevelsList[i])) { &#13;
+	gs.info("Action BRT got accesslevel Location record  of " + accessLevelLocationGr.getDisplayValue("access_level_name") +" "+accessLevelLocationGr.getDisplayValue("location"));&#13;
+    var accessLevelGr = new GlideRecordSecure('x_aleen_alertsnowp_access_levels');&#13;
+	accessLevelGr.initialize();&#13;
+	gs.info("Action BRT Searching for access -&gt;"+accessLevelLocationGr.access_level);&#13;
+    if (accessLevelGr.get(accessLevelLocationGr.access_level)) {&#13;
+		gs.info("Action BRT:: access level from access location "+accessLevelGr.getValue("access_level_name")+" "+accessLevelGr.getDisplayValue("access_level_name"));&#13;
+        var count = 0;&#13;
+        var gr = new GlideAggregate('x_aleen_alertsnowp_area_owners');&#13;
+        gr.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
+        gr.addAggregate('COUNT');&#13;
+        gr.query();&#13;
+        while (gr.next()) {&#13;
+            count = gr.getAggregate('COUNT');&#13;
+        }&#13;
+		gs.info("Action BRT Count of area owner "+count);&#13;
+        if (count == 0) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has no Area owners");&#13;
+			gs.info("Action BRT "+accessLevelGr.getDisplayValue("access_level_name")+"has no owner");&#13;
+            if (accessLevelGr.criticality == "LOW") {&#13;
+				gs.info("We have a low criticality access level with no owner");&#13;
+                if (lowAccessLevelRecords.length &gt; 0) {&#13;
+                    lowAccessLevelRecords[0]['access_level_id'] = lowAccessLevelRecords[0]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    lowAccessLevelRecords[0]['access_level_name'] = lowAccessLevelRecords[0]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					lowAccessLevelRecords[0]['sourceid'] = lowAccessLevelRecords[0]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var lmap = {};&#13;
+                    lmap['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    lmap['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					lmap['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(lmap));&#13;
+                    lowAccessLevelRecords.push(lmap);&#13;
+                }&#13;
+            } else {&#13;
+				gs.info("Action BRT We have a High Criticality with no owner setting to default approver");&#13;
+                needApproval = true;&#13;
+                foundIndex = -1;&#13;
+                for (var icv = 0; icv &lt; singleOwnerRecords.length; icv++) {&#13;
+                    if (singleOwnerRecords[icv]['approver'] === "DEFAULT") {&#13;
+                        foundIndex = icv;&#13;
+                        break;&#13;
+                    }&#13;
+                }&#13;
+                if (foundIndex &gt; -1) {&#13;
+                    singleOwnerRecords[foundIndex]['access_level_id'] = singleOwnerRecords[foundIndex]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    singleOwnerRecords[foundIndex]['access_level_name'] = singleOwnerRecords[foundIndex]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					singleOwnerRecords[foundIndex]['sourceid'] = singleOwnerRecords[foundIndex]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var mapa = {};&#13;
+                    mapa['approver'] = "DEFAULT";&#13;
+                    mapa['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    mapa['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					mapa['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT lmap to be pushed "+JSON.stringify(mapa));&#13;
+                    singleOwnerRecords.push(mapa);&#13;
+                }&#13;
+            }&#13;
+        } else {&#13;
+            needApproval = true;&#13;
+        }&#13;
+        if (count == 1) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has one Area owner");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has one area owner");&#13;
+            var grAO = new GlideRecordSecure('x_aleen_alertsnowp_area_owners');&#13;
+            grAO.addQuery('access_level_id', accessLevelGr.access_level_id);&#13;
+            grAO.query();&#13;
+            while (grAO.next()) {&#13;
+                var refSysUser = grAO.owner.getRefRecord();&#13;
+                var approverID = refSysUser.sys_id;&#13;
+				gs.info("Action BRT Setting Approver id "+approverID);&#13;
+                indexFound = -1;&#13;
+                for (var icx = 0; icx &lt; singleOwnerRecords.length; icx++) {&#13;
+                    var mmpa = singleOwnerRecords[icx];&#13;
+                    if (mmpa['approver'] == approverID) {&#13;
+                        indexFound = icx;&#13;
+                        break;&#13;
+                    }&#13;
+                }&#13;
+                if (indexFound &gt; -1) {&#13;
+                    singleOwnerRecords[indexFound]['access_level_id'] = singleOwnerRecords[indexFound]['access_level_id'] + "," + accessLevelGr.access_level_id;&#13;
+                    singleOwnerRecords[indexFound]['access_level_name'] = singleOwnerRecords[indexFound]['access_level_name'] + "," + accessLevelGr.access_level_name;&#13;
+					singleOwnerRecords[indexFound]['sourceid'] = singleOwnerRecords[indexFound]['sourceid'] + "###" + accessLevelGr.access_level_id;&#13;
+                } else {&#13;
+                    var map = {};&#13;
+                    map['approver'] = approverID;&#13;
+                    map['access_level_id'] = accessLevelGr.access_level_id;&#13;
+                    map['access_level_name'] = accessLevelGr.access_level_name;&#13;
+					map['sourceid'] = accessLevelGr.access_level_id;&#13;
+					gs.info("Action BRT map to be pushed "+JSON.stringify(map));&#13;
+                    singleOwnerRecords.push(map);&#13;
+                }&#13;
+            }&#13;
+        }&#13;
+        if (count &gt; 1) {&#13;
+			gs.info(accessLevelGr.access_level_name +"  has multiple Area owners");&#13;
+			gs.info("Action BRT access level"+accessLevelGr.getDisplayValue("access_level_name")+" has multiple area owner");&#13;
+			gs.info("Action BRT Record inserted in Building Access Task for multiple owners");&#13;
+            var buildingAccessTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+            buildingAccessTask.access_level_id = accessLevelGr.access_level_id;&#13;
+            buildingAccessTask.access_level_name = accessLevelGr.access_level_name;&#13;
+			buildingAccessTask.sourceid = accessLevelGr.access_level_id;&#13;
+            buildingAccessTask.needapproval = needApproval;&#13;
+            buildingAccessTask.parent_number = buildingGr.number;&#13;
+            buildingAccessTask.access_end_date = buildingGr.access_end_date;&#13;
+            buildingAccessTask.access_start_date = buildingGr.access_start_date;&#13;
+            buildingAccessTask.request_for = buildingGr.request_for;&#13;
+            buildingAccessTask.notes = buildingGr.notes;&#13;
+            buildingAccessTask.reason = buildingGr.reason;&#13;
+            buildingAccessTask.sys_created_on = new GlideDateTime();&#13;
+            buildingAccessTask.sys_updated_on = new GlideDateTime();&#13;
+            buildingAccessTask.insert();&#13;
+        }&#13;
+    }&#13;
+	}else{&#13;
+		gs.info("Action BRT NO ACCESS FOUND IN Access LOCATION table for access sys id"+accessLevelsList[i]);&#13;
+	}&#13;
+}&#13;
+gs.info("Action BRT singleOwnerRecords.length "+singleOwnerRecords.length);&#13;
+for (var icc = 0; icc &lt; singleOwnerRecords.length; icc++) {&#13;
+	gs.info("Action BRT Inserting Single area owner access ");&#13;
+    var mapva = singleOwnerRecords[icc];&#13;
+    var buildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+    buildingAccTask.access_level_id = mapva['access_level_id'];&#13;
+	gs.info("Action BRT Single Owner access id "+mapva['access_level_id']);&#13;
+    buildingAccTask.access_level_name = mapva['access_level_name'];&#13;
+	gs.info("Action BRT Single area owner Record source id "+mapva['sourceid']);&#13;
+	buildingAccTask.sourceid = mapva['sourceid'];&#13;
+    buildingAccTask.needapproval = true;&#13;
+    buildingAccTask.parent_number = buildingGr.number;&#13;
+    buildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
+    buildingAccTask.access_start_date = buildingGr.access_start_date;&#13;
+    buildingAccTask.request_for = buildingGr.request_for;&#13;
+    buildingAccTask.notes = buildingGr.notes;&#13;
+    buildingAccTask.reason = buildingGr.reason;&#13;
+    buildingAccTask.sys_created_on = new GlideDateTime();&#13;
+    buildingAccTask.sys_updated_on = new GlideDateTime();&#13;
+    buildingAccTask.insert();&#13;
+    singleOwnerRecords.splice(icc, 1);&#13;
+    --icc;&#13;
+}&#13;
+gs.info("Action BRT low access level record length "+lowAccessLevelRecords.length);&#13;
+for (var iccl = 0; iccl &lt; lowAccessLevelRecords.length; iccl++) {&#13;
+	gs.info("Action BRT lowAcces level Record inserting");&#13;
+    var mapval = lowAccessLevelRecords[iccl];&#13;
+    var lowbuildingAccTask = new GlideRecordSecure('x_aleen_alertsnowp_building_access_task');&#13;
+    lowbuildingAccTask.access_level_id = mapval['access_level_id'];&#13;
+	gs.info("Action BRT low access access id "+mapval['access_level_id']);&#13;
+    lowbuildingAccTask.access_level_name = mapval['access_level_name'];&#13;
+	lowbuildingAccTask.sourceid = mapval['sourceid'];&#13;
+	gs.info("Action BRT low level source id "+mapval['sourceid']);&#13;
+    lowbuildingAccTask.needapproval = false;&#13;
+    lowbuildingAccTask.parent_number = buildingGr.number;&#13;
+    lowbuildingAccTask.access_end_date = buildingGr.access_end_date;&#13;
+    lowbuildingAccTask.access_start_date = buildingGr.access_start_date;&#13;
+    lowbuildingAccTask.request_for = buildingGr.request_for;&#13;
+    lowbuildingAccTask.notes = buildingGr.notes;&#13;
+    lowbuildingAccTask.reason = buildingGr.reason;&#13;
+    lowbuildingAccTask.sys_created_on = new GlideDateTime();&#13;
+    lowbuildingAccTask.sys_updated_on = new GlideDateTime();&#13;
+    lowbuildingAccTask.insert();&#13;
+    lowAccessLevelRecords.splice(iccl, 1);&#13;
+    --iccl;&#13;
+}&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>15586fea1b200650759455342a4bcb66</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>dd586fea1b200650759455342a4bcb8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=15586fea1b200650759455342a4bcb66"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_number</field>
+        <id>15586fea1b200650759455342a4bcb66</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>9d586fea1b200650759455342a4bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_15586fea1b200650759455342a4bcb66</table>
+        <value>{{action.record_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>15586fea1b200650759455342a4bcb66</id>
+        <sys_created_by>anurag.yadav</sys_created_by>
+        <sys_created_on>2024-03-12 09:58:59</sys_created_on>
+        <sys_id>938e4f8f1bf04210759455342a4bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-12 09:58:59</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>15586fea1b200650759455342a4bcb66</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>d9586fea1b200650759455342a4bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_15586fea1b200650759455342a4bcb66</table>
+        <value>{{action.table}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=15586fea1b200650759455342a4bcb66"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=15586fea1b200650759455342a4bcb66^sys_idNOT IN91586fea1b200650759455342a4bcb86,95586fea1b200650759455342a4bcb82"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>table</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">15586fea1b200650759455342a4bcb66</model>
+        <model_id>15586fea1b200650759455342a4bcb66</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_15586fea1b200650759455342a4bcb66</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>91586fea1b200650759455342a4bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>record_number</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">15586fea1b200650759455342a4bcb66</model>
+        <model_id>15586fea1b200650759455342a4bcb66</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_15586fea1b200650759455342a4bcb66</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>95586fea1b200650759455342a4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=15586fea1b200650759455342a4bcb66"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=15586fea1b200650759455342a4bcb66"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_15586fea1b200650759455342a4bcb66"/>
+    <sys_hub_action_input action="delete_multiple" query="model=9d586fea1b200650759455342a4bcb4c^sys_idNOT IN11586fea1b200650759455342a4bcb5d,15586fea1b200650759455342a4bcb61"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=66dbc5a9-330c-422b-b809-e42af2083fca</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Number</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</model>
+        <model_id>9d586fea1b200650759455342a4bcb4c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>11586fea1b200650759455342a4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=11586fea1b200650759455342a4bcb5d"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0e579b55-9984-40ff-90d3-13c93547da7e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>table</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</model>
+        <model_id>9d586fea1b200650759455342a4bcb4c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>15586fea1b200650759455342a4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=15586fea1b200650759455342a4bcb61"/>
+    <sys_hub_action_output action="delete_multiple" query="model=9d586fea1b200650759455342a4bcb4c^sys_idNOT IN55586fea1b200650759455342a4bcb90,59586fea1b200650759455342a4bcb94"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=3ba4b41e-4e99-4dd5-a448-6b1d7fdc9e12</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</model>
+        <model_id>9d586fea1b200650759455342a4bcb4c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>55586fea1b200650759455342a4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=55586fea1b200650759455342a4bcb90"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=55586fea1b200650759455342a4bcb90"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1db63402-fe88-4f00-9b3e-e66b38af5b6a,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</model>
+        <model_id>9d586fea1b200650759455342a4bcb4c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>59586fea1b200650759455342a4bcb94</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>anurag.yadav</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:07:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=59586fea1b200650759455342a4bcb94"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=59586fea1b200650759455342a4bcb94"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9d586fea1b200650759455342a4bcb4c"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=9d586fea1b200650759455342a4bcb4c^sys_idNOT INdd586fea1b200650759455342a4bcb9d"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Action Create Access level Task for Area owner">9d586fea1b200650759455342a4bcb4c</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_id>dd586fea1b200650759455342a4bcb9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=dd586fea1b200650759455342a4bcb9d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c^sys_idNOT IN11586fea1b200650759455342a4bcb64,55586fea1b200650759455342a4bcb60"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table</element>
+        <help/>
+        <hint/>
+        <label>table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>11586fea1b200650759455342a4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>record_number</element>
+        <help/>
+        <hint/>
+        <label>Record Number</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>55586fea1b200650759455342a4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_9d586fea1b200650759455342a4bcb4c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c^sys_idNOT IN91586fea1b200650759455342a4bcb99,99586fea1b200650759455342a4bcb93"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>91586fea1b200650759455342a4bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-27 12:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>99586fea1b200650759455342a4bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-27 12:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_9d586fea1b200650759455342a4bcb4c"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>698727aa1b200650759455342a4bcb35</sys_id>
+        <latest_snapshot>9d586fea1b200650759455342a4bcb4c</latest_snapshot>
+        <compiler_build>glide-vancouver-07-06-2023__patch7-02-08-2024_02-19-2024_0243.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

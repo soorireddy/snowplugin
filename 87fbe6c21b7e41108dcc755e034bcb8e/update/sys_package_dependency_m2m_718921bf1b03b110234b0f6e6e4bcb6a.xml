@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Web Service Import Set Tables" source="com.snc.web_service_import_set_tables">b2981ee61b8331108dcc755e034bcbd8</dependency>
+        <dependency display_value="Web Service Import Set Tables" source="com.snc.web_service_import_set_tables">fcc5e3ecdb031300a3b6176a489619c8</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-18 10:43:10</sys_created_on>

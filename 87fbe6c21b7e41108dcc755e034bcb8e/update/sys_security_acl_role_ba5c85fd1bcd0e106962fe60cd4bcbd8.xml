@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-20 13:33:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ba5c85fd1bcd0e106962fe60cd4bcbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aleen_alertsnowp_alert_request_status.x_aleen_alertsnowp.admin</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_security_acl display_value="x_aleen_alertsnowp_alert_request_status">f15c45fd1bcd0e106962fe60cd4bcba5</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ba5c85fd1bcd0e106962fe60cd4bcbd8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:33:26</sys_updated_on>
+        <sys_user_role display_value="x_aleen_alertsnowp.admin" name="x_aleen_alertsnowp.admin">8f1c26c21b7e41108dcc755e034bcb38</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

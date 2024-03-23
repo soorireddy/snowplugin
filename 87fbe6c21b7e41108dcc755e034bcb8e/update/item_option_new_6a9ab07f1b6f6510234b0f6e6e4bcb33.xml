@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <attributes/>
         <cat_item display_value="Request Building Access">956c04aa1b3e81108dcc755e034bcbf8</cat_item>
         <category/>
@@ -26,7 +26,7 @@
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
-        <hidden>false</hidden>
+        <hidden>true</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -42,7 +42,7 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>existing_access_levels</name>
+        <name>existing_access_levels_Old</name>
         <order>120</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
@@ -77,15 +77,17 @@
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-27 07:43:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6a9ab07f1b6f6510234b0f6e6e4bcb33</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Existing Access Levels</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>item_option_new_6a9ab07f1b6f6510234b0f6e6e4bcb33</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-27 12:19:52</sys_updated_on>
+        <sys_updated_on>2024-02-28 18:19:06</sys_updated_on>
         <table/>
         <tooltip/>
         <type>23</type>

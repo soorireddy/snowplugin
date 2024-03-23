@@ -5,11 +5,13 @@
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-22 10:18:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>642a7501db0b85100cd344080596199f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>baseURL</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_rest_message_fn_parameters_642a7501db0b85100cd344080596199f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

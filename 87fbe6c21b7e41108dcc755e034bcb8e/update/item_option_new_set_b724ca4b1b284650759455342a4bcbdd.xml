@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="INSERT_OR_UPDATE">
+        <create_roles/>
+        <description/>
+        <display_title>false</display_title>
+        <internal_name>existing_access_levels</internal_name>
+        <layout>normal</layout>
+        <name/>
+        <order>120</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-28 18:18:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b724ca4b1b284650759455342a4bcbdd</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Existing Access Levels</sys_name>
+        <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
+        <sys_update_name>item_option_new_set_b724ca4b1b284650759455342a4bcbdd</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-28 18:33:59</sys_updated_on>
+        <title>Existing Access Levels</title>
+        <type>one_to_many</type>
+        <version>12</version>
+        <write_roles/>
+    </item_option_new_set>
+</record_update>
