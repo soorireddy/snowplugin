@@ -39,18 +39,18 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
             req.setRequestHeader('Content-Type', 'application/json');
             var use_oauth = gs.getProperty('x_aleen_alertsnowp.use_oauth_authentication');
             gs.info("CheckUserBadgesUI Is Oauth Enabled " + use_oauth); //Oauth Integration
-            if (use_oauth==="true") {
-				gs.info("CheckUserBadgesUI Using Oauth ");
+            if (use_oauth === "true") {
+                gs.info("CheckUserBadgesUI Using Oauth ");
                 new OauthHelper().validateToken("UserBadgesAndAccessLevels");
                 req.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
-            }else{
-				gs.info("CheckUserBadgesUI Using JWT");
+            } else {
+                gs.info("CheckUserBadgesUI Using JWT");
                 req.setRequestHeader('Authorization', accessTokenScriptScript.getToken());
             }
-            gs.info("CheckUserBadgesUI "+req.getRequestBody());
+            gs.info("CheckUserBadgesUI " + req.getRequestBody());
             var ressponse = req.executeAsync();
             var responsseBody = ressponse.getBody();
-            gs.info("CheckUserBadgesUI "+responsseBody);
+            gs.info("CheckUserBadgesUI " + responsseBody);
             var httpStatuss = ressponse.getStatusCode();
             if (httpStatuss == 200) {
                 var successresponseObj = JSON.parse(responsseBody);
@@ -59,13 +59,33 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
                 var errorresponseObj = JSON.parse(responsseBody);
                 returnResponse = JSON.stringify(errorresponseObj);
             }
-            gs.info("CheckUserBadgesUI "+returnResponse);
+            gs.info("CheckUserBadgesUI " + returnResponse);
             return returnResponse;
         } catch (ex) {
             var message = ex.message;
             gs.addInfoMessage("CheckUserBadgesUI Error Message   ---> " + message);
             return JSON.stringify(returnResponse);
         }
+    },
+    getFLowContext: function() {
+        var answer = {};
+        var source_record = this.getParameter('source_record');
+        var source_table = this.getParameter('source_table');
+        gs.info("source_record" + source_record);
+        gs.info("source_table" + source_table);
+        var flowContextGr = new GlideRecord('sys_flow_context');
+        flowContextGr.addQuery('source_table', source_table);
+        flowContextGr.addQuery('source_record', source_record);
+
+        flowContextGr.query();
+        if (flowContextGr.next()) {
+            gs.info("Found Record");
+            answer['id'] = flowContextGr.getValue('sys_id');
+            gs.info(answer);
+            gs.info(JSON.stringify(answer));
+            return JSON.stringify(answer);
+        }
+        return null;
     },
     type: 'CheckUserBadgesFromUIScript'
 });]]></script>
@@ -74,14 +94,14 @@ CheckUserBadgesFromUIScript.prototype = Object.extendsObject(global.AbstractAjax
         <sys_created_on>2022-08-09 10:07:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a4aa4708dbd991100cd3440805961934</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>CheckUserBadgesFromUIScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_a4aa4708dbd991100cd3440805961934</sys_update_name>
-        <sys_updated_by>anurag.yadav</sys_updated_by>
-        <sys_updated_on>2024-03-22 06:12:45</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-23 17:26:22</sys_updated_on>
     </sys_script_include>
 </record_update>

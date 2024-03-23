@@ -13,8 +13,5 @@
         <element default="False" label="Deleted" max_length="40" name="deleted" type="boolean"/>
         <element label="sourceId" mandatory="true" max_length="40" name="sourceid" type="string"/>
         <element label="System" mandatory="true" max_length="40" name="system" type="string"/>
-        <index name="index">
-            <element name="access_level_id"/>
-        </index>
     </element>
 </database>

@@ -22,7 +22,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-05-04 08:03:01</sys_updated_on>
         <table/>
-        <ui_policy display_value="Mark StatDate &amp; End Date Madatory if  Temp Work">8022ca141bdb81508dcc755e034bcb72</ui_policy>
+        <ui_policy display_value="Mark StatDate &amp; End Date Mandatory if  Temp Work">8022ca141bdb81508dcc755e034bcb72</ui_policy>
         <variable>access_end_date</variable>
         <variable_set/>
         <visible>ignore</visible>

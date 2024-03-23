@@ -2687,6 +2687,6 @@ function executeAlertApi() {&#13;
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>5fa8c2e21b6cc6506962fe60cd4bcbad</sys_id>
         <latest_snapshot>17e94ea61b6cc6506962fe60cd4bcb9e</latest_snapshot>
-        <compiler_build>glide-vancouver-07-06-2023__patch6-01-11-2024_01-22-2024_2201.zip</compiler_build>
+        <compiler_build>glide-vancouver-07-06-2023__patch7-02-08-2024_02-19-2024_0243.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

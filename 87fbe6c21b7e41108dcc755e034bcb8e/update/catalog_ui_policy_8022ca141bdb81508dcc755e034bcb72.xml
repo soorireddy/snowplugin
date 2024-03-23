@@ -23,7 +23,7 @@
         <script_false/>
         <script_true/>
         <set_values/>
-        <short_description>Mark StatDate &amp; End Date Madatory if  Temp Work</short_description>
+        <short_description>Mark StatDate &amp; End Date Mandatory if  Temp Work</short_description>
         <sys_class_name>catalog_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-05-02 13:17:43</sys_created_on>
@@ -31,8 +31,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8022ca141bdb81508dcc755e034bcb72</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Mark StatDate &amp; End Date Madatory if  Temp Work</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Mark StatDate &amp; End Date Mandatory if  Temp Work</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>catalog_ui_policy_8022ca141bdb81508dcc755e034bcb72</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-04 08:03:29</sys_updated_on>
+        <sys_updated_on>2024-03-23 15:36:32</sys_updated_on>
         <table/>
         <ui_type>10</ui_type>
         <va_supported>true</va_supported>
