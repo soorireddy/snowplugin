@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>!current.isNewRecord() &amp;&amp; (new global.Workflow().hasWorkflow(current))</condition>
+        <condition>!current.isNewRecord() &amp;&amp; current.isValidRecord()</condition>
         <form_action>true</form_action>
         <form_button>false</form_button>
         <form_button_v2>false</form_button_v2>
@@ -30,12 +30,23 @@
         <name>Show Workflow</name>
         <onclick>showWorkFlowContext()</onclick>
         <order>100</order>
-        <script><![CDATA[function showWorkFlowContext(){
-	var url = new GlideURL('/context_workflow.do');
-    url.addParam('sysparm_stack', 'no');
-    url.addParam('sysparm_table', g_form.getTableName());
-    url.addParam('sysparm_document', g_form.getUniqueValue());
-    g_navigation.open(url.getURL(), "_blank");
+        <script><![CDATA[function showWorkFlowContext() {
+
+    var ajaxscript = new GlideAjax('CheckUserBadgesFromUIScript');
+    ajaxscript.addParam('sysparm_name', 'getFLowContext');
+    ajaxscript.addParam('source_table', g_form.getTableName());
+    ajaxscript.addParam('source_record', g_form.getUniqueValue());
+    ajaxscript.getXMLAnswer(flowContextDatacallback);
+
+
+    function flowContextDatacallback(response) {
+        if (null != response) {
+            var responseObj = JSON.parse(response);
+            var url = new GlideURL('/$flow-designer.do#/operations/context/' + responseObj.id);
+            url.addParam('sysparm_stack', 'no');
+            g_navigation.open(url.getURL(), "_blank");
+        }
+    }
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -48,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>71afe3b61b8f8d108dcc755e034bcb31</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Show Workflow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
@@ -57,7 +68,7 @@
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_ui_action_71afe3b61b8f8d108dcc755e034bcb31</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-28 05:22:54</sys_updated_on>
+        <sys_updated_on>2024-03-23 17:29:42</sys_updated_on>
         <table>x_aleen_alertsnowp_repalce_badge</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
