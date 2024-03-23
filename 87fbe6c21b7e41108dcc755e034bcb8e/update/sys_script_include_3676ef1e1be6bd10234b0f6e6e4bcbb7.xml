@@ -22,17 +22,13 @@ AlertMetadataScript.prototype = {
     syncLocations: function() {
         gs.info('syncLocations  :: Begin');
         try {
-            gs.info('syncLocations  :: BEFORE NULL CHECK' + this.jwt_token + ">>>>>>>>>" + this.use_oauth);
             if (null != this.jwt_token) {
                 var r = new sn_ws.RESTMessageV2('x_aleen_alertsnowp.GetLocations', 'POST');
                 r.setStringParameter('baseURL', gs.getProperty('x_aleen_alertsnowp.alert_api_baseUrl'));
-                gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.use_oauth);
                 if (this.use_oauth === "true") {
-                    gs.info(" this.SSSSSSSSSSSSSSSSSSSSSSSSSSSS ----> " + this.jwt_token);
                     new OauthHelper().validateToken("GetLocations");
                     r.setAuthenticationProfile('oauth2', gs.getProperty('x_aleen_alertsnowp.oauth_profile'));
                 } else {
-                    gs.info(" this.jwt_token ----> " + this.jwt_token);
                     r.setRequestHeader('Authorization', this.jwt_token);
                 }
                 var updateresponse = r.executeAsync();
@@ -43,8 +39,6 @@ AlertMetadataScript.prototype = {
                     if (null != responseObj && responseObj.success && null != responseObj.data && responseObj.data.length > 0) {
                         var locationImportSet = new GlideRecord('sys_import_set');
                         locationImportSet.initialize();
-                        //locationImportSet.mode = "asynchronous";
-                        //locationImportSet.state = "loading";
                         locationImportSet.table_name = "x_aleen_alertsnowp_u_locations_import_set";
                         locationImportSet.short_description = "Importing Data from x_aleen_alertsnowp_u_locations_import_set";
                         locationImportSet.insert();
@@ -58,8 +52,7 @@ AlertMetadataScript.prototype = {
                                 locationImportSetRowGr.setValue('u_city', (responseObj.data[i].city && responseObj.data[i].city != "") ? responseObj.data[i].city : "");
                                 locationImportSetRowGr.setValue('u_latitude', (responseObj.data[i].latitude && responseObj.data[i].latitude != "") ? responseObj.data[i].latitude : "0.0");
                                 locationImportSetRowGr.setValue('u_longitude', (responseObj.data[i].longitude && responseObj.data[i].longitude != "") ? responseObj.data[i].longitude : "0.0");
-                                //locationImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
-                                locationImportSetRowGr.setValue('u_deleted', 'true');
+                                locationImportSetRowGr.setValue('u_deleted', (responseObj.data[i].intStatus && responseObj.data[i].intStatus != "") ? responseObj.data[i].intStatus == 3 ? 'true' : 'false' : 'false');
                                 locationImportSetRowGr.setValue('u_id', responseObj.data[i].id.toString());
                                 locationImportSetRowGr.setValue('u_name', responseObj.data[i].text);
                                 locationImportSetRowGr.setValue('u_location_type', responseObj.data[i].type);
@@ -276,7 +269,7 @@ AlertMetadataScript.prototype = {
         <sys_created_on>2023-11-19 07:27:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name>AlertMetadataScript</sys_name>
         <sys_package display_value="Workplace Access and Security" source="x_aleen_alertsnowp">87fbe6c21b7e41108dcc755e034bcb8e</sys_package>
         <sys_policy/>
@@ -284,6 +277,6 @@ AlertMetadataScript.prototype = {
         <sys_scope display_value="Workplace Access and Security">87fbe6c21b7e41108dcc755e034bcb8e</sys_scope>
         <sys_update_name>sys_script_include_3676ef1e1be6bd10234b0f6e6e4bcbb7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-22 06:41:38</sys_updated_on>
+        <sys_updated_on>2024-03-23 14:47:50</sys_updated_on>
     </sys_script_include>
 </record_update>
